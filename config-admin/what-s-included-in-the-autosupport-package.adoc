@@ -1,0 +1,55 @@
+---
+permalink: config-admin/what-s-included-in-the-autosupport-package.html 
+sidebar: sidebar 
+keywords:  
+summary: AutoSupport 软件包包含数据库备份以及扩展信息。 
+---
+= AutoSupport (ASUP)软件包中包含的内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupport 软件包包含数据库备份以及扩展信息。
+
+AutoSupport 软件包包括以下内容：
+
+* 清单数据
+* 性能数据(如果选择包含在ASUP中)
+* 数据源和数据源设置
+* 集成软件包
+* 远程采集单元
+* 以太网监控单元
+* ASUP/代理设置
+* 备份位置设置
+* 归档位置设置
+* 通知设置
+* 异常检测分数和设备
+* 异常检测应用程序设置
+* 用户
+* 性能策略
+* 业务实体和应用程序
+* 设备解析规则和设置
+* 信息板和小工具
+* 自定义资产页面信息板和小工具
+* 查询
+* 标注和标注规则
+* 日志
+* licenses
+* 采集/数据源状态
+* MySQL状态
+* 系统信息
+
+
+AutoSupport 软件包不包括：
+
+* 安全工具设置/存储信息(通过单独的命令行界面过程进行备份)
+* 性能数据(如果未选择包含在ASUP中)
+
+
+[NOTE]
+====
+如果选择在ASUP中包含性能数据、则会包括最近七天的数据。如果启用了此功能、则其余数据将保存在归档中。归档数据不包含在ASUP中。
+
+====

@@ -1,0 +1,46 @@
+---
+permalink: install-linux/installing-your-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 从NetApp收到包含Insight许可证密钥的许可证文件后、您可以使用设置功能同时安装所有许可证。 
+---
+= 安装Insight许可证
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从NetApp收到包含Insight许可证密钥的许可证文件后、您可以使用设置功能同时安装所有许可证。
+
+
+
+== 关于此任务
+
+Insight许可证密钥存储在中 `.txt` 或 `.lcn` 文件
+
+
+
+== 步骤
+
+. 在文本编辑器中打开许可证文件并复制文本。
+. 在浏览器中打开Insight。
+. 在Insight工具栏上、单击*管理*。
+. 单击*设置*。
+. 单击*许可证*选项卡。
+. 单击 * 更新许可证 * 。
+. 将许可证密钥文本复制到*许可证*文本框中。
+. 选择*更新(最常见)*操作。
+. 单击 * 保存 * 。
+. 如果您使用的是Insight消费许可模式、则必须选中*发送使用情况信息*部分中的*启用向NetApp*发送使用情况信息复选框。必须为您的环境正确配置和启用代理。
+
+
+
+
+== 完成后
+
+安装许可证后、您可以执行以下配置任务：
+
+* 配置数据源。
+* 创建OnCommand Insight 用户帐户。
+

@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能希望删除不再需要使用的标注。您不能删除系统级别的标注或在标注规则、查询或性能策略中使用的标注。 
+---
+= 删除标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能希望删除不再需要使用的标注。您不能删除系统级别的标注或在标注规则、查询或性能策略中使用的标注。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 单击*管理*并选择*标注*。
++
+此时将显示"Annotations"页面。
+
+. 将光标置于要删除的标注上、然后单击 image:../media/trash-can-query.gif[""]。
++
+此时将显示确认对话框。
+
+. 单击 * 确定 * 。
+

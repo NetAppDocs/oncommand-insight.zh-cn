@@ -1,0 +1,67 @@
+---
+permalink: howto/preparation-and-prerequisites-for-servicenow-integration.html 
+sidebar: sidebar 
+keywords:  
+summary: 在集成之前、必须满足ServiceNow、Insight和Python中间件连接器的必要准备工作和前提条件。 
+---
+= Service Now集成的准备和前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在集成之前、必须满足ServiceNow、Insight和Python中间件连接器的必要准备工作和前提条件。
+
+
+
+== 建议的工作流
+
+在将ServiceNow与Insight集成时、强烈建议使用以下工作流：
+
+. 首先在您的开发实例中部署Python中间件连接器。
+. 确认已在开发实例中发现并更正所有故障后、请在测试/阶段实例中部署此连接器。
+. 确认暂存实例中的操作正确后、请在生产实例中部署此连接器。
+
+
+如果在上述任一阶段发现问题、请按照回滚步骤禁用此连接器、然后对问题进行故障排除并重新部署。
+
+
+
+== 一般前提条件：
+
+* 您可以使用独立主机或VM (建议)或Insight服务器主机/VM来托管python中间件连接器。
+* 强烈建议备份生产Insight服务器并将其部署在开发实例上。
+* ServiceNow必须准确发现CMDB中的服务器。
+* Insight必须准确发现您的存储和计算环境。
+* 端口443和80连接到Insight Server和ServiceNow实例。
+
+
+
+
+== ServiceNow前提条件：
+
+* 强烈建议使用开发/测试实例。
+* 加载ServiceNow更新集的权限。
+* 创建用户的权限。
+* ServiceNow版本雅加达或更高版本
+
+
+
+
+== Insight前提条件：
+
+* 强烈建议使用开发/测试实例。
+* 创建用户的权限(管理员权限)。
+* 支持Insight 7.3.1或更高版本、但要充分利用Insight、请使用最新版本。
+
+
+
+
+== Python中间件连接器前提条件：
+
+* 已安装Python 3.6或更高版本。
+* 安装Python时、选中此框可启用所有用户。这会将Python设置为标准应用程序安装位置。
+* 安装Python时、选中此框可使安装程序更新路径。否则、您必须手动更新路径。
+* 下载Python * pysnow*和*请求*库。
+

@@ -1,0 +1,148 @@
+---
+permalink: install-windows/insight-upgrade-checklist.html 
+sidebar: sidebar 
+keywords: 6.4 
+summary: 您可以使用提供的检查清单在准备升级时记录进度。这些任务旨在帮助降低升级失败的风险、并加快恢复和还原工作。 
+---
+= OnCommand Insight 升级检查清单
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用提供的检查清单在准备升级时记录进度。这些任务旨在帮助降低升级失败的风险、并加快恢复和还原工作。
+
+
+
+== 用于准备升级的检查清单(必需)
+
+|===
+
+
+| 条件 | 是否已完成？ 
+
+
+ a| 
+确保您在所有Insight服务器上拥有执行升级过程所需的Windows本地管理员权限。
+ a| 
+
+
+
+ a| 
+如果Insight、数据仓库或远程采集单元服务器位于32位平台上、则必须将服务器升级到64位平台。自Insight 7.x起、升级仅适用于64位平台。
+ a| 
+
+
+
+ a| 
+确保您拥有在环境中所有服务器上修改或禁用防病毒软件所需的权限。要防止由于病毒扫描软件处于活动状态而导致升级失败、您必须排除Insight安装目录 (`disk drive:\install directory\sanscreen` 升级期间从访问到防病毒扫描。升级所有组件后、您可以安全地重新激活防病毒软件；但是、请确保将扫描配置为仍排除Insight安装目录中的所有内容。
+
+此外、在安装后、您还必须从防病毒扫描中排除IBM/DB2文件夹(例如_C：\Program Files\IBM\DB2_)。
+ a| 
+
+|===
+
+
+== 准备升级的检查清单(最佳实践)
+
+|===
+
+
+| 条件 | 是否已完成？ 
+
+
+ a| 
+考虑到大多数升级至少需要4到8个小时、大型企业需要更长的时间、规划升级的时间。升级时间可能因可用资源(架构、CPU和内存)、数据库大小以及环境中监控的对象数量而异。
+ a| 
+
+
+
+ a| 
+请联系您的客户代表、了解您的升级计划、并提供您安装的Insight版本以及要升级到的版本。
+ a| 
+
+
+
+ a| 
+确保分配给Insight、数据仓库和远程采集单元的当前资源仍符合建议的规格。请参见所有服务器的建议规模估算准则。或者、您也可以联系客户代表来讨论规模估算准则。
+ a| 
+
+
+
+ a| 
+确保您有足够的磁盘空间用于数据库备份和还原过程。备份和还原过程所需磁盘空间大约是Insight和数据仓库服务器上备份文件所用磁盘空间的五倍。例如、50 GB的备份需要250到300 GB的可用磁盘空间。
+ a| 
+
+
+
+ a| 
+备份Insight和数据仓库数据库时、请确保您有权访问Firefox®或Chrome®浏览器。不建议使用Internet Explorer、因为它在上传和下载大于4 GB的文件时会遇到一些问题。
+ a| 
+
+
+
+ a| 
+删除 `.tmp` Insight服务器上的文件、您可以在以下位置找到这些文件： `<install directory>\SANscreen\wildfly\standalone\tmp`。
+ a| 
+
+
+
+ a| 
+从Insight客户端中删除重复的数据源和已停用的数据源。删除已停用或重复的数据源可减少执行升级所需的时间、并减少数据损坏的机会。
+ a| 
+
+
+
+ a| 
+如果您修改了Insight随附的任何默认报告、则应使用其他名称保存这些报告、然后将其保存到"Customer Reports"文件夹、以便在升级或还原系统时不会丢失已修改的报告。
+ a| 
+
+
+
+ a| 
+如果您拥有由您或专业服务创建的任何自定义或修改的数据仓库报告、请通过将这些报告导出为XML并将其移动到客户报告文件夹来创建这些报告的备份。确保备份不在数据仓库服务器上。如果不将报告移动到建议的文件夹、则升级过程可能不会备份这些报告。对于早期版本的Insight、如果无法在相应文件夹中找到报告、可能会导致自定义报告和修改后的报告丢失。
+ a| 
+
+
+
+ a| 
+请在IBM Cognos Configuration实用程序中记录所有设置、因为这些设置不包含在数据仓库备份中；您必须在升级后重新配置这些设置。该实用程序位于中 `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` 目录、并使用运行它 `cogconfigw` Command.Alternatively、您也可以对Cognos执行完整备份、然后导入所有设置。有关详细信息、请参见IBM Cognos文档。
+ a| 
+
+|===
+
+
+== 用于准备升级的检查清单(如果适用)
+
+|===
+
+
+| 条件 | 是否已完成？ 
+
+
+ a| 
+如果已将Insight安装由于浏览器安全警告而创建的自签名证书替换为内部证书颁发机构签名的证书、请备份密钥库文件、该文件位于以下位置： `disk drive:\install directory\SANscreen\wildfly\standalone\configuration` 并在升级后进行还原。此操作会将Insight创建的自签名证书替换为您的已签名证书。
+ a| 
+
+
+
+ a| 
+如果您的任何数据源已针对您的环境进行了修改、并且您不确定这些修改是否适用于您要升级到的Insight版本、请创建以下目录的副本、以帮助您在出现恢复问题时进行故障排除： `disk drive:\install directory\SANscreen\wildfly\standalone\deployments\datasources.war`。
+ a| 
+
+
+
+ a| 
+使用备份所有自定义数据库表和视图 `mysqldump` 命令行工具。还原自定义数据库表需要有权限的数据库访问。请联系技术支持、以获得有关还原这些表的帮助。
+ a| 
+
+
+
+ a| 
+确保Insight数据源所需的自定义集成脚本、第三方组件、备份或任何其他所需数据不会存储在中 `disk drive:\install directory\sanscreen` 目录、因为此目录的内容已通过升级过程删除。请确保从移动其中任何内容 `\sanscreen` 目录到其他位置。例如、如果您的环境包含自定义集成脚本、请确保将以下文件复制到非目录 `\sanscreen` 目录：
+
+`\install_dir\SANscreen\wildfly\standalone\deployments\datasources.war\new_disk_models.txt`。
+ a| 
+
+|===

@@ -1,0 +1,38 @@
+---
+permalink: config-admin/insight-syslog-contents.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在服务器上启用系统日志来收集Insight违规和性能警报消息、其中包括利用率和流量数据。 
+---
+= Insight系统日志内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在服务器上启用系统日志来收集Insight违规和性能警报消息、其中包括利用率和流量数据。
+
+
+
+== 消息类型
+
+Insight系统日志列出了三种类型的消息：
+
+* SAN路径违规
+* 常规违规
+* 性能警报
+
+
+
+
+== 提供的数据
+
+违规说明包括相关元素、事件时间以及违规的相对严重性或优先级。
+
+性能警报包括以下数据：
+
+* 利用率百分比
+* 流量类型
+* 流量速率以MB为单位
+

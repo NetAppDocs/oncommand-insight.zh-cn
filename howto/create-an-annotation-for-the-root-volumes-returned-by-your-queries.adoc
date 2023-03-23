@@ -1,0 +1,35 @@
+---
+permalink: howto/create-an-annotation-for-the-root-volumes-returned-by-your-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 标注是您分配给资产的专用注释，可用于按资产标注筛选资产。您创建的标注将用于标识环境中的 NetApp 根聚合，并确保它们不包含在特定报告中。 
+---
+= 为查询返回的根卷创建标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+标注是您分配给资产的专用注释，可用于按资产标注筛选资产。您创建的标注将用于标识环境中的 NetApp 根聚合，并确保它们不包含在特定报告中。
+
+
+
+== 开始之前
+
+您必须已确定要从"`High I/O Density`"报告中排除的所有根聚合。
+
+
+
+== 步骤
+
+. 创建标注以关联通过查询确定的所有NetApp根聚合：*管理*>*标注*
+. 单击 * 添加 * 。
++
+.. 输入标注的名称： * RootAggr*
+.. 输入标注的问题描述： * 从 " 高 I/O 密度 " 报告中删除根聚合 *
+.. 输入标注类型： * 布尔值 *
+
+
+. 单击 * 保存 * 。
+

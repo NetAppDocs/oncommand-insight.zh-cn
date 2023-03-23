@@ -1,0 +1,26 @@
+---
+permalink: reporting/enabling-security-headers.html 
+sidebar: sidebar 
+keywords:  
+summary: 可以对HTTP标头进行配置、以增强Cognos Analytics Web应用程序的整体安全性。 
+---
+= 启用安全标头
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+可以对HTTP标头进行配置、以增强Cognos Analytics Web应用程序的整体安全性。
+
+要添加响应标头、请执行以下操作：
+
+* 登录到Cognos Analytics UI并导航到*管理"->"配置"->"系统"->"高级设置"*
+* 添加以下关键字/值并应用：
++
+** 密钥： `BIHeaderFilter.responseHeaders`
+** 值： `[{"name":"X-FRAME-OPTIONS","value":"SAMEORIGIN"},{"name":"X-XSS-Protection","value":"1"},{"name":"X-Content-Type-Options","value":"nosniff"}]`
+
+
+* 刷新浏览器以启用标题。
+

@@ -1,0 +1,235 @@
+---
+section: howto
+title: 操作指南
+entries:
+- title: Insight入门
+  url: "/howto/getting-started-with-insight.html"
+  entries:
+  - title: 设置通知
+    url: "/howto/setting-up-notifications.html"
+    entries:
+    - title: 设置通知电子邮件
+      url: "/howto/setting-up-email-for-notifications.html"
+    - title: 设置用于日志记录的系统日志
+      url: "/howto/setting-up-syslog-for-notifications.html"
+    - title: 为通知设置SNMP
+      url: "/howto/setting-up-snmp-for-notifications.html"
+  - title: 准备资产：添加标注
+    url: "/howto/preparing-assets-annotating.html"
+    entries:
+    - title: 为企业创建标注
+      url: "/howto/assigning-annotations-to-assets.html"
+    - title: 配置数据中心标注
+      url: "/howto/configuring-data-center-annotations.html"
+    - title: 配置层标注
+      url: "/howto/configure-tier-annotations.html"
+    - title: 配置服务级别标注
+      url: "/howto/configure-service-level-annotations.html"
+    - title: 配置自定义环境标注
+      url: "/howto/configure-custom-environment-annotations.html"
+  - title: 查找资产：查询
+    url: "/howto/finding-assets-querying.html"
+    entries:
+    - title: 使用查询为资产添加标注
+      url: "/howto/using-queries-to-annotate-your-assets.html"
+    - title: 查询数据中心并为其添加标注
+      url: "/howto/querying-and-annotating-data-centers.html"
+    - title: 查询层并为其添加标注
+      url: "/howto/querying-and-annotating-tiers.html"
+    - title: 服务级别和环境标注
+      url: "/howto/service-level-and-environment.html"
+  - title: 您的企业结构：设置业务实体和应用程序
+    url: "/howto/your-corporate-structure-setting-up-business-entities-and-applications.html"
+    entries:
+    - title: 为您的公司配置业务实体
+      url: "/howto/configuring-business-entities-for-your-company.html"
+    - title: 为您的公司配置应用程序
+      url: "/howto/configuring-applications-for-your-company.html"
+  - title: 创建用于警报的性能策略
+    url: "/howto/creating-a-performance-policy-for-alerting.html"
+  - title: 使用信息板突出显示数据
+    url: "/howto/viewing-data-on-a-dashboard-how-to.html"
+- title: 创建自定义信息板
+  url: "/howto/custom-dashboards.html"
+  entries:
+  - title: 自定义信息板概念
+    url: "/howto/custom-dashboard-concepts.html"
+    entries:
+    - title: 信息板变量
+      url: "/howto/custom-dashboard-variables.html"
+      entries:
+      - title: 有关信息板变量的更多信息
+        url: "/howto/more-on-dashboard-variables.html"
+    - title: 显示小工具图例
+      url: "/howto/displaying-widget-legends.html"
+    - title: 信息板小工具查询和筛选器
+      url: "/howto/custom-dashboard-queries-and-filters.html"
+    - title: 汇总和聚合
+      url: "/howto/custom-dashboard-roll-up.html"
+    - title: 在信息板小工具中显示顶部/底部结果
+      url: "/howto/custom-dashboard-top-bottom-results.html"
+    - title: 在表小工具中分组
+      url: "/howto/custom-dashboard-group-by.html"
+      entries:
+      - title: 分组示例（介绍了汇总）
+        url: "/howto/grouping-example-with-rollup-explained.html"
+    - title: 覆盖各个小工具的信息板时间
+      url: "/howto/custom-dashboard-override-dashboard-time.html"
+    - title: 主轴和二级轴说明
+      url: "/howto/primary-and-secondary-axis-explained.html"
+    - title: 信息板小工具中的表达式
+      url: "/howto/expressions-in-dashboard-widgets.html"
+      entries:
+      - title: 表达式示例：读取IOPS百分比
+        url: "/howto/expressions-example-read-iops-percentage.html"
+      - title: 表达式示例： "system" I/O
+        url: "/howto/expressions-example-system-i-o.html"
+  - title: 自定义信息板：虚拟机性能
+    url: "/howto/custom-dashboard-vm-performance.html"
+  - title: 包含变量的存储节点利用率信息板示例
+    url: "/howto/custom-dashboard-example-with-variables.html"
+    entries:
+    - title: 节点信息板小工具示例设置
+      url: "/howto/node-dashboard-example-widget-settings.html"
+  - title: 信息板和小工具的最佳实践
+    url: "/howto/best-practices-for-dashboards-and-widgets.html"
+    entries:
+    - title: 最佳实践：找到合适的指标
+      url: "/howto/finding-the-right-metric.html"
+    - title: 最佳实践：查找合适的资产
+      url: "/howto/finding-the-right-assets.html"
+    - title: 散点图示例：了解轴
+      url: "/howto/scatterplot-example-knowing-your-axis.html"
+- title: 创建性能策略
+  url: "/howto/creating-performance-policies.html"
+  entries:
+  - title: 配置性能并确保违规通知
+    url: "/howto/configuring-performance-and-assurance-violation-notifications.html"
+  - title: 监控网络中的违规
+    url: "/howto/opening-the-violations-dashboard.html"
+- title: 对光纤通道BB信用0错误进行故障排除
+  url: "/howto/how-to-troubleshoot-fibre-channel-bb-credit-0-errors.html"
+  entries:
+  - title: 为端口创建性能策略和阈值
+    url: "/howto/creating-performance-policies-and-thresholds-for-ports.html"
+- title: 分析基础架构
+  url: "/howto/analyzing-your-infrastructure.html"
+  entries:
+  - title: 观察对象随时间变化的行为
+    url: "/howto/observe-an-objects-behavior-over-time.html"
+  - title: 将总延迟排名前10位的对象与所有类似对象的平均延迟进行比较
+    url: "/howto/compare-objects-with-the-top-10-latency-total-to-the-average-latency-for-all-like-objects.html"
+  - title: 将一个对象的总延迟与前10个对象的总延迟进行比较
+    url: "/howto/compare-one-object-s-latency-total-to-the-latency-total-of-the-top-10-objects.html"
+  - title: 将指标A与指标B进行比较、以显示类别和异常情况
+    url: "/howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html"
+  - title: 使用表达式标识备用指标
+    url: "/howto/use-an-expression-to-identify-alternate-metrics.html"
+- title: 最小化精简配置风险简介
+  url: "/howto/introduction-to-minimizing-risk-in-thin-provisioning.html"
+  entries:
+  - title: 监控存储池
+    url: "/howto/monitoring-the-storage-pool.html"
+  - title: 监控数据存储库
+    url: "/howto/monitoring-the-data-stores.html"
+  - title: 创建信息板以监控精简配置环境
+    url: "/howto/create-dashboards-to-monitor-thin-provisioned-environments.html"
+  - title: 使用性能策略降低精简配置的风险
+    url: "/howto/using-performance-policies-to-reduce-risk-in-thin-provisioning.html"
+  - title: 为存储池创建性能策略
+    url: "/howto/creating-policies-and-thresholds-for-storage-pools.html"
+  - title: 为数据存储库创建性能策略
+    url: "/howto/creating-performance-policies-for-datastores.html"
+- title: 收集主机和VM文件系统利用率数据
+  url: "/howto/host-and-vm-filesystem-utilization.html"
+  entries:
+  - title: 配置Insight以收集文件系统
+    url: "/howto/configure-insight-for-filesystem-collection.html"
+  - title: 文件系统成本分摊和报告
+    url: "/howto/file-system-utilization-chargeback.html"
+- title: 配置系统以报告成本分摊数据
+  url: "/howto/introduction-to-configuring-your-system-for-chargeback.html"
+  entries:
+  - title: 定义用于成本分摊的标注
+    url: "/howto/defining-annotations.html"
+  - title: 定义用于成本分摊的应用程序
+    url: "/howto/defining-applications-how-to-chargeback.html"
+  - title: 将应用程序分配给资产
+    url: "/howto/assigning-application-to-assets-how-to-chargeback.html"
+    entries:
+    - title: 使用临时方法将应用程序分配给资产
+      url: "/howto/assigning-applications-using-an-ad-hoc-method.html"
+    - title: 使用查询将应用程序分配给资产
+      url: "/howto/assigning-applications-using-a-query.html"
+  - title: 创建简单的成本分摊报告
+    url: "/howto/creating-a-simple-chargeback-report.html"
+- title: 确保 IO 密度报告仅描述内部数据卷
+  url: "/howto/introduction-to-root-volume-isolation.html"
+  entries:
+  - title: 创建查询以确定环境中的 NetApp 根聚合
+    url: "/howto/creating-a-query-to-identify-netapp-root-aggregates.html"
+  - title: 为查询返回的根卷创建标注
+    url: "/howto/create-an-annotation-for-the-root-volumes-returned-by-your-queries.html"
+  - title: 创建标注规则以自动从 I/O 密度报告中排除特定聚合
+    url: "/howto/create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-query.html"
+- title: 收集集成数据
+  url: "/howto/collecting-integration-data.html"
+  entries:
+  - title: 正在收集SNMP集成数据
+    url: "/howto/collecting-snmp-integration-data.html"
+    entries:
+    - title: 导入SNMP集成软件包
+      url: "/howto/importing-snmp-integration-data.html"
+    - title: 创建SNMP集成数据源
+      url: "/howto/adding-the-snmp-integration-data-source.html"
+    - title: integration.json文件信息
+      url: "/howto/integration-code-sample.html"
+- title: 分析应用程序性能问题
+  url: "/howto/analyzing-an-application-performance-problem.html"
+  entries:
+  - title: 检查内部卷
+    url: "/howto/examining-the-internal-volume.html"
+  - title: 检查耗用资源
+    url: "/howto/examining-the-greedy-resource.html"
+  - title: 检查存储池
+    url: "/howto/examining-the-details-of-the-storage-pool.html"
+  - title: 检查卷
+    url: "/howto/examining-the-server-volume.html"
+  - title: 检查虚拟机
+    url: "/howto/examining-the-vm.html"
+- title: 收集和报告AWS计费数据
+  url: "/howto/collecting-aws-billing-data.html"
+  entries:
+  - title: 准备AWS以收集Insight数据
+    url: "/howto/preparing-aws-for-insight-collection.html"
+  - title: 配置AWS Cloud成本数据源
+    url: "/howto/configuring-the-aws-cloud-cost-data-source.html"
+  - title: 在Insight中处理AWS Cloud成本数据
+    url: "/howto/processing-cloud-cost-data-in-insight.html"
+  - title: 在Insight中报告云成本数据
+    url: "/howto/reporting-on-cloud-cost-data-task.html"
+- title: 与ServiceNow集成
+  url: "/howto/integrating-with-servicenow.html"
+  entries:
+  - title: Service Now集成的准备和前提条件
+    url: "/howto/preparation-and-prerequisites-for-servicenow-integration.html"
+    entries:
+    - title: 下载ServiceNow Python连接器
+      url: "/howto/downloading-the-servicenow-connector.html"
+  - title: 配置ServiceNow以实现集成
+    url: "/howto/configuring-servicenow-for-integration.html"
+    entries:
+    - title: 提升角色
+      url: "/howto/servicenow-integration-elevate-role.html"
+    - title: 安装更新集
+      url: "/howto/servicenow-integration-install-update-set.html"
+    - title: ServiceNow集成—设置用户
+      url: "/howto/servicenow-integration-set-up-user.html"
+    - title: 安装Python和库
+      url: "/howto/servicenow-integration-install-python-and-libraries.html"
+    - title: 设置Python中间件
+      url: "/howto/servicenow-integration-python-middleware-setup.html"
+    - title: 正在同步连接器
+      url: "/howto/servicenow-integration-syncing-the-connector.html"
+    - title: 计划每天同步
+      url: "/howto/servicenow-integration-scheduling-daily-sync.html"

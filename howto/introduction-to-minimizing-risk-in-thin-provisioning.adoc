@@ -1,0 +1,16 @@
+---
+permalink: howto/introduction-to-minimizing-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: 在当今的混合IT数据中心中、管理员面临着通过采用精简配置等容量效率技术来控制分配和利用以前不可用的容量来将资源利用率延伸到物理范围以外的压力。 
+---
+= 最小化精简配置风险简介
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在当今的混合 IT 数据中心中，管理员面临着通过采用精简配置等容量效率技术来控制分配和利用以前不可用的容量来将资源利用率延伸到物理范围以外的压力。
+
+OnCommand Insight 可提供IT服务堆栈中多个精简配置层以往近乎实时的容量使用情况和利用率详细信息。如果未能正确管理超额预订风险，可能会导致业务停机时间不及时。

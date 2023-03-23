@@ -1,0 +1,16 @@
+---
+permalink: dwh/welcome-to-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 数据仓库是一个集中式存储库、用于存储来自多个OnCommand Insight 服务器的数据、并将数据转换为一个通用的多维数据模型以供查询和分析。 
+---
+= 欢迎使用OnCommand Insight 数据仓库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 数据仓库是一个集中式存储库、用于存储来自多个OnCommand Insight 服务器的数据、并将数据转换为一个通用的多维数据模型以供查询和分析。
+
+通过OnCommand Insight 数据仓库、您可以访问由多个数据集市组成的开放式数据库、这些数据集市可用于生成自定义容量和性能报告、例如成本分摊报告、包含历史数据的趋势报告、使用情况分析和预测报告。

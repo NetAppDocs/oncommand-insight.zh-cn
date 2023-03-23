@@ -1,0 +1,30 @@
+---
+permalink: install-windows/uninstalling-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果需要、您可以卸载OnCommand Insight 服务器。 
+---
+= 卸载OnCommand Insight 服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果需要、您可以卸载OnCommand Insight 服务器。
+
+
+
+== 开始之前
+
+最佳实践：卸载Insight之前、请备份OnCommand Insight 数据库。
+
+
+
+== 步骤
+
+. 使用具有管理员权限的帐户登录到OnCommand Insight 服务器。
+. 确保服务器上的所有Insight窗口均已关闭。
+. 从控制面板打开*卸载程序*功能、然后选择要删除的OnCommand Insight 应用程序。
+. 单击*卸载*、然后按照提示进行操作。
+

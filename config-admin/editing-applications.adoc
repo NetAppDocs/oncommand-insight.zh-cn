@@ -1,0 +1,46 @@
+---
+permalink: config-admin/editing-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能需要更改应用程序的优先级、与应用程序关联的业务实体或卷共享的状态。 
+---
+= 编辑应用程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能希望更改应用程序的优先级、与应用程序关联的业务实体或卷共享的状态。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 单击*管理*并选择*应用程序*。
+. 将光标置于要编辑的应用程序上、然后单击 image:../media/edit-recipient-icon.gif[""]。
++
+此时将显示编辑应用程序对话框。
+
+. 执行以下任一操作：
++
+** 单击*优先级*并选择其他优先级。
++
+[NOTE]
+====
+您不能更改应用程序的名称。
+
+====
+** 单击*业务实体*并选择要与应用程序关联的其他业务实体、或者选择*无*以删除应用程序与业务实体的关联。
+** 单击以清除或选择*验证卷共享*。
++
+[NOTE]
+====
+只有在拥有Assure许可证的情况下、此选项才可用。
+
+====
+
+
+. 单击 * 保存 * 。
+

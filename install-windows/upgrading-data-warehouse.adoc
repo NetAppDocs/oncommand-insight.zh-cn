@@ -1,0 +1,60 @@
+---
+permalink: install-windows/upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 完成所有前提任务后、您可以登录到数据仓库服务器并运行安装包以完成升级。 
+---
+= 正在升级数据仓库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成所有前提任务后、您可以登录到数据仓库服务器并运行安装包以完成升级。
+
+
+
+== 关于此任务
+
+数据仓库(DWH)不支持实时升级。按照以下步骤升级到新版本的DWH软件。
+
+[NOTE]
+====
+升级DWH时、包含_securityadmin_工具存储备份的文件夹将被删除。强烈建议在升级DWH之前备份存储。默认存储文件夹如下所示、以供参考：
+
+* 存储文件夹(正在使用存储)：``%SANSCREEN_HOME%\wildfly\standalone\configuration\vault``
+* 存储备份： `%SANSCREEN_HOME%\backup\vault`
+
+
+请参见 http://ie-docs.rtp.openeng.netapp.com/oci-73_ram/topic/com.netapp.doc.oci-acg/GUID-E3351676-2088-4767-AAB5-CB1D8476291C.html?resultof=%22%76%61%75%6c%74%22%20["管理数据仓库上的安全性"] 有关详细信息 ...
+
+====
+
+
+== 步骤
+
+. 使用具有Windows本地管理员权限的帐户登录到DWH服务器。
+. 使用DWH门户界面备份DWH数据库和报告。
+. 如果服务器使用非默认安全配置、请备份安全配置。
+. 从服务器卸载DWH软件。
+. 重新启动服务器以从内存中删除组件。
+. 在服务器上安装新版本的DWH。
++
+安装大约需要2小时。最好保持选中所有默认值。
+
+. 将非默认安全配置还原到DWH服务器。
+. 将DWH数据库还原到服务器。
+
+
+
+
+== 完成后
+
+升级后、您必须还原数据仓库数据库、此操作所需时间可能与升级所需时间相同或更长。
+
+[NOTE]
+====
+在OnCommand Insight 升级期间、客户切换到其他Insight服务器的情况并不少见。如果您更改了Insight服务器、则在还原数据仓库数据库后、现有连接器将指向先前的服务器IP地址或主机名。最好删除此连接器并创建一个新连接器、以避免可能出现的错误。
+
+====

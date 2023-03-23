@@ -1,0 +1,22 @@
+---
+permalink: howto/processing-cloud-cost-data-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight每月从AWS计费报告中收集一次上个月的数据、并反映该月的最终云成本。 
+---
+= 在Insight中处理AWS Cloud成本数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight每月从AWS计费报告中收集一次上个月的数据、并反映该月的最终云成本。
+
+设置AWS云成本数据源后、如果您已经向S3生成了计费报告、则在第一次数据源轮询后、您将立即获得长达三个月的过去数据。
+
+Insight每月收集一次AWS "`final`"数据。此收集会在上个月结束后几天进行、以便AWS有时间最终确定实际数据。
+
+AWS计费数据将发送到Insight的数据仓库、以用于报告。
+
+请注意、必须为一个计费帐户/用户配置每个数据源。

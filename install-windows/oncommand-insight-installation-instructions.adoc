@@ -1,0 +1,27 @@
+---
+permalink: install-windows/oncommand-insight-installation-instructions.html 
+sidebar: sidebar 
+keywords:  
+summary: 安装时需要安装多个OnCommand Insight 组件、包括Insight服务器、数据仓库和报告以及异常检测。 
+---
+= Insight安装说明
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装时需要安装多个OnCommand Insight 组件、包括Insight服务器、数据仓库和报告以及异常检测。
+
+安装包括以下主要任务：
+
+* 下载OnCommand Insight 安装程序
+* 正在安装OnCommand Insight 服务器
+* 安装许可证
+* (可选)安装DWH和报告(必须安装在单独的计算机或虚拟机上)
+* 或者、也可以安装远程采集单元(RAU)、以便从位于防火墙后面、位于远程站点或专用网络上的设备资源获取信息
+* (可选)安装异常检测引擎(必须安装在运行Linux的单独计算机或虚拟机上)。
+* 对于升级、请升级OnCommand Insight 报告。
+
+
+安装后、您必须配置Insight以获取有关环境的信息。所需任务在_RAID OnCommand Insight 配置和管理指南_中进行了介绍。

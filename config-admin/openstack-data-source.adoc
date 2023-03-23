@@ -1,0 +1,195 @@
+---
+permalink: config-admin/openstack-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OpenStack数据源(REST API/KVM\)收集有关OpenStack硬件实例的信息。此数据源可收集所有OpenStack实例的清单数据、也可收集虚拟机性能数据。' 
+---
+= OpenStack数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OpenStack (REST API/KVM)数据源收集有关OpenStack硬件实例的信息。此数据源可收集所有OpenStack实例的清单数据、也可收集虚拟机性能数据。
+
+
+
+== 要求
+
+以下是配置OpenStack数据源的要求。
+
+* OpenStack 控制器的 IP 地址
+* 建议使用OpenStack管理员角色凭据以及对Linux KVM虚拟机管理程序的sudo访问权限。
++
+[NOTE]
+====
+如果您不使用管理员帐户或管理员等效权限、则仍可从数据源获取数据。您需要修改策略配置文件(例如etc/nva/policy.json)、以允许具有非管理员角色的用户调用API：
+
+====
++
+** "OS_compute_API：os-availability—zone：detail"：""
+** "OS_compute_API：操作系统虚拟机管理程序"：""
+** os_compute_api：服务器：详细信息：get_all_tenants：""
+
+
+* 要收集性能、必须安装和配置OpenStack Ceilometer模块。可通过编辑来配置Ceilmeter `nova.conf` 为每个虚拟机管理程序创建文件、然后在每个虚拟机管理程序上重新启动Nova Compute服务。对于不同版本的 OpenStack ，选项名称会发生变化：
++
+** Icehouse
+** 6 月
+** 千克
+** 自由
+** Mitaka
+** Newton
+** Ocata
+
+
+* 对于CPU统计信息、需要在计算节点上的/etc/nva/nva.conf中打开"compute_monitors=ComputeDriverCPUMonitor"。
+* 端口要求
++
+** 对于 http 为 5000 ，对于 https 为 13000 ，对于 Keystone 服务为 13000
+** 22 表示 KVM SSH
+** 8774 用于 Nova 计算服务
+** 8776 用于 Cinder 块服务
+** 8777 ，适用于 Ceilmeter 性能服务
+** 9292.用于Glance映像服务
++
+[NOTE]
+====
+端口绑定到特定服务、该服务可以在较大环境中的控制器或其他主机上运行。
+
+====
+
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+OpenStack 控制器 IP 地址
+ a| 
+OpenStack 控制器的 IP 地址或完全限定域名
+
+
+
+ a| 
+OpenStack 管理员
+ a| 
+OpenStack 管理员的用户名
+
+
+
+ a| 
+OpenStack 密码
+ a| 
+OpenStack 管理员使用的密码
+
+
+
+ a| 
+OpenStack 管理员租户
+ a| 
+OpenStack 管理员租户
+
+
+
+ a| 
+KVM sudo 用户
+ a| 
+KVM sudo 用户名
+
+
+
+ a| 
+选择 " 密码 " 或 "OpenSSH 密钥文件 " 以指定凭据类型
+ a| 
+用于通过SSH连接到设备的凭据类型
+
+
+
+ a| 
+清单专用密钥的完整路径
+ a| 
+清单专用密钥的完整路径
+
+
+
+ a| 
+KVM sudo 密码
+ a| 
+KVM sudo 密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+通过 SSH 启用虚拟机管理程序清单发现
+ a| 
+选中此复选框可通过 SSH 启用虚拟机管理程序清单发现
+
+
+
+ a| 
+OpenStack 管理 URL 端口
+ a| 
+OpenStack 管理 URL 端口
+
+
+
+ a| 
+使用 HTTPS
+ a| 
+选中以使用安全 HTTP
+
+
+
+ a| 
+HTTP 连接超时（秒）
+ a| 
+HTTP连接超时(默认为300秒)
+
+
+
+ a| 
+SSH 端口
+ a| 
+用于 SSH 的端口
+
+
+
+ a| 
+SSH进程等待超时(秒)
+ a| 
+SSH进程超时(默认为30秒)
+
+
+
+ a| 
+SSH 进程重试
+ a| 
+清单重试尝试次数
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+|===

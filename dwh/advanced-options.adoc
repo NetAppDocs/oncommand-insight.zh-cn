@@ -1,0 +1,14 @@
+---
+permalink: dwh/advanced-options.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据仓库包括各种高级选项。 
+---
+= 高级选项
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据仓库包括各种高级选项。

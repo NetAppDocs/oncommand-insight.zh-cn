@@ -1,0 +1,62 @@
+---
+permalink: config-admin/ibm-totalstorage-ds4000-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '此数据源收集清单和性能信息。有两种可能的配置(固件6.x和7.x+\)、它们的值相同。API收集卷数据统计信息。' 
+---
+= IBM TotalStorage DS4000数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源收集清单和性能信息。有两种可能的配置(固件6.x和7.x+)、它们的值相同。API收集卷数据统计信息。
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+阵列SANtricity 控制器IP的逗号分隔列表
+ a| 
+控制器的IP地址或完全限定域名、以逗号分隔
+
+|===
+
+
+== 要求
+
+* 每个 DS5 或 FAStT 阵列的 IP 地址
+* 访问验证：对每个阵列上两个控制器的IP地址执行ping操作。
+
+
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为30分钟)
+
+
+
+ a| 
+性能轮询间隔(最长3600秒)
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

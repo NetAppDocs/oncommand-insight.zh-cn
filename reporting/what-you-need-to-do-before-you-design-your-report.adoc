@@ -1,0 +1,23 @@
+---
+permalink: reporting/what-you-need-to-do-before-you-design-your-report.html 
+sidebar: sidebar 
+keywords:  
+summary: 在设计自定义报告之前、您需要完成一些前提条件任务。如果您未完成这些操作，报告可能不准确或不完整。 
+---
+= 在设计报告之前需要执行的操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在设计自定义报告之前、您需要完成一些前提条件任务。如果您未完成这些操作，报告可能不准确或不完整。
+
+例如，如果您未完成设备标识过程，容量报告将不准确。或者、如果您未完成标注设置(例如层、业务单位和数据中心)、则自定义报告可能无法准确报告您的域中的数据、并且可能会对某些数据点显示不适用。
+
+在设计报告之前，请完成以下任务：
+
+* 配置所有数据源。有关详细信息、请参见_Data OnCommand Insight 配置和管理指南_。
+* 在环境中的设备和资源上输入标注（例如层，数据中心和业务单位）。在生成报告之前使标注保持稳定很有帮助、因为OnCommand Insight 数据仓库会收集历史信息。
+* 将OnCommand Insight 数据仓库配置为在提取、转换和加载(ETL)过程中接受来自OnCommand Insight 服务器的数据。
+

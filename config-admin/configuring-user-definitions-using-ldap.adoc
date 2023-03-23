@@ -1,0 +1,136 @@
+---
+permalink: config-admin/configuring-user-definitions-using-ldap.html 
+sidebar: sidebar 
+keywords:  
+summary: '要从LDAP服务器为用户身份验证和授权配置OnCommand Insight \(OCI\)、必须在LDAP服务器中将您定义为OnCommand Insight 服务器管理员。' 
+---
+= 使用LDAP配置用户定义
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要从LDAP服务器配置OnCommand Insight (OCI)以进行用户身份验证和授权、必须在LDAP服务器中将您定义为OnCommand Insight 服务器管理员。
+
+
+
+== 开始之前
+
+您必须知道在LDAP域中为Insight配置的用户和组属性。
+
+对于所有安全Active Directory (例如LDAPS)用户、您必须使用证书中定义的AD服务器名称。不能使用IP地址进行安全AD登录。
+
+
+
+== 关于此任务
+
+OnCommand Insight 通过Microsoft Active Directory服务器支持LDAP和LDAPS。其他LDAP实施可能有效、但尚未通过Insight认证。此操作步骤 假定您使用的是Microsoft Active Directory版本2或3 LDAP (轻型目录访问协议)。
+
+LDAP用户与本地定义的用户一起显示在*管理*>菜单：设置[用户]列表中。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
+. 单击*设置*。
+. 单击*用户*选项卡。
+. 滚动到LDAP部分、如下所示。
++
+image::../media/ldap-setup.gif[LDAP设置]
+
+. 单击*启用LDAP*以允许LDAP用户进行身份验证和授权。
+. 填写以下字段：
++
+** `LDAP servers`：Insight接受以逗号分隔的LDAP URL列表。Insight会尝试连接到提供的URL、而不验证LDAP协议。
++
+[NOTE]
+====
+要导入LDAP证书、请单击*证书*、然后自动导入或手动查找证书文件。
+
+====
++
+用于标识LDAP服务器的IP地址或DNS名称通常采用以下格式输入：
+
++
+[listing]
+----
+ldap://<ldap-server-address>:port
+----
++
+或者、如果使用默认端口：
+
++
+[listing]
+----
+ ldap://<ldap-server-address>
+----
++
+在此字段中输入多个LDAP服务器时、请确保在每个条目中使用正确的端口号。
+
+** `User name`：输入在LDAP服务器上有权进行目录查找查询的用户的凭据。
+** `Password`：输入上述用户的密码。要在LDAP服务器上确认此密码、请单击*验证*。
+
+
+. 如果要更精确地定义此LDAP用户、请单击*显示更多*并填写列出属性的字段。
++
+这些设置必须与LDAP域中配置的属性匹配。如果您不确定要为这些字段输入的值、请咨询Active Directory管理员。
+
++
+** *管理员组*
++
+具有Insight管理员权限的用户的LDAP组。默认值为 `insight.admins`。
+
+** *用户组*
++
+具有Insight用户权限的用户的LDAP组。默认值为 `insight.users`。
+
+** *来宾组*
++
+具有Insight来宾权限的用户的LDAP组。默认值为 `insight.guests`。
+
+** *服务器管理员组*
++
+具有Insight Server管理员权限的用户的LDAP组。默认值为 `insight.server.admins`。
+
+** *超时*
++
+超时前等待LDAP服务器响应的时间长度、以毫秒为单位。默认值为2、000、这在所有情况下都是足够的、不应修改。
+
+** *域*
++
+OnCommand Insight 应开始查找LDAP用户的LDAP节点。通常、这是组织的顶级域。例如：
+
++
+[listing]
+----
+DC=<enterprise>,DC=com
+----
+** *用户主体名称属性*
++
+用于标识LDAP服务器中每个用户的属性。默认值为 `userPrincipalName`、全局唯一。OnCommand Insight 会尝试将此属性的内容与上述提供的用户名进行匹配。
+
+** *角色属性*
++
+用于确定用户是否适合指定组的LDAP属性。默认值为 `memberOf`。
+
+** *邮件属性*
++
+用于标识用户电子邮件地址的LDAP属性。默认值为 `mail`。如果您要订阅OnCommand Insight 提供的报告、此功能非常有用。Insight会在每个用户首次登录时获取用户的电子邮件地址、之后不会查找该地址。
+
++
+[NOTE]
+====
+如果LDAP服务器上的用户电子邮件地址发生变化、请务必在Insight中对其进行更新。
+
+====
+** *可分辨名称属性*
++
+用于标识用户可分辨名称的LDAP属性。默认值为 `distinguishedName`。
+
+
+
+. 单击 * 保存 * 。
+

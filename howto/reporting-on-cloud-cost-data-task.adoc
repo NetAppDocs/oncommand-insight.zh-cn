@@ -1,0 +1,46 @@
+---
+permalink: howto/reporting-on-cloud-cost-data-task.html 
+sidebar: sidebar 
+keywords:  
+summary: 在Insight中收集的云成本每月数据将发送到数据仓库、并可在云成本数据集市中获取、以供报告使用。 
+---
+= 在Insight中报告云成本数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Insight中收集的云成本每月数据将发送到数据仓库、并可在云成本数据集市中获取、以供报告使用。
+
+
+
+== 开始之前
+
+您必须配置数据源、以便从AWS收集云成本数据。每个计费用户/帐户都必须有一个单独的数据源。
+
+请让Insight至少36小时开始收集数据。
+
+允许ETL在该时间后至少运行一次、以便将数据发送到数据仓库。
+
+
+
+== 关于此任务
+
+收集数据并将其发送到数据仓库后、您可以在多个预配置报告中的任意一个中查看该数据、也可以创建自定义报告。Insight将数据存储在自己的云成本数据集市中。
+
+要在其中一个预配置报告中查看云成本数据、请执行以下操作：
+
+
+
+== 步骤
+
+. 通过以下方法之一打开Insight报告：
++
+** 单击Reporting Portal图标 image:../media/oci-reporting-portal-icon.gif[""] 在Insight服务器Web UI或数据仓库UI中。
+** 输入以下URL直接启动报告： `https://<dwh_server_name\>:9300/p2pd/servlet/dispatch` 或 `https://<dwh_server_name\>:9300/bi (7.3.3 and later)`
+
+
+. 登录到报告后、单击*公共文件夹*并选择*云成本*。
+. 您可以在*云成本*文件夹中的可用报告中查看AWS计费数据、也可以使用*软件包*文件夹中的*云成本数据集市*创建您自己的自定义报告。
+

@@ -1,0 +1,40 @@
+---
+permalink: howto/create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-query.html 
+sidebar: sidebar 
+keywords:  
+summary: 除了手动将标注应用于单个资产之外，您还可以使用标注规则自动将标注应用于多个资产。标注规则基于您创建的查询，在系统上运行时，它们会将新资产添加到现有资产集。如果从报告中排除这些资产集，则新资产也会自动排除。 
+---
+= 创建标注规则以自动从 I/O 密度报告中排除特定聚合
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了手动将标注应用于单个资产之外，您还可以使用标注规则自动将标注应用于多个资产。标注规则基于您创建的查询，在系统上运行时，它们会将新资产添加到现有资产集。如果从报告中排除这些资产集，则新资产也会自动排除。
+
+
+
+== 开始之前
+
+您必须已创建并保存一个查询，用于标识您在环境中标识的 NetApp 根聚合。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 单击*管理*>*标注规则*
+. 单击 * 添加 * 。
++
+此时将显示添加规则对话框。
+
+. 执行以下操作：
++
+.. 在名称框中、输入描述规则的唯一名称："`RootAggrExclusde`"
+.. 单击Query并选择Insight应用标注规则时应使用的查询："` Aggregate0`"
+.. 单击Annotation并选择："`Root AGG Exclude`"
+.. 单击Value并输入True
+
+
+

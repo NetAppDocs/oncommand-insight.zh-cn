@@ -1,0 +1,27 @@
+---
+permalink: config-admin/displaying-system-information.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以显示有关部署OnCommand Insight 服务器的系统的Microsoft Windows IP配置信息。 
+---
+= 显示系统信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以显示有关部署OnCommand Insight 服务器的系统的Microsoft Windows IP配置信息。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*并选择*故障排除*。
+. 在页面底部的"Other tasks"区域中、单击*高级故障排除*链接。
+. 在高级故障排除页面上、单击*报告*选项卡。
+. 单击*系统信息*。
++
+Windows IP配置包括主机名、DNS、IP地址、子网掩码、操作系统信息、 内存、启动设备和连接名称。
+
+

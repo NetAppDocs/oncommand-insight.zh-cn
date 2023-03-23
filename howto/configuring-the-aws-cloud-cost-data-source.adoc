@@ -1,0 +1,50 @@
+---
+permalink: howto/configuring-the-aws-cloud-cost-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以像配置任何Insight数据源一样配置AWS Cloud成本数据源。 
+---
+= 配置AWS Cloud成本数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以像配置任何Insight数据源一样配置AWS Cloud成本数据源。
+
+
+
+== 开始之前
+
+您必须已为Insight数据收集设置并准备好Amazon AWS帐户、并准备好以下信息。
+
+* 报告名称
+* S3存储分段名称
+* S3存储分段所在的AWS地区。
+* 报告路径前缀
+
+
+
+
+== 关于此任务
+
+一旦您的AWS帐户准备就绪并设置了适当的权限、您就可以将OnCommand Insight 配置为收集计费报告数据了。
+
+[NOTE]
+====
+您需要为要从中检索计费数据的每个计费用户/帐户添加一个单独的AWS Cloud成本数据源。
+
+====
+
+
+== 步骤
+
+. 以管理员身份登录到OnCommand Insight。
+. 单击*管理*>*数据源*以打开"Insight数据源"页面。
+. 单击*+添加*以添加新的数据源。选择* Amazon *并选择* AWS Cloud Cost *。
+. 在*配置*部分中、填写_Report name_、_S3 Bucket_ name、_S3 Region_(必须是S3存储分段所在的区域)、_Report path prefix_、_AWS IAM Access Key ID_和_AWS IAM Secret Access Key_。如果您不确定其中任何一项、请咨询您的云提供商或AWS帐户持有人。
+. 单击此复选框、确认您已了解AWS将为Insight数据源发出的API请求和数据传输向您付费。
+. 在*高级配置*中、输入HTTP连接和套接字超时。默认值为 300 秒。
+. 单击 * 保存 * 。
+

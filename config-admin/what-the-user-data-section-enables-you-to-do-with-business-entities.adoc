@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以定义业务实体、以便更精细地跟踪和报告环境数据。通过资产页面中的User Data部分、您可以更改分配给资产的业务实体或从资产中删除业务实体。 
+---
+= 使用用户数据部分分配或修改业务实体
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以定义业务实体、以便更精细地跟踪和报告环境数据。通过资产页面中的User Data部分、您可以更改分配给资产的业务实体或从资产中删除业务实体。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 通过执行以下任一操作找到资产页面：
++
+** 在Insight工具栏上、单击 image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]、键入资产的名称、然后从列表中选择资产。
+** 单击*信息板*、选择*资产信息板*、找到资产名称并单击它。此时将显示资产页面。
+
+
+. 您可以执行以下操作：
++
+** 要更改分配的实体或分配实体、请单击 image:../media/pencil-icon-landing-page-be.gif[""] 并从列表中选择一个实体。
+** 要删除业务实体、请单击 image:../media/trash-can-query.gif[""]。
++
+[NOTE]
+====
+您不能删除从分配给资产的应用程序派生的实体。
+
+====
+
+
+

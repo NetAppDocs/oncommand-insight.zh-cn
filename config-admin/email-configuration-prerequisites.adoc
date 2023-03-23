@@ -1,0 +1,20 @@
+---
+permalink: config-admin/email-configuration-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: '在将OnCommand Insight 配置为访问电子邮件系统之前、您需要先发现主机名或IP地址以标识\(SMTP或Exchange\)邮件服务器并为OnCommand Insight 报告分配电子邮件帐户。' 
+---
+= 电子邮件配置前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在将OnCommand Insight 配置为访问电子邮件系统之前、您需要先发现主机名或IP地址以标识(SMTP或Exchange)邮件服务器并为OnCommand Insight 报告分配电子邮件帐户。
+
+请您的电子邮件管理员为OnCommand Insight 创建一个电子邮件帐户。您需要以下信息：
+
+* 用于标识组织使用的(SMTP或Exchange)邮件服务器的主机名或IP地址。您可以通过用于阅读电子邮件的应用程序找到此信息。例如、在Microsoft Outlook中、您可以通过查看帐户配置来查找服务器的名称：Tools - E-Mail accounts -查看或更改现有电子邮件帐户。
+* OnCommand Insight 用于发送定期报告的电子邮件帐户的名称。此帐户必须是您组织中的有效电子邮件地址。(大多数邮件系统不会发送消息、除非这些消息是从有效用户发送的。) 如果电子邮件服务器需要用户名和密码才能发送邮件、请从系统管理员处获取此信息。
+

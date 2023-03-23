@@ -1,0 +1,60 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-command-line.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用将MySQL数据目录迁移到其他目录。您可以保留当前数据目录。您可以使用Troubleshooting菜单上的migrate选项、也可以使用命令行。此操作步骤 介绍了如何使用命令行。 
+---
+= 使用命令行移动MySQL数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用将MySQL数据目录迁移到其他目录。您可以保留当前数据目录。您可以使用Troubleshooting菜单上的migrate选项、也可以使用命令行。此操作步骤 介绍了如何使用命令行。
+
+
+
+== 关于此任务
+
+如果保留当前数据目录、则该目录将作为备份保留并重命名。
+
+您可以使用Migrate MySQL Data实用程序、也可以使用 `java -jar mysqldatamigrator.jar` 选项OnCommand Insight `\bin\mysqldatamigrator` 应使用以下参数的位置：
+
+* 必需参数
++
+** *路径*
++
+要将数据文件夹复制到的新数据路径。
+
+
+
+* 可选参数
++
+** *—myCnf <my .cnf file>
++
+cnf文件的路径。默认值为 `<install path>\mysql\my.cnf`。只有在使用非默认MySQL时、才使用此标志。
+
+** *—doBackup*
++
+如果设置了此标志、则当前数据文件夹将被重命名、但不会被删除。
+
+
+
+
+
+
+
+== 步骤
+
+. 在此处访问命令行工具： `<installation path>` \bin\mysqldatamigraator\mysqldatamigraator.jar``
+
+
+
+
+== 使用示例
+
+[listing]
+----
+java -jar mysqldatamigrator.jar -path "C:\<new path>" -doBackup
+----

@@ -1,0 +1,14 @@
+---
+permalink: howto/best-practices-for-dashboards-and-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: 帮助您充分利用信息板和小工具的强大功能的提示和技巧。 
+---
+= 信息板和小工具的最佳实践
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+帮助您充分利用信息板和小工具的强大功能的提示和技巧。

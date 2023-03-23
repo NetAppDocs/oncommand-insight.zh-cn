@@ -1,0 +1,55 @@
+---
+permalink: config-admin/modifying-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能需要更改标注的名称、问题描述 或值、或者删除不再需要使用的标注。 
+---
+= 修改标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要更改标注的名称、问题描述 或值、或者删除不再需要使用的标注。
+
+
+
+== 步骤
+
+. 登录到OnCommand InsightWeb UI。
+. 单击*管理*并选择*标注*。
++
+此时将显示"Annotations"页面。
+
+. 将光标置于要编辑的标注上并单击 image:../media/edit-recipient-icon.gif[""]。
++
+此时将显示*编辑标注*对话框。
+
+. 您可以对标注进行以下修改：
++
+.. 更改名称、问题描述 或两者。
++
+但是、请注意、您可以为名称和问题描述 最多输入255个字符、并且不能更改任何标注的类型。此外、对于系统级标注、您不能更改名称或问题描述 ；但是、如果标注是列表类型、则可以添加或删除值。
+
++
+[NOTE]
+====
+如果将自定义标注发布到数据仓库并对其进行重命名、则会丢失历史数据。
+
+====
+.. 要向列表类型的标注添加另一个值、请单击 image:../media/add-annotation-icon.gif[""]。
+.. 要从列表类型的标注中删除值、请单击 image:../media/trash-can-query.gif[""]。
++
+如果某个标注值与标注规则、查询或性能策略中包含的标注关联、则不能删除该标注值。
+
+
+
+. 完成后、单击*保存*。
+
+
+
+
+== 完成后
+
+如果要在数据仓库中使用标注、则需要强制更新数据仓库中的标注。请参见_Data OnCommand Insight Warehouse管理指南_。

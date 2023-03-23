@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-database-build-from-history-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以使用OnCommand Insight 服务器中的历史数据构建数据仓库数据库。数据仓库从OnCommand Insight 服务器中提取数据、并根据"从历史记录构建"计划构建数据仓库数据集市。' 
+---
+= 根据历史记录概述构建数据仓库数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用OnCommand Insight 服务器中的历史数据构建数据仓库数据库。数据仓库从OnCommand Insight 服务器中提取数据、并根据"从历史记录构建"计划构建数据仓库数据集市。
+
+此选项不需要特殊许可证、构建过程中会包含清单数据。但是、要构建容量信息、需要OnCommand Insight Plan和OnCommand Insight Perform许可证。
+
+如果已执行任何构建(从历史记录或当前)、则无法在最后一个作业之前的日期完成构建。这意味着、如果您执行当前构建、则无法从历史记录进行构建。更具体地说、如果您从2012年1月1日结束的历史记录执行构建、则无法在2011年执行任何构建。
+
+如果历史记录构建不包括任何失败的ETL流程中的一两天、请勿尝试仅在这几天内构建历史记录。历史数据的期限较长、一两天的趋势不会发生显著变化。如果您确实要从历史记录重建、请重建整个历史记录。
+
+"从历史记录构建"视图显示所有连接器的所有构建作业。例如、此视图可能会显示每个连接器的清单作业、每次构建运行的端口容量作业以及标注作业。
+
+在配置"从历史记录构建"之前、必须执行以下操作：
+
+* 必须配置连接器。
+* 应在OnCommand Insight 中输入标注、并可使用旧OnCommand Insight 门户中的*强制更新DWH标注选项*手动更新标注、或者在设置后15分钟自动更新标注。
+

@@ -1,0 +1,25 @@
+---
+permalink: config-admin/manually-backing-up-the-oci-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果为OnCommand Insight 数据库启用了每周备份、则会自动生成副本、以便在必要时用于还原数据库。如果您需要在执行还原操作之前创建备份、或者需要发送给NetApp技术支持以获得帮助、则可以手动创建备份.zip文件。 
+---
+= 手动备份OnCommand Insight 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果为OnCommand Insight 数据库启用了每周备份、则会自动生成副本、以便在必要时用于还原数据库。如果您需要在执行还原操作之前创建备份、或者发送给NetApp技术支持以寻求帮助、则可以创建备份 `.zip` 文件。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
+. 单击*故障排除*。
+. 在发送/收集数据部分中、单击*备份*。
+. 单击*保存文件*。
+. 单击 * 确定 * 。
+

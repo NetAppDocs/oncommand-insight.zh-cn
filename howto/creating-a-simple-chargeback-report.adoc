@@ -1,0 +1,86 @@
+---
+permalink: howto/creating-a-simple-chargeback-report.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过成本分摊报告、管理员和经理可以按应用程序、业务实体、服务级别和层评估容量使用情况。成本分摊报告包括容量责任、历史容量责任和趋势数据。这些报告的数据是从OnCommand Insight 数据仓库构建和计划的。 
+---
+= 创建简单的成本分摊报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过成本分摊报告、管理员和经理可以按应用程序、业务实体、服务级别和层评估容量使用情况。成本分摊报告包括容量责任、历史容量责任和趋势数据。这些报告的数据是从OnCommand Insight 数据仓库构建和计划的。
+
+
+
+== 开始之前
+
+要创建示例报告、必须将系统配置为报告存储层的成本。需要完成以下任务：
+
+* 为层定义标注。
+* 为标注分配成本。
+* 定义要跟踪数据的应用程序。
+* 将应用程序分配给资产。
+
+
+
+
+== 关于此任务
+
+此示例使用Cognos Workspace Advanced报告工具创建成本分摊报告。使用Workspace Advanced、您可以通过将数据元素拖放到报告托盘中来创建报告。
+
+
+
+== 步骤
+
+. 在OnCommand Insight Web UI中、单击报告图标。
+. 登录到报告门户。
+. 在IBM Cognos Connection工具栏中、单击*启动*>* Cognos Worksapce Advanced*
++
+此时将打开Workspace Advanced软件包屏幕。
+
+. 单击*软件包*>*成本分摊*
++
+此时将显示IBM Workspace Advanace屏幕。
+
+. 单击*新建*
+. 在*新建*报告对话框中、单击*列表*以指定列表报告。
++
+此时将显示报告面板、并在源标题下显示成本分摊"`SSimple data mart`"和"`Advanced data mart`"。
+
+. 单击每个数据集市旁边的箭头将其展开。
++
+此时将显示数据集市的完整内容。
+
+. 将"`应用程序`"从"`SSimple Data Mart `"拖动到报告面板最左侧的列中。
++
+将项目拖动到面板时、列将缩小并突出显示。将应用程序数据放到突出显示的列中会导致所有应用程序在列中正确列出。
+
+. 将"`Tier`"从"`SSimple Data Mart `"拖动到报告面板的下一列。
++
+与每个应用程序关联的存储层将添加到面板中。
+
+. 将"`Tier Cost`"从"`SSimple Data Mart `"拖动到报告面板的下一列。
+. 将"`Provisioned capacity`"从"`SSimple Data Mart `"拖动到报告面板的下一列。
+. 按住* Ctrl*键并选择此外箱中的"`Tier Cost`"和"`Provisioned Capacity`"列。
+. 右键单击任一选定列。
+. 单击*计算*>*层成本*已配置容量数据库*
++
+此时将向此托盘添加一个标题为"层成本*配置容量GB"的新列。
+
+. 右键单击*层成本*配置容量GB*列。
+. 单击*模式*>*数据类型*
+. 单击*格式类型*>*货币*
+. 单击 * 确定 * 。
++
+现在、列数据将格式化为美国货币。
+
+. 右键单击"`Tier Cost * Provision Capacity GB`"并选择*编辑数据项标签*
+. 将Name字段替换为"`Provisioned capacity cost`"
+. 要运行报告、请单击*运行*>*运行报告- HTML
++
+此时将显示类似于以下内容的报告。 image:../media/insight-chargeback-report.gif[""]
+
+

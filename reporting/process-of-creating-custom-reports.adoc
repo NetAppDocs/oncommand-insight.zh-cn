@@ -1,0 +1,21 @@
+---
+permalink: reporting/process-of-creating-custom-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 创建临时报告的过程涉及多项任务。 
+---
+= 创建报告的过程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+创建临时报告的过程涉及多项任务。
+
+* 规划报告的结果。
+* 确定数据以支持您的结果。
+* 选择包含数据的数据模型（例如，成本分摊数据模型，清单数据模型等）。
+* 选择报告的数据元素。
+* 可以选择对报告结果进行格式化，排序和筛选。
+

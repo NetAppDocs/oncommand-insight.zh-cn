@@ -1,0 +1,140 @@
+---
+permalink: config-admin/brocade-efcm-9-5-to-9-7-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 使用Brocade Enterprise Fabric Connectivity Manager\(EFCM\)数据源发现Brocade EFCM交换机的清单。Insight支持EFCM 9.5、9.6和9.7版。' 
+---
+= Brocade Enterprise Fabric Connectivity Manager数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 使用Brocade Enterprise Fabric Connectivity Manager (EFCM)数据源发现Brocade EFCM交换机的清单。Insight支持EFCM 9.5、9.6和9.7版。
+
+
+
+== 要求
+
+[NOTE]
+====
+从OnCommand Insight 7.3.11开始、此数据收集器不可用。
+
+====
+* EFCM 服务器的网络地址或完全限定域名
+* EFCM 版本必须为 9.5 ， 9.6 或 9.7
+* EFCM 服务器的 IP 地址
+* EFCM 服务器的只读用户名和密码
+* 已通过端口51512使用只读用户名和密码验证通过Telnet从Insight服务器对Connectrix交换机的访问
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+EFC 服务器
+ a| 
+EFC 服务器的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+交换机的用户名
+
+
+
+ a| 
+Password
+ a| 
+交换机使用的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为15分钟)
+
+
+
+ a| 
+网络结构名称
+ a| 
+要由EFCM数据源报告的网络结构名称。留空以将网络结构名称报告为 WWN 。
+
+
+
+ a| 
+通信端口
+ a| 
+用于与交换机通信的端口
+
+
+
+ a| 
+启用陷阱
+ a| 
+选择此选项可在从设备收到 SNMP 陷阱时启用采集。如果选择启用陷阱，则还必须激活 SNMP 。
+
+
+
+ a| 
+陷阱之间的最短时间（秒）
+ a| 
+陷阱触发的两次采集尝试之间的最短时间(默认为15秒)
+
+
+
+ a| 
+非活动区域集
+ a| 
+除了在活动分区集上执行采集之外，要在其中执行采集的非活动分区集的逗号分隔列表
+
+
+
+ a| 
+要使用的 NIC
+ a| 
+指定在报告 SAN 设备时应在 RAU 上使用哪个网络接口
+
+
+
+ a| 
+排除设备
+ a| 
+要包括在轮询中或从轮询中排除的单元名称的逗号分隔列表
+
+
+
+ a| 
+使用EFCM交换机别名作为Insight交换机名称
+ a| 
+选择以使用EFCM交换机别名作为Insight交换机名称
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

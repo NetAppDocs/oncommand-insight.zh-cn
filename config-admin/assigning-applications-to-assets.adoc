@@ -1,0 +1,40 @@
+---
+permalink: config-admin/assigning-applications-to-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: 在定义具有或不具有业务实体的应用程序后、您可以将这些应用程序与资产相关联。 
+---
+= 将应用程序分配给资产
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在定义具有或不具有业务实体的应用程序后、您可以将这些应用程序与资产相关联。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 通过执行以下任一操作、找到要应用此应用程序的资产(主机、虚拟机、卷或内部卷)：
++
+** 单击*信息板*、选择*资产信息板*、然后单击资产。
+** 单击 image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] 在显示*搜索资产*框的工具栏上、键入资产的名称、然后从列表中选择资产。
+
+
+. 在资产页面的*用户数据*部分中、将光标置于当前分配给资产的应用程序的名称上方(如果未分配任何应用程序、则会显示*无*)、然后单击 image:../media/pencil-icon-landing-page-be.gif[""] (编辑应用程序)。
++
+此时将显示选定资产的可用应用程序列表。当前与此资产关联的应用程序前面带有一个复选标记。
+
+. 您可以在搜索框中键入以筛选应用程序名称、也可以向下滚动列表。
+. 选择要与资产关联的应用程序。
++
+您可以将多个应用程序分配给主机、虚拟机和内部卷；但是、您只能将一个应用程序分配给卷。
+
+. 单击 image:../media/check-box-ok.gif[""] 将选定应用程序分配给资产。
++
+应用程序名称显示在"User Data"部分中；如果应用程序与业务实体关联、则业务实体的名称也会显示在本部分中。
+
+

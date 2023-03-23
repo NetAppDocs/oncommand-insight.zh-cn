@@ -1,0 +1,152 @@
+---
+permalink: config-admin/microsoft-hyper-v-wmi-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '在配置方面、Microsoft Hyper-V数据源需要物理主机(虚拟机管理程序)的IP地址或可解析的DNS名称。此数据源使用PowerShell \(以前使用的WMI\)。' 
+---
+= Microsoft Hyper-V数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在配置方面、Microsoft Hyper-V数据源需要物理主机(虚拟机管理程序)的IP地址或可解析的DNS名称。此数据源使用PowerShell (以前使用的WMI)。
+
+
+
+== 术语
+
+OnCommand Insight 从Hyper-V数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+虚拟硬盘
+ a| 
+虚拟磁盘
+
+
+
+ a| 
+主机
+ a| 
+主机
+
+
+
+ a| 
+虚拟机
+ a| 
+虚拟机
+
+
+
+ a| 
+集群共享卷（ CSV ），分区卷
+ a| 
+数据存储
+
+
+
+ a| 
+Internet SCSI 设备，多路径 SCSI LUN
+ a| 
+LUN
+
+
+
+ a| 
+光纤通道端口
+ a| 
+Port
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* Hyper-V 需要打开端口 5985 ，以便进行数据收集和远程访问 / 管理。
+* 集群组节点的 IP 地址
+* 虚拟机管理程序上的本地管理员用户和密码
+* 管理级用户帐户
+* 端口要求：对于Windows 2003及更早版本、端口135和动态TCP端口分配了1024-65535；对于Windows 2008、分配了49152-65535。
+* DNS解析必须成功、即使数据收集器仅指向IP地址也是如此。
+* 每个Hyper-V虚拟机管理程序必须为每个主机上的每个VM启用"`资源计量`"。这样，每个虚拟机管理程序就可以在每个子系统上为 Cloud Insights 提供更多数据。如果未设置此值，则为每个子系统获取的性能指标会更少。有关资源计量的详细信息，请参见 Microsoft 文档：
++
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Hyper-V 资源计量概述"]
+
++
+https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["启用 VMResourceMetering"]
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+物理主机 IP 地址
+ a| 
+物理主机（虚拟机管理程序）的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+虚拟机管理程序的管理员用户名
+
+
+
+ a| 
+Password
+ a| 
+虚拟机管理程序的密码
+
+
+
+ a| 
+NT 域
+ a| 
+集群中节点使用的 DNS 名称
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+连接超时(毫秒)
+ a| 
+连接超时(默认值为60000毫秒)
+
+|===

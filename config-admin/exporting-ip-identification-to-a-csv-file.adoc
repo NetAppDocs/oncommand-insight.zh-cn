@@ -1,0 +1,49 @@
+---
+permalink: config-admin/exporting-ip-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用设备解析功能从Insight导出现有IP设备标识。您可能希望导出设备标识、以便对其进行修改、然后将其导回Insight、以便可以使用它来标识与导出标识中的设备类似的设备。 
+---
+= 将IP设备标识导出到CSV文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用设备解析功能从Insight导出现有IP设备标识。您可能希望导出设备标识、以便对其进行修改、然后将其导回Insight、以便可以使用它来标识与导出标识中的设备类似的设备。
+
+
+
+== 关于此任务
+
+将IP设备标识导出到CSV文件时、该文件将按所示顺序包含以下信息：
+
+|===
+
+
+ a| 
+Address
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Name
+
+|===
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*>*设备解析*
+. 选择* IP Identify"*选项卡。
+. 选择要导出其标识的 IP 设备。
+. 单击导出 image:../media/export-to-csv.gif[""] 图标。
+. 选择是要打开CSV文件还是保存该文件。
+

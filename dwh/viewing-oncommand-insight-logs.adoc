@@ -1,0 +1,106 @@
+---
+permalink: dwh/viewing-oncommand-insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在OnCommand Insight 中查看各种数据仓库和Cognos日志。 
+---
+= 查看OnCommand Insight 日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在OnCommand Insight 中查看各种数据仓库和Cognos日志。
+
+
+
+== 关于此任务
+
+您可以在Cognos和数据仓库日志文件中检查故障排除和状态信息。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 在左侧导航窗格中、单击*故障排除*。
+. 在*日志*部分中、单击*日志文件*。
++
+此时将显示以下日志文件：
+
++
+|===
+
+
+ a| 
+dwh.log
+
+
+
+ a| 
+列出数据仓库作业的状态
+
+
+
+ a| 
+wildfly.log
+
+
+
+ a| 
+提供有关WildFly应用程序服务器的信息
+
+
+
+ a| 
+dwh_upgrade日志
+
+
+
+ a| 
+提供有关数据仓库升级的信息
+
+
+
+ a| 
+ldap.log
+
+
+
+ a| 
+记录与LDAP身份验证相关的消息
+
+
+
+ a| 
+dwh_troubleshoot.log
+
+
+
+ a| 
+记录有助于对DWH问题进行故障排除的消息
+
+
+
+ a| 
+sanscreenap.log
+
+
+
+ a| 
+提供有关连接到服务器、身份验证和访问Cognos存储库的信息、以及有关其他进程的信息
+
+
+
+ a| 
+cognosserver.log
+
+
+
+ a| 
+Cognos日志
+
+|===
+. 单击要查看的日志文件的名称。
+

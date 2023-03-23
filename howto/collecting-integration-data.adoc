@@ -1,0 +1,46 @@
+---
+permalink: howto/collecting-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以将集成数据导入到OnCommand Insight 系统中。可以使用collectd、作为守护进程运行的开源软件来收集性能数据、也可以使用集成SNMP数据源来收集通用SNMP数据。 
+---
+= 收集集成数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将集成数据导入到OnCommand Insight 系统中。可以使用collectd、作为守护进程运行的开源软件来收集性能数据、也可以使用集成SNMP数据源来收集通用SNMP数据。
+
+
+
+== 集成数据的数据流
+
+以下适用场景 允许提供给OnCommand Insight 服务器的集成数据总量：
+
+* 系统会保留一个包含100个调用的队列。
++
+当客户端在队列中等待超过一分钟时、将发生超时错误。
+
+* 建议的集成数据的载入速率为每分钟一次、每个客户端一次。
+* 允许的集成对象类型限制为300。
+
+
+
+
+== 访问collectd软件和文档
+
+您可以从NetApp的GitHub站点访问collectd的输出写入程序插件软件和文档： https://github.com/NetApp/OCI_collectd[]
+
+
+
+== 备份和还原集成数据
+
+集成数据的备份和还原采用OnCommand Insight 性能数据备份和还原策略进行建模。为性能数据配置备份时、集成数据也会包含在备份中。与性能备份一样、备份中会包含最近七天的集成数据。备份中的任何集成数据都会在还原操作中还原。
+
+
+
+== licenses
+
+要报告集成数据、需要Perform许可证。如果不存在Perform许可证、则会出现错误并显示消息"Perform license required to report integration data"。

@@ -1,0 +1,27 @@
+---
+permalink: install-linux/uninstalling-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在不再需要远程采集单元时将其卸载。 
+---
+= 卸载远程采集单元
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在不再需要远程采集单元时将其卸载。
+
+
+
+== 步骤
+
+. 使用具有sudo权限的帐户登录到远程采集单元服务器。
+. 确保所有OnCommand Insight 窗口均已关闭。
+. 您可以查看的语法、命令参数和参数用法 `uninstall.sh` 输入以下命令： `sudo /usr/bin/oci-uninstall.sh --help`
+. 键入以下命令： `sudo /usr/bin/oci-uninstall.sh`
++
+卸载脚本将运行。按照提示进行操作。
+
+

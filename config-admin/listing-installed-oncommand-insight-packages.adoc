@@ -1,0 +1,24 @@
+---
+permalink: config-admin/listing-installed-oncommand-insight-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以显示已安装的OnCommand Insight 组件列表、其中包括清单、容量、维度、 和数据仓库视图。客户支持可能会要求您提供此信息、或者您可能希望了解安装的软件版本以及安装的时间。 
+---
+= 列出已安装的OnCommand Insight 组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以显示已安装的OnCommand Insight 组件列表、其中包括清单、容量、维度、 和数据仓库视图。客户支持可能会要求您提供此信息、或者您可能希望了解安装的软件版本以及安装的时间。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*并选择*故障排除*。
+. 在页面底部的"Other tasks"区域中、单击*高级故障排除*链接。
+. 在高级故障排除页面上、单击*报告*选项卡。
+. 单击*已安装的软件包*。
+

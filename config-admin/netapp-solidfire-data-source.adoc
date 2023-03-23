@@ -1,0 +1,173 @@
+---
+permalink: config-admin/netapp-solidfire-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: NetApp SolidFire 数据源支持iSCSI和光纤通道SolidFire 配置、用于清单和性能收集。 
+---
+= NetApp SolidFire 数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp SolidFire 数据源支持iSCSI和光纤通道SolidFire 配置、用于清单和性能收集。
+
+SolidFire 数据源利用SolidFire REST API。数据源所在的采集单元需要能够启动与SolidFire 集群管理IP地址上的TCP端口443的HTTPS连接。数据源需要能够在SolidFire 集群上进行REST API查询的凭据。
+
+
+
+== 术语
+
+OnCommand Insight 从NetApp SolidFire 数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+驱动器
+ a| 
+Disk
+
+
+
+ a| 
+集群
+ a| 
+存储
+
+
+
+ a| 
+Node
+ a| 
+存储节点
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+光纤通道端口
+ a| 
+Port
+
+
+
+ a| 
+卷访问组， LUN 分配
+ a| 
+卷映射
+
+
+
+ a| 
+iSCSI 会话
+ a| 
+卷掩码
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+以下是配置此数据源的要求：
+
+* 管理虚拟 IP 地址
+* 端口 443
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+管理虚拟 IP 地址（ MVIP ）
+ a| 
+SolidFire 集群的管理虚拟 IP 地址
+
+
+
+ a| 
+用户名
+ a| 
+用于登录到 SolidFire 集群的名称
+
+
+
+ a| 
+Password
+ a| 
+用于登录到 SolidFire 集群的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+TCP 端口
+ a| 
+用于连接到SolidFire 服务器的TCP端口(默认值为443)
+
+
+
+ a| 
+连接超时（秒）
+ a| 
+连接超时(默认为60秒)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===
+
+
+== 故障排除
+
+当SolidFire 报告错误时、它将显示在OnCommand Insight 中、如下所示：
+
+`An error message was received from a SolidFire device while trying to retrieve data. The call was <method> (<parameterString> ). The error message from the device was (check the device manual): <message>`
+
+其中：
+
+* method 是一种 HTTP 方法，例如 get 或 put 。
+* parameterString> 是 REST 调用中包含的参数的逗号分隔列表。
+* message> 是设备作为错误消息返回的内容。
+

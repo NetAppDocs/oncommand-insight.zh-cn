@@ -1,0 +1,35 @@
+---
+permalink: config-admin/associating-costs-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 在运行成本相关报告之前、您应将成本与服务级别、交换机级别和系统级别标注关联起来、以便根据存储用户的实际生产和复制容量使用情况向其进行成本分摊。例如、对于层级别、您可能具有黄金层和白银层值、并为黄金层分配比白银层更高的成本。 
+---
+= 将成本与标注相关联
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在运行成本相关报告之前、您应将成本与服务级别、交换机级别和系统级别标注关联起来、以便根据存储用户的实际生产和复制容量使用情况向其进行成本分摊。例如、对于层级别、您可能具有黄金层和白银层值、并为黄金层分配比白银层更高的成本。
+
+
+
+== 步骤
+
+. 登录到InsightWeb UI。
+. 单击Manage并选择*标注*。
++
+此时将显示"Annotation"页面。
+
+. 将光标置于服务级别、交换机级别或层标注上、然后单击 image:../media/edit-annotation-icon.gif[""]。
++
+此时将显示编辑标注对话框。
+
+. 在*成本*字段中输入任何现有级别的值。
++
+"层"和"服务级别"标注分别具有"自动层"和"对象存储"值、您无法删除这些值。
+
+. 单击 image:../media/edit-annotation-add-icon.gif[""] 以添加其他级别。
+. 完成后、单击*保存*。
+

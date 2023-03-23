@@ -1,0 +1,52 @@
+---
+permalink: config-admin/manually-assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 为资产分配标注有助于您按照与业务相关的方式对资产进行排序，分组和报告。尽管您可以使用标注规则自动为特定类型的资产分配标注、但您可以使用资产页面为单个资产分配标注。 
+---
+= 手动为资产分配标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为资产分配标注有助于您按照与业务相关的方式对资产进行排序，分组和报告。尽管您可以使用标注规则自动为特定类型的资产分配标注、但您可以使用资产页面为单个资产分配标注。
+
+
+
+== 开始之前
+
+您必须已创建要分配的标注。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 执行以下任一操作、找到要应用标注的资产：
++
+** 单击资产信息板中的资产。
+** 单击 image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] 在显示*搜索资产*框的工具栏上、键入资产的类型或名称、然后从显示的列表中选择资产。
++
+此时将显示资产页面。
+
+
+
+. 在资产页面的*用户数据*部分中、单击 image:../media/add-annotation-icon.gif[""]。
++
+此时将显示添加标注对话框。
+
+. 单击*标注*、然后从列表中选择一个标注。
+. 单击*值*、然后根据您选择的标注类型执行以下操作之一：
++
+** 如果标注类型为 list ， date 或 boolean ，请从列表中选择一个值。
+** 如果标注类型为文本，请键入一个值。
+
+
+. 单击 * 保存 * 。
+. 如果要在分配后更改标注的值、请单击 image:../media/change-annotation-value.gif[""] 并选择其他值。
++
+如果标注的列表类型选择了*标注分配时动态添加值*选项、则除了选择现有值之外、您还可以键入以添加新值。
+
+

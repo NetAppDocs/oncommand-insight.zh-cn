@@ -1,0 +1,226 @@
+---
+permalink: config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 对于使用在7-模式下运行的Data ONTAP 软件的存储系统、您应使用ONTAPI数据源、该数据源使用命令行界面来获取容量编号。 
+---
+= 在7-模式下运行的NetApp Data ONTAP 数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于使用在7-模式下运行的Data ONTAP 软件的存储系统、您应使用ONTAPI数据源、该数据源使用命令行界面来获取容量编号。
+
+
+
+== 术语
+
+OnCommand Insight 从NetApp Data ONTAP 7-模式数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+RAID 组
+ a| 
+磁盘组
+
+
+
+ a| 
+存储器
+ a| 
+存储
+
+
+
+ a| 
+存储器
+ a| 
+存储节点
+
+
+
+ a| 
+聚合
+ a| 
+存储池
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+Volume
+ a| 
+内部卷
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* FAS 存储控制器和配对节点的IP地址
+* 端口 443
+* 控制器和配对系统的用户名和密码
+* 控制器和配对控制器的自定义管理员级别用户名和密码，对于 7- 模式具有以下角色功能：
++
+** "api-*" ：使用此命令可以使 OnCommand Insight 执行所有 NetApp 存储 API 命令。
+** "login-http-admin" ：使用此命令可以允许 OnCommand Insight 通过 HTTP 连接到 NetApp 存储。
+** "security-api-vfiler" ：使用此命令可以使 OnCommand Insight 执行 NetApp 存储 API 命令来检索 vFiler 单元信息。
+** "cli-options" ：使用此选项可读取存储系统选项。
+** "CLI-LUN" ：访问这些命令以管理 LUN 。显示给定 LUN 或 LUN 类的状态（ LUN 路径，大小，联机 / 脱机状态和共享状态）。
+** cli-df ：使用此选项可显示可用磁盘空间。
+** cli-ifconfig ：使用此命令可显示接口和 IP 地址。
+
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+文件系统的地址
+ a| 
+NetApp Filer的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+NetApp Filer的用户名
+
+
+
+ a| 
+Password
+ a| 
+NetApp Filer的密码
+
+
+
+ a| 
+集群中HA配对节点文件管理器的地址
+ a| 
+HA配对节点存储器的IP地址或完全限定域名
+
+
+
+ a| 
+集群中HA配对文件管理器的用户名
+ a| 
+NetApp HA Partner Filer的用户名
+
+
+
+ a| 
+集群中 HA 配对文件存储器的密码
+ a| 
+NetApp HA Partner Filer的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+连接类型
+ a| 
+选择连接类型
+
+
+
+ a| 
+连接端口
+ a| 
+用于 NetApp API 的端口
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===
+
+
+== 存储系统连接
+
+除了使用此数据源的默认管理用户之外、您还可以直接在NetApp存储系统上为用户配置管理权限、以便此数据源可以从NetApp存储系统获取数据。
+
+要连接到 NetApp 存储系统，需要在获取存储系统所在的主 pfiler 时指定的用户满足以下条件：
+
+* 用户必须位于 vfiler0 （根存储器 /pfiler ）上。
++
+存储系统是在采集主 pfiler 时采集的。
+
+* 以下命令定义了用户角色功能：
++
+** "api-*" ：使用此命令可以使 OnCommand Insight 执行所有 NetApp 存储 API 命令。要使用 ZAPI ，需要使用此命令。
+** "login-http-admin" ：使用此命令可以允许 OnCommand Insight 通过 HTTP 连接到 NetApp 存储。要使用 ZAPI ，需要使用此命令。
+** "security-api-vfiler" ：使用此命令可以使 OnCommand Insight 执行 NetApp 存储 API 命令来检索 vFiler 单元信息。
+** cli-options ：用于 "options" 命令，用于配对 IP 和已启用许可证。
+** " cli-lun"：访问这些命令以管理LUN。显示给定 LUN 或 LUN 类的状态（ LUN 路径，大小，联机 / 脱机状态和共享状态）。
+** cli-df ：用于 "df -s " ， "df -r" ， "df -a -r" 命令，用于显示可用空间。
+** cli-ifconfig ：用于 "ifconfig -a " 命令，用于获取存储器 IP 地址。
+** cli-rdfile ：用于 "rdfile /etc/netgroup" 命令，用于获取网络组。
+** cli-date ：表示 date 命令，用于获取 Snapshot 副本的完整日期。
+** cli-snap ：用于 "snap list" 命令，用于获取 Snapshot 副本。
+
+
+
+
+如果未提供 cli-date 或 cli-snap 权限，则可以完成采集，但不会报告 Snapshot 副本。
+
+要成功获取 7- 模式数据源并在存储系统上不生成警告，您应使用以下命令字符串之一定义用户角色。此处列出的第二个字符串是第一个字符串的简化版本：
+
+[listing]
+----
+login-http-admin,api-*,security-api-vfile,cli-rdfile,cli-options,cli-df,cli-lun,cli-ifconfig,cli-date,cli-snap,
+or
+login-http-admin,api-*,security-api-vfile,cli-*
+----

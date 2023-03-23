@@ -1,0 +1,106 @@
+---
+permalink: config-admin/managing-security-on-the-insight-server.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用securityadmin工具可以管理Insight服务器上的安全选项。安全管理包括更改密码、生成新密钥、保存和还原您创建的安全配置或将配置还原为默认设置。 
+---
+= 管理Insight服务器上的安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+。 `securityadmin` 使用工具可以管理Insight服务器上的安全选项。安全管理包括更改密码、生成新密钥、保存和还原您创建的安全配置或将配置还原为默认设置。
+
+
+
+== 关于此任务
+
+您可以使用 `securityadmin` 用于管理安全性的工具：
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+
+
+== 步骤
+
+. 远程登录到Insight服务器。
+. 在交互模式下启动安全管理工具： `securityadmin -i`
++
+系统请求登录凭据。
+
+. 输入具有"`Admin`"凭据的帐户的用户名和密码。
+. 选择 * 服务器 * 。
++
+可以使用以下服务器配置选项：
+
++
+** * 备份 *
++
+为包含所有密码和密钥的存储创建一个备份zip文件、并将该文件放置在用户指定的位置或以下默认位置：
+
++
+*** Windows - `C:\Program Files\SANscreen\backup\vault`
+*** Linux - `/var/log/netapp/oci/backup/vault`
+
+
+** * 还原 *
++
+还原已创建的存储的zip备份。还原后、所有密码和密钥将还原为创建备份时的现有值。
+
++
+[NOTE]
+====
+还原可用于同步多个服务器上的密码和密钥、例如：-更改一台服务器上的服务器加密密钥-创建存储的备份-将存储备份还原到第二台服务器
+
++
+
+====
+** *更改加密密钥*
++
+更改用于对代理用户密码、SMTP用户密码、LDAP用户密码等进行加密或解密的服务器加密密钥。
+
++
+[NOTE]
+====
+更改加密密钥时、您应备份新的安全配置、以便在升级或安装后还原它。
+
+====
+** *更新密码*
++
+更改Insight使用的内部帐户的密码。此时将显示以下选项：
+
++
+*** 内部
+*** 采集
+*** Cognos_admin
+*** dwh_internal
+*** 主机
+*** 清单
+*** root
+
+
+
+
++
+[NOTE]
+====
+更改密码后、某些帐户需要同步。例如、如果您更改服务器上"采集"用户的密码、则需要更改LAU、RAU和DWH上"采集"用户的密码以使其匹配。此外、更改密码时、您应备份新的安全配置、以便在升级或安装后还原它。
+
+====
++
+** *重置为默认值*
++
+将密钥和密码重置为默认值。默认值是在安装期间提供的值。
+
+** * 退出 *
++
+退出 `securityadmin` 工具。
+
+
+
+. 选择要更改的选项、然后按照提示进行操作。
+

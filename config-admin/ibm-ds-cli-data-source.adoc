@@ -1,0 +1,159 @@
+---
+permalink: config-admin/ibm-ds-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'IBM DS \(cli\)数据源仅支持DS6xxx和DS8xxx设备。NetApp E系列数据源支持DS3xxx、DS4xxx和DS5xxx设备。有关支持的型号和固件版本、请参见Insight数据源支持列表。' 
+---
+= IBM DS数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IBM DS (CLI)数据源仅支持DS6xxx和DS8xxx设备。NetApp E系列数据源支持DS3xxx、DS4xxx和DS5xxx设备。有关支持的型号和固件版本、请参见Insight数据源支持列表。
+
+
+
+== 术语
+
+OnCommand Insight 从IBM DS数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+磁盘驱动器模块
+ a| 
+Disk
+
+
+
+ a| 
+存储映像
+ a| 
+存储
+
+
+
+ a| 
+块区池
+ a| 
+存储池
+
+
+
+ a| 
+固定块卷
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 每个 DS 阵列的 IP 地址
+* 存储显示名称是可选的、仅供外观使用
+* 每个 DS 阵列上的只读用户名和密码
+* Insight服务器上安装的第三方软件：IBM dscli
+* 访问验证：运行 `dscli` 使用用户名和密码的命令
+* 端口要求： 80 ， 443 和 1750
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+DS存储
+ a| 
+DS存储主机的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+DS命令行界面使用的名称
+
+
+
+ a| 
+Password
+ a| 
+DS命令行界面使用的密码
+
+
+
+ a| 
+可执行文件dscli.exe路径
+ a| 
+的完整路径 ``dscli.exe``实用程序。
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔（默认为 40 分钟）
+
+
+
+ a| 
+存储显示名称
+ a| 
+IBM DS 存储阵列的名称
+
+
+
+ a| 
+清单排除设备
+ a| 
+要从清单收集中排除的设备序列号的逗号分隔列表
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+
+
+ a| 
+性能筛选器类型
+ a| 
+Include ：仅从列表中的设备收集数据。Exclude ：不会从这些设备收集任何数据
+
+
+
+ a| 
+性能筛选器设备列表
+ a| 
+要从性能收集中包括或排除的设备 ID 的逗号分隔列表
+
+|===

@@ -1,0 +1,29 @@
+---
+permalink: config-admin/changes-causing-data-collection-problems.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您在OnCommand Insight 中遇到数据收集问题、则环境中的更改可能是发生原因。作为一般维护规则、您还应在Insight中适应环境中的任何更改。 
+---
+= 导致数据收集问题的更改
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在OnCommand Insight 中遇到数据收集问题、则环境中的更改可能是发生原因。作为一般维护规则、您还应在Insight中适应环境中的任何更改。
+
+您可以使用此检查清单确定可能导致问题的网络更改：
+
+* 您是否更改过任何密码？是否在Insight中更改了这些密码？
+* 是否已从网络中删除设备？您还必须从OnCommand Insight 中删除此设备、以防止重新发现和重新引入此设备。
+* 您是否升级了基础架构软件(例如HP CommandView EVA或EMC Solutions Enabler)？
++
+确保采集单元上安装了相应版本的客户端工具。如果数据源故障持续存在、您需要联系技术支持以请求帮助、可能还需要获取数据源修补程序。
+
+* 您的所有OnCommand Insight 采集单元是否都使用相同的OnCommand Insight 版本？如果远程采集单元和本地采集单元运行的OnCommand Insight 版本不同、请在所有单元上安装相同的版本以更正数据收集问题。
++
+如果需要在所有采集单元上安装新版本的OnCommand Insight 、请转到支持站点并下载正确的版本。
+
+* 您是否更改了任何域名或添加了新域？您必须更新设备解析(以前称为自动解析)方法。
+

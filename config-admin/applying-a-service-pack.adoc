@@ -1,0 +1,37 @@
+---
+permalink: config-admin/applying-a-service-pack.html 
+sidebar: sidebar 
+keywords:  
+summary: 我们会定期提供服务包、您可以应用这些服务包来利用OnCommand Insight 的修复和增强功能。 
+---
+= 应用Service Pack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+我们会定期提供服务包、您可以应用这些服务包来利用OnCommand Insight 的修复和增强功能。
+
+
+
+== 开始之前
+
+* 您必须已下载服务包文件(例如、 `7.2service_pack_1.patch`)。
+* 您必须已批准所有修补程序。
+
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
+. 单击*修补程序*。
+. 从"Actions"按钮中、选择*应用修补程序*。
+. 在*应用数据源修补程序*对话框中、单击*浏览*以查找服务包文件。
+. 检查*修补程序名称*、*问题描述 *、*受影响的数据源类型*(用于显示是否有任何数据源受到影响)以及*详细信息*(用于描述服务包包含的增强功能)。
+. 如果选定的服务包正确无误、请单击*应用修补程序*。
++
+服务包会自动获得批准；无需采取进一步操作。
+
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: 适用于您在NetApp集群模式Data ONTAP 存储池资产登录页面上可能找到的对象或引用的术语。 
+---
+= 集群模式Data ONTAP 存储池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于您在NetApp集群模式Data ONTAP 存储池资产登录页面上可能找到的对象或引用的术语。
+
+
+
+== 集群模式Data ONTAP 存储池术语
+
+以下术语适用于您在NetApp集群模式Data ONTAPstorage pool资产登录页面上可能找到的对象或引用。其中许多术语也适用于其他数据收集器。
+
+* storage—此池所在的存储阵列。必填。
+* type—从枚举的可能性列表中获取的描述性值。最常见的是"`aggregate`"或"`RAID Group`"`。
+* node—如果此存储阵列的架构使池属于特定存储节点、则其名称将在此处显示为指向其自己登录页面的超链接。
+* 使用Flash Pool -是/否值-此基于SATA/SAS的池是否使用SSD进行缓存加速？
+* 冗余—RAID级别或保护方案。RAID-DP 为双奇偶校验， raid_TP 为三重奇偶校验。
+* 容量-此处的值为逻辑已用容量、可用容量和逻辑总容量以及这些容量中使用的百分比。
+* 过量使用的容量—如果使用效率技术分配的卷或内部卷总容量大于存储池的逻辑容量、则此处的百分比值将大于0%。
+* Snapshot—已用快照容量和总快照容量、前提是存储池架构将部分容量专用于专为快照划分的分区区域。MetroCluster 配置中的ONTAP 很可能会显示这一点、而其他ONTAP 配置则不会显示这一点。
+* Utilization—一个百分比值、显示为该存储池贡献容量的任何磁盘的最高磁盘繁忙百分比。磁盘利用率不一定与阵列性能有很强的关联—如果没有主机驱动的工作负载、则由于磁盘重建、重复数据删除活动等、利用率可能会很高。此外、许多阵列的`复制实施可能会提高磁盘利用率、而不会显示为内部卷或卷工作负载。
+* IOPS -为该存储池贡献容量的所有磁盘的IOPS之和。
+* throughput—为该存储池提供容量的所有磁盘的总吞吐量。
+

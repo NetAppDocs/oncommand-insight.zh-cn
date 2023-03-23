@@ -1,0 +1,21 @@
+---
+permalink: config-admin/insight-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: 系统会为每个用户帐户分配三个可能的权限级别之一。 
+---
+= Insight用户角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+系统会为每个用户帐户分配三个可能的权限级别之一。
+
+* 通过子系统、您可以登录到Insight并查看各种页面。此帐户类型不允许执行诸如标识通用设备和在Java UI中定义策略等操作。
+* 用户允许所有来宾级别的特权、并允许访问Insight操作、例如定义策略和标识通用设备。用户帐户类型不允许您执行数据源操作、也不允许添加或编辑除您自己帐户之外的任何用户帐户。
+* 管理员允许您执行任何操作、包括添加新用户和管理数据源。
+
+
+*最佳实践：*通过为用户或来宾创建大多数帐户来限制具有管理员权限的用户数量。

@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-features.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 数据仓库是一个由多个数据集市组成的独立数据库。 
+---
+= 数据仓库功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 数据仓库是一个由多个数据集市组成的独立数据库。
+
+数据仓库包括以下功能：
+
+* 当前和历史配置以及清单数据、可用于创建对预测和规划有用的趋势报告
+* 多个多维历史数据集市和一个额外的纯当前清单数据集市
+* 用于预定义查询或用户定义查询的优化数据库
+* 与第三方报告和业务智能引擎集成的平台、包括：
++
+** 配置管理数据库
+** 财务会计系统
+** 资产管理系统
+
+
+

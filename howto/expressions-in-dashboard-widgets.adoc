@@ -1,0 +1,16 @@
+---
+permalink: howto/expressions-in-dashboard-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过时间序列小工具中的表达式、您可以根据所选指标的计算结果显示数据。 
+---
+= 信息板小工具中的表达式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过时间序列小工具中的表达式、您可以根据所选指标的计算结果显示数据。
+
+在信息板中，任何时间序列小工具（折线，样条曲线，区域，堆积区）均可用于根据您选择的指标构建表达式，并在一个图形中显示这些表达式的结果。以下示例使用表达式解决特定问题。在第一个示例中，我们希望将环境中所有存储资产的读取 IOPS 显示为总 IOPS 的百分比。第二个示例让我们可以了解环境中发生的"系统"或"开销"IOPS、即不是读取或写入数据的IOPS。

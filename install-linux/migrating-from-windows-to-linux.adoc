@@ -1,0 +1,30 @@
+---
+permalink: install-linux/migrating-from-windows-to-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 要在安装了现有Windows的情况下在Linux上使用Insight、必须执行迁移。您必须在Insight服务器和数据仓库组件上执行此操作步骤。 
+---
+= 从Windows迁移到Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要在安装了现有Windows的情况下在Linux上使用Insight、必须执行迁移。您必须在Insight服务器和数据仓库组件上执行此操作步骤。
+
+
+
+== 步骤
+
+. 备份服务器上的当前Insight安装。
++
+有关如何备份OnCommand Insight 数据库的信息、请参见_OCI配置和管理指南。
+
+. 安装Insight for Linux。
+. 还原先前版本的数据库。
++
+有关如何还原OnCommand Insight 数据库的信息、请参见_OCI配置和管理指南_。
+
+. 卸载先前版本的Insight for Windows。
+

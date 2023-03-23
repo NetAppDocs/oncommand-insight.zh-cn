@@ -1,0 +1,51 @@
+---
+permalink: install-windows/installing-the-anomaly-detection-software.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 包含可将机器学习异常检测应用于Insight数据的软件。您可以将此软件与其他OnCommand Insight 组件分开安装。 
+---
+= 安装异常检测软件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 包含可将机器学习异常检测应用于Insight数据的软件。您可以将此软件与其他OnCommand Insight 组件分开安装。
+
+
+
+== 开始之前
+
+您必须已完成所有安装前提条件。
+
+
+
+== 步骤
+
+. 使用具有sudo权限的帐户登录到异常检测服务器。
+. 复制 `.zip` 包含异常检测软件的文件。
+. 将文件解压缩到 `oci-prelert-<version>-linux-x86_64` 目录。
+. 导航到安装程序所在的目录： `cd oci-prelert-<version>-linux-x86_64`
+. 安装异常检测软件： `sudo ./oci-prelert-install.sh`
++
+在安装期间、系统会提示您输入OnCommand Insight 服务器的服务器名称或IP地址、以及具有管理员权限的帐户的用户名和密码。
+
++
+您可以使用以下命令删除异常检测软件： `sudo /usr/bin/oci-prelert-uninstall.sh`
+
+
+
+
+
+== 结果
+
+软件会自动注册到安装中指定的OnCommand Insight 实例中。该软件只能与注册到的OnCommand Insight 实例通信、并且只能向OnCommand Insight 服务器注册一个软件实例。
+
+如果重新启动运行异常检测软件的服务器或Insight服务器、异常检测过程将自动重新启动。
+
+[NOTE]
+====
+如果通过命令行提供参数来安装异常检测软件、而不是让安装程序提示您输入参数、则该软件将无法注册到Insight服务器、除非您提供以下参数： `--path rest/v1`
+
+====

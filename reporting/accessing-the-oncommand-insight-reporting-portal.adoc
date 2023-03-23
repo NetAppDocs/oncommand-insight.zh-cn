@@ -1,0 +1,68 @@
+---
+permalink: reporting/accessing-the-oncommand-insight-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以直接从Web浏览器、数据仓库或Insight服务器访问OnCommand Insight 报告门户。您可以使用报告门户访问预定义报告或使用数据仓库数据创建自己的报告。 
+---
+= 访问OnCommand Insight 报告门户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以直接从Web浏览器、数据仓库或Insight服务器访问OnCommand Insight 报告门户。您可以使用报告门户访问预定义报告或使用数据仓库数据创建自己的报告。
+
+
+
+== 从Web浏览器访问报告门户
+
+
+
+=== 步骤
+
+. 打开 Web 浏览器。
+. 输入以下URL： `+https://server-name:9300/bi+`
++
+9300表示安装期间指定的默认端口。如果指定了其他端口、则必须更改此端口。
+
+. 输入您的用户名和密码、然后单击*确定*。
+
+
+
+
+== 从Insight服务器访问报告门户
+
+
+
+=== 步骤
+
+. 打开 Web 浏览器。
+. 输入以下URL以访问Insight服务器： `+https://server-name+`
+. 输入您的用户名和密码、然后单击*确定*。
+. 在Insight工具栏中、单击 image:../media/oci-reporting-portal-icon.gif[""]。
+. 在显示的登录页面中、输入您的用户名和密码、然后单击*确定*。
+
+
+
+
+== 从数据仓库访问报告门户
+
+
+
+=== 步骤
+
+. 打开 Web 浏览器。
+. 输入以下URL以访问数据仓库： `+https://server-name/dwh+`
+. 输入您的用户名和密码、然后单击*确定*。
+. 在数据仓库工具栏中、单击 image:../media/oci-reporting-portal-icon.gif[""]。
+. 在显示的登录页面中、输入您的用户名和密码、然后单击*确定*。
+
+
+
+
+=== 结果
+
+此时将显示IBM Cognos Analytics欢迎页面。这是OnCommand Insight 报告门户的默认登录页面。
+
+image::../media/cognos-welcome.gif[欢迎使用Cognos]

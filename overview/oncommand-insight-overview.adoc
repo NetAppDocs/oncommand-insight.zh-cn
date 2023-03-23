@@ -1,0 +1,16 @@
+---
+permalink: overview/oncommand-insight-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过OnCommand Insight 、您可以简化复杂的私有云和混合云以及虚拟IT环境的运营管理。Insight是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。 
+---
+= OnCommand Insight 概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过OnCommand Insight 、您可以简化复杂的私有云和混合云以及虚拟IT环境的运营管理。Insight是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。
+
+Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。

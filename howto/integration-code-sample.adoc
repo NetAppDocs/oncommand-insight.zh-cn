@@ -1,0 +1,126 @@
+---
+permalink: howto/integration-code-sample.html 
+sidebar: sidebar 
+keywords:  
+summary: integration.json文件用于标识有效负载。 
+---
+= integration.json文件信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+integration.json文件用于标识有效负载。
+
+下图提供了一个简单integration.json文件的颜色编码表示。随附的表标识了文件中对象的功能。
+
+image::../media/color-code-example.gif[颜色代码示例]
+
+
+
+== 关于integration.json文件
+
+每个字段都具有以下特征：
+
+* "identifiers"部分是一个唯一的复合密钥、用于在Insight中创建新的"object"
+* "attributes"提供了有关对象的支持元数据。
++
+在这两种情况下、仅会保留该对象(通过标识符标识)的最新报告值。
+
+* "dataPoints"是时间序列数据、必须为数值。Insight会将此处报告的每个值保留90天(默认情况下)、并将其时间序列与标识的对象关联起来。
+
+
+
+
+== 数字表达式
+
+默认情况下、所有值表达式均在集成有效负载中报告为字符串。"identifiers"和"attributes"只能定义字符串值。"dataPoints"可以定义字符串或数字值。数值使用以下修饰符键之一进行定义：
+
+* num—自上次初始化计数器以来接收的总字节数
+* delta—在轮询间隔期间接收的字节数
+* rate—轮询间隔期间的平均接收速率、以每秒字节为单位
++
+可以通过速率和数学运算的组合来实现轮询间隔期间的平均接收速率(以MB/秒为单位)
+
+
+
+
+
+== 数学运算
+
+。 `integration.json` 文件支持以下数学运算：加、减、乘、除。以下示例显示了JSON文件中的乘法、除法和求和操作。
+
+image::../media/net-util-rhel.gif[NET Util RHEL]
+
+
+
+== 关键字
+
+集成软件包关键字string用于强制将通常以十六进制格式呈现的八位字节字符串或从八位字节字符串派生的专有类型呈现为ASCII字符。
+
+八位字节字符串通常包含二进制数据、例如MAC地址和WWN：
+
+[listing]
+----
+        "interface_mac": {
+                  "mibModuleName":      "IF-MIB",
+                  "objectName":         "ifPhysAddress"
+                 }
+----
+ifPhysAddress类型为PhysAddress、它只是一个八位字节字符串：
+
+[listing]
+----
+  PhysAddress ::= TEXTUAL-CONVENTION
+                DISPLAY-HINT "1x:"
+                STATUS       current
+                DESCRIPTION
+                                "Represents media- or physical-level addresses."
+                SYNTAX       OCTET STRING
+----
+如果ifPhysAddress默认呈现为十六进制、则结果为：
+
+[listing]
+----
+"interface_mac": "00:50:56:A2:07:E7"
+----
+但是、如果要将八位字节字符串或从八位字节字符串派生的专有类型解释为ASCII、则可以使用"string"关键字：
+
+[listing]
+----
+        "string_test_1": {
+          "string": {
+            "mibModuleName":      "IF-MIB",
+            "objectName":         "ifPhysAddress"
+          }
+        },
+
+        "string_test_2": {
+          "string": [
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            },
+            {
+              "const": "JSD"
+            },
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            }
+          ]
+        }
+----
+此关键字遵循现有字符串串联规则、在以下示例中的术语之间插入一个空格：
+
+[listing]
+----
+      "string_test_1": "PV¢ç",
+              "string_test_2": "PV¢ç JSD PV¢ç"
+----
+"string"关键字对单个术语或一系列术语起作用、但不对嵌套表达式起作用。只有DataPoint表达式才支持嵌套表达式。如果尝试在dataPoint表达式中使用"string"表达式、则会出现类似以下内容的错误：
+
+_java.lang.IllegalArgumentException：集成软件包"GenericSwitch32"索引"nmp_generic_interface_32"部分"ataPoints"键"tring_test_3"不受支持的JSON数字表达式"｛"string"：｛"mibModuleName"："if-mib"、"objectName"："PhysiftName"｝
+
+某些派生的八位字节字符串类型(例如DisplayString、SnmpAdminString)的优先级为硬编码、高于"string"关键字。这是因为SnmpAdminString是专门采用UTF-8编码的、我们希望正确处理它、而"string"关键字则强制使用snmp_framework返回的默认字符串表示形式、即假定每个字符具有单字节ASCII代码点。

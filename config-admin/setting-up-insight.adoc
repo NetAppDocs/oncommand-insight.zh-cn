@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 要设置Insight、您必须激活Insight许可证、设置数据源、定义用户和通知、启用备份并执行任何所需的高级配置步骤。 
+---
+= 设置Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要设置Insight、您必须激活Insight许可证、设置数据源、定义用户和通知、启用备份并执行任何所需的高级配置步骤。
+
+安装OnCommand Insight 系统后、您必须执行以下设置任务：
+
+* 安装Insight许可证。
+* 在Insight中设置数据源。
+* 设置用户帐户。
+* 配置电子邮件。
+* 根据需要定义SNMP、电子邮件或系统日志通知。
+* 为Insight数据库启用每周自动备份。
+* 执行所需的任何高级配置步骤、包括定义标注和阈值。
+

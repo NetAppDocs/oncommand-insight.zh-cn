@@ -1,0 +1,116 @@
+---
+permalink: howto/finding-the-right-metric.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 会使用有时因数据源而异的名称采集计数器和指标。 
+---
+= 最佳实践：找到合适的指标
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 会使用有时因数据源而异的名称采集计数器和指标。
+
+在为信息板小工具搜索合适的指标或计数器时，请记住，您所需的指标可能与您正在考虑的指标名称不同。虽然OnCommand Insight 中的下拉列表通常按字母顺序排列、但有时某个术语可能不会显示在您认为应该显示的列表中。例如， " 原始容量 " 和 " 已用容量 " 等术语不会显示在大多数列表中。
+
+最佳实践：在*筛选依据*等字段或列选择器等位置使用搜索功能 image:../media/column-picker-button.gif[""] 查找所需内容。例如、搜索"cap"将显示名称中包含"capacity"的所有指标、而无论其发生在何处。然后、您可以轻松地从该短列表中选择所需的指标。
+
+以下是您在搜索指标时可以尝试使用的一些备用短语：
+
+|===
+
+
+| 要查找的内容： | 请尝试搜索： 
+
+
+ a| 
+CPU
+ a| 
+处理器
+
+
+
+ a| 
+Capacity
+ a| 
+已用容量原始容量
+
+已配置容量
+
+存储池容量
+
+<other asset type> 容量
+
+写入容量
+
+
+
+ a| 
+磁盘速度
+ a| 
+执行磁盘类型的磁盘速度最低
+
+
+
+ a| 
+主机
+ a| 
+超大型主机
+
+
+
+ a| 
+虚拟机管理程序
+ a| 
+主机系统管理程序
+
+
+
+ a| 
+微代码
+ a| 
+固件
+
+
+
+ a| 
+Name
+ a| 
+AliasHypervisor名称
+
+存储名称
+
+<other asset type> 名称
+
+简单名称
+
+资源名称
+
+网络结构别名
+
+
+
+ a| 
+读 / 写
+ a| 
+部分R/WPending写入
+
+IOPS -写入
+
+写入容量
+
+延迟—读取
+
+缓存利用率—读取
+
+
+
+ a| 
+虚拟机
+ a| 
+VMI虚拟
+
+|===
+这不是一个全面的列表。这些只是可能的搜索词的示例。

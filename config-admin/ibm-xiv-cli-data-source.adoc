@@ -1,0 +1,186 @@
+---
+permalink: config-admin/ibm-xiv-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'IBM XIV \(cli\)数据源清单可使用XIV命令行界面执行。XIV性能可通过对XIV阵列进行SMI-S调用来实现、XIV阵列在端口5989上运行SMI-S提供程序。' 
+---
+= IBM XIV数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IBM XIV (CLI)数据源清单可使用XIV命令行界面执行。XIV性能可通过对XIV阵列进行SMI-S调用来实现、XIV阵列在端口5989上运行SMI-S提供程序。
+
+
+
+== 术语
+
+OnCommand Insight 从IBM XIV数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+存储系统
+ a| 
+存储
+
+
+
+ a| 
+存储池
+ a| 
+存储池
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 端口要求： TCP 端口 7778
+* XIV管理接口的IP地址
+* 只读用户名和密码
+* XIV命令行界面必须安装在Insight服务器或RAU上
+* 访问验证：使用用户名和密码从Insight服务器登录到XIV用户界面。
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+IP 地址
+ a| 
+XIV存储的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+XIV 存储的用户名
+
+
+
+ a| 
+Password
+ a| 
+XIV 存储的密码
+
+
+
+ a| 
+XIV命令行界面目录的完整路径
+ a| 
+XIV命令行界面目录的完整路径
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔（默认为 40 分钟）
+
+
+
+ a| 
+CLI进程等待超时(毫秒)
+ a| 
+CLI进程超时(默认值为7200000毫秒)
+
+
+
+ a| 
+SMI-S主机IP
+ a| 
+SMI-S提供程序主机的IP地址
+
+
+
+ a| 
+SMI-S端口
+ a| 
+SMI-S Provider主机使用的端口
+
+
+
+ a| 
+SMI-S 协议
+ a| 
+用于连接到 SMI-S 提供程序的协议
+
+
+
+ a| 
+SMI-S命名空间
+ a| 
+SMI-S命名空间
+
+
+
+ a| 
+Username
+ a| 
+SMI-S Provider 主机的用户名
+
+
+
+ a| 
+Password
+ a| 
+SMI-S Provider 主机的密码
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+
+
+ a| 
+SMI-S连接重试次数
+ a| 
+SMI-S连接重试尝试次数
+
+|===

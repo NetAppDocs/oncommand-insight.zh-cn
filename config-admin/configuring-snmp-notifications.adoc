@@ -1,0 +1,60 @@
+---
+permalink: config-admin/configuring-snmp-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 支持针对配置和全局路径策略更改以及违规发出SNMP通知。例如、超过数据源阈值时会发送SNMP通知。 
+---
+= 配置SNMP通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 支持针对配置和全局路径策略更改以及违规发出SNMP通知。例如、超过数据源阈值时会发送SNMP通知。
+
+
+
+== 开始之前
+
+必须已完成以下操作：
+
+* 确定用于整合每种类型事件的陷阱的服务器的IP地址。
++
+要获取此信息、您可能需要咨询系统管理员。
+
+* 确定指定计算机为每种类型的事件获取SNMP陷阱所使用的端口号。
++
+SNMP陷阱的默认端口为162。
+
+* 编译站点上的MIB。
++
+专有MIB随安装软件一起提供、用于支持OnCommand Insight 陷阱。NetApp MIB与所有标准SNMP管理软件兼容、可在Insight服务器上的中找到 `<install dir>\SANscreen\MIBS\sanscreen.mib`。
+
+
+
+
+
+== 步骤
+
+. 单击*管理*并选择*通知*。
+. 向下滚动到页面的* SNMP *部分。
+. 单击*操作*并选择*添加陷阱源*。
+. 在*添加SNMP陷阱收件人*对话框中、输入以下值：
++
+** * IP *
++
+OnCommand Insight 将SNMP陷阱消息发送到的IP地址。
+
+** * 端口 *
++
+OnCommand Insight 将SNMP陷阱消息发送到的端口号。
+
+** *社区字符串*
++
+对于SNMP陷阱消息、请使用"`public`"。
+
+
+
+. 单击 * 保存 * 。
+

@@ -1,0 +1,23 @@
+---
+permalink: dwh/generating-a-manual-data-warehouse-build.html 
+sidebar: sidebar 
+keywords:  
+summary: '在OnCommand Insight 中强制更新标注(运行瞬时数据)后、您需要启动数据仓库构建。您可以等到下一个计划的构建完成、也可以立即启动构建。' 
+---
+= 生成手动数据仓库构建
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在OnCommand Insight 中强制更新标注(运行瞬时数据)后、您需要启动数据仓库构建。您可以等到下一个计划的构建完成、也可以立即启动构建。
+
+
+
+== 步骤
+
+. 以管理员身份登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*计划*。
+. 单击*立即构建*。
+

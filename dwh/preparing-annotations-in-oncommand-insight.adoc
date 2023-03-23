@@ -1,0 +1,23 @@
+---
+permalink: dwh/preparing-annotations-in-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 必须先在OnCommand Insight 中准备标注、然后才能将其导入到数据仓库中。 
+---
+= 在OnCommand Insight 中准备标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必须先在OnCommand Insight 中准备标注、然后才能将其导入到数据仓库中。
+
+
+
+== 步骤
+
+. 以管理员身份登录到OnCommand Insight 门户 `+https://hostname+`、其中 `hostname` 是安装了OnCommand Insight 的系统的名称。
+. 单击*管理*>*故障排除*。在页面底部、单击*高级故障排除*。
+. 在*操作*选项卡中、单击*更新DWH标注(包括已删除)*。
+

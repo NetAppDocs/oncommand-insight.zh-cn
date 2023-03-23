@@ -1,0 +1,36 @@
+---
+permalink: config-admin/deleting-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果不再需要某个标注规则来监控网络中的对象、则可以删除该规则。 
+---
+= 正在删除标注规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果不再需要某个标注规则来监控网络中的对象、则可以删除该规则。
+
+
+
+== 步骤
+
+. 登录到OnCommand InsightWeb UI。
+. 单击*管理*、然后选择*标注规则*。
++
+" 标注规则 " 页面将显示现有标注规则的列表。
+
+. 找到要删除的规则：
++
+** 在标注规则页面上、您可以通过在筛选器框中输入值来筛选标注规则。
+** 如果规则数量超出单个页面的大小、请单击页码以按页浏览标注规则。
+
+
+. 将光标指向要删除的规则、然后单击 image:../media/trash-can-query.gif[""]。
++
+此时将显示一条确认消息，提示您是否要删除此规则。
+
+. 单击 * 确定 * 。
+

@@ -1,0 +1,70 @@
+---
+permalink: config-admin/client-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: 客户端计算机需要使用中间件并修改浏览器、才能使用智能卡并登录证书。已在使用智能卡的客户不需要对其客户端计算机进行其他修改。 
+---
+= 配置客户端以支持智能卡和证书登录
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+客户端计算机需要使用中间件并修改浏览器、才能使用智能卡并登录证书。已在使用智能卡的客户不需要对其客户端计算机进行其他修改。
+
+
+
+== 开始之前
+
+[NOTE]
+====
+有关最新的CAC和证书说明、请参见以下知识库文章(需要支持登录)：
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["如何为OnCommand Insight 配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["如何为OnCommand Insight 数据仓库配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["如何创建证书颁发机构(CA)签名证书并将其导入到OnComand Insight和OnCommand Insight 数据仓库7.3.x中"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["如何在Windows主机上安装的OnCommand Insight 7.3.X中创建自签名证书"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["如何将Cognos证书颁发机构(CA)签名证书导入到OnCommand 数据中心7.3.3及更高版本中"]
+
+
+====
+
+
+== 关于此任务
+
+以下是常见的客户端配置要求：
+
+* 安装智能卡中间件、例如ActivClient (请参见 http://militarycac.com/activclient.htm)[]
+* 修改IE浏览器(请参见 http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
+* 修改Firefox浏览器(请参见 https://militarycac.com/firefox2.htm)[]
+
+
+其他配置步骤包括：
+
+
+
+== 步骤
+
+. 启动Java客户端时禁用不必要的对话框弹出窗口：
++
+.. 打开"`Java`"控制面板。
+.. 选择"`高级`"选项卡。
+.. 选择"`Advanced Security Settings`"。
+.. 清除"`Use certificates and keys in browser keystore`"选项。
+
+
+. 使用Chrome浏览器将软证书导入到用户的个人证书中：
++
+.. 导航到"`Advanced Settings`"。
+.. 选择`Manage Certificates`
+.. 选择"`Personal " certificates选项卡`。
+.. 选择"`Import...`"。
+.. 选择.p12文件。
+.. 完成向导、确保在密码字段中填写用于创建证书的密码。
+
+
++
+要配置Internet Explorer和Firefox浏览器、需要执行类似的步骤。
+
+

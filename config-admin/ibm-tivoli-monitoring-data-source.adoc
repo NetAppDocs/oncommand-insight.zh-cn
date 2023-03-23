@@ -1,0 +1,107 @@
+---
+permalink: config-admin/ibm-tivoli-monitoring-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '此数据源仅用于文件系统利用率。它可以直接与Tivoli监控数据库(也称为Tivoli监控数据仓库)进行通信。支持Oracle和DB2数据库。' 
+---
+= IBM Tivoli监控数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源仅用于文件系统利用率。它可以直接与Tivoli监控数据库(也称为Tivoli监控数据仓库)进行通信。支持Oracle和DB2数据库。
+
+
+
+== Oracle错误消息
+
+[NOTE]
+====
+从OnCommand Insight 7.3.11开始、此数据收集器不再可用。
+
+====
+如果指定的SID导致在尝试连接时显示包含"ORA-12154"的错误消息、请仔细检查Oracle DB网络服务配置。如果访问配置指定了完全限定的主机名(例如"names.default_domain")、请尝试在SID字段中插入完全限定的服务名称。一个简单的示例是与SID的连接 `testdb` 出现故障、并且您的Oracle配置指定了的域``company.com``。可以使用以下字符串来尝试连接、而不是使用基础SID： `testdb.company.com`。
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+Tivoli监控数据库IP
+ a| 
+Tivoli监控服务器的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+Tivoli监控服务器的用户名
+
+
+
+ a| 
+Password
+ a| 
+Tivoli监控服务器的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+Tivoli监控数据库端口
+ a| 
+用于Tivoli监控数据库的端口
+
+
+
+ a| 
+Oracle SID或DB2数据库名称
+ a| 
+Oracle侦听器服务ID或DB2数据库名称
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+要使用的数据库驱动程序
+ a| 
+选择要使用的数据库驱动程序
+
+
+
+ a| 
+用于连接到数据库的协议
+ a| 
+用于连接到数据库的协议
+
+
+
+ a| 
+数据库架构
+ a| 
+输入Database Schema
+
+|===

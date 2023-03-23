@@ -1,0 +1,24 @@
+---
+permalink: reporting/adding_a_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能希望在一个选项卡中显示一组报告信息板、以便于访问。您可以从用户首选项中添加选项卡。 
+---
+= 从用户首选项添加信息板
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能希望在一个选项卡中显示一组报告信息板、以便于访问。您可以从用户首选项中添加选项卡。
+
+.步骤
+. 打开OnCommand Insight 报告门户。
+. 在右上角、单击"人员"图标以显示下拉菜单。
+. 选择My Preferences。
+. 在设置首选项视图中、单击门户选项卡选项卡。
+. 在门户选项卡选项卡中、单击添加链接。
+. 在Public Folders and Dashboard文件夹中、找到要用作选项卡的信息板并选中它。
+. 单击箭头将其移动到"选定条目"框、然后单击确定。
+

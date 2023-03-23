@@ -1,0 +1,46 @@
+---
+permalink: config-admin/adding-fc-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用设备解析FC标识选项卡中提供的手动添加功能将光纤通道设备手动添加到OnCommand Insight。此过程可用于预先识别预计将来会发现的设备。 
+---
+= 手动添加光纤通道设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用设备解析FC标识选项卡中提供的手动添加功能将光纤通道设备手动添加到OnCommand Insight。此过程可用于预先识别预计将来会发现的设备。
+
+
+
+== 开始之前
+
+要成功向系统添加设备标识，您需要知道 WWN 或 IP 地址以及设备名称。
+
+
+
+== 关于此任务
+
+您可以手动添加主机、存储、磁带或未知光纤通道设备。
+
+
+
+== 步骤
+
+. 登录到Insight Web UI
+. 单击*管理*>*设备解析*
+. 单击* FC Identify"*选项卡。
+. 单击添加按钮。
++
+此时将显示添加设备对话框
+
+. 输入 WWN 或 IP 地址，设备名称，然后选择设备类型。
+
+
+
+
+== 结果
+
+您输入的设备将添加到FC Identify选项卡的设备列表中。"`规则`"标识为"手动"。

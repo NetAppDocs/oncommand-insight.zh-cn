@@ -1,0 +1,29 @@
+---
+permalink: config-admin/device-resolution-fc-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: '"FC Identify"屏幕将显示其主机尚未通过自动设备解析进行标识的光纤通道设备的WWN和WWPN。此屏幕还会显示通过手动设备解析解决的所有设备。' 
+---
+= 光纤通道设备解析
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"FC Identify"屏幕将显示其主机尚未通过自动设备解析进行标识的光纤通道设备的WWN和WWPN。此屏幕还会显示通过手动设备解析解决的所有设备。
+
+已通过手动解析解决的设备的状态为"`OK`"、并标识用于标识设备的规则。缺少的设备的状态为"`Unidentified`"。此页面列出了用于标识设备的总覆盖范围。
+
+image::../media/fcidentify.gif[fcidentify]
+
+您可以通过在FC Identify屏幕左侧选择多个设备来执行批量操作。可以通过将鼠标悬停在某个设备上并选择列表最右侧的"Identify"或"Unidentify"按钮对单个设备执行操作。
+
+"总覆盖范围"链接将显示您的配置的"已识别设备数/可用设备数"列表：
+
+* SRM 别名
+* 存储别名
+* 交换机别名
+* 分区
+* 用户定义
+

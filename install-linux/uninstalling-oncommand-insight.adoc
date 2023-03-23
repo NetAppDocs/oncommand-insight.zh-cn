@@ -1,0 +1,16 @@
+---
+permalink: install-linux/uninstalling-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果需要、您可以卸载OnCommand Insight 组件。您必须单独卸载OnCommand Insight 组件。 
+---
+= 卸载OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果需要、您可以卸载OnCommand Insight 组件。您必须单独卸载OnCommand Insight 组件。
+
+每个组件都会单独卸载。

@@ -1,0 +1,16 @@
+---
+permalink: config-admin/pruning-of-inventory-history.html 
+sidebar: sidebar 
+keywords:  
+summary: '从7.3.2版开始、Insight会将清单\(基础\)更改历史记录保留90天。早期版本的Insight会保留安装后的所有清单更改历史记录。从旧版Insight升级后、旧的清单历史记录将被缩减为、然后保留90天。' 
+---
+= 删除清单历史记录
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从7.3.2版开始、Insight会将清单(基础)更改历史记录保留90天。早期版本的Insight会保留安装后的所有清单更改历史记录。从旧版Insight升级后、旧的清单历史记录将被缩减为、然后保留90天。
+
+升级到OnCommand Insight 的当前版本后、历史记录将根据最近90天进行修剪。Insight会从最早的历史记录开始、以每天一次的30天块的形式对历史记录进行删减、直到剩余90天的历史记录为止。然后、每天都会对历史记录进行修剪、以便仅保留90天的`'清单更改历史记录。

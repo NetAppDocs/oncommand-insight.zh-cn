@@ -1,0 +1,44 @@
+---
+permalink: config-admin/types-of-asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: 资产页面汇总了资产的当前状态，并包含指向有关资产及其相关资产的追加信息的链接。 
+---
+= 资产页面的类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资产页面汇总了资产的当前状态，并包含指向有关资产及其相关资产的追加信息的链接。
+
+OnCommand Insight 提供了以下资产的资产页面：
+
+* 虚拟机
+* Volume
+* 内部卷
+* 物理主机
+* 存储池
+* 存储
+* 数据存储库
+* 虚拟机管理程序
+* 应用程序
+* 存储节点
+* qtree
+* Disk
+* VMDK
+* Port
+* 交换机
+* 网络结构
+* 对象存储(例如Atmos、Centera、Amazon S3)
+* 分区
+
+
+映射和屏蔽信息可在分区、卷、虚拟机和主机/虚拟机管理程序资产页面上的表中查看。
+
+[NOTE]
+====
+摘要信息可用于对象存储资产；但是、您只能从"数据源"详细信息页面访问此信息。
+
+====

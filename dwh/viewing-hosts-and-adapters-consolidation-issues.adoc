@@ -1,0 +1,93 @@
+---
+permalink: dwh/viewing-hosts-and-adapters-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 主机及其关联适配器的报告数据来源于清单数据集市。 
+---
+= 查看主机和适配器整合问题
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+主机及其关联适配器的报告数据来源于清单数据集市。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 在左侧导航窗格中、单击*故障排除*。
+. 在*机箱整合*部分中、单击*主机和适配器*。
++
+[NOTE]
+====
+此示例中显示的配置不是有效配置。本地主机上的主要连接器和可用连接器表明Insight服务器和DWH都安装在同一服务器上。本示例的目的是让您熟悉整合表。
+
+====
++
+image::../media/oci-dwh-admin-troubleshooting-hostsandadapters-gif.gif[机箱整合主机和适配器]
+
++
+对于所有主机和适配器、报告它们的每个连接器以及从中提取主机和适配器的主连接器都有一行。仅对于主机和适配器、由一个连接器报告的主机的适配器可能由另一个连接器报告。
+
++
+您还可以查看每个连接器的主机/适配器的OnCommand Insight 更改时间。使用此参数、您可以发现主机/适配器在OnCommand Insight 中发生更新的时间以及同一主机/适配器在其他OnCommand Insight 服务器中发生更新的时间。
+
+. 也可以通过键入文本的一部分并单击*筛选器*来筛选此视图中的数据。要清除筛选器、请删除*筛选器*框中的文本、然后单击*筛选器*。您可以按主机名、主机IP、适配器WWN或OnCommand Insight 对象ID进行筛选。
++
+此筛选器区分大小写。
+
+. 查看以下数据：
++
+** *主机GUID*
++
+此类型整合设备(主机)的全局唯一标识符
+
+** * 主机名 *
++
+数据仓库中显示的整合主机的名称
+
+** *主机IP*
++
+整合主机的IP地址
+
+** *适配器GUID*
++
+主机适配器的全局唯一标识符
+
+** *适配器WWW*
++
+主机适配器的WWN
+
+** *主要连接器*
++
+实际数据源的OnCommand Insight 连接器的名称
+
+** *可用连接器*
++
+整合主机/适配器所在的所有OnCommand Insight 连接器
+
+** * Insight ID*
++
+相关报告连接器的整合主机/适配器的OnCommand Insight ID
+
+** * Insight更改时间*
++
+主机/适配器在OnCommand Insight 中发生更新的时间以及同一主机/适配器在其他OnCommand Insight 服务器中发生更新的时间
+
+
+
+. 要获取连接器的详细信息、请单击连接器。
++
+您可以查看此连接器的以下信息：
+
++
+** 主机名
+** 上次在该连接器上运行数据仓库作业的时间
+** 上次从该连接器收到更改的时间
+** 该连接器所指向的OnCommand Insight 服务器版本
+
+
+

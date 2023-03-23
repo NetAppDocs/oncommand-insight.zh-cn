@@ -1,0 +1,23 @@
+---
+permalink: howto/introduction-to-root-volume-isolation.html 
+sidebar: sidebar 
+keywords:  
+summary: 在NetApp存储系统中、根聚合包含根卷。根卷包含用于管理和控制存储系统的特殊目录和配置文件。管理和控制操作可能会在根聚合中产生大量活动。在Insight系统中查询IO密度最高的前10个内部卷时、结果可能会包括NetApp根聚合作为前10个卷的成员。 
+---
+= 确保 IO 密度报告仅描述内部数据卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在NetApp存储系统中、根聚合包含根卷。根卷包含用于管理和控制存储系统的特殊目录和配置文件。管理和控制操作可能会在根聚合中产生大量活动。在Insight系统中查询IO密度最高的前10个内部卷时、结果可能会包括NetApp根聚合作为前10个卷的成员。
+
+在监控您的环境时，更重要的是确定哪些内部数据卷产生了高 I/O 密度数字。为了准确地识别数据卷，您需要将 NetApp 内部卷与用于监控 I/O 密度的查询隔离开来。
+
+本指南介绍如何轻松识别 NetApp 根聚合，将其与内部卷查询结果隔离以及创建规则，以便在将任何新的 NetApp 根聚合添加到系统中时将其排除。以下Insight功能用于确保I/O密度报告源自内部数据卷。
+
+* 系统将创建一个查询来标识 Insight 监控的所有 NetApp 根聚合。
+* 系统会为每个 NetApp 根聚合分配一个标注。
+* 系统将创建一个标注规则以排除NetApp聚合
+

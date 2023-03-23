@@ -1,0 +1,16 @@
+---
+permalink: install-windows/insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Insight提供了许多日志文件、可帮助您进行研究和故障排除。可用日志将列在日志目录中。您可能希望使用日志监控工具(例如、BareTail)一次性显示所有日志。' 
+---
+= Insight日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight提供了许多日志文件、可帮助您进行研究和故障排除。可用日志将列在日志目录中。您可能希望使用日志监控工具(例如、BareTail)一次性显示所有日志。
+
+日志文件位于中 `<install directory>\SANscreen\wildfly\standalone\log` 目录。采集日志位于中 `<install directory>\SANscreen\Acq\Log` 目录。

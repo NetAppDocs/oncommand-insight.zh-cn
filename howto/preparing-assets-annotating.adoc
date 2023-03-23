@@ -1,0 +1,14 @@
+---
+permalink: howto/preparing-assets-annotating.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过添加标注、您可以将特定标记或标签与所选资产相关联、从而有助于管理和报告这些资产。 
+---
+= 准备资产：添加标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过添加标注、您可以将特定标记或标签与所选资产相关联、从而有助于管理和报告这些资产。

@@ -1,0 +1,79 @@
+---
+permalink: config-admin/ibm-cleversafe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 此数据源收集IBM Cleversafe的清单和性能数据。 
+---
+= IBM Cleverssafe数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源收集IBM Cleversafe的清单和性能数据。
+
+
+
+== 要求
+
+以下是配置此数据源的要求：
+
+* 管理器IP地址或主机名
+* 用户名和密码相同
+* 端口 9440
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+Cleversafe Manager主机名或IP地址
+ a| 
+Cleversafe设备的主机IP地址
+
+
+
+ a| 
+用户名
+ a| 
+用于登录到Cleversafe的名称
+
+
+
+ a| 
+Password
+ a| 
+用于登录到Cleversafe的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+默认值为 60 分钟
+
+
+
+ a| 
+HTTP连接超时)
+ a| 
+默认值为60秒
+
+|===

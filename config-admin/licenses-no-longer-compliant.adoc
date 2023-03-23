@@ -1,0 +1,18 @@
+---
+permalink: config-admin/licenses-no-longer-compliant.html 
+sidebar: sidebar 
+keywords:  
+summary: '如果您在"Insight Licenses"页面上看到"Not Compliance"消息、则Insight管理的TB数将超过您公司许可的TB数。' 
+---
+= 许可证不再合规
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在"Insight Licenses"页面上看到"Not Compliance"消息、则Insight管理的TB数将超过您公司许可的TB数。
+
+"不合规"消息表示贵公司支付的TB数少于Insight当前管理的TB数。不合规消息旁边会显示受管TB数与许可的TB数之间的差值。
+
+Insight系统的运行不会受到影响、但您应联系NetApp代表以增加许可证覆盖范围并更新相应的许可证。

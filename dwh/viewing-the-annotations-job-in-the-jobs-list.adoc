@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-annotations-job-in-the-jobs-list.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在作业列表中查看标注作业、并将标注更改应用于数据仓库数据集市。 
+---
+= 在作业列表中查看标注作业
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在作业列表中查看标注作业、并将标注更改应用于数据仓库数据集市。
+
+
+
+== 步骤
+
+. 以管理员身份登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*作业*。
+

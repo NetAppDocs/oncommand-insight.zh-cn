@@ -1,0 +1,732 @@
+---
+section: config-admin
+title: 配置和管理
+entries:
+- title: 设置Insight
+  url: "/config-admin/setting-up-insight.html"
+  entries:
+  - title: 访问Web UI
+    url: "/config-admin/opening-insight.html"
+  - title: 安装Insight许可证
+    url: "/config-admin/installing-your-insight-licenses.html"
+    entries:
+    - title: OnCommand Insight 许可证
+      url: "/config-admin/oncommand-insight-licenses.html"
+  - title: 设置和管理用户帐户
+    url: "/config-admin/setting-up-and-managing-user-accounts.html"
+    entries:
+    - title: Insight用户角色
+      url: "/config-admin/insight-user-roles.html"
+    - title: 为LDAP配置Insight
+      url: "/config-admin/configuring-insight-for-ldap-s.html"
+      entries:
+      - title: 使用LDAP配置用户定义
+        url: "/config-admin/configuring-user-definitions-using-ldap.html"
+    - title: 更改用户密码
+      url: "/config-admin/changing-user-passwords.html"
+    - title: 编辑用户定义
+      url: "/config-admin/editing-a-user-definition.html"
+    - title: 删除用户帐户
+      url: "/config-admin/deleting-a-user-account.html"
+    - title: 配置单点登录(SSO)
+      url: "/config-admin/configuring-sso.html"
+  - title: 设置登录警告消息
+    url: "/config-admin/configuring-a-login-warning-message.html"
+  - title: Insight安全性
+    url: "/config-admin/security-management.html"
+    entries:
+    - title: 管理Insight服务器上的安全性
+      url: "/config-admin/managing-security-on-the-insight-server.html"
+    - title: 管理本地采集单元上的安全性
+      url: "/config-admin/managing-security-on-the-local-acquisition-unit.html"
+    - title: 管理RAU上的安全性
+      url: "/config-admin/managing-security-on-an-rau.html"
+    - title: 管理数据仓库上的安全性
+      url: "/config-admin/managing-security-on-the-data-warehouse.html"
+    - title: 更改OnCommand Insight 内部用户密码
+      url: "/config-admin/changing-oncommand-insight-internal-user-passwords.html"
+      entries:
+      - title: 使用服务器连接配置UI更改"清单"和"dwh_interne"密码
+        url: "/config-admin/changing-passwords-in-the-server-connection-configuration-ui.html"
+      - title: 使用ODBC管理工具更改dwh密码
+        url: "/config-admin/changing-the-dwh-password-using-the-odbc-administration-tool.html"
+  - title: 支持智能卡和证书登录
+    url: "/config-admin/certificate-login-support.html"
+    entries:
+    - title: 为主机配置智能卡和证书登录
+      url: "/config-admin/host-configuration-for-smart-card-and-certificate-login.html"
+    - title: 配置客户端以支持智能卡和证书登录
+      url: "/config-admin/client-configuration-for-smart-card-and-certificate-login.html"
+    - title: 在Linux服务器上启用CAC
+      url: "/config-admin/cac-configuration-for-linux.html"
+    - title: 为智能卡和证书登录配置数据仓库
+      url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+    - title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.5至7.3.9)
+      url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+    - title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.10及更高版本)
+      url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+    - title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.5至7.3.9)
+      url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+    - title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.10及更高版本)
+      url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+  - title: 为智能卡和证书登录配置数据仓库
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+  - title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.5至7.3.9)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+  - title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.10及更高版本)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+  - title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.5至7.3.9)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+  - title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.10及更高版本)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+  - title: 导入SSL证书
+    url: "/config-admin/importing-an-ssl-certificate.html"
+  - title: 为Insight数据库设置每周备份
+    url: "/config-admin/setting-up-weekly-backups-for-your-oci-database.html"
+    entries:
+    - title: 备份中包含的内容
+      url: "/config-admin/what-s-included-in-the-backup.html"
+  - title: 性能数据归档
+    url: "/config-admin/performance-data-archiving.html"
+    entries:
+    - title: 启用性能归档
+      url: "/config-admin/enabling-performance-archive.html"
+    - title: 正在加载性能归档
+      url: "/config-admin/loading-performance-archive.html"
+  - title: 配置电子邮件
+    url: "/config-admin/configuring-your-email.html"
+    entries:
+    - title: 电子邮件配置前提条件
+      url: "/config-admin/email-configuration-prerequisites.html"
+    - title: 为Insight配置电子邮件
+      url: "/config-admin/configuring-your-email-for-insight.html"
+  - title: 配置SNMP通知
+    url: "/config-admin/configuring-snmp-notifications.html"
+  - title: 启用系统日志工具
+    url: "/config-admin/enabling-the-syslog-facility.html"
+    entries:
+    - title: Insight系统日志内容
+      url: "/config-admin/insight-syslog-contents.html"
+  - title: 配置性能并确保违规通知
+    url: "/config-admin/configuring-performance-and-assurance-violation-notifications.html"
+  - title: 配置系统级别的事件通知
+    url: "/config-admin/configuring-system-level-event-notifications.html"
+  - title: 配置ASUP处理
+    url: "/config-admin/configuring-your-asup-processing.html"
+    entries:
+    - title: AutoSupport (ASUP)软件包中包含的内容
+      url: "/config-admin/what-s-included-in-the-autosupport-package.html"
+  - title: 定义应用程序
+    url: "/config-admin/defining-applications.html"
+    entries:
+    - title: 将应用程序分配给资产
+      url: "/config-admin/assigning-applications-to-assets.html"
+    - title: 编辑应用程序
+      url: "/config-admin/editing-applications.html"
+    - title: 删除应用程序
+      url: "/config-admin/deleting-an-application.html"
+  - title: OnCommand Insight 异常检测的工作原理
+    url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
+    entries:
+    - title: 配置应用程序以进行异常检测
+      url: "/config-admin/configuring-anomaly-detection-for-applications.html"
+    - title: 使用Anomalies部分
+      url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+    - title: 异常检测监控状态
+      url: "/config-admin/anomaly-detection-monitoring-status.html"
+    - title: 创建应用程序性能策略
+      url: "/config-admin/creating-an-application-performance-policy.html"
+  - title: 业务实体层次结构
+    url: "/config-admin/your-business-entities-hierarchy.html"
+    entries:
+    - title: 设计业务实体层次结构
+      url: "/config-admin/designing-your-business-entities-hierarchy.html"
+    - title: 创建业务实体
+      url: "/config-admin/setting-up-business-entities.html"
+    - title: 将业务实体分配给资产
+      url: "/config-admin/assigning-business-entities-to-assets.html"
+    - title: 将业务实体分配给多个资产或从多个资产中删除业务实体
+      url: "/config-admin/adding-or-removing-business-entities-from-multiple-assets.html"
+  - title: 定义标注
+    url: "/config-admin/defining-annotations.html"
+    entries:
+    - title: 使用标注监控您的环境
+      url: "/config-admin/using-annotations-to-monitor-your-environment.html"
+      entries:
+      - title: 管理标注类型
+        url: "/config-admin/managing-annotation-types.html"
+        entries:
+        - title: 默认标注类型
+          url: "/config-admin/predefined-annotation-types.html"
+        - title: 如何分配标注
+          url: "/config-admin/how-annotations-are-assigned.html"
+        - title: 将成本与标注相关联
+          url: "/config-admin/associating-costs-with-annotations.html"
+      - title: 创建自定义标注
+        url: "/config-admin/creating-custom-annotations.html"
+        entries:
+        - title: 手动为资产分配标注
+          url: "/config-admin/manually-assigning-annotations-to-assets.html"
+        - title: 修改标注
+          url: "/config-admin/modifying-annotations.html"
+        - title: 删除标注
+          url: "/config-admin/deleting-annotations.html"
+      - title: 使用标注规则为资产分配标注
+        url: "/config-admin/assigning-annotations-to-assets-using-annotation-rules.html"
+        entries:
+        - title: 默认存储标注规则
+          url: "/config-admin/default-storage-annotation-settings.html"
+        - title: 正在创建标注规则
+          url: "/config-admin/configuring-annotation-rules-for-automatic-assignment.html"
+        - title: 设置标注规则优先级
+          url: "/config-admin/setting-annotation-rule-precedence.html"
+        - title: 修改标注规则
+          url: "/config-admin/modifying-annotation-rules.html"
+        - title: 正在删除标注规则
+          url: "/config-admin/deleting-annotation-rules.html"
+      - title: 正在导入标注值
+        url: "/config-admin/importing-annotation-values.html"
+      - title: 使用查询为多个资产分配标注
+        url: "/config-admin/assigning-annotations-using-a-query.html"
+  - title: 正在查询资产
+    url: "/config-admin/using-queries.html"
+    entries:
+    - title: 查询和信息板中使用的资产
+      url: "/config-admin/assets-used-in-queries-and-dashboards.html"
+    - title: 创建查询
+      url: "/config-admin/creating-a-query.html"
+    - title: 查看查询
+      url: "/config-admin/viewing-queries.html"
+    - title: 将查询结果导出到 .CSV 文件
+      url: "/config-admin/exporting-query-results-to-a-csv-file.html"
+    - title: 修改查询
+      url: "/config-admin/modifying-queries.html"
+    - title: 删除查询
+      url: "/config-admin/deleting-queries.html"
+    - title: 为资产分配多个应用程序或从资产中删除多个应用程序
+      url: "/config-admin/editing-or-removing-applications-in-bulk.html"
+    - title: 编辑或删除资产中的多个标注
+      url: "/config-admin/editing-or-removing-annotations-from-assets-in-bulk.html"
+    - title: 正在复制表值
+      url: "/config-admin/copying-table-values.html"
+  - title: 管理性能策略
+    url: "/config-admin/performance-policy-management.html"
+    entries:
+    - title: 创建性能策略
+      url: "/config-admin/creating-performance-policies.html"
+    - title: 性能策略评估优先级
+      url: "/config-admin/performance-policy-precedence.html"
+      entries:
+      - title: 更改性能策略的优先级
+        url: "/config-admin/configuring-performance-policy-precedence.html"
+    - title: 编辑性能策略
+      url: "/config-admin/modifying-performance-policies.html"
+    - title: 正在删除性能策略
+      url: "/config-admin/deleting-performance-policies.html"
+  - title: 导入和导出用户数据
+    url: "/config-admin/importing-and-exporting-user-data.html"
+- title: Insight安全性
+  url: "/config-admin/security-management.html"
+  entries:
+  - title: 管理Insight服务器上的安全性
+    url: "/config-admin/managing-security-on-the-insight-server.html"
+  - title: 管理本地采集单元上的安全性
+    url: "/config-admin/managing-security-on-the-local-acquisition-unit.html"
+  - title: 管理RAU上的安全性
+    url: "/config-admin/managing-security-on-an-rau.html"
+  - title: 管理数据仓库上的安全性
+    url: "/config-admin/managing-security-on-the-data-warehouse.html"
+  - title: 更改OnCommand Insight 内部用户密码
+    url: "/config-admin/changing-oncommand-insight-internal-user-passwords.html"
+    entries:
+    - title: 使用服务器连接配置UI更改"清单"和"dwh_interne"密码
+      url: "/config-admin/changing-passwords-in-the-server-connection-configuration-ui.html"
+    - title: 使用ODBC管理工具更改dwh密码
+      url: "/config-admin/changing-the-dwh-password-using-the-odbc-administration-tool.html"
+- title: 支持智能卡和证书登录
+  url: "/config-admin/certificate-login-support.html"
+  entries:
+  - title: 为主机配置智能卡和证书登录
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login.html"
+  - title: 配置客户端以支持智能卡和证书登录
+    url: "/config-admin/client-configuration-for-smart-card-and-certificate-login.html"
+  - title: 在Linux服务器上启用CAC
+    url: "/config-admin/cac-configuration-for-linux.html"
+  - title: 为智能卡和证书登录配置数据仓库
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+  - title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.5至7.3.9)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+  - title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.10及更高版本)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+  - title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.5至7.3.9)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+  - title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.10及更高版本)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+- title: 为智能卡和证书登录配置数据仓库
+  url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+- title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.5至7.3.9)
+  url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+- title: 为智能卡和证书登录配置Cognos (OnCommand Insight 7.3.10及更高版本)
+  url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+- title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.5至7.3.9)
+  url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+- title: 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.10及更高版本)
+  url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+- title: 导入SSL证书
+  url: "/config-admin/importing-an-ssl-certificate.html"
+- title: OnCommand Insight 异常检测的工作原理
+  url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
+  entries:
+  - title: 配置应用程序以进行异常检测
+    url: "/config-admin/configuring-anomaly-detection-for-applications.html"
+  - title: 使用Anomalies部分
+    url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+  - title: 异常检测监控状态
+    url: "/config-admin/anomaly-detection-monitoring-status.html"
+  - title: 创建应用程序性能策略
+    url: "/config-admin/creating-an-application-performance-policy.html"
+- title: 业务实体层次结构
+  url: "/config-admin/your-business-entities-hierarchy.html"
+  entries:
+  - title: 设计业务实体层次结构
+    url: "/config-admin/designing-your-business-entities-hierarchy.html"
+  - title: 创建业务实体
+    url: "/config-admin/setting-up-business-entities.html"
+  - title: 将业务实体分配给资产
+    url: "/config-admin/assigning-business-entities-to-assets.html"
+  - title: 将业务实体分配给多个资产或从多个资产中删除业务实体
+    url: "/config-admin/adding-or-removing-business-entities-from-multiple-assets.html"
+- title: 定义标注
+  url: "/config-admin/defining-annotations.html"
+  entries:
+  - title: 使用标注监控您的环境
+    url: "/config-admin/using-annotations-to-monitor-your-environment.html"
+    entries:
+    - title: 管理标注类型
+      url: "/config-admin/managing-annotation-types.html"
+      entries:
+      - title: 默认标注类型
+        url: "/config-admin/predefined-annotation-types.html"
+      - title: 如何分配标注
+        url: "/config-admin/how-annotations-are-assigned.html"
+      - title: 将成本与标注相关联
+        url: "/config-admin/associating-costs-with-annotations.html"
+    - title: 创建自定义标注
+      url: "/config-admin/creating-custom-annotations.html"
+      entries:
+      - title: 手动为资产分配标注
+        url: "/config-admin/manually-assigning-annotations-to-assets.html"
+      - title: 修改标注
+        url: "/config-admin/modifying-annotations.html"
+      - title: 删除标注
+        url: "/config-admin/deleting-annotations.html"
+    - title: 使用标注规则为资产分配标注
+      url: "/config-admin/assigning-annotations-to-assets-using-annotation-rules.html"
+      entries:
+      - title: 默认存储标注规则
+        url: "/config-admin/default-storage-annotation-settings.html"
+      - title: 正在创建标注规则
+        url: "/config-admin/configuring-annotation-rules-for-automatic-assignment.html"
+      - title: 设置标注规则优先级
+        url: "/config-admin/setting-annotation-rule-precedence.html"
+      - title: 修改标注规则
+        url: "/config-admin/modifying-annotation-rules.html"
+      - title: 正在删除标注规则
+        url: "/config-admin/deleting-annotation-rules.html"
+    - title: 正在导入标注值
+      url: "/config-admin/importing-annotation-values.html"
+    - title: 使用查询为多个资产分配标注
+      url: "/config-admin/assigning-annotations-using-a-query.html"
+- title: 正在查询资产
+  url: "/config-admin/using-queries.html"
+  entries:
+  - title: 查询和信息板中使用的资产
+    url: "/config-admin/assets-used-in-queries-and-dashboards.html"
+  - title: 创建查询
+    url: "/config-admin/creating-a-query.html"
+  - title: 查看查询
+    url: "/config-admin/viewing-queries.html"
+  - title: 将查询结果导出到 .CSV 文件
+    url: "/config-admin/exporting-query-results-to-a-csv-file.html"
+  - title: 修改查询
+    url: "/config-admin/modifying-queries.html"
+  - title: 删除查询
+    url: "/config-admin/deleting-queries.html"
+  - title: 为资产分配多个应用程序或从资产中删除多个应用程序
+    url: "/config-admin/editing-or-removing-applications-in-bulk.html"
+  - title: 编辑或删除资产中的多个标注
+    url: "/config-admin/editing-or-removing-annotations-from-assets-in-bulk.html"
+  - title: 正在复制表值
+    url: "/config-admin/copying-table-values.html"
+- title: Insight数据源管理
+  url: "/config-admin/insight-data-source-management.html"
+  entries:
+  - title: 在Insight中设置数据源
+    url: "/config-admin/setting-up-your-data-sources-in-insight.html"
+    entries:
+    - title: 数据源支持信息
+      url: "/config-admin/data-source-support-information.html"
+    - title: 添加数据源
+      url: "/config-admin/adding-data-sources.html"
+      entries:
+      - title: 从电子表格导入数据源
+        url: "/config-admin/importing-data-sources-from-a-spreadsheet.html"
+      - title: 通过修补程序添加新数据源
+        url: "/config-admin/adding-a-new-data-source-patch-us26313-fr.html"
+    - title: 克隆数据源
+      url: "/config-admin/cloning-a-data-source.html"
+    - title: 测试数据源配置
+      url: "/config-admin/testing-the-data-source-configuration.html"
+  - title: 供应商专用数据源参考
+    url: "/config-admin/vendor-specific-data-source-reference.html"
+    entries:
+    - title: 3PAR InServ数据源
+      url: "/config-admin/3par-inserv-firmware-ssh-data-source.html"
+    - title: Amazon AWS EC2数据源
+      url: "/config-admin/amazon-aws-ec2-data-source.html"
+    - title: Brocade Enterprise Fabric Connectivity Manager数据源
+      url: "/config-admin/brocade-efcm-9-5-to-9-7-data-sources.html"
+    - title: Brocade FC交换机数据源
+      url: "/config-admin/brocade-fc-switch-firmware-ssh-data-source.html"
+    - title: Brocade Sphereon/Intrepid交换机数据源
+      url: "/config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html"
+    - title: Cisco FC交换机固件(SNMP)数据源
+      url: "/config-admin/cisco-fc-switch-firmware-snmp-data-source.html"
+    - title: EMC Celerra数据源
+      url: "/config-admin/emc-celerra-ssh-data-source.html"
+    - title: EMC CLARiiON (NaviCLI)数据源
+      url: "/config-admin/emc-clariion-navicli-data-source.html"
+    - title: EMC Data Domain数据源
+      url: "/config-admin/emc-datadomain-data-source.html"
+    - title: EMC ECC StorageScope数据源
+      url: "/config-admin/generic-emc-ecc-storagescope-data-source.html"
+    - title: Dell EMC ECS数据源
+      url: "/config-admin/dell-emc-ecs-data-source.html"
+    - title: EMC Isilon数据源
+      url: "/config-admin/emc-isilon-ssh-data-source.html"
+    - title: Dell EMC PowerStore数据源
+      url: "/config-admin/dell-emc-powerstore-data-source.html"
+    - title: EMC RecoverPoint数据源
+      url: "/config-admin/emc-recoverpoint-data-source.html"
+    - title: 具有SMI-S性能数据源的EMC Solutions Enabler
+      url: "/config-admin/emc-solutions-enabler-cli-with-smi-s-performance.html"
+    - title: EMC VNX数据源
+      url: "/config-admin/emc-vnx-ssh-data-source.html"
+    - title: EMC VNXe数据源
+      url: "/config-admin/emc-vnxe-data-source.html"
+    - title: EMC VPLEX数据源
+      url: "/config-admin/emc-vplex-cli-data-source.html"
+    - title: EMC XtremIO数据源
+      url: "/config-admin/emc-xtremeio-data-source.html"
+    - title: Fujitsu Eternus数据源
+      url: "/config-admin/fujitsu-eternus-data-source.html"
+    - title: Hitachi Content Platform (HCP)数据源
+      url: "/config-admin/hitachi-content-platform-hcp-data-source.html"
+    - title: HDS HiCommand Device Manager数据源
+      url: "/config-admin/hds-hicommand-devicemanager-data-source.html"
+      entries:
+      - title: HDS存储
+        url: "/config-admin/hds-landing-page-terminology-storage.html"
+      - title: HDS存储池
+        url: "/config-admin/hds-landing-page-terminology-storage-pool.html"
+      - title: HDS存储节点
+        url: "/config-admin/hds-landing-page-terminology-storage-node.html"
+    - title: HDS NAS (HNAS)数据源
+      url: "/config-admin/hds-hnas-data-source.html"
+    - title: HP CommandView AE数据源
+      url: "/config-admin/hp-commandview-ae-data-source.html"
+    - title: HP EVA存储数据源
+      url: "/config-admin/hp-eva-storage-sssu-data-source.html"
+    - title: HPE Nimble数据源
+      url: "/config-admin/hpe-nimble-data-source.html"
+    - title: Huawei OceanStor数据源
+      url: "/config-admin/huawei-oceanstor-data-source.html"
+    - title: IBM Cleverssafe数据源
+      url: "/config-admin/ibm-cleversafe-data-source.html"
+    - title: IBM DS数据源
+      url: "/config-admin/ibm-ds-cli-data-source.html"
+    - title: IBM PowerVM数据源
+      url: "/config-admin/ibm-powervm-ssh-data-source.html"
+    - title: IBM SVC数据源
+      url: "/config-admin/ibm-svc-ssh-data-source.html"
+    - title: IBM Tivoli监控数据源
+      url: "/config-admin/ibm-tivoli-monitoring-data-source.html"
+    - title: IBM TotalStorage DS4000数据源
+      url: "/config-admin/ibm-totalstorage-ds4000-data-source.html"
+    - title: IBM XIV数据源
+      url: "/config-admin/ibm-xiv-cli-data-source.html"
+    - title: Infinidat InfiniBox数据源
+      url: "/config-admin/infinidat-infinibox-http-data-source.html"
+    - title: Microsoft Azure计算数据源
+      url: "/config-admin/microsoft-azure-compute-data-source.html"
+    - title: Azure NetApp Files 数据源
+      url: "/config-admin/microsoft-azure-netapp-files-data-source.html"
+    - title: Microsoft Hyper-V数据源
+      url: "/config-admin/microsoft-hyper-v-wmi-data-source.html"
+    - title: NetApp集群模式Data ONTAP 数据源
+      url: "/config-admin/netapp-clustered-data-ontap-data-source.html"
+      entries:
+      - title: 集群模式Data ONTAP 存储
+        url: "/config-admin/cdot-landing-page-terminology-storage.html"
+      - title: 集群模式Data ONTAP 存储池
+        url: "/config-admin/cdot-landing-page-terminology-storage-pool.html"
+      - title: 集群模式Data ONTAP 存储节点
+        url: "/config-admin/cdot-landing-page-terminology-storage-node.html"
+    - title: NetApp集群模式Data ONTAP for Unified Manager数据源
+      url: "/config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html"
+    - title: 在7-模式下运行的NetApp Data ONTAP 数据源
+      url: "/config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html"
+    - title: NetApp E系列数据源
+      url: "/config-admin/netapp-e-series-data-source.html"
+      entries:
+      - title: E系列存储
+        url: "/config-admin/e-series-landing-page-terminology-storage.html"
+      - title: E系列存储池
+        url: "/config-admin/e-series-landing-page-terminology-storage-pool.html"
+      - title: E系列存储节点
+        url: "/config-admin/e-series-landing-page-terminology-storage-node.html"
+    - title: NetApp主机和VM文件系统数据源
+      url: "/config-admin/netapp-host-and-vm-filesystems-data-source.html"
+    - title: NetApp SolidFire 数据源
+      url: "/config-admin/netapp-solidfire-data-source.html"
+    - title: NetApp StorageGRID 数据源
+      url: "/config-admin/netapp-storagegrid-data-source.html"
+    - title: OpenStack数据源
+      url: "/config-admin/openstack-data-source.html"
+    - title: Oracle ZFS数据源
+      url: "/config-admin/oracle-zfs-data-source.html"
+    - title: Pure Storage FlashArray数据源
+      url: "/config-admin/pure-storage-flasharray-http-data-source.html"
+    - title: QLogic FC交换机数据源
+      url: "/config-admin/qlogic-fc-switch-snmp-data-source.html"
+    - title: Red Hat (RHEV)数据源
+      url: "/config-admin/red-hat-rhev-data-source.html"
+    - title: Violin Flash Memory阵列数据源
+      url: "/config-admin/violin-memory-data-source.html"
+    - title: VMware vSphere数据源
+      url: "/config-admin/vmware-vsphere-web-services-data-source.html"
+  - title: 更改数据源凭据
+    url: "/config-admin/changing-data-source-credentials.html"
+  - title: 导致数据收集问题的更改
+    url: "/config-admin/changes-causing-data-collection-problems.html"
+  - title: 详细检查一个数据源
+    url: "/config-admin/examining-one-data-source-in-detail.html"
+  - title: 调查故障数据源
+    url: "/config-admin/researching-a-failed-data-source.html"
+  - title: 控制数据源轮询
+    url: "/config-admin/controlling-data-source-polling.html"
+  - title: 编辑数据源信息
+    url: "/config-admin/editing-data-source-information.html"
+  - title: 编辑多个数据源的信息
+    url: "/config-admin/editing-multiple-data-sources.html"
+  - title: 将数据源标记映射到标注
+    url: "/config-admin/mapping-data-source-tags-to-annotations.html"
+  - title: 删除数据源
+    url: "/config-admin/deleting-a-data-source-from-the-monitoring-environment.html"
+  - title: 什么是数据源修补程序
+    url: "/config-admin/data-source-patches.html"
+    entries:
+    - title: 应用数据源修补程序
+      url: "/config-admin/applying-a-data-source-patch.html"
+    - title: 在一种类型的数据源上安装修补程序
+      url: "/config-admin/installing-a-patch-on-all-data-sources-of-one-type.html"
+    - title: 管理修补程序
+      url: "/config-admin/managing-patches.html"
+    - title: 提交数据源修补程序
+      url: "/config-admin/committing-a-data-source-patch.html"
+    - title: 回滚数据源修补程序
+      url: "/config-admin/rolling-back-a-data-source-patch.html"
+- title: 设备解析
+  url: "/config-admin/device-resolution.html"
+  entries:
+  - title: 开始之前
+    url: "/config-admin/before-you-begin.html"
+  - title: 为您的环境规划设备解析规则
+    url: "/config-admin/creating-rules-for-your-environment.html"
+  - title: 创建设备解析规则
+    url: "/config-admin/creating-device-resolution-rules.html"
+    entries:
+    - title: 启动自动设备解析更新
+      url: "/config-admin/starting-a-automatic-device-resolution-update.html"
+    - title: 规则辅助手动标识
+      url: "/config-admin/rule-assisted-manual-identification.html"
+  - title: 光纤通道设备解析
+    url: "/config-admin/device-resolution-fc-identify.html"
+    entries:
+    - title: 手动添加光纤通道设备
+      url: "/config-admin/adding-fc-devices-manually.html"
+    - title: 从CSV文件导入光纤通道设备标识
+      url: "/config-admin/importing-fc-identification-from-a-csv-file.html"
+    - title: 将光纤通道设备标识导出到CSV文件
+      url: "/config-admin/exporting-fc-identification-to-a-csv-file.html"
+  - title: IP 设备解析
+    url: "/config-admin/device-resolution-ip-identify.html"
+    entries:
+    - title: 手动添加 IP 设备
+      url: "/config-admin/adding-ip-devices-manually.html"
+    - title: 从CSV文件导入IP设备标识
+      url: "/config-admin/importing-ip-identification-from-a-csv-file.html"
+    - title: 将IP设备标识导出到CSV文件
+      url: "/config-admin/exporting-ip-identification-to-a-csv-file.html"
+  - title: 设置首选项选项卡中的选项
+    url: "/config-admin/using-options-in-the-preferences-tab.html"
+  - title: 正则表达式示例
+    url: "/config-admin/regular-expression-examples.html"
+- title: 维护Insight
+  url: "/config-admin/maintaining-insight.html"
+  entries:
+  - title: 管理Insight
+    url: "/config-admin/managing-insight.html"
+  - title: 监控OnCommand Insight 系统运行状况
+    url: "/config-admin/monitoring-oncommand-insight-system-health.html"
+  - title: 删除非活动设备
+    url: "/config-admin/deleting-inactive-devices.html"
+  - title: 审核系统和用户活动
+    url: "/config-admin/auditing-system-and-user-activities.html"
+  - title: 监控网络中的违规
+    url: "/config-admin/opening-the-violations-dashboard.html"
+  - title: 采集单元状态
+    url: "/config-admin/acquisition-unit-status.html"
+  - title: 还原Insight数据库
+    url: "/config-admin/restoring-the-insight-database.html"
+  - title: 正在更新已过期的许可证
+    url: "/config-admin/updating-expired-licenses.html"
+    entries:
+    - title: 许可证不再合规
+      url: "/config-admin/licenses-no-longer-compliant.html"
+    - title: 替换旧版Insight的许可证
+      url: "/config-admin/replacing-licenses-for-older-insight-versions.html"
+  - title: 应用Service Pack
+    url: "/config-admin/applying-a-service-pack.html"
+  - title: 准备特殊的故障排除报告
+    url: "/config-admin/preparing-a-special-troubleshooting-report.html"
+    entries:
+    - title: 手动备份OnCommand Insight 数据库
+      url: "/config-admin/manually-backing-up-the-oci-database.html"
+    - title: 捆绑支持日志
+      url: "/config-admin/bundling-logs-for-support.html"
+    - title: 将信息发送给NetApp支持部门
+      url: "/config-admin/sending-information-to-netapp-support.html"
+    - title: 擦洗数据以传输到支持部门
+      url: "/config-admin/scrubbing-data-for-transfer-to-support-webui.html"
+  - title: 高级故障排除
+    url: "/config-admin/advanced-troubleshooting.html"
+    entries:
+    - title: 配置忽略动态数据的小时数
+      url: "/config-admin/configuring-the-number-of-hours-to-ignore-dynamic-data.html"
+    - title: 为客户支持生成日志
+      url: "/config-admin/generating-logs-for-customer-support.html"
+    - title: 显示系统信息
+      url: "/config-admin/displaying-system-information.html"
+    - title: 列出已安装的OnCommand Insight 组件
+      url: "/config-admin/listing-installed-oncommand-insight-packages.html"
+    - title: 计算数据库对象的数量
+      url: "/config-admin/calculating-the-number-of-database-objects.html"
+    - title: 重新启动OnCommand Insight 服务器
+      url: "/config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html"
+    - title: 使用迁移选项移动MySQL数据
+      url: "/config-admin/moving-mysql-data-using-the-migrate-option.html"
+      entries:
+      - title: 使用命令行移动MySQL数据
+        url: "/config-admin/moving-mysql-data-using-the-command-line.html"
+    - title: 正在强制更新标注
+      url: "/config-admin/forcing-annotation-updates.html"
+    - title: 配置客户端设置
+      url: "/config-admin/configuring-client-settings.html"
+    - title: 检查服务器资源的状态
+      url: "/config-admin/checking-the-status-of-server-resources.html"
+    - title: 查找虚影数据源
+      url: "/config-admin/finding-ghost-data-sources.html"
+    - title: 添加缺少的磁盘型号
+      url: "/config-admin/adding-a-missing-disk-model.html"
+      entries:
+      - title: 查找新磁盘型号所需的信息
+        url: "/config-admin/locating-required-information-for-new-disk-model.html"
+        entries:
+        - title: new_disk_models.txt文件的内容
+          url: "/config-admin/content-of-the-new-disk-models-txt-file.html"
+- title: 监控您的环境
+  url: "/config-admin/monitoring-your-environment.html"
+  entries:
+  - title: 资产页面数据
+    url: "/config-admin/asset-pages.html"
+    entries:
+    - title: 资产页面的类型
+      url: "/config-admin/types-of-asset-pages.html"
+    - title: 在环境中搜索特定资产
+      url: "/config-admin/searching-your-environment-for-specific-assets.html"
+      entries:
+      - title: 高级搜索技术
+        url: "/config-admin/advanced-asset-search-techniques-new.html"
+    - title: 更改显示数据的时间范围
+      url: "/config-admin/changing-the-time-segment-of-the-data-displayed.html"
+    - title: 确定数据源采集状态
+      url: "/config-admin/determining-data-source-acquisition-status.html"
+    - title: 资产页面部分
+      url: "/config-admin/asset-page-sections.html"
+      entries:
+      - title: 摘要
+        url: "/config-admin/summary.html"
+        entries:
+        - title: 使用摘要部分
+          url: "/config-admin/what-the-summary-section-enables-you-to-do.html"
+      - title: 拓扑
+        url: "/config-admin/topology.html"
+        entries:
+        - title: 使用Topology部分
+          url: "/config-admin/what-the-topology-section-enables-you-to-do.html"
+      - title: 用户数据
+        url: "/config-admin/user-data.html"
+        entries:
+        - title: 使用 User Data 部分分配或修改应用程序
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html"
+        - title: 使用用户数据部分分配或修改业务实体
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html"
+        - title: 使用 User Data 部分分配或修改标注
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html"
+      - title: 异常
+        url: "/config-admin/anomalies.html"
+        entries:
+        - title: 使用Anomalies部分
+          url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+      - title: 专家视图
+        url: "/config-admin/expert-view.html"
+        entries:
+        - title: 专家视图指标定义
+          url: "/config-admin/metric-definitions.html"
+        - title: 使用专家视图部分
+          url: "/config-admin/what-the-expert-view-section-enables-you-to-do.html"
+      - title: 相关资产
+        url: "/config-admin/related-assets.html"
+        entries:
+        - title: 使用相关资产部分
+          url: "/config-admin/what-the-related-assets-sections-enable-you-to-do.html"
+      - title: 违规
+        url: "/config-admin/violations.html"
+        entries:
+        - title: 使用Violations部分
+          url: "/config-admin/what-the-violations-section-enables-you-to-do.html"
+      - title: 可自定义的资产页面
+        url: "/config-admin/additional-data.html"
+        entries:
+        - title: 了解"$this"变量
+          url: "/config-admin/understanding-this-variables.html"
+  - title: 平衡网络资源
+    url: "/config-admin/balancing-network-resources.html"
+  - title: 检查网络性能
+    url: "/config-admin/examining-network-performance.html"
+    entries:
+    - title: 分析PC性能较慢的问题
+      url: "/config-admin/analyzing-slow-pc-performance.html"
+    - title: 分析相关资源
+      url: "/config-admin/analyzing-correlated-resources.html"
+  - title: 光纤通道环境监控
+    url: "/config-admin/monitoring-fabric-inventory-and-performance.html"
+  - title: 生存时间（ TTL ）和缩减采样数据
+    url: "/config-admin/time-to-live-ttl-and-downsampling.html"
+  - title: 删除清单历史记录
+    url: "/config-admin/pruning-of-inventory-history.html"
+  - title: VM的NAS路径
+    url: "/config-admin/nas-path-for-vms.html"
+  - title: 容量作为时间序列
+    url: "/config-admin/capacity-as-time-series.html"

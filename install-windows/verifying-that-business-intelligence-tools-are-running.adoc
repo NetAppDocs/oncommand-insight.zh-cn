@@ -1,0 +1,16 @@
+---
+permalink: install-windows/verifying-that-business-intelligence-tools-are-running.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果适用、您应在升级后验证业务智能工具是否正在运行并检索数据。 
+---
+= 验证业务智能工具是否正在运行
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果适用、您应在升级后验证业务智能工具是否正在运行并检索数据。
+
+验证BMC Atrium和ServiceNow等业务智能工具是否正在运行且能够检索数据。其中包括利用REST的BMC连接器和解决方案。

@@ -1,0 +1,25 @@
+---
+permalink: howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用散点图显示每个对象的两组数据。例如、您可以指定要为每个对象显示的IOPS读取和总延迟。使用此图表、您可以根据IOPS和延迟的组合确定您认为有问题的对象。 
+---
+= 将指标A与指标B进行比较、以显示类别和异常情况
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用散点图显示每个对象的两组数据。例如、您可以指定要为每个对象显示的IOPS读取和总延迟。使用此图表、您可以根据IOPS和延迟的组合确定您认为有问题的对象。
+
+
+
+== 步骤
+
+. 将带有散点图的小工具添加到新信息板中：*小工具*>*散点图图表*
+. 将默认设备更改为虚拟机：单击*存储*>*虚拟机*>*总延迟*>* IOPS读取*
++
+系统将显示类似于以下内容的散点图： image:../media/guid-a2c666db-f53d-42b8-82ef-62743b8b0fe2.gif[""]
+
+

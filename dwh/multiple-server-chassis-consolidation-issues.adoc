@@ -1,0 +1,14 @@
+---
+permalink: dwh/multiple-server-chassis-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以查看报告主机和适配器以及SAN交换机和存储阵列的连接器。您还可以查看报告对象并标识主连接器的各种连接器、即为对象选择的连接器。 
+---
+= 多个服务器机箱整合问题
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看报告主机和适配器以及SAN交换机和存储阵列的连接器。您还可以查看报告对象并标识主连接器的各种连接器、即为对象选择的连接器。

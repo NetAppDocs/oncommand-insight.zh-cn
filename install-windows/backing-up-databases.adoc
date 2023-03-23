@@ -1,0 +1,16 @@
+---
+permalink: install-windows/backing-up-databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 在升级之前、您应备份数据仓库和OnCommand Insight 数据库。升级需要对数据仓库数据库进行备份、以便您可以在升级过程稍后还原数据库。Insight的原位升级会备份数据库；但是、作为最佳实践、您应在升级之前备份数据库。 
+---
+= 备份数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在升级之前、您应备份数据仓库和OnCommand Insight 数据库。升级需要对数据仓库数据库进行备份、以便您可以在升级过程稍后还原数据库。Insight的原位升级会备份数据库；但是、作为最佳实践、您应在升级之前备份数据库。
+
+为了避免误报数据、您应在备份Insight数据库之前备份数据仓库数据库。此外、如果您使用的是测试环境、建议您在继续升级之前确保可以还原备份。

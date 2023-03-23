@@ -1,0 +1,33 @@
+---
+permalink: config-admin/generating-logs-for-customer-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果客户支持部门要求、请生成服务器、采集或远程日志以进行故障排除。 
+---
+= 为客户支持生成日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果客户支持部门要求、请生成服务器、采集或远程日志以进行故障排除。
+
+
+
+== 关于此任务
+
+如果NetApp客户支持部门要求、请使用此选项生成日志。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*并选择*故障排除*。
+. 在页面底部的"Other tasks"区域中、单击*高级故障排除*。
+. 在下一页的高级菜单中、单击*故障排除*链接。
+. 单击*日志*选项卡、然后选择要下载的日志文件。
++
+此时将打开一个对话框、您可以在本地打开日志或保存日志。
+
+

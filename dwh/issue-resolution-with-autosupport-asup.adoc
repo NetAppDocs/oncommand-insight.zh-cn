@@ -1,0 +1,68 @@
+---
+permalink: dwh/issue-resolution-with-autosupport-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以将ASUP日志发送给技术支持、以协助进行故障排除。适用于数据仓库的ASUP配置为自动运行。在数据仓库门户中、您可以禁用自动发送过程、选择包括数据仓库数据库的备份或启动向ASUP的传输。 
+---
+= 使用ASUP进行问题描述 解析
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将ASUP日志发送给技术支持、以协助进行故障排除。适用于数据仓库的ASUP配置为自动运行。在数据仓库门户中、您可以禁用自动发送过程、选择包括数据仓库数据库的备份或启动向ASUP的传输。
+
+日志中的信息将使用HTTPS协议转发给技术支持。除非您先在Insight服务器上配置ASUP、否则不会使用ASUP转发任何数据。
+
+数据仓库会将日志发送到OnCommand Insight 服务器、该服务器是数据仓库门户连接器页面中列出的第一个连接器。自动过程将发送以下文件：
+
+* 数据仓库日志、其中包括以下内容：
++
+** boot.log (包括备份)
+** dwh.log (包括dwh.log.1等备份)
+** dhw_troubleshoot.log
+** dwh_upgrade.log (包括备份)
+** WildFly.log (包括备份)
+** ldap.log (包括备份)
+** 数据仓库管理数据库的SQL转储
+** MySQL：my.cnf、.err和查询日志较慢
+** 完整的InnoDB状态
+
+
+* Cognos日志、其中包括以下内容：
++
+** cognos-logs.zip
++
+包含中的Cognos日志文件 `<install>\cognos\c10_64\logs` 目录。此外、它还包含Cognos生成的日志以及OnCommand InsightAP.log文件、其中包含登录和退出OnCommand Insight 报告的用户的所有日志记录。
+
+** DailyBackup.zip
++
+包含公共文件夹中报告项目的备份。"我的文件夹"的内容不包括在此中。
+
+** Cognos_``version``_``site name``_content_store.zip
++
+包含Cognos内容存储的完整备份。
+
+
+
+
+
+您可以手动生成故障排除报告。故障排除报告.zip文件包含以下数据仓库信息：
+
+* boot.log (包括备份)
+* dwh.log (包括dwh.log.1等备份)
+* dwh_upgrade.log (包括备份)
+* wildfly.log (包括备份)
+* ldap.log (包括备份)
+* c：\Program Files\SANscreen\wildfly\standalone\log\dwh\中的转储文件
+* 数据仓库管理数据库的SQL转储
+* MySQL：my.cnf、.err和查询日志较慢
+* 完整的InnoDB状态
+
+
+[NOTE]
+====
+ASUP不会自动向技术支持发送OnCommand Insight 数据库的备份。
+
+====

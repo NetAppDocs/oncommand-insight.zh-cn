@@ -1,0 +1,35 @@
+---
+permalink: howto/examining-the-greedy-resource.html 
+sidebar: sidebar 
+keywords: greedy,degraded 
+summary: 单击标识为贪婪资源的内部卷将打开卷CDot_Boston：SP1：vol_01的登录页面。 
+---
+= 检查耗用资源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+单击标识为贪婪资源的内部卷将打开卷CDot_Boston：SP1：vol_01的登录页面。
+
+请注意、在摘要详细信息中、此内部卷是一个适用于不同应用程序(差旅预订)的资源、尽管包含在不同的存储池中、但与Exchange 2016的内部卷(CDot_Boston_N1)位于同一节点上
+
+image::../media/cdot-boston-sp1-part1.gif[cdot Boston SP1第1部分]
+
+image::../media/cdot-boston-sp1-part2.gif[cdot Boston SP1第2部分]
+
+登录页面将显示：
+
+* 与差旅预订应用程序关联的内部卷。
+* 在相关资源中标识新的存储池。
+* 您正在检查的初始内部卷(CDot_Boston：SP2：vol_01)标识为`Degraded`。
+* 在性能图中、该应用程序具有稳定的延迟配置文件、并且大致具有IOPS峰值、同时我们还可以看到Exchange应用程序上的延迟峰值。
++
+这可能表示Exchange应用程序上的延迟峰值可能是由于此卷上的IOPS峰值引起的。
+
+
+
+在"资源"部分的图表右侧、请注意相关的"已降级"资源、即Exchange 2016内部卷(CDot_Boston: SP2：vol_01)。单击此复选框可将降级的内部卷包括在性能图中。对齐这两个性能图可显示延迟和IOPS峰值几乎同时发生。这告诉我们、我们希望更好地了解差旅预订应用程序。我们需要了解应用程序为何会遇到如此长的IOPS峰值。
+
+检查与差旅预订应用程序关联的存储池可能会确定该应用程序出现IOPS峰值的原因。单击CDot_Boston：SP1以查看存储池登录页面。

@@ -1,0 +1,22 @@
+---
+permalink: dwh/managing-data-warehouse-and-reporting-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 报告工具的用户帐户、用户身份验证和用户授权是从数据仓库\(DWH)定义和管理的。根据这些配置、用户和管理员可以访问部分或所有可用的OnCommand Insight 报告。' 
+---
+= 管理数据仓库和报告用户帐户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 报告工具的用户帐户、用户身份验证和用户授权是从数据仓库(DWH)定义和管理的。根据这些配置、用户和管理员可以访问部分或所有可用的OnCommand Insight 报告。
+
+要访问数据仓库中的用户管理、需要具有系统管理员权限的帐户。其中包括：
+
+* 数据仓库的完整管理功能
+* 配置和维护所有用户帐户
+* 对数据库的读取访问
+* 可以在ETL中设置连接器、计划数据仓库作业、重置数据库、分配或更改角色以及添加和删除用户帐户
+

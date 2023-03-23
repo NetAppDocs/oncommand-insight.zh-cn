@@ -1,0 +1,188 @@
+---
+permalink: config-admin/amazon-aws-ec2-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 使用此数据源来发现Amazon AWS EC2的清单和性能。 
+---
+= Amazon AWS EC2数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 使用此数据源来发现Amazon AWS EC2的清单和性能。
+
+
+
+== 前提条件：
+
+要从 Amazon EC2 设备收集数据，您必须具有以下信息：
+
+* 您必须具有IAM访问密钥ID
+* 您必须拥有Amazon EC2云帐户的机密访问密钥
+* 您必须具有 " 列表组织 " 权限
+* 端口433 HTTPS
+* EC2 实例可以报告为虚拟机，也可以报告为主机（不太自然）。EBS 卷既可以报告为虚拟机使用的虚拟磁盘，也可以报告为虚拟磁盘提供容量的数据存储库。
+
+
+访问密钥由一个访问密钥 ID （例如， AKIIOSFODNN7EXAMPLE ）和一个机密访问密钥（例如， wJALRXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY ）组成。如果使用Amanzon EC2 SDK、REST或查询API操作、则可以使用访问密钥对向EC@发出的编程请求进行签名。这些密钥随 Amazon 的合同一起提供。
+
+
+
+== 如何配置此数据源
+
+要配置Amazon AWS EC2数据源、您需要为AWS帐户提供AWS IAM访问密钥ID和机密访问密钥。
+
+根据下表填写数据源字段：
+
+
+
+== 配置：
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+AWS 地区
+ a| 
+选择 AWS 区域
+
+
+
+ a| 
+IAM 角色
+ a| 
+仅在 AWS 中的 AU 上采集时使用。有关IAM角色的详细信息、请参见下文。
+
+
+
+ a| 
+AWS IAM 访问密钥 ID
+ a| 
+输入 AWS IAM 访问密钥 ID 。如果不使用 IAM 角色，则此为必填项。
+
+
+
+ a| 
+AWS IAM 机密访问密钥
+ a| 
+输入 AWS IAM 机密访问密钥。如果不使用 IAM 角色，则此为必填项。
+
+
+
+ a| 
+我了解AWS会为我的API请求付费
+ a| 
+选中此复选框可验证您是否了解AWS会为Insight轮询发出的API请求向您收费
+
+|===
+
+
+== 高级配置：
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+包括其他区域
+ a| 
+指定要包括在轮询中的其他区域。
+
+
+
+ a| 
+跨帐户角色
+ a| 
+用于访问不同 AWS 帐户中的资源的角色。
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+HTTP连接和套接字超时(秒)
+ a| 
+HTTP连接超时(默认值为300秒)
+
+
+
+ a| 
+包括AWS标记
+ a| 
+选中此选项可在Insight标注中启用AWS标记支持
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔(默认值为1800秒)
+
+|===
+
+
+== 将AWS标记映射到Insight标注
+
+AWS EC2数据源包含一个选项、可用于使用AWS上配置的标记填充Insight标注。标注的名称必须与AWS标记完全相同。Insight将始终填充同名文本类型的标注、并"尽力"填充其他类型(数字、布尔值等)的标注。如果您的标注类型不同、而数据源无法填充、则可能需要删除此标注并将其重新创建为文本类型。
+
+请注意、AWS区分大小写、而Insight不区分大小写。因此、如果您在Insight中创建了名为"`owner`"的标注、并在AWS中创建了名为"`owner`"、"`owner`"和"`owner`"的标记、则"`owner`"的所有AWS变体都将映射到Insight的"`owner`"标注。
+
+相关信息：
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["管理IAM用户的访问密钥"]
+
+
+
+== 包括其他区域
+
+在 AWS Data Collector * 高级配置 * 部分中，您可以设置 * 包括额外区域 * 字段以包括其他区域，以逗号或分号分隔。默认情况下，此字段设置为 * 。 * _ * ，它会在所有美国 AWS 地区收集数据。要在 _all_ 地区收集数据，请将此字段设置为 * 。 * _ * 。
+
+如果 * 包括额外区域 * 字段为空，则数据收集器将收集在 * 配置 * 部分中指定的 * AWS 区域 * 字段中指定的资产。
+
+
+
+== *从AWS子帐户收集*
+
+Insight支持在一个AWS数据收集器中收集AWS的子帐户。此收集的配置在 AWS 环境中执行：
+
+* 您必须将每个子帐户配置为具有一个AWS角色、此角色允许主帐户ID从子帐户访问EC2详细信息。
+* 每个子帐户都必须将角色名称配置为相同的字符串
+* 在"*跨帐户角色*"字段的"Insight AWS Data Collector *高级配置*"部分中输入此角色名称字符串。
+
+
+最佳实践：强烈建议将AWS预定义的AmazonEC2ReadOnlyAccess策略分配给ECS主帐户。此外、在数据源中配置的用户应至少分配预定义的_AWSOrganizationsReadOnlyAccess__policy、以便查询AWS。
+
+有关配置环境以允许Insight从AWS子帐户收集数据的信息、请参见以下内容：
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html["教程：使用 IAM 角色跨 AWS 帐户委派访问"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html["AWS 设置：在您拥有的另一个 AWS 帐户中提供对 IAM 用户的访问权限"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["创建角色以将权限委派给 IAM 用户"]
+
+
+
+== IAM 角色
+
+使用_IAM role_ security时、您必须确保您创建或指定的角色具有访问资源所需的适当权限。
+
+例如，如果您创建了一个名为 _InstanceEE2ReadOnly" 的 IAM 角色，则必须设置此策略，以便为此 IAM 角色向所有 EC2 资源授予 EC2 只读列表访问权限。此外，您还必须授予 STS （安全令牌服务）访问权限，以便允许此角色跨帐户承担角色。
+
+创建 IAM 角色后，您可以在创建新的 EC2 实例或任何现有 EC2 实例时附加此角色。
+
+将 IAM 角色 _InstanceEE2ReadOnly" 附加到 EC2 实例后，您将能够通过实例元数据按 IAM 角色名称检索临时凭据，并使用它通过在此 EC2 实例上运行的任何应用程序访问 AWS 资源。
+
+
+NOTE: 仅当采集单元在AWS实例中运行时、才能使用IAM角色。

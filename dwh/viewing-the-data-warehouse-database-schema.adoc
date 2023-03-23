@@ -1,0 +1,31 @@
+---
+permalink: dwh/viewing-the-data-warehouse-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能需要查看数据库架构、以了解如何使用另一个API中的数据或开发SQL查询。模式选项会列出模式中的所有数据库、表和列。您还可以查看显示表关系的数据库架构图。 
+---
+= 查看数据仓库数据库架构
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要查看数据库架构、以了解如何使用另一个API中的数据或开发SQL查询。模式选项会列出模式中的所有数据库、表和列。您还可以查看显示表关系的数据库架构图。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 单击 image:../media/oci-7-help-icon-gif.gif[""] 在数据仓库工具栏上、选择*文档*。
+. 选择*数据库架构*。
+. 例如、在*数据库*窗格中、单击* DWH清单*。
+. 在*所有表*窗格中、向下滚动到* DWH清单*部分、然后单击*标注值*表。
++
+image::../media/oci-dwh-databaseschema-inventory-annotation-gif.gif[清单数据集市标注值表]
+
++
+此时将显示dwh_inventory.annotation表。
+
+

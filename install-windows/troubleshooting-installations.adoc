@@ -1,0 +1,16 @@
+---
+permalink: install-windows/troubleshooting-installations.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 安装通常通过安装向导进行管理。但是、客户可能会在升级期间遇到问题、或者由于计算机环境而发生冲突。 
+---
+= 对安装进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 安装通常通过安装向导进行管理。但是、客户可能会在升级期间遇到问题、或者由于计算机环境而发生冲突。
+
+此外、您还应确保安装安装软件所需的所有OnCommand Insight 许可证。

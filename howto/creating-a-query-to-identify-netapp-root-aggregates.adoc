@@ -1,0 +1,36 @@
+---
+permalink: howto/creating-a-query-to-identify-netapp-root-aggregates.html 
+sidebar: sidebar 
+keywords:  
+summary: 查询可根据用户选择的条件精细地进行搜索。使用查询可以搜索环境中包含 NetApp 根聚合的内部卷。 
+---
+= 创建查询以确定环境中的 NetApp 根聚合
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+查询可根据用户选择的条件精细地进行搜索。使用查询可以搜索环境中包含 NetApp 根聚合的内部卷。
+
+
+
+== 步骤
+
+. 在OnCommand Insight Web UI中、创建一个查询以确定环境中的NetApp根聚合：*查询*>*新查询*>*选择资源类型*
+. 单击*存储池*
+. 输入根聚合的名称
++
+此示例使用"`aggr0`"作为名称。创建聚合时，只需满足以下名称要求：
+
++
+** 它必须以字母或下划线（ _ ）开头。
+** 它只能包含字母，数字和下划线。
+** 字符数不能超过 250 个。大多数情况下，聚合的名称为 aggr0 ， aggr_0 或类似的内容。要确定环境中的所有 NetApp 根聚合，可能需要一个迭代过程。
+
+
+. 单击 * 保存 * 并输入新查询的名称。
++
+如前所述，此过程可能是一个迭代过程，需要多次查询才能确定所有 NetApp 根聚合。
+
+

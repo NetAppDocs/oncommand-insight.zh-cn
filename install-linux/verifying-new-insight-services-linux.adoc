@@ -1,0 +1,37 @@
+---
+permalink: install-linux/verifying-new-insight-services-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 安装后、您应验证服务器上是否存在新组件。 
+---
+= 验证是否已安装新的Insight组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装后、您应验证服务器上是否存在新组件。
+
+
+
+== 步骤
+
+. 要显示当前正在登录到的服务器上运行的服务列表、请键入：
++
+`sudo oci-service.sh status all`
+
+. 根据您登录到的服务器、在列表中检查以下Insight服务、并确保其状态为"`Running`"。
++
+** Insight服务器：wildfly、acquisition、mysql、弹性搜索
+** 数据仓库服务器：wildfly、mysql
+** 远程采集服务器：采集
+
+
+
+
+
+
+== 结果
+
+如果未列出这些组件、请联系技术支持。

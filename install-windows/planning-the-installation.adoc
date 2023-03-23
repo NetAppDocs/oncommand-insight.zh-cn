@@ -1,0 +1,26 @@
+---
+permalink: install-windows/planning-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 要确保部署成功、您必须在安装OnCommand Insight 之前考虑某些系统元素。 
+---
+= 规划部署
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要确保部署成功、您必须在安装OnCommand Insight 之前考虑某些系统元素。
+
+
+
+== 关于此任务
+
+规划Insight部署包括考虑以下系统要素：
+
+* Insight架构
+* 要监控的网络组件
+* Insight安装前提条件和服务器要求
+* Insight Web浏览器要求
+

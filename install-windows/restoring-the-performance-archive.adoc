@@ -1,0 +1,31 @@
+---
+permalink: install-windows/restoring-the-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: 对于执行性能归档的系统、升级过程只会还原7天的归档数据。您可以在完成升级后还原其余归档数据。 
+---
+= 还原性能归档
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于执行性能归档的系统、升级过程只会还原7天的归档数据。您可以在完成升级后还原其余归档数据。
+
+
+
+== 关于此任务
+
+要还原性能归档、请执行以下步骤。
+
+
+
+== 步骤
+
+. 在工具栏上、单击*管理*>*故障排除*
+. 在还原部分的*加载性能归档*下、单击*加载*。
++
+归档加载在后台处理。加载完整归档可能需要很长时间、因为每天的归档性能数据都会填充到Insight中。归档加载的状态将显示在此页面的归档部分中。
+
+

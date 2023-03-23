@@ -1,0 +1,87 @@
+---
+permalink: config-admin/generic-emc-ecc-storagescope-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: EMC ECC StorageScope设备有三种类型的数据源：5.x、6.0和6.1。 
+---
+= EMC ECC StorageScope数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EMC ECC StorageScope设备有三种类型的数据源：5.x、6.0和6.1。
+
+
+
+== Configuration
+
+[NOTE]
+====
+从OnCommand Insight 7.3.11开始、此数据收集器不再可用。
+
+====
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+ECC服务器
+ a| 
+ECC服务器的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+ECC服务器的用户名
+
+
+
+ a| 
+Password
+ a| 
+ECC服务器的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+ECC端口
+ a| 
+用于ECC服务器的端口
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为30分钟)
+
+
+
+ a| 
+连接到数据库的协议
+ a| 
+用于连接到数据库的协议
+
+
+
+ a| 
+查询文件系统信息
+ a| 
+选择以检索WWN别名和文件系统的详细信息。
+
+|===

@@ -1,0 +1,25 @@
+---
+permalink: install-windows/verifying-data-warehouse-has-historical-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 还原自定义报告后、您应通过查看自定义报告来验证数据仓库是否正在收集历史数据。 
+---
+= 验证数据仓库是否包含历史数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+还原自定义报告后、您应通过查看自定义报告来验证数据仓库是否正在收集历史数据。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://fqdn/dwh+`。
+. 在数据仓库工具栏上、单击 image:../media/oci-reporting-portal-icon.gif[""] 打开Insight报告门户并登录。
+. 打开包含自定义报告的文件夹(例如、自定义报告)。
+. 单击 image:../media/run-with-options.gif[""] 打开此报告的输出格式选项。
+. 选择所需选项并单击*运行*、以确保这些选项已填充存储、计算和交换机历史数据。
+

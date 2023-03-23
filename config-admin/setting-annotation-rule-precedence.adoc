@@ -1,0 +1,33 @@
+---
+permalink: config-admin/setting-annotation-rule-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: 默认情况下、OnCommand Insight 会按顺序评估标注规则；但是、如果您希望Insight按特定顺序评估规则、则可以配置OnCommand Insight 评估标注规则的顺序。 
+---
+= 设置标注规则优先级
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下、OnCommand Insight 会按顺序评估标注规则；但是、如果您希望Insight按特定顺序评估规则、则可以配置OnCommand Insight 评估标注规则的顺序。
+
+
+
+== 步骤
+
+. 登录到InsightWeb UI。
+. 单击*管理*并选择*标注规则*。
++
+" 标注规则 " 页面将显示现有标注规则的列表。
+
+. 将光标置于标注规则上。
++
+优先级箭头显示在规则的右侧。
+
+. 要在列表中上移或下移规则、请单击向上箭头或向下箭头。
++
+默认情况下、新规则会按顺序添加到规则列表中。在 Insight 评估标注规则时，在单个资产页面上手动设置的标注优先于基于规则的标注。
+
+

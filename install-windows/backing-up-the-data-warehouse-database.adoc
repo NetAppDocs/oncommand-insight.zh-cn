@@ -1,0 +1,262 @@
+---
+permalink: install-windows/backing-up-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以将数据仓库数据库(也包括Cognos备份)备份到文件、然后使用数据仓库门户进行还原。通过此类备份、您可以迁移到其他数据仓库服务器或升级到新的数据仓库版本。' 
+---
+= 备份数据仓库数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将数据仓库数据库(也包括Cognos备份)备份到文件、然后使用数据仓库门户进行还原。通过此类备份、您可以迁移到其他数据仓库服务器或升级到新的数据仓库版本。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://fqdn/dwh+`。
+. 从左侧导航窗格中、选择*备份/还原*。
+. 单击*备份*并选择备份配置：
++
+.. 除性能数据集市外的所有数据集市
+.. 所有数据集市
+
+
++
+此操作可能需要30分钟或更长时间。
+
++
++数据仓库会创建一个备份文件并显示其名称。
+
+. 右键单击备份文件并将其保存到所需位置。
++
+您可能不想更改文件名、但应将文件存储在数据仓库安装路径之外。
+
++
+数据仓库备份文件包括DWH实例的MySQL、自定义架构(MySQL数据库)和表、LDAP配置、将Cognos连接到MySQL数据库的数据源(而不是将Insight服务器连接到设备以获取数据的数据源)； 导入和导出导入或导出报告的任务；报告安全角色、组和命名空间；用户帐户； 任何已修改的报告门户报告以及任何自定义报告、无论这些报告存储在何处、即使在My Folders目录中也是如此。不会备份Cognos系统配置参数、例如SMTP服务器设置和Cognos自定义内存设置。
+
++
+备份自定义表的默认架构包括：
+
++
+|===
+
+
+ a| 
+dwh_capacity
+
+
+
+ a| 
+dwh_capacity_staging
+
+
+
+ a| 
+dwh_dimensions
+
+
+
+ a| 
+dwh_fs_util
+
+
+
+ a| 
+dwh_inventory
+
+
+
+ a| 
+dwh_inventory_staging
+
+
+
+ a| 
+dwh_inventory_瞬 时
+
+
+
+ a| 
+dwh_management
+
+
+
+ a| 
+dwh_performance
+
+
+
+ a| 
+dwh_performation_staging
+
+
+
+ a| 
+dwh_ports
+
+
+
+ a| 
+dwh_reports
+
+
+
+ a| 
+dwh_sa_staging
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+从备份中排除自定义表的架构包括：
+
++
+|===
+
+
+ a| 
+信息模式
+
+
+
+ a| 
+采集
+
+
+
+ a| 
+cloud模型
+
+
+
+ a| 
+host_data
+
+
+
+ a| 
+InnoDB
+
+
+
+ a| 
+清单
+
+
+
+ a| 
+清单私有
+
+
+
+ a| 
+Inventory_Time
+
+
+
+ a| 
+日志
+
+
+
+ a| 
+管理
+
+
+
+ a| 
+MySQL
+
+
+
+ a| 
+NAS
+
+
+
+ a| 
+性能
+
+
+
+ a| 
+performation_schema
+
+
+
+ a| 
+performation_views.
+
+
+
+ a| 
+SANscreen
+
+
+
+ a| 
+擦除
+
+
+
+ a| 
+服务保证
+
+
+
+ a| 
+测试
+
+
+
+ a| 
+温度
+
+
+
+ a| 
+工作台
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+在手动启动的任何备份中、 `.zip` 创建的文件包含以下文件：
+
++
+** 每日备份 `.zip` 文件、其中包含Cognos报告定义
+** 报告备份 `.zip` 文件、其中包含Cognos中的所有报告、包括My Folders目录中的报告
+** 数据仓库数据库备份文件除了可以随时执行的手动备份之外、Cognos还会创建每日备份(每天自动生成一个名为的文件) `DailyBackup.zip`)、包括报告定义。每日备份包括产品随附的前几个文件夹和软件包。My Folders目录以及您在产品的顶层文件夹之外创建的任何目录不会包含在Cognos备份中。
+
+
++
+[NOTE]
+====
+由于Insight在中命名文件的方式不同 `.zip` file、某些解压缩程序在打开文件时会显示该文件为空。只要 `.zip` 文件的大小大于0、并且不以结尾 `.bad` 扩展名 `.zip` 文件有效。您可以使用其他解压缩程序(如7-Zip或WinZip®)打开此文件。
+
+====
+

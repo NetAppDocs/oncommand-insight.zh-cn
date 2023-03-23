@@ -1,0 +1,20 @@
+---
+permalink: install-windows/data-source-support-information.html 
+sidebar: sidebar 
+keywords:  
+summary: 在规划配置时、您应确保Insight可以监控环境中的设备。为此、您可以查看数据源支持列表、了解有关操作系统、特定设备和协议的详细信息。某些数据源可能并非在所有操作系统上都可用。 
+---
+= 数据源支持信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在规划配置时、您应确保Insight可以监控环境中的设备。为此、您可以查看数据源支持列表、了解有关操作系统、特定设备和协议的详细信息。某些数据源可能并非在所有操作系统上都可用。
+
+
+
+== 最新版本的数据源支持列表的位置
+
+OnCommand Insight 数据源支持列表随每个Service Pack版本一起更新。文档的最新版本可在中找到 https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["NetApp 支持站点"]。。

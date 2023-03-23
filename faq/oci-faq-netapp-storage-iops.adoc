@@ -1,0 +1,36 @@
+---
+permalink: faq/oci-faq-netapp-storage-iops.html 
+sidebar: sidebar 
+keywords:  
+summary: 本常见问题解答解答解答了有关IOPS数量如何从Data ONTAP 存储系统派生的常见问题。 
+---
+= Data ONTAP 存储IOPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本常见问题解答解答解答了有关IOPS数量如何从Data ONTAP 存储系统派生的常见问题。
+
+
+
+== 如何从Data ONTAP 存储系统派生存储IOPS
+
+* 存储阵列级别IOPS会从内部卷IOPS进行聚合
+* 存储节点级别的IOPS包括元数据操作系统
+* 存储池级别IOPS不包括元数据操作系统；仅测量磁盘
+* 内部卷级别IOPS包括读取+写入操作(操作)+其他操作
+
+
+
+
+== 问题-聚合IOPS有时如何高于节点IOPS？
+
+在CDOT 8.3.1之前、节点IOPS由协议IOPS组成。在CDOT 8.3.1中。之后、它们由系统成分卷指标组成。它们包括"仅"数据请求、通过前台发出的请求、但不包括后端任务、如snapmirrors、重复数据删除等。另一方面、这些任务会产生磁盘IOPS、因此会产生聚合IOPS。因此、您可能会看到聚合IOPS高于节点IOPS。
+
+
+
+== 问题-如何计算元数据或其他操作系统
+
+其他操作系统=总计-(读取+写入)

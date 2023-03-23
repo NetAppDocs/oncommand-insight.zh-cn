@@ -1,0 +1,67 @@
+---
+permalink: dwh/viewing-switches-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 报告的交换机数据来自清单数据集市。对于所有交换机、报告其情况的每个连接器以及从中提取每个交换机的主连接器都有一行。 
+---
+= 查看交换机整合问题
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+报告的交换机数据来自清单数据集市。对于所有交换机、报告其情况的每个连接器以及从中提取每个交换机的主连接器都有一行。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击"*故障排除"。
+. 在*机箱整合*部分中、单击* SAN交换机*。
+. 也可以通过键入文本的一部分并单击*筛选器*来筛选此视图中的数据。要清除筛选器、请清除筛选器框、然后单击*筛选器*。您可以按交换机名称、交换机IP、供应商型号或OnCommand Insight 对象ID进行筛选。
++
+此筛选器区分大小写。
+
+. 查看以下数据：
++
+** * GUID *
++
+此类型整合设备(存储阵列)的全局唯一标识符
+
+** * 名称 *
++
+数据仓库中显示的整合存储阵列的名称
+
+** * IP *
++
+整合存储阵列的IP地址
+
+** *供应商和型号*
++
+销售整合存储阵列的供应商的名称以及制造商的型号
+
+** * WWW*
++
+整合交换机的WWN
+
+** *主要连接器*
++
+实际数据源的OnCommand Insight 连接器的名称
+
+** *可用连接器*
++
+整合存储阵列所在的所有OnCommand Insight 连接器
+
+** * Insight ID*
++
+主体连接器所在OnCommand Insight 机箱上的整合存储阵列的ID
+
+** * Insight更改时间*
++
+存储阵列在OnCommand Insight 中发生更新以及同一存储阵列在其他OnCommand Insight 服务器中发生更新的时间
+
+
+
+

@@ -1,0 +1,46 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: '在自定义OnCommand Insight 以根据企业要求跟踪数据时、您可以定义称为标注的专用注释并将其分配给资产。资产页面的 "User Data" 部分显示分配给资产的标注，还可以用于更改分配给该资产的标注。' 
+---
+= 使用 User Data 部分分配或修改标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在自定义OnCommand Insight 以根据企业要求跟踪数据时、您可以定义称为_annotations_的 专用注释并将其分配给资产。资产页面的 "User Data" 部分显示分配给资产的标注，还可以用于更改分配给该资产的标注。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 通过执行以下任一操作找到资产页面：
++
+** 在Insight工具栏上、单击 image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]、键入资产的名称、然后从列表中选择资产。
+** 单击*信息板*、选择*资产信息板*、找到资产名称并单击它。此时将显示资产页面。
+
+
+. 在资产页面的*用户数据*部分中、单击 image:../media/add-annotation-icon.gif[""]。
++
+此时将显示添加标注对话框。
+
+. 单击*标注*、然后从列表中选择一个标注。
+. 单击*值*、然后根据您选择的标注类型执行以下操作之一：
++
+** 如果标注类型为 list ， date 或 boolean ，请从列表中选择一个值。
+** 如果标注类型为文本，请键入一个值。
+
+
+. 单击 * 保存 * 。
++
+标注将分配给资产。您可以稍后使用查询按标注筛选资产。如果要按标注对资产进行分组、则必须使用Java UI。
+
+. 如果要在分配后更改标注的值、请单击 image:../media/change-annotation-value.gif[""] 并选择其他值。
++
+如果标注的列表类型选择了*标注分配时动态添加值*选项、则除了选择现有值之外、您还可以键入以添加新值。
+
+

@@ -1,0 +1,57 @@
+---
+permalink: install-windows/downloading-the-installation-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: '您应在选择升级的日期之前下载Insight、数据仓库和远程采集单元的安装包(如果适用)。软件包(.msi文件)的下载时间因可用带宽而异。' 
+---
+= 下载OnCommand Insight 安装包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应在选择升级的日期之前下载Insight、数据仓库和远程采集单元(如果适用)的安装包。软件包的下载时间 (`.msi` 文件)因可用带宽而异。
+
+
+
+== 关于此任务
+
+您可以使用Insight WebUI下载安装包、也可以导航到中相应的OnCommand Insight 链接 http://support.netapp.com/NOW/cgi-bin/software[]。
+
+要从Insight服务器中下载安装包、请执行以下操作：
+
+
+
+== 步骤
+
+. 打开Web浏览器并输入以下命令之一、以打开Insight Web UI：
++
+** 在Insight服务器上： `+https://localhost+`
+** 从任何位置： `+https://IP Address:port or fqdn:port+`
++
+端口号为443或在安装Insight服务器时配置的端口。如果未在URL中指定端口号、则端口号默认为443。
+
+
+
+. 登录到Insight。
+. 单击帮助图标并选择*检查更新*。
+. 如果检测到较新版本、请按照消息框中的说明进行操作。
++
+您将转到较新版本的InsightDescription页面。
+
+. 在*问题描述 *页面上、单击*继续*。
+. 显示最终用户许可协议(EULA)时、单击*接受*。
+. 单击每个组件(Insight服务器、数据仓库、远程采集单元)的安装包链接、然后单击*另存为*以保存安装包。
++
+在升级之前、您应确保将数据仓库和远程采集单元安装包复制到其各自服务器的本地磁盘。
+
+. 单击*校验和*、并记下与每个安装包关联的数值。
+. 下载安装包后、请验证安装包是否完整且无错误。
++
+文件传输不完整可能会在升级过程中出现发生原因 问题。
+
++
+要为安装包生成MD5哈希值、您可以使用Microsoft等第三方实用程序link:HTTP://SUPPORT.MICROSOFT.COM/KB/841290["文件ChecksumIntegrity验证程序"] 实用程序。
+
+

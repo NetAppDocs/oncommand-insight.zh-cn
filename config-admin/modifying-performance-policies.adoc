@@ -1,0 +1,35 @@
+---
+permalink: config-admin/modifying-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以编辑现有和默认性能策略、以更改Insight监控网络中您感兴趣的条件的方式。例如、您可能希望更改策略的阈值。 
+---
+= 编辑性能策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以编辑现有和默认性能策略、以更改Insight监控网络中您感兴趣的条件的方式。例如、您可能希望更改策略的阈值。
+
+
+
+== 步骤
+
+. 在浏览器中打开Insight。
+. 从*管理*菜单中、选择*性能策略*。
++
+此时将显示性能策略页面。
+
+. 将光标悬停在对象性能策略列表中的策略名称上。
+. 单击 image:../media/oci-edit-threshold-policy-icon.gif[""]。
++
+此时将显示编辑策略对话框。
+
+. 进行所需的更改。
++
+如果更改策略名称以外的任何选项、Insight将删除该策略的所有现有违规。
+
+. 单击*保存。*
+

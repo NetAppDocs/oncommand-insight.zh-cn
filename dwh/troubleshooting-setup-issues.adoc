@@ -1,0 +1,14 @@
+---
+permalink: dwh/troubleshooting-setup-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: 在设置期间、您可能会遇到一些与标注、构建和报告有关的常见问题。您可以按照所述步骤对这些问题进行故障排除。 
+---
+= 对设置问题进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在设置期间、您可能会遇到一些与标注、构建和报告有关的常见问题。您可以按照所述步骤对这些问题进行故障排除。

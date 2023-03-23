@@ -1,0 +1,84 @@
+---
+permalink: config-admin/red-hat-rhev-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Red Hat Enterprise Virtualization \(REST/）数据源通过HTTPS收集有关RHEH实例的信息。' 
+---
+= Red Hat (RHEV)数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Red Hat Enterprise Virtualization (REST)数据源通过HTTPS收集有关RHEV实例的信息。
+
+
+
+== 要求
+
+* 通过 REST API 通过端口 443 访问 RHEV-Server 的 IP 地址
+* 只读用户名和密码
+* RHEV3.0 及更高版本
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+RHEV 服务器 IP 地址
+ a| 
+RHEN服务器的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+RHEV-Server的用户名
+
+
+
+ a| 
+Password
+ a| 
+用于RHEV-Server的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+HTTPS 通信端口
+ a| 
+用于与 RHEV-HTTPS 通信的端口
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+连接超时(秒)
+ a| 
+连接超时(默认为60秒)
+
+|===

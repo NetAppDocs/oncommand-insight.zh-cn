@@ -1,0 +1,14 @@
+---
+permalink: install-windows/uninstalling-the-insight-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 要安装新版本、必须卸载旧版本的数据仓库和远程采集软件。在尝试升级其中任何组件之前、应执行此操作。Insight服务器上的软件将在原位升级期间卸载。 
+---
+= 卸载软件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要安装新版本、必须卸载旧版本的数据仓库和远程采集软件。在尝试升级其中任何组件之前、应执行此操作。Insight服务器上的软件将在原位升级期间卸载。

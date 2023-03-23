@@ -1,0 +1,30 @@
+---
+permalink: dwh/including-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: 默认情况下、ASUP仅会将数据仓库日志文件发送给技术支持以协助进行故障排除；但是、您也可以选择包括数据仓库数据库的备份并选择所发送的数据类型。 
+---
+= 包括数据仓库数据库的备份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下、ASUP仅会将数据仓库日志文件发送给技术支持以协助进行故障排除；但是、您也可以选择包括数据仓库数据库的备份并选择所发送的数据类型。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*故障排除*。
+. 要指定ASUP应包含数据仓库数据库的备份、请单击*包括DWH数据库备份*列表、然后为备份应包含的数据类型选择以下选项之一：
++
+** 全部(包括性能)
+** 除性能外的所有
+** 仅限清单
+
+
+. 单击 * 更新 * 。
+

@@ -1,0 +1,16 @@
+---
+permalink: reporting/managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 对于每个报告、您可以在操作列中选择更多链接、并访问所有报告操作、例如设置报告属性、计划报告或通过电子邮件发送报告。与其他用户相比、管理员可以使用更多的管理选项。 
+---
+= 管理报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于每个报告、您可以在操作列中选择*更多*链接、并访问所有报告操作、例如设置报告属性、计划报告或通过电子邮件发送报告。与其他用户相比、管理员可以使用更多的管理选项。
+
+管理员可以根据其他报告用户的OnCommand Insight 角色为其设置权限。

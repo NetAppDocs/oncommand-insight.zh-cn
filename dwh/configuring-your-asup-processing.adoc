@@ -1,0 +1,25 @@
+---
+permalink: dwh/configuring-your-asup-processing.html 
+sidebar: sidebar 
+keywords:  
+summary: 所有NetApp产品都配备了自动化功能、可提供尽可能最佳的支持来对环境中发生的问题进行故障排除。ASUP会定期向客户支持发送预定义的特定信息。默认情况下、为数据仓库启用ASUP；但是、如果您不再需要发送信息、则可以禁用ASUP。 
+---
+= 禁用自动ASUP传输
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+所有NetApp产品都配备了自动化功能、可提供尽可能最佳的支持来对环境中发生的问题进行故障排除。ASUP会定期向客户支持发送预定义的特定信息。默认情况下、为数据仓库启用ASUP；但是、如果您不再需要发送信息、则可以禁用ASUP。
+
+
+
+== 步骤
+
+. 从左侧导航窗格中、单击*故障排除*。
+. 单击*禁用*以防止ASUP发送每日报告。
++
+此时将显示一条消息、指出ASUP已禁用。
+
+

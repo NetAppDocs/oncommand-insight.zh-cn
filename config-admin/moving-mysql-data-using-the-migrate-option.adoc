@@ -1,0 +1,33 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-migrate-option.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用将MySQL数据目录迁移到其他目录。您可以保留当前数据目录。您可以使用Troubleshooting菜单上的migrate选项、也可以使用命令行。此操作步骤 介绍了如何使用故障排除\>迁移MySQL数据选项。 
+---
+= 使用迁移选项移动MySQL数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用将MySQL数据目录迁移到其他目录。您可以保留当前数据目录。您可以使用Troubleshooting菜单上的migrate选项、也可以使用命令行。此操作步骤 介绍了如何使用*故障排除*>*迁移MySQL数据*选项。
+
+
+
+== 关于此任务
+
+如果保留当前数据目录、则该目录将作为备份保留并重命名。
+
+
+
+== 步骤
+
+. 在Web UI中、单击*管理*并选择*故障排除*。
+. 单击*高级故障排除*。
+. 选择*操作*选项卡
+. 选择*迁移MySQL数据*。
+. 输入要将数据迁移到的路径。
+. 要保留现有数据目录、请选中*保留现有数据目录。*
+. 单击 * 迁移 * 。
+

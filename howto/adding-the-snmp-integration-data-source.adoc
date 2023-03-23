@@ -1,0 +1,66 @@
+---
+permalink: howto/adding-the-snmp-integration-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 集成SNMP数据源可提供与Brocade和Cisco的OnCommand Insight 数据源附带的其他基于SNMP的数据源类似的通用SNMP配置属性。 
+---
+= 创建SNMP集成数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+集成SNMP数据源可提供与Brocade和Cisco的OnCommand Insight 数据源附带的其他基于SNMP的数据源类似的通用SNMP配置属性。
+
+
+
+== 开始之前
+
+要成功使用集成SNMP数据源进行收集、必须满足以下条件：
+
+* 您必须已导入要用于此SNMP数据源的集成软件包。
+* 所有目标设备都共享相同的凭据。
+* 所有目标设备都会实施所配置的集成软件包引用的SNMP对象。
+
+
+
+
+== 关于此任务
+
+要创建SNMP集成数据源、请在数据源创建向导中选择供应商"Integration"和型号"SNMP"。
+
+
+
+== 步骤
+
+. 在OnCommand Insight Web UI中、单击*管理*>*数据源*
+. 单击 * + 添加 *
+. 输入数据源的名称
+. 对于Vendor、选择*集成*
+. 对于"Model"、选择"* SNMP*"
++
+image::../media/add-integration-ds.gif[添加集成DS]
+
+. 有关要收集的内容、请选中*集成*
++
+这是此数据源上的唯一软件包、默认情况下会进行检查：
+
+. 单击*配置*
+. 输入要从中收集SNMP数据的系统的IP地址
+. 选择导入的SNMP集成软件包
+. 设置集成轮询间隔
+. 选择SNMP版本
+. 输入SNMP社区字符串
++
+适用于SNMP V1和V2。
+
+. 为要从中收集数据的系统添加用户名和密码。
++
+对于SNMP V3。
+
+. 单击*高级配置*
++
+此时将显示高级配置默认设置。根据需要对这些设置进行任何更改。
+
+

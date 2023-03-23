@@ -1,0 +1,14 @@
+---
+permalink: config-admin/managing-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 提供了一些默认标注类型、例如资产生命周期\(生日或寿命结束\)、建筑物或数据中心位置以及层、您可以自定义这些标注类型以显示在报告中。您可以为默认标注类型定义值、也可以创建自己的自定义标注类型。您可以稍后编辑这些值。' 
+---
+= 管理标注类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 提供了一些默认标注类型、例如资产生命周期(生日或生命周期结束)、建筑物或数据中心位置以及层、您可以自定义这些标注类型以显示在报告中。您可以为默认标注类型定义值、也可以创建自己的自定义标注类型。您可以稍后编辑这些值。

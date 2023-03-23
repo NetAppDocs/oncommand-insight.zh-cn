@@ -1,0 +1,18 @@
+---
+permalink: install-linux/checking-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 完成安装后、安装目录位于/opt/netapp/oci中。您可以在支持的浏览器中打开Insight以检查安装情况。您可能还需要检查Insight日志文件。 
+---
+= 正在检查安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成安装后、安装目录位于中 `/opt/netapp/oci`。您可以在支持的浏览器中打开Insight以检查安装情况。您可能还需要检查Insight日志文件。
+
+首次打开Insight时、将打开许可证设置页面。输入许可证信息后、必须设置数据源。有关输入数据源定义以及设置OnCommand Insight 用户和通知的信息、请参见_Insight配置和管理指南_。
+
+如果遇到安装问题、请联系技术支持并提供所请求的信息。

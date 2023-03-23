@@ -1,0 +1,28 @@
+---
+permalink: config-admin/determining-data-source-acquisition-status.html 
+sidebar: sidebar 
+keywords:  
+summary: 由于数据源是Insight的主要信息源、因此您必须确保它们保持运行状态。 
+---
+= 确定数据源采集状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+由于数据源是Insight的主要信息源、因此您必须确保它们保持运行状态。
+
+可以在每个资产页面上查看直接获取的所有资产的数据源采集状态。可能会发生以下任一采集情形、其中状态显示在资产页面的右上角：
+
+* 已成功从数据源采集
++
+显示状态"`acquired `xxxx``", where `xxxx` 指示资产数据源的最新采集时间。
+
+* 发生采集错误。
++
+显示状态"`acquired `xxxx``", where `xxxx` 指示资产的一个或多个数据源的最新采集时间 image:../media/acquisition-icon.gif[""]。单击时 image:../media/acquisition-icon.gif[""]、此时将显示一个窗口、其中显示资产的每个数据源、数据源的状态以及上次采集数据的时间。单击某个数据源将显示该数据源的详细信息页面。
+
+
+
+如果资产不是直接获取的、则不会显示任何状态。

@@ -1,0 +1,48 @@
+---
+permalink: install-linux/submitting-an-online-technical-support-request.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您在Insight安装方面遇到问题、作为注册支持客户、可以提交在线技术支持请求。 
+---
+= 提交在线技术支持请求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在Insight安装方面遇到问题、作为注册支持客户、可以提交在线技术支持请求。
+
+
+
+== 开始之前
+
+您必须使用公司电子邮件地址注册为支持客户、才能获得在线支持服务。可通过支持站点进行注册 (http://support.netapp.com)[]。
+
+
+
+== 关于此任务
+
+为了帮助客户支持解决安装问题、您应收集尽可能多的信息、包括以下各项：
+
+* Insight序列号
+* 问题的问题描述
+* 所有Insight日志文件
+* 任何错误消息的屏幕截图
+
+
+
+
+== 步骤
+
+. 创建 `.zip` 您为创建故障排除软件包而收集的信息的文件。
+. 登录到支持站点、网址为 http://mysupport.netapp.com/["mysupport.netapp.com"] 并选择*技术帮助*。
+. 单击*打开案例*。
+. 按照说明对数据包进行操作。
+
+
+
+
+== 完成后
+
+您可以使用技术帮助页面上的*检查案例状态*来跟踪您的请求。

@@ -1,0 +1,40 @@
+---
+permalink: config-admin/content-of-the-new-disk-models-txt-file.html 
+sidebar: sidebar 
+keywords:  
+summary: new_disk_models.txt文件包含必填字段和可选字段。这些字段以逗号分隔、因此请勿在字段中使用逗号。 
+---
+= new_disk_models.txt文件的内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+。 `new_disk_models.txt` 文件包含必填字段和可选字段。这些字段以逗号分隔、因此请勿在字段中使用逗号_within。
+
+除寻道时间、传输速率和附加信息以外、所有字段均为必填字段。如果有、请在Additional _info字段中包含供应商/型号网站链接。
+
+使用文本编辑器按此顺序为要添加的每个新磁盘型号输入以下信息、并用逗号分隔：
+
+. *键*：使用型号(必需)
+. *供应商*：名称(必需)
+. *型号*：完整数字(通常与"密钥"中的值相同)(必需)
+. 磁盘的*转数*：例如10000或15000 (必需)
+. *大小*：容量(GB)(必需)
+. *接口类型*：ATA、SATA、FC、SAS、FATA、 SSD、其他(必需)
+. *寻道时间*：以毫秒为单位(可选)
+. *潜在传输速率*：潜在传输速率、以MB/秒为单位磁盘本身的最大传输速率。（可选）
+. *接口传输速率*：主机之间的传输速率、以MB/秒为单位(可选)。
+. *其他信息*：要捕获的任何追加信息。最佳实践是、输入供应商页面的链接以查找规格、以供参考(可选)
+
+
+对于留空的任何可选字段、请务必包含逗号。
+
+示例(每行都不含空格)：
+
+`+ST373405,Seagate,ST373405,10000,73,FC,5.3,64,160,http://www.seagate.com/staticfiles/support/disc/manuals/enterprise/cheetah/73(LP)/100109943e.pdf+`
+
+`SLR5B-M400SS,HITACHI,SLR5B-M400SS,1000000,400,SSD,,,,`
+
+`+X477_THARX04TA07,TOSHIBA,X477_THARX04TA07,7200,4000,SATA,9.5,,,https://storage.toshiba.eu/export/sites/toshiba-sdd/media/products/datasheets/MG03ACAxxxY.pdf+`

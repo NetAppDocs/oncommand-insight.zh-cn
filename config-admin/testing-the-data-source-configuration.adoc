@@ -1,0 +1,21 @@
+---
+permalink: config-admin/testing-the-data-source-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: 添加数据源时、您可以在保存或更新该数据源之前验证与设备通信的配置是否正确。 
+---
+= 测试数据源配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+添加数据源时、您可以在保存或更新该数据源之前验证与设备通信的配置是否正确。
+
+单击数据源向导中的*测试*按钮时、将检查与指定设备的通信。此测试将生成以下结果之一：
+
+* PASSED：已正确配置数据源。
+* 警告：测试未完成、可能是由于处理期间超时或采集未运行。
+* failed：配置的数据源无法与指定设备通信。检查配置设置并重新测试。
+

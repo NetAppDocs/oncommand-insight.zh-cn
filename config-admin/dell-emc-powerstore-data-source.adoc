@@ -1,0 +1,192 @@
+---
+permalink: config-admin/dell-emc-powerstore-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Dell EMC PowerStore数据收集器从Dell EMC PowerStore存储收集清单信息。在配置方面，数据收集器需要存储处理器的 IP 地址以及只读用户名和密码。 
+---
+= Dell EMC PowerStore数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dell EMC PowerStore数据收集器从Dell EMC PowerStore存储收集清单信息。在配置方面，数据收集器需要存储处理器的 IP 地址以及只读用户名和密码。
+
+
+
+== 术语
+
+OnCommand Insight 从EMC Data Domain数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+host
+ a| 
+host
+
+
+
+ a| 
+host_volume_mapping
+ a| 
+host_volume_mapping
+
+
+
+ a| 
+硬件（驱动器位于 "ext_details" 对象下）： drives
+ a| 
+Disk
+
+
+
+ a| 
+设备
+ a| 
+StoragePool
+
+
+
+ a| 
+集群
+ a| 
+存储阵列
+
+
+
+ a| 
+Node
+ a| 
+StorageNode
+
+
+
+ a| 
+FC_port
+ a| 
+Port
+
+
+
+ a| 
+volume
+ a| 
+Volume
+
+
+
+ a| 
+内部卷
+ a| 
+file_system
+
+
+
+ a| 
+文件系统
+ a| 
+内部卷
+
+
+
+ a| 
+Mtree
+ a| 
+qtree
+
+
+
+ a| 
+配额
+ a| 
+配额
+
+
+
+ a| 
+NFS 和 CIFS 共享
+ a| 
+文件共享
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 存储处理器的 IP 地址或完全限定域名
+* 只读用户名和密码
+
+
+
+
+== 说明了父级序列号
+
+传统上、Insight可以报告存储阵列序列号或单个存储节点序列号。但是、某些存储阵列架构并不完全符合此要求。一个PowerStore集群可以由1-4个设备组成、每个设备都有2个节点。如果设备本身具有序列号、则该序列号既不是集群的序列号、也不是节点的序列号。
+
+如果各个节点位于仅属于较大集群一部分的中间设备/机箱中、则存储节点对象上的"父序列号"属性会针对Dell/EMC PowerStore阵列正确填充。
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+PowerStore 网关
+ a| 
+PowerStore 存储的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+PowerStore 的用户名
+
+
+
+ a| 
+Password
+ a| 
+PowerStore 使用的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+HTTPS 端口
+ a| 
+默认值为 443
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔。默认值为 60 分钟。
+
+|===
+OnCommand Insight的PowerStore性能收集利用了PowerStore的5分钟粒度源数据。因此、Insight每五分钟轮询一次该数据、而这是无法配置的。

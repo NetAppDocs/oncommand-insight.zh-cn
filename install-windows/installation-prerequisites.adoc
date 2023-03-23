@@ -1,0 +1,47 @@
+---
+permalink: install-windows/installation-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: 在安装OnCommand Insight 之前、您必须下载当前软件版本、获取相应的许可证并设置您的环境。 
+---
+= 安装前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装OnCommand Insight 之前、您必须下载当前软件版本、获取相应的许可证并设置您的环境。
+
+安装OnCommand Insight 之前、请确保您已满足以下条件：
+
+* 当前版本下载的安装包中的OnCommand Insight 软件文件
+* 用于运行下载的OnCommand Insight 版本的许可证
+* 最低硬件和软件环境
++
+当前产品可能会占用早期版本的OnCommand Insight 产品未使用的其他硬件资源(由于OnCommand Insight 产品功能增强)。
+
+* 一种部署计划、其中包括OnCommand Insight 服务器、数据仓库和报告以及远程采集单元的硬件和网络配置。
+* 适用于OnCommand Insight Java UI的Java 8。
++
+
+NOTE: OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见 http://docs.netapp.com/oci-73/topic/com.netapp.ndc.notices/GUID-93BE9A1E-D79E-4A97-87A2-4DBE31372A16.html["通知"] 页面以查看特定详细信息。
+
+* 已禁用病毒扫描软件
++
+在安装OnCommand Insight 期间、您必须完全禁用所有病毒扫描程序。安装后、除了排除整个之外、Insight组件使用的路径(安装、备份和归档程序路径)还必须从病毒扫描中排除 `sanscreen` 扫描中的目录。
+
++
+此外、在安装后、您还必须从防病毒扫描中排除IBM/DB2文件夹(例如_C：\Program Files\IBM\DB2_)。
+
+
+
+[NOTE]
+====
+如果您要作为升级或迁移到新硬件的方式执行完整安装、并且现有系统包含非默认安全配置、则必须在执行安装之前备份安全配置。安装完成后、您必须先还原安全配置、然后再还原服务器(包括本地采集单元)或数据仓库数据库。在还原DWH数据库之前、必须将安全配置还原到所有Insight服务器。
+
+对于原位升级(仅适用于Insight Server)、安全配置会得到正确处理、您不需要还原它。
+
+您可以使用 `securityadmin` 用于创建配置备份和还原已保存配置的工具。有关详细信息、请搜索 `securityadmin` 在OnCommand Insight 文档中心中： http://docs.netapp.com/oci-73/index.jsp[]
+
+====

@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-your-email-for-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果用户希望在其电子邮件帐户中接收Insight报告、则需要配置电子邮件服务器以启用此功能。 
+---
+= 为Insight配置电子邮件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果用户希望在其电子邮件帐户中接收Insight报告、则需要配置电子邮件服务器以启用此功能。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*并选择*通知*。
+. 向下滚动到页面的*电子邮件*部分。
+. 在*服务器*框中、输入组织中SMTP服务器的名称、该名称使用主机名或IP地址(_nnn.nnn.nnn.nnn_格式)进行标识。
++
+如果指定主机名、请确保可以通过DNS解析此名称。
+
+. 在*用户名*框中、输入您的用户名。
+. 在*密码*框中、输入用于访问电子邮件服务器的密码、只有当SMTP服务器受密码保护时才需要此密码。此密码与您用于登录到允许您阅读电子邮件的应用程序的密码相同。如果需要密码、您必须再次输入密码进行验证。
+. 在*发件人电子邮件*框中、输入将在所有OnCommand Insight 报告中标识为发件人的发件人电子邮件帐户。
++
+此帐户必须是您组织中的有效电子邮件帐户。
+
+. 在*电子邮件签名*框中、输入要在发送的每个电子邮件中插入的文本。
+. 在收件人框中、单击 image:../media/add-email-recipient-icon.gif[""]、输入电子邮件地址、然后单击*确定*。
++
+要编辑电子邮件地址、请选择该地址、然后单击 image:../media/edit-recipient-icon.gif[""]。要删除电子邮件地址、请选择该地址、然后单击 image:../media/delete-recipient-icon.gif[""]。
+
+. 要向指定收件人发送测试电子邮件、请单击 image:../media/test-email-icon.gif[""]。
+. 单击 * 保存 * 。
+

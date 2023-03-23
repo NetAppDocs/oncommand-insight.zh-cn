@@ -1,0 +1,92 @@
+---
+permalink: install-windows/verifying-the-data-warehouse-and-reporting-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 成功安装OnCommand Insight 数据仓库后、您应确保所有DWH和报告服务均可在Microsoft Windows服务中使用。 
+---
+= 验证数据仓库和报告安装
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+成功安装OnCommand Insight 数据仓库后、您应确保所有DWH和报告服务均可在Microsoft Windows服务中使用。
+
+
+
+== 步骤
+
+. 从Windows的"开始"菜单中、选择菜单：控制面板[系统和安全性>管理工具>服务]。
+. 确保以下条目显示在服务列表中：
++
+|===
+
+
+| 名称/状态 | Description 
+
+
+ a| 
+* SANscreen 服务器/正在运行*
+ a| 
+OnCommand Insight DWH服务器
+
+
+
+ a| 
+* MySQL /正在运行*
+ a| 
+OnCommand Insight SQL数据库
+
+
+
+ a| 
+* IBM Cognos/正在运行*
+ a| 
+IBM Cognos内容数据库
+
+
+
+ a| 
+* DB2 - DB2COPY1 - DB2-0/Running *
+ a| 
+管理DB2数据库
+
+
+
+ a| 
+* DB2控制器(DB2COPY1)/未运行*
+ a| 
+收集连接到DB2数据库的应用程序的统计信息。
+
+
+
+ a| 
+* DB2许可证服务器(DB2COPY1)/未运行*
+ a| 
+监控DB2许可证合规性。
+
+
+
+ a| 
+* DB2管理服务(DB2COPY1)/正在运行*
+ a| 
+管理DB2注册表条目、以便与早期的DB2副本版本兼容。
+
+
+
+ a| 
+* DB2远程命令服务器(DB2COPY1)/正在运行*
+ a| 
+支持远程执行DB2命令。
+
+
+
+ a| 
+*适用于Windows的IBM安全Shell服务器/未运行*
+ a| 
+适用于Windows的IBM Secure Shell Server
+
+|===
+

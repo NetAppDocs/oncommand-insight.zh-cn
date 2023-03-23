@@ -1,0 +1,42 @@
+---
+permalink: install-windows/upgrading-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 完成所有前提任务后、您可以登录到Insight服务器并运行安装包以完成升级。升级过程将卸载现有软件、安装新软件、然后重新启动服务器。 
+---
+= 升级Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成所有前提任务后、您可以登录到Insight服务器并运行安装包以完成升级。升级过程将卸载现有软件、安装新软件、然后重新启动服务器。
+
+
+
+== 开始之前
+
+Insight安装包必须位于服务器上。
+
+
+
+== 步骤
+
+. 使用具有Windows本地管理员权限的帐户登录到Insight服务器。
+. 找到Insight安装包 (`SANscreenServer-x64-version_number-build_number.msi`)并双击它。
++
+此时将显示OnCommand InsightSetup向导。
+
+. 将进度窗口移出屏幕中央和*设置*向导窗口、以便不会从视图中隐藏任何生成的错误。
+. 按照设置向导的提示进行操作。
++
+最好保持选中所有默认值。
+
+
+
+
+
+== 完成后
+
+要验证升级是否成功或是否生成错误、请检查以下位置的升级日志： `<install directory>\SANscreen\wildfly\standalone\log`。

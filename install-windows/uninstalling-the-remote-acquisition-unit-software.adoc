@@ -1,0 +1,24 @@
+---
+permalink: install-windows/uninstalling-the-remote-acquisition-unit-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须先卸载现有版本的远程采集单元软件、然后才能升级到新版本。您应在环境中的所有远程采集单元服务器上执行此任务。 
+---
+= 卸载远程采集单元软件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须先卸载现有版本的远程采集单元软件、然后才能升级到新版本。您应在环境中的所有远程采集单元服务器上执行此任务。
+
+
+
+== 步骤
+
+. 登录到远程采集单元服务器。
+. 确保服务器上的所有OnCommand Insight 窗口均已关闭。
+. 从控制面板打开*卸载程序*功能、然后选择要删除的OnCommand Insight 远程采集单元程序。
+. 单击*卸载*、然后按照提示进行操作。
+

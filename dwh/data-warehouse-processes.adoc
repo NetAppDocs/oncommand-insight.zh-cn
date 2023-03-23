@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-processes.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据仓库执行多种类型的流程。 
+---
+= 数据仓库流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据仓库执行多种类型的流程。
+
+* * ETL进程*
++
+提取转换和加载(ETL)过程从多个OnCommand Insight 数据库中检索数据、转换数据并将其保存到数据集市中。数据仓库构建过程是一个ETL过程。
+
+* * 作业 *
++
+数据仓库执行和报告以下作业：清单、维度、容量、端口容量、VM容量、 文件系统利用率、性能、容量效率、许可证、历史记录构建、 动态标注、连接器删除、跳过的构建、ASUP选项和维护作业。
+
+* *整合流程*
++
+数据仓库支持将多个OnCommand Insight 服务器整合到同一个数据仓库数据库中。在许多配置中、可能会发生多个连接器报告同一对象的情况(即、同一交换机存在于两个OnCommand Insight 实例中)。在这种情况下、数据仓库会将多个对象整合到一个对象中(选择一个主连接器、并且仅从该连接器中获取对象的数据)。
+
+

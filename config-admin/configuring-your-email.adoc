@@ -1,0 +1,14 @@
+---
+permalink: config-admin/configuring-your-email.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须将OnCommand Insight 配置为访问电子邮件系统、以便OnCommand Insight服务器可以使用您的电子邮件交付您订阅的报告、并将故障排除支持信息传输给NetApp技术支持。 
+---
+= 配置电子邮件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须将OnCommand Insight 配置为访问电子邮件系统、以便OnCommand Insight服务器可以使用您的电子邮件交付您订阅的报告、并将故障排除支持信息传输给NetApp技术支持。

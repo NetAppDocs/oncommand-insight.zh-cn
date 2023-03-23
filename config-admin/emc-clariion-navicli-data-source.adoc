@@ -1,0 +1,183 @@
+---
+permalink: config-admin/emc-clariion-navicli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 在配置此数据源之前、请确保目标设备和Insight服务器上安装了EMC Navisphere命令行界面。Navisphere命令行界面版本必须与控制器上的固件版本匹配。要收集性能数据、必须打开统计信息日志记录。 
+---
+= EMC CLARiiON (NaviCLI)数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在配置此数据源之前、请确保目标设备和Insight服务器上安装了EMC Navisphere命令行界面。Navisphere命令行界面版本必须与控制器上的固件版本匹配。要收集性能数据、必须打开统计信息日志记录。
+
+
+
+== Navisphere命令行界面语法
+
+[listing]
+----
+naviseccli.exe -h <IP address> -user <user> -password <password> -scope
+<scope,use 0 for global scope> -port <use 443 by default> command
+----
+
+
+== 术语
+
+OnCommand Insight 从EMC CLARiiON数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+存储
+ a| 
+存储
+
+
+
+ a| 
+存储处理器
+ a| 
+存储节点
+
+
+
+ a| 
+精简池、RAID组
+ a| 
+存储池
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 每个CLARiiON存储处理器的IP地址
+* CLARiiON阵列的只读Navisphere用户名和密码
+* 必须在Insight服务器/RAU上安装navicli
+* 访问验证：使用上述用户名和密码运行从Insight服务器到每个阵列的NaviCLI。
+* Navicli版本应与阵列上的最新FLARE代码相对应
+* 为了提高性能、必须打开统计信息日志记录。
+* 端口要求： 80 ， 443
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+CLARiiON存储
+ a| 
+CLARiiON存储的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+用于登录到CLARiiON存储设备的名称。
+
+
+
+ a| 
+Password
+ a| 
+用于登录到CLARiiON存储设备的密码。
+
+
+
+ a| 
+指向NaviCLI.exe路径或naviseccli.exe路径的命令行界面路径
+ a| 
+的完整路径 `navicli.exe` 或 `naviseccli.exe` 可执行文件
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔（默认为 40 分钟）
+
+
+
+ a| 
+使用安全客户端(naviseccli)
+ a| 
+选择以使用安全客户端(navseccli)
+
+
+
+ a| 
+范围
+ a| 
+安全客户端范围。默认值为 "Global" 。
+
+
+
+ a| 
+CLARiiON命令行界面端口
+ a| 
+用于CLARiiON命令行界面的端口
+
+
+
+ a| 
+清单外部进程超时(秒)
+ a| 
+外部进程超时(默认值为1800秒)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+
+
+ a| 
+性能外部进程超时(秒)
+ a| 
+外部进程超时(默认值为1800秒)
+
+|===

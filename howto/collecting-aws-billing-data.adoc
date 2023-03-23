@@ -1,0 +1,22 @@
+---
+permalink: howto/collecting-aws-billing-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Amazon AWS Cloud成本数据源将由Amazon生成的计费数据作为集成数据导入到Insight中、从而使其可供数据仓库用于报告。 
+---
+= 收集和报告AWS计费数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Amazon AWS Cloud成本数据源将由Amazon生成的计费数据作为集成数据导入到Insight中、从而使其可供数据仓库用于报告。
+
+让Insight可以使用云计费数据的三个部分：
+
+验证AWS帐户信息。
+
+在Insight中配置AWS Cloud成本数据源以收集数据。
+
+通过ETL将数据发送到数据仓库以用于报告。

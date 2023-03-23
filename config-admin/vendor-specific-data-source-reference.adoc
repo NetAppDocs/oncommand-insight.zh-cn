@@ -1,0 +1,16 @@
+---
+permalink: config-admin/vendor-specific-data-source-reference.html 
+sidebar: sidebar 
+keywords:  
+summary: 配置详细信息因所添加数据源的供应商和型号而异。 
+---
+= 供应商专用数据源参考
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+配置详细信息因所添加数据源的供应商和型号而异。
+
+如果供应商的数据源需要高级Insight配置说明、例如特殊要求和特定命令、则本节将包含这些信息。

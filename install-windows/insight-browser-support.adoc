@@ -1,0 +1,23 @@
+---
+permalink: install-windows/insight-browser-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 基于浏览器的OnCommand InsightWeb UI可在多个不同的浏览器上运行。 
+---
+= OnCommand Insight 支持的浏览器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+基于浏览器的OnCommand InsightWeb UI可在多个不同的浏览器上运行。
+
+Insight支持以下浏览器的非测试版更新版本：
+
+* Mozilla Firefox
+* Google Chrome
+* Microsoft Edge
+
+
+有关符合OnCommand Insight 条件的浏览器版本的完整列表、请参见 https://imt.netapp.com/matrix/#welcome["NetApp 互操作性表工具"]。

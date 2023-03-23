@@ -1,0 +1,33 @@
+---
+permalink: config-admin/updating-expired-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果一个或多个Insight许可证已过期、您可以使用与最初安装许可证相同的操作步骤 快速更新许可证。 
+---
+= 正在更新已过期的许可证
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果一个或多个Insight许可证已过期、您可以使用与最初安装许可证相同的操作步骤 快速更新许可证。
+
+
+
+== 步骤
+
+. 在文本编辑器(如Notepad)中、打开从NetApp支持收到的新许可证文件、并将许可证密钥文本复制到Windows剪贴板。
+. 在浏览器中打开OnCommand Insight。
+. 单击工具栏上的*管理员*。
+. 单击*设置*。
+. 单击*许可证*选项卡。
+. 单击 * 更新许可证 * 。
+. 将许可证密钥文本复制到*许可证*文本框中。
+. 选择*更新(最常见)*操作。
++
+此操作会将新许可证添加到任何当前处于活动状态的Insight许可证中。
+
+. 单击 * 保存 * 。
+. 如果您使用的是Insight消费许可模式、则必须选中"使用情况"部分中的*启用向NetApp*发送使用情况信息复选框。必须为您的环境正确配置和启用代理。
+

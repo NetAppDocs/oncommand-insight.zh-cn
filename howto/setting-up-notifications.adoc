@@ -1,0 +1,16 @@
+---
+permalink: howto/setting-up-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以将Insight配置为通过电子邮件、SNMP或系统日志发送有关性能策略、全局路径或容量违规等触发事件的通知。您还可以将Insight配置为针对数据源错误或采集单元故障等系统级别事件发送电子邮件通知。 
+---
+= 设置通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将Insight配置为通过电子邮件、SNMP或系统日志发送有关性能策略、全局路径或容量违规等触发事件的通知。您还可以将Insight配置为针对数据源错误或采集单元故障等系统级别事件发送电子邮件通知。
+
+这些是基本说明。有关通知的详细信息、请参见配置和管理> Insight配置和管理>设置Insight。

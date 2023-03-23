@@ -1,0 +1,100 @@
+---
+permalink: config-admin/managing-security-on-the-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用securityadmin工具可以管理数据仓库服务器上的安全选项。安全管理包括更新DWH服务器上内部用户的内部密码、创建安全配置的备份或将配置还原为默认设置。 
+---
+= 管理数据仓库上的安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+。 `securityadmin` 您可以使用工具管理数据仓库服务器上的安全选项。安全管理包括更新DWH服务器上内部用户的内部密码、创建安全配置的备份或将配置还原为默认设置。
+
+
+
+== 关于此任务
+
+您可以使用 `securityadmin` 用于管理安全性的工具：
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux - `/bin/oci-securityadmin.sh`
+
+
+
+
+== 步骤
+
+. 远程登录到数据仓库服务器。
+. 在交互模式下启动安全管理工具： `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
++
+系统请求登录凭据。
+
+. 输入具有"`Admin`"凭据的帐户的用户名和密码。
++
+系统将显示数据仓库的安全管理员菜单：
+
++
+** * 备份 *
++
+为包含所有密码和密钥的存储创建一个备份zip文件、并将该文件放置在用户指定的位置或默认位置：
+
++
+*** Windows - `C:\Program Files\SANscreen\backup\vault`
+*** Linux - `/var/log/netapp/oci/backup/vault`
+
+
+** * 还原 *
++
+还原已创建的存储的zip备份。还原后、所有密码和密钥将还原为创建备份时的现有值。
+
++
+[NOTE]
+====
+还原可用于同步多个服务器上的密码和密钥、例如：-更改一个服务器上的加密密钥-创建存储备份-将存储备份还原到第二个服务器
+
++
+
+====
+** *更改加密密钥*
++
+更改用于对连接器密码和SMPT密码等密码进行加密或解密的DWH加密密钥。
+
+** *更新密码*
++
+更改特定用户帐户的密码。
+
++
+*** 内部
+*** 采集
+*** Cognos_admin
+*** dwh
+*** dwh_internal
+*** dwhuser
+*** 主机
+*** 清单
+*** root
+
+
+
+
++
+[NOTE]
+====
+更改dwhuser、hosts、inventory或root密码时、您可以选择使用SHA-256密码哈希。此选项要求访问这些帐户的所有客户端都使用SSL连接。
+
+====
++
+** *重置为默认值*
++
+将加密密钥和密码重置为默认值。默认值是在安装期间提供的值。
+
+** * 退出 *
++
+退出 `securityadmin` 工具。
+
+
+
+

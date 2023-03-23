@@ -1,0 +1,14 @@
+---
+permalink: config-admin/monitoring-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight可帮助您防止环境中出现问题并快速排除潜在问题。 
+---
+= 监控您的环境
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight可帮助您防止环境中出现问题并快速排除潜在问题。

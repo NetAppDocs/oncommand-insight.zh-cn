@@ -1,0 +1,87 @@
+---
+permalink: config-admin/emc-recoverpoint-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: EMC RecoverPoint数据源从EMC RecoverPoint存储收集清单信息。在配置方面、数据源需要存储处理器的IP地址以及只读用户名和密码。 
+---
+= EMC RecoverPoint数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+EMC RecoverPoint数据源从EMC RecoverPoint存储收集清单信息。在配置方面、数据源需要存储处理器的IP地址以及_read-ononly_用户名和密码。
+
+EMC RecoverPoint数据源收集RecoverPoint在其他存储阵列之间协调的卷到卷复制关系。OnCommand Insight 会显示每个RecoverPoint集群的存储阵列、并收集该集群上节点和存储端口的清单数据。不会收集任何存储池或卷数据。
+
+
+
+== 要求
+
+* 存储处理器的 IP 地址或完全限定域名
+* 只读用户名和密码
+* 通过端口 443 进行 REST API 访问
+* 通过PuTTY进行SSH访问
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+RecoverPoint 的地址
+ a| 
+RecoverPoint 集群的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+RecoverPoint 集群的用户名
+
+
+
+ a| 
+Password
+ a| 
+RecoverPoint集群的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+TCP 端口
+ a| 
+用于连接到 Recoverpoint 集群的 TCP 端口
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+排除的集群
+ a| 
+要在轮询时排除的集群ID或名称的逗号分隔列表
+
+|===

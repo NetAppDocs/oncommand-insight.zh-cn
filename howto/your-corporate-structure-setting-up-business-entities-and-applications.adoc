@@ -1,0 +1,14 @@
+---
+permalink: howto/your-corporate-structure-setting-up-business-entities-and-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 了解企业结构的要素有助于您跟踪资产使用情况并报告成本。 
+---
+= 您的企业结构：设置业务实体和应用程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解企业结构的要素有助于您跟踪资产使用情况并报告成本。

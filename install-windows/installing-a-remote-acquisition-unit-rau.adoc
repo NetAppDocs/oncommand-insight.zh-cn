@@ -1,0 +1,57 @@
+---
+permalink: install-windows/installing-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: 在OnCommand Insight 环境中安装一个或多个RAU。 
+---
+= 安装远程采集单元(RAU)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在OnCommand Insight 环境中安装一个或多个RAU。
+
+
+
+== 开始之前
+
+您必须已完成所有安装前提条件。
+
+RAU服务器和OnCommand Insight 服务器之间至少需要有一个端口处于打开状态且可用、才能将更改信息转发到服务器。如果您对此不确定、请在RAU计算机上打开Web浏览器并将其定向到OnCommand Insight 服务器、以对其进行验证：
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+采集端口默认为443、但在服务器安装期间可能已更改。如果连接成功、您将看到一个OnCommand Insight 响应页面、指示RAU和OnCommand Insight 服务器之间打开且可用的端口。
+
+
+
+== 步骤
+
+. 使用具有管理员权限的帐户登录到RAU服务器。
+. 打开Windows资源管理器并导航到RAU安装文件所在的目录。
+. 双击 `.MSI` 文件以开始安装。
+. 单击*下一步*继续显示许可协议的窗口。阅读此内容并接受许可协议的条款、然后单击*下一步*。
+. 选择此选项可将RAU安装在本地硬盘驱动器上、或者将整个功能安装在本地硬盘驱动器上。(您可以检查"Disk Usage"链接以确保具有足够的空间-需要116MB。) 单击*下一步*。
+. 在配置窗口中、设置特定于您站点的以下参数：
++
+** * OnCommand Insight **服务器名称或地址*—用于标识OnCommand Insight 服务器的主机名或IP地址。RAU使用此名称/IP打开与服务器的通信链路。如果指定主机名、请确保可以通过DNS解析该主机名。
+** *采集单元名称*—用于标识RAU的唯一名称。
+** * OnCommand Insight 安全远程采集端口(HTTPS)*—远程采集单元用于向OnCommand Insight 服务器发送环境更改信息的端口。此设置应与安装OnCommand Insight 服务器时输入的值匹配、并且在所有RAU上必须相同。
+
+
+. 查看您的选择。单击*返回*可返回并进行更改。单击 * 下一步 * 。
+. 单击*安装*开始安装。
++
+等待安装完成。此过程大约需要5到10分钟。
+
+
+
+
+
+== 完成后
+
+安装完成后、将显示一个最终窗口。单击*启动远程采集服务*框以启动RAU、然后单击*完成*以结束此操作。

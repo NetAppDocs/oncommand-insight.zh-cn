@@ -1,0 +1,31 @@
+---
+permalink: install-linux/device-identification-and-data-source-planning.html 
+sidebar: sidebar 
+keywords:  
+summary: 在规划部署时、您应收集有关环境中设备的信息。 
+---
+= 设备标识和数据源规划
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在规划部署时、您应收集有关环境中设备的信息。
+
+您需要以下软件、连接以及有关环境中每个设备的信息：
+
+* OCI服务器可解析的IP地址或主机名
+* 登录名和密码
+* 对设备的访问类型、例如控制器和管理工作站
++
+[NOTE]
+====
+只读访问对于大多数设备来说都已足够、但某些设备需要管理员权限。
+
+====
+* 与设备的端口连接、具体取决于数据源端口要求
+* 对于交换机、SNMP只读社区字符串(用于授予交换机访问权限的用户ID或密码)
+* 设备上所需的任何第三方软件、例如Solutions Enabler。
+* 有关OnCommand Insight 数据源权限和要求的详细信息、请参见Web UI帮助或_Web配置和管理指南_中的"供应商专用数据源参考"。
+

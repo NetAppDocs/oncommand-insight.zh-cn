@@ -1,0 +1,31 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 适用于您在NetApp集群模式Data ONTAP 存储资产登录页面上可能找到的对象或参考的术语。 
+---
+= 集群模式Data ONTAP 存储
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于您在NetApp集群模式Data ONTAP 存储资产登录页面上可能找到的对象或参考的术语。
+
+
+
+== 集群模式Data ONTAP 存储术语
+
+以下术语适用于您在NetApp集群模式Data ONTAP 存储资产登录页面上可能找到的对象或参考。其中许多术语也适用于其他数据收集器。
+
+* model—此集群中唯一的离散节点型号名称的逗号分隔列表。如果集群中的所有节点的型号类型相同，则只会显示一个型号名称。
+* vendor—与配置新数据源时看到的供应商名称相同。
+* serial number—阵列序列号。在NetApp集群模式Data ONTAP 等集群架构存储系统上、此序列号可能不如各个"存储节点`S`"序列号有用。
+* ip—通常是数据源中配置的IP或主机名。
+* 微代码版本—固件。
+* 原始容量—系统中所有物理磁盘的基本2总和、而不管其角色如何。
+* 延迟—表示主机在读取和写入工作负载方面所遇到的情况。理想情况下、OCI会直接获取此值、但这种情况通常不会发生。OCI通常会执行IOPs加权计算、而不是阵列提供这种计算、该计算是从各个内部卷`'统计信息中得出的。
+* 吞吐量—从内部卷聚合。
+* 管理—此信息可能包含设备管理界面的超链接。由Insight数据源在清单报告中以编程方式创建。
+

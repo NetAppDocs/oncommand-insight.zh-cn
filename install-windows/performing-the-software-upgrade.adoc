@@ -1,0 +1,14 @@
+---
+permalink: install-windows/performing-the-software-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: 完成所有前提任务后、您可以通过在每个服务器上下载并运行适用的安装包将所有Insight组件升级到新版本。 
+---
+= 正在执行软件升级
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成所有前提任务后、您可以通过在每个服务器上下载并运行适用的安装包将所有Insight组件升级到新版本。

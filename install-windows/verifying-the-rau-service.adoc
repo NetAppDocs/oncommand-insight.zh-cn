@@ -1,0 +1,22 @@
+---
+permalink: install-windows/verifying-the-rau-service.html 
+sidebar: sidebar 
+keywords:  
+summary: '成功安装远程采集单元(RAU)后、OnCommand Insight RAU服务应可在Microsoft Windows服务环境中使用。' 
+---
+= 验证远程采集单元服务
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+成功安装远程采集单元(RAU)后、OnCommand Insight RAU服务应可在Microsoft Windows服务环境中使用。
+
+
+
+== 步骤
+
+. 要验证RAU是否已添加到Windows服务中、请打开Windows的"开始"菜单、然后选择*控制面板*>*管理工具*>*服务*。
+. 在列表中找到* OnCommand Insight Acq - OnCommand Insight's Remote Acquisition Unit (RAU)*。
+

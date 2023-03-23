@@ -1,0 +1,36 @@
+---
+permalink: install-linux/uninstalling-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果需要、您可以卸载数据仓库。 
+---
+= 卸载数据仓库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果需要、您可以卸载数据仓库。
+
+
+
+== 开始之前
+
+备份OnCommand Insight 数据仓库(DWH)数据库的当前版本。
+
+
+
+== 关于此任务
+
+卸载OnCommand Insight 数据仓库会永久删除以前收集的所有数据。
+
+
+
+== 步骤
+
+. 使用具有sudo权限的帐户登录到数据仓库服务器。
+. 确保所有OnCommand Insight 窗口均已关闭。
+. 您可以查看的语法、命令参数和参数用法 `uninstall.sh` 输入以下命令： `sudo /usr/bin/oci-uninstall.sh --help`
+. 键入以下命令： `sudo /usr/bin/oci-uninstall.sh`
+

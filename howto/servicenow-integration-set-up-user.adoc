@@ -1,0 +1,46 @@
+---
+permalink: howto/servicenow-integration-set-up-user.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须为Insight设置一个ServiceNow用户、以便与数据进行连接和同步。 
+---
+= ServiceNow集成—设置用户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须为Insight设置一个ServiceNow用户、以便与数据进行连接和同步。
+
+
+
+== 关于此任务
+
+
+
+== 步骤
+
+. 在ServiceNow中创建服务帐户。登录到ServiceNow并导航到*系统安全性*>*用户和组*>*用户*。单击*新增*。
+. 输入用户名。在此示例中、我们将使用"`OCI2SNOW`"作为集成用户。输入此用户的密码。
++
+[NOTE]
+====
+在本操作说明中、我们会在整个文档中使用名为"`OCI2SNOW``"的服务帐户用户。您可以使用不同的服务帐户、但请确保它在您的环境中保持一致。
+
+====
+. 右键单击菜单栏、然后单击*保存*。这样、您就可以继续使用此用户来添加角色。
+. 单击*编辑*、然后向此用户添加以下角色：
++
+** 资产
+** import_verter
+** REST_SERVICE
+
+
+. 单击 * 保存 * 。
+. 必须将此同一用户添加到OnCommand Insight 中。以具有管理员权限的用户身份登录到Insight。
+. 导航到*管理*>*设置*、然后单击*用户*选项卡。
+. 单击*操作*按钮并选择*添加用户*。
+. 对于名称、输入"`OCI2SNOW`"。如果您使用的用户名与上述不同、请在此处输入此名称。输入与上述ServiceNow用户相同的密码。您可以将电子邮件字段留空。
+. 为此用户分配*用户*角色。单击 * 保存 * 。
+

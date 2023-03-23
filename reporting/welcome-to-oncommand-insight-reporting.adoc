@@ -1,0 +1,26 @@
+---
+permalink: reporting/welcome-to-oncommand-insight-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 报告是一种业务智能工具、可用于查看预定义报告或创建自定义报告。OnCommand Insight 报告可从数据仓库(DWH)数据生成报告。' 
+---
+= 欢迎使用OnCommand Insight 报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 报告是一种业务智能工具、可用于查看预定义报告或创建自定义报告。OnCommand Insight 报告可从数据仓库(DWH)数据生成报告。
+
+使用OnCommand Insight 报告、您可以执行以下任务：
+
+* 运行预定义报告
+* 创建自定义报告
+* 自定义报告格式和交付方法
+* 计划自动运行报告
+* 通过电子邮件发送报告
+* 使用颜色表示数据的阈值
+
+
+预定义报告是标准OnCommand Insight 报告。本指南介绍了所有产品许可证附带的预定义报告。

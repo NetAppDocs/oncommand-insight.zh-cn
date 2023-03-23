@@ -1,0 +1,30 @@
+---
+permalink: howto/setting-up-snmp-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight可以发送有关触发事件的SNMP通知、例如违规或超出数据源阈值的情况。 
+---
+= 为通知设置SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight可以发送有关触发事件的SNMP通知、例如违规或超出数据源阈值的情况。
+
+
+
+== 关于此任务
+
+按照以下基本步骤在Insight中配置SNMP：
+
+
+
+== 步骤
+
+. 单击*管理*>*通知*、然后转到* SNMP *部分。
+. 单击*操作*并选择*添加陷阱源*。
+. 在*添加SNMP陷阱收件人*对话框中、输入要将SNMP陷阱消息发送到的* IP *地址和*端口*。对于*社区字符串*、请对SNMP陷阱消息使用"`public`"。
+. 单击 * 保存 * 。
+

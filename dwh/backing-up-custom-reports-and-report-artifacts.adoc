@@ -1,0 +1,22 @@
+---
+permalink: dwh/backing-up-custom-reports-and-report-artifacts.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您在早于7.0的Insight版本中创建了自定义报告、并且要升级到最新的Insight版本、则应在升级安装之前备份报告和报告项目、并在升级安装后还原它们。您还应注意用于存储报告项目的文件夹。 
+---
+= 备份自定义报告和报告项目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在早于7.0的Insight版本中创建了自定义报告、并且要升级到最新的Insight版本、则应在升级安装之前备份报告和报告项目、并在升级安装后还原它们。您还应注意用于存储报告项目的文件夹。
+
+
+
+== 关于此任务
+
+如果您对预先设计的报告进行了更改、请在单独的文件夹中为这些报告创建您自己的副本。这样、在更新预先设计的项目时、您不会覆盖所做的更改。
+
+如果My Folders区域中有报告、则应将其复制到"Custom Reports"文件夹、以免丢失。

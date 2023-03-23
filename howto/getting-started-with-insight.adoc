@@ -1,0 +1,23 @@
+---
+permalink: howto/getting-started-with-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 安装OnCommand Insight 并获得正确许可后、您应执行许多任务来开始准备环境、以展示对您重要的数据。 
+---
+= Insight入门
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装OnCommand Insight 并获得正确许可后、您应执行许多任务来开始准备环境、以展示对您重要的数据。
+
+在典型环境中执行的某些任务包括：
+
+. *标注资产*、以便为查询和报告做好准备。有用的初始标注通常包括数据中心、层和服务级别。
+. "*创建查询"可显示重要数据并帮助进行故障排除
+. 将应用程序*和*业务实体*分配给资产
+. 针对违反这些策略的情况*创建性能策略*和*警报*
+. *创建自定义信息板*以根据需要或用户角色突出显示数据
+

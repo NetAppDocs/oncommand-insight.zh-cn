@@ -1,0 +1,171 @@
+---
+permalink: config-admin/importing-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: '如果在CSV文件中维护SAN对象(例如存储、主机和虚拟机)的标注、则可以将该信息导入到OnCommand Insight 中。您可以导入应用程序、业务实体或标注、例如层和建筑物。' 
+---
+= 正在导入标注值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果在CSV文件中维护SAN对象(例如存储、主机和虚拟机)的标注、则可以将该信息导入到OnCommand Insight 中。您可以导入应用程序、业务实体或标注、例如层和建筑物。
+
+
+
+== 关于此任务
+
+以下规则适用：
+
+* 如果标注值为空、则该标注将从对象中删除。
+* 为卷或内部卷添加标注时、对象名称是使用短划线和箭头(\->)分隔符的存储名称和卷名称的组合：
++
+[listing]
+----
+<storage_name>-><volume_name>
+----
+* 为存储、交换机或端口添加标注后、应用程序列将被忽略。
+* 租户列、Line__of_Business列、Business-Unit列和Project列构成一个业务实体。
++
+任何值均可留空。如果某个应用程序已与与与输入值不同的业务实体相关、则会将该应用程序分配给新的业务实体。
+
+
+
+导入实用程序支持以下对象类型和密钥：
+
+|===
+
+
+| Type | 密钥 
+
+
+ a| 
+主机
+ a| 
+`+id-><id>+` 或 `<Name>` 或 `<IP>`
+
+
+
+ a| 
+虚拟机
+ a| 
+`+id-><id>+` 或 `<Name>`
+
+
+
+ a| 
+存储池
+ a| 
+`+id-><id>+` 或 `<Storage_name>`\->``<Storage_Pool_name>``
+
+
+
+ a| 
+内部卷
+ a| 
+`+id-><id>+` 或 `<Storage_name>`\->``<Internal_volume_name>``
+
+
+
+ a| 
+Volume
+ a| 
+`+id-><id>+` 或 `<Storage_name>`\->``<Volume_name>``
+
+
+
+ a| 
+存储
+ a| 
+`+id-><id>+` 或 `<Name>` 或 `<IP>`
+
+
+
+ a| 
+交换机
+ a| 
+`+id-><id>+` 或 `<Name>` 或 `<IP>`
+
+
+
+ a| 
+Port
+ a| 
+`+id-><id>+` 或 `<WWN>`
+
+
+
+ a| 
+共享
+ a| 
+`+id-><id>+` 或 `+<Storage Name>-><Internal Volume Name>-><Share Name>-><Protocol>+` [`+-><Qtree Name >+`]`<Qtree>` 如果存在默认qtree、则为可选。
+
+
+
+ a| 
+qtree
+ a| 
+`+id-><id>+` 或 `+<Storage Name>-><Internal Volume Name>-><Qtree Name>+`
+
+|===
+CSV文件应使用以下格式：
+
+[listing]
+----
+, , <Annotation Type> [, <Annotation Type> ...]
+[, Application] [, Tenant] [, Line_Of_Business] [,
+Business_Unit] [, Project]
+
+<Object Type Value 1>, <Object Key 1>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+
+...
+
+<Object Type Value N>, <Object Key N>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+----
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*并选择*故障排除*。
++
+此时将显示Troubleshooting页面。
+
+. 在页面的*其他任务部分*中、单击* OnCommand Insight Portal"链接。
+. 单击* Insight Connect APi*。
+. 登录到门户。
+. 单击*标注导入实用程序*。
+. 保存 `.zip` 文件、解压缩并读取 `readme.txt` 追加信息 和示例的文件。
+. 将CSV文件置于与相同的文件夹中 `.zip` 文件
+. 在命令行窗口中、输入以下内容：
++
+[listing]
+----
+java -jar rest-import-utility.jar [-uusername] [-ppassword]
+[-aserver name or IP address] [-bbatch size] [-ccase sensitive:true/false]
+[-lextra logging:true/false] csv filename
+----
++
+默认情况下、启用额外日志记录的-l选项和启用区分大小写的-c选项均设置为false。因此、只有在要使用这些功能时、才必须指定这些功能。
+
++
+[NOTE]
+====
+选项与其值之间没有空格。
+
+====
++
+[NOTE]
+====
+以下关键字为保留关键字、可防止用户将其指定为标注名称：-应用程序-应用程序优先级-租户- Line__of_Business -业务单位-如果您尝试使用其中一个保留关键字导入标注类型、则会生成项目错误。如果您已使用这些关键字创建标注名称、则必须对其进行修改、以使导入实用程序工具能够正常工作。
+
++
+
+====
+

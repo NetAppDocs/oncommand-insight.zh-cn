@@ -1,0 +1,14 @@
+---
+permalink: config-admin/assigning-annotations-to-assets-using-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 要根据定义的条件自动为资产分配标注，请配置标注规则。OnCommand Insight 会根据这些规则为资产分配标注。Insight还提供了两个默认标注规则、您可以根据需要修改这些规则、如果不想使用这些规则、则可以将其删除。 
+---
+= 使用标注规则为资产分配标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要根据定义的条件自动为资产分配标注，请配置标注规则。OnCommand Insight 会根据这些规则为资产分配标注。Insight还提供了两个默认标注规则、您可以根据需要修改这些规则、如果不想使用这些规则、则可以将其删除。

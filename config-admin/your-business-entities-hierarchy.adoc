@@ -1,0 +1,24 @@
+---
+permalink: config-admin/your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以定义业务实体、以便更精细地跟踪和报告环境数据。 
+---
+= 业务实体层次结构
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以定义业务实体、以便更精细地跟踪和报告环境数据。
+
+在OnCommand Insight 中、业务实体层次结构包含以下级别：
+
+* 服务提供商主要使用*租户*将资源与客户(例如NetApp)相关联。
+* *业务部门(LOB)*是公司内的业务部门或产品线、例如数据存储。
+* *业务单位*代表传统业务单位、例如法律或营销。
+* *项目*通常用于标识业务单位中您希望进行容量成本分摊的特定项目。例如、"专利"可能是法律业务部门的项目名称、"销售活动"可能是营销业务部门的项目名称。请注意、级别名称可能包含空格。
+
+
+您无需在设计企业层次结构时使用所有级别。

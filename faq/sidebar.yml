@@ -1,0 +1,22 @@
+---
+section: faq
+title: 常见问题解答
+entries:
+- title: 一般问题
+  url: "/faq/faq-general-insight-questions.html"
+- title: OnCommand Insight 许可
+  url: "/faq/faq-insight-licensing.html"
+- title: 配置和支持的设备
+  url: "/faq/faq-configuration-and-supported-devices.html"
+- title: 扩展性和易用性
+  url: "/faq/faq-scale-and-ease-of-use.html"
+- title: 性能故障排除
+  url: "/faq/faq-performance-troubleshooting.html"
+- title: 管理您的环境
+  url: "/faq/faq-environment-management.html"
+- title: 将Insight与其他工具集成
+  url: "/faq/faq-integrating-insight-and-third-party-tools.html"
+- title: Data ONTAP 存储IOPS
+  url: "/faq/oci-faq-netapp-storage-iops.html"
+- title: 异常检测
+  url: "/faq/faq-anomaly-detection.html"

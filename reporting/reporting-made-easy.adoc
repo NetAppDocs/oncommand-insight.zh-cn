@@ -1,0 +1,38 @@
+---
+permalink: reporting/reporting-made-easy.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以从OnCommand Insight 报告门户生成预定义报告、并通过电子邮件将其发送给其他用户、甚至可以对其进行修改。您可以通过多个报告按设备，业务实体或层进行筛选。报告工具使用 IBM Cognos 作为基础，并为您提供多种数据呈现选项。 
+---
+= 轻松完成报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从OnCommand Insight 报告门户生成预定义报告、并通过电子邮件将其发送给其他用户、甚至可以对其进行修改。您可以通过多个报告按设备，业务实体或层进行筛选。报告工具使用 IBM Cognos 作为基础，并为您提供多种数据呈现选项。
+
+* OnCommand Insight 预定义报告显示您的清单、存储容量、成本分摊、性能、存储效率、 和云成本数据。您可以修改这些预定义报告并保存所做的修改。
+
+
+您可以使用的报告数据由多个因素控制、包括：
+
+* 登录访问OnCommand Insight 报告门户、该门户由角色定义。
+* OnCommand InsightData仓库的设置、用于存储报告的数据。
+
+
+您可以生成各种格式的报告，包括 HTML ， PDF ， CSV ， XML ， 和 Excel 。
+
+OnCommand Insight 允许您将用户与业务单位相关联、从而在报告中容纳多个租户。借助此功能、管理员可以根据用户的属性或其从属关系来分隔数据或报告。
+
+[NOTE]
+====
+对于Cognos 11.1.2及更高版本、报告URL不会被视为"稳定"、可能会发生更改。如果您已将报告URL添加到书签、则这些书签可能会随后失败。有关详细信息、请参见： http://queryvision.com/ibm-analytics-11-x-urls-they-are-a-changing/[]
+
+====
+[NOTE]
+====
+OnCommand Insight 不支持使用IBM Cognos中的软件包创建的任何信息板、除非使用新的数据模块功能。
+
+====

@@ -1,0 +1,67 @@
+---
+permalink: config-admin/importing-fc-identification-from-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用CSV文件中的设备列表手动将光纤通道设备标识导入到OnCommand Insight 设备解析功能中。 
+---
+= 从CSV文件导入光纤通道设备标识
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用CSV文件中的设备列表手动将光纤通道设备标识导入到OnCommand Insight 设备解析功能中。
+
+
+
+== 开始之前
+
+您必须具有格式正确的CSV文件、才能将设备标识直接导入到设备解析功能中。光纤通道设备的CSV文件需要以下信息：
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Name
+
+
+
+ a| 
+Type
+
+|===
+[NOTE]
+====
+作为最佳实践、建议先将FC标识信息导出到CSV文件、在该文件中进行所需的更改、然后再将该文件导回FC标识。这样可以确保所需列的存在顺序正确。
+
+====
+要导入FC标识信息、请执行以下操作：
+
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*>*设备解析*
+. 选择* FC Identify"*选项卡。
+. 单击*标识*>*从文件标识*
+. 
++
+.. 导航到包含要导入的CSV文件的文件夹、然后选择所需文件。
+
+
++
+您输入的设备将添加到FC Identify选项卡的设备列表中。"`规则`"标识为"`M手动`"。
+
+

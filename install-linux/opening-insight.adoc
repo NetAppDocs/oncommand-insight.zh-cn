@@ -1,0 +1,48 @@
+---
+permalink: install-linux/opening-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 安装OnCommand Insight 后、您必须安装许可证、然后设置Insight以监控您的环境。为此、您可以使用Web浏览器访问Insight Web UI。 
+---
+= 访问Web UI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装OnCommand Insight 后、您必须安装许可证、然后设置Insight以监控您的环境。为此、您可以使用Web浏览器访问Insight Web UI。
+
+
+
+== 步骤
+
+. 执行以下操作之一：
++
+** 在Insight服务器上打开Insight：
++
+`+https://fqdn+`
+
+** 从任何其他位置打开Insight：
++
+`+https://fqdn:port+`
+
++
+端口号是443、或者是在安装Insight服务器时配置的其他端口。如果未在URL中指定端口号、则端口号默认为443。
+
+
+
++
+此时将显示OnCommand Insight 对话框：image:../media/oci-login-dialog-box.gif[""]
+
+. 输入您的用户名和密码、然后单击*登录*。
++
+如果已安装许可证、则会显示数据源设置页面。
+
++
+[NOTE]
+====
+处于非活动状态30分钟的Insight浏览器会话将超时、您将自动从系统中注销。为了提高安全性、建议在注销Insight后关闭浏览器。
+
+====
+

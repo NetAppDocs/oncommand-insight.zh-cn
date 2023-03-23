@@ -1,0 +1,45 @@
+---
+permalink: dwh/seeing-the-annotation-changes-in-the-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据库架构反映了特定表中的更改。 
+---
+= 显示数据库架构中的标注更改
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据库架构反映了特定表中的更改。
+
+
+
+== 关于此任务
+
+例如、如果向存储阵列添加标注、则这些标注将显示在清单或其他数据集市的存储或交换机表中。
+
+如果您使用OnCommand Insight 用户界面更新资源上的标注并启动或等待下一个数据仓库构建、则您还会在清单(dwh_inventory)中的相应对象以及相应维度表中看到添加或删除了一个新列 (位于相应的数据集市中)。您可以在下表中查看结果：
+
+* dwh_inventory.annotation_value
+* dwh_inventory.object_to_annotation
+
+
+
+
+== 步骤
+
+. 单击 image:../media/oci-7-help-icon-gif.gif[""] 在数据仓库工具栏上、选择*文档*。
+. 选择*数据库架构*。
+. 在左侧的*数据库架构*窗格中、滚动到* DWH清单*部分、然后单击*交换机*。
++
+image::../media/oci-dwh-databaseschema-inventory-switch-gif.gif[DWH清单数据库架构切换表]
+
+. * dwh_inventory.switch*表反映了以下更改：
++
+image::../media/oci-dwh-databaseschema-capacity-sd-gif.gif[DWH容量数据库架构存储维度表]
+
++
+数据中心标注列显示在storage_dimensions表中。
+
+

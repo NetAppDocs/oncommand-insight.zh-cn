@@ -1,0 +1,40 @@
+---
+permalink: config-admin/editing-a-user-definition.html 
+sidebar: sidebar 
+keywords:  
+summary: 具有管理员权限的用户可以编辑用户帐户、以更改OnCommand Insight 或DWH的电子邮件地址或角色以及报告功能。 
+---
+= 编辑用户定义
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+具有管理员权限的用户可以编辑用户帐户、以更改OnCommand Insight 或DWH的电子邮件地址或角色以及报告功能。
+
+
+
+== 开始之前
+
+确定需要更改的用户帐户类型(OnCommand Insight 、DWH或组合)。
+
+
+
+== 关于此任务
+
+对于LDAP用户、您只能使用此方法修改电子邮件地址。
+
+
+
+== 步骤
+
+. 使用管理员权限登录。
+. 在Insight工具栏上、单击*管理*。
+. 单击*设置*。
+. 单击*用户*选项卡。
+. 找到显示要修改的用户帐户的行。
+. 单击用户信息右侧的*编辑用户帐户*图标。
+. 进行必要的更改。
+. 单击 * 保存 * 。
+

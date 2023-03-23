@@ -1,0 +1,18 @@
+---
+permalink: config-admin/violations.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用资产页面的违规部分查看因分配给资产的性能策略而在您的环境中发生的违规（如果有）。性能策略可监控您的网络阈值、并使您能够立即检测到违反阈值的情况、确定其含义、并分析问题的影响和根发生原因 、以便快速有效地进行更正。 
+---
+= 违规
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用资产页面的违规部分查看因分配给资产的性能策略而在您的环境中发生的违规（如果有）。性能策略可监控您的网络阈值、并使您能够立即检测到违反阈值的情况、确定其含义、并分析问题的影响和根发生原因 、以便快速有效地进行更正。
+
+以下示例显示了虚拟机管理程序的资产页面上显示的"Violations"部分：
+
+image::../media/violations-section.gif[Violations部分]

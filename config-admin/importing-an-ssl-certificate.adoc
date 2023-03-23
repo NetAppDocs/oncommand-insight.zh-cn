@@ -1,0 +1,132 @@
+---
+permalink: config-admin/importing-an-ssl-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以添加SSL证书以启用增强的身份验证和加密、从而增强OnCommand Insight 环境的安全性。 
+---
+= 导入SSL证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以添加SSL证书以启用增强的身份验证和加密、从而增强OnCommand Insight 环境的安全性。
+
+
+
+== 开始之前
+
+您必须确保系统满足所需的最低位级别(1024位)。
+
+
+
+== 关于此任务
+
+[NOTE]
+====
+在尝试执行此操作步骤 之前、您应备份现有的 `server.keystore` 文件、并为备份命名 `server.keystore.old`。损坏 `server.keystore` 文件可能会导致Insight服务器在重新启动后无法运行。如果创建备份、则可以在出现问题时还原到旧文件。
+
+====
+
+
+== 步骤
+
+. 创建原始密钥库文件的副本： `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
+. 列出密钥库的内容： `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. 当系统提示您输入密码时、输入 `changeit`。
+
+
++
+系统将显示密钥库的内容。密钥库中应至少有一个证书、 `"ssl certificate"`。
+
+. 删除 `"ssl certificate"`： `keytool -delete -alias "ssl certificate" -keystore c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. 生成新密钥： `C:\Program Files\SANscreen\java64\bin\keytool.exe -genkey -alias "ssl certificate" -keyalg RSA -keysize 2048 -validity 365 -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. 当系统提示您输入名字和姓氏时、请输入要使用的完全限定域名(FQDN)。
+.. 提供有关您的组织和组织结构的以下信息：
++
+*** 国家/地区：您所在国家/地区的双字母ISO缩写(例如、US)
+*** 州或省：您的组织总部所在州或省的名称(例如、马萨诸塞州)
+*** Locality：您的组织总部所在城市的名称(例如、沃尔瑟姆)
+*** 组织名称：拥有域名的组织的名称(例如、NetApp)
+*** 组织单位名称：要使用证书的部门或组的名称(例如、支持)
+*** 域名/公用名：用于服务器DNS查找的FQDN (例如www.example.com)系统将使用类似于以下内容的信息进行响应： `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. 输入 ... `Yes` 公用名(Common Name、CN)等于FQDN时。
+.. 当系统提示您输入密钥密码时、输入密码或按Enter键以使用现有密钥库密码。
+
+
+. 生成证书请求文件： `C:\Program Files\SANscreen\java64\bin\keytool.exe -certreq -alias "ssl certificate" -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+。 `c:\localhost.csr` file是新生成的证书请求文件。
+
+. 提交 `c:\localhost.csr` 将文件提交给证书颁发机构(CA)进行审批。
++
+证书请求文件获得批准后、您希望证书在中返回给您 `.der` 格式。此文件可能会以返回、也可能不会以返回 `.der` 文件默认文件格式为 `.cer` 适用于Microsoft CA服务。
+
++
+大多数组织的CA都使用一系列信任模式、包括通常处于脱机状态的根CA。它仅为少数子CA (称为中间CA)的证书签名。
+
++
+您必须获取整个信任链的公共密钥(证书)—为OnCommand Insight 服务器签署证书的CA的证书、以及该签名CA与组织根CA之间的所有证书。
+
++
+在某些组织中、当您提交签名请求时、可能会收到以下消息之一：
+
++
+** 一个PKCS12文件、其中包含您的签名证书以及信任链中的所有公共证书
+** 答 `.zip` 包含各个文件(包括您的签名证书)以及信任链中的所有公共证书的文件
+** 仅限您的签名证书
++
+您必须获取公共证书。
+
+
+
+. 导入已批准的server.keystore证书： `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. 出现提示时、输入密钥库密码。
++
+此时将显示以下消息： `Certificate reply was installed in keystore`
+
+
+
+. 导入已批准的server.trustore证书： `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore"`
++
+.. 出现提示时、输入truestore密码。
++
+此时将显示以下消息： `Certificate reply was installed in trustore`
+
+
+
+. 编辑 `SANscreen\wildfly\standalone\configuration\standalone-full.xml` 文件：
++
+替换以下别名字符串： `alias="cbc-oci-02.muccbc.hq.netapp.com"`。例如：
+
++
+`<keystore path="server.keystore" relative-to="jboss.server.config.dir" keystore-password="${VAULT::HttpsRealm::keystore_password::1}" alias="cbc-oci-02.muccbc.hq.netapp.com" key-password="${VAULT::HttpsRealm::key_password::1}"/>`
+
+. 重新启动SANscreen 服务器服务。
++
+运行Insight后、您可以单击挂锁图标以查看系统上安装的证书。
+
++
+如果您看到包含与"颁发者"信息匹配的"颁发给"信息的证书、则仍会安装自签名证书。Insight安装程序生成的自签名证书的有效期为100年。
+
++
+NetApp无法保证此操作步骤 将删除数字证书警告。NetApp无法控制最终用户工作站的配置方式。请考虑以下情形：
+
++
+** Microsoft Internet Explorer和Google Chrome均在Windows上使用Microsoft本机证书功能。
++
+这意味着、如果Active Directory管理员将组织的CA证书推送到最终用户的证书存储库中、则当OnCommand Insight 自签名证书被替换为内部CA基础架构签名的证书时、这些浏览器的用户将看到证书警告消失。
+
+** Java和Mozilla Firefox具有各自的证书存储。
++
+如果系统管理员不自动将CA证书载入这些应用程序的可信证书存储中、则使用Insight Java客户端或Firefox浏览器可能会由于证书不可信而继续生成证书警告、即使已更换自签名证书也是如此。将您的组织的证书链安装到数据存储库中是另一项要求。
+
+
+
+

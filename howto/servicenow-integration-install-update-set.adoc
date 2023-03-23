@@ -1,0 +1,31 @@
+---
+permalink: howto/servicenow-integration-install-update-set.html 
+sidebar: sidebar 
+keywords:  
+summary: 在ServiceNow和OnCommand Insight 之间集成的过程中、您必须安装一个更新集、该更新集会将预配置的数据加载到ServiceNow中、以便为连接器提供用于提取和加载数据的特定字段和表。 
+---
+= 安装更新集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在ServiceNow和OnCommand Insight 之间集成的过程中、您必须安装一个更新集、该更新集会将预配置的数据加载到ServiceNow中、以便为连接器提供用于提取和加载数据的特定字段和表。
+
+
+
+== 步骤
+
+. 通过搜索"`reRetrieved update sets`"、导航到ServiceNow中的远程更新集表。
+. 单击*从XML*导入更新集。
+. 此更新集位于先前下载到本地驱动器(在我们的示例中为)的Python connector .zip文件中 `C:\OCI2SNOW` 文件夹) `\update_sets` 子文件夹。单击*选择文件*、然后选择此文件夹中的.xml文件。单击 * 上传 * 。
+. 加载更新集后、将其打开并单击*预览更新集*。
++
+如果检测到错误、则必须先更正这些错误、然后才能提交更新集。
+
+. 如果没有错误、请单击*提交更新集*。
++
+提交更新集后、它将显示在*系统更新集*>*更新源*页面上。
+
+

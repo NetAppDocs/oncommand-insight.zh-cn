@@ -1,0 +1,167 @@
+---
+permalink: config-admin/huawei-oceanstor-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 使用Huawei OceanStor (REST/HTTPS\)数据源发现Huawei OceanStor存储的清单。' 
+---
+= Huawei OceanStor数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 使用Huawei OceanStor (REST/HTTPS)数据源发现Huawei OceanStor存储的清单。
+
+
+
+== 术语
+
+OnCommand Insight 从华为OceanStor采集以下清单和性能信息。对于OnCommand Insight 收购的每种资产类型、均显示了此资产最常用的术语。查看此数据收集器或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | OnCommand Insight 术语 
+
+
+ a| 
+存储池
+ a| 
+存储池
+
+
+
+ a| 
+文件系统
+ a| 
+内部卷
+
+
+
+ a| 
+控制器
+ a| 
+存储节点
+
+
+
+ a| 
+FC 端口（已映射）
+ a| 
+卷映射
+
+
+
+ a| 
+主机 FC 启动程序（已映射）
+ a| 
+卷掩码
+
+
+
+ a| 
+NFS/CIFS 共享
+ a| 
+共享
+
+
+
+ a| 
+共享
+ a| 
+iSCSI 目标节点
+
+
+
+ a| 
+iSCSI 链路启动程序
+ a| 
+iSCSI 启动程序节点
+
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+|===
+
+
+== 要求
+
+配置和使用此数据收集器的要求如下：
+
+* 设备IP
+* 用于访问 OceanStor 设备管理器的凭据
+* 端口 8088 必须可用
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+OceanStor 主机 IP 地址
+ a| 
+OceanStor Device Manager 的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+用于登录到 OceanStor Device Manager 的名称
+
+
+
+ a| 
+Password
+ a| 
+用于登录到 OceanStor Device Manager 的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+TCP 端口
+ a| 
+用于连接到OceanStor Device Manager的TCP端口(默认值为8088)
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+连接超时（秒）
+ a| 
+连接超时(默认为60秒)
+
+|===

@@ -1,0 +1,36 @@
+---
+permalink: install-windows/testing-the-connectors.html 
+sidebar: sidebar 
+keywords:  
+summary: 升级后、您需要测试连接器、以确保已从OnCommand Insight 数据仓库连接到OnCommand Insight 服务器。 
+---
+= 测试连接器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+升级后、您需要测试连接器、以确保已从OnCommand Insight 数据仓库连接到OnCommand Insight 服务器。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://fqdn/dwh+`。
+. 从左侧导航窗格中、单击*连接器*。
+. 选择第一个连接器。
++
+此时将显示编辑连接器页面。
+
+. 单击 * 测试 * 。
+. 如果测试成功、请单击*关闭*；如果测试失败、请在*名称*字段中输入Insight服务器的名称、并在*主机*字段中输入其IP地址、然后单击*测试*。
+. 在数据仓库与Insight服务器之间成功连接后、单击*保存*。
++
+如果失败、请检查连接配置并确保Insight服务器没有任何问题。
+
+. 单击 * 测试 * 。
++
+数据仓库会测试连接。
+
+

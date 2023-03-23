@@ -1,0 +1,48 @@
+---
+permalink: howto/collecting-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过集成SNMP数据源、您可以在OnCommand Insight 中收集通用SNMP数据。 
+---
+= 正在收集SNMP集成数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过集成SNMP数据源、您可以在OnCommand Insight 中收集通用SNMP数据。
+
+
+
+== 集成软件包
+
+SNMP集成数据源使用"`Integration Pack`"来定义收集的集成值以及提供这些值的SNMP对象。
+
+集成软件包包括：
+
+* 一个JSON配置文件(integration.json)、根据特定设备类型(交换机、路由器等)的SNMP对象定义集成有效负载内容。
+* 集成软件包所依赖的MIB文件列表。
+
+
+一个集成软件包可以定义多种数据类型。例如、在集成RHEL主机时、可以为正常运行时间、用户数和正在运行的进程数等常规系统信息定义数据类型、还可以为内存和文件系统使用情况数据定义第二种数据类型。通常、每个数据类型都必须为"`flat`"、并且不能包含嵌套数据。
+
+一个集成软件包不应定义24种以上的数据类型。Insight会限制收集的集成数据量。如果尝试在一分钟内载入24个以上的报告、则会导致速率错误。
+
+集成类型的名称必须遵循以下规则：
+
+* 名称不能以以下字符开头：_、-或+
+* 名称不能包含以下字符：#、\、/、*、？、 "、<、>、|、"、 `、
+* 长度不能超过100个UTF-8编码字节
+* 不能命名为。或。
+
+
+
+
+== 集成文件格式
+
+集成软件包是一个ZIP文件、其中包含一个JSON配置文件(integration.json)、用于根据SNMP对象定义集成有效负载内容。它还包含一个MIB文件夹、其中包含所有MIB文件及其MIB依赖项。
+
+。 `integration.json` 文件必须位于ZIP文件的顶层、MIB文件必须位于ZIP中的"resources/mibs"子目录中。如果需要、此ZIP文件还可能包含readme.txt等文件。集成ZIP结构的一个示例是：
+
+image::../media/integration-zip.gif[集成zip]

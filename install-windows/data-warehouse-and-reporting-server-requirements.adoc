@@ -1,0 +1,130 @@
+---
+permalink: install-windows/data-warehouse-and-reporting-server-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须在与已建立的硬件和软件要求兼容的计算机上运行数据仓库和报告服务器、以确保此计算机上尚未安装Apache Web服务器或报告软件。 
+---
+= 数据仓库和报告服务器要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须在与已建立的硬件和软件要求兼容的计算机上运行数据仓库和报告服务器、以确保此计算机上尚未安装Apache Web服务器或报告软件。
+
+[NOTE]
+====
+OnCommand Insight 的规模估算具有多种依赖关系、例如环境中的资产数量、保留的历史数据量等。以下数据仓库规模估算示例仅供参考；它们表示已对Insight进行测试的某些环境。更改环境中的上述任何因素或其他因素都可能会更改Insight的规模估算要求。
+
+====
+在安装或升级Insight之前、建议联系您的销售工程师以获取详细的规模估算指导。
+
+*示例：*
+
+|===
+
+
+| 环境因素： | 测试的磁盘空间、CPU和内存： 
+
+
+ a| 
+18个存储阵列3、400个VM
+
+4、500个交换机端口
+ a| 
+200 GB硬盘8个核心
+
+32 GB RAM
+
+
+
+ a| 
+110个存储阵列11、500个VM
+
+14、500个交换机端口
+ a| 
+300 GB硬盘8个核心
+
+48 GB RAM
+
+|===
+*要求：*
+
+|===
+
+
+| 组件 | Required 
+
+
+ a| 
+操作系统
+ a| 
+运行64位Microsoft Windows Server 2012、2012 R2、2016或2019且具有最新Service Pack的计算机。
+
+
+
+ a| 
+虚拟机(VM)
+ a| 
+如果为实例预留了CPU和内存资源、则此组件可以在虚拟环境中运行。
+
+
+
+ a| 
+CPU
+ a| 
+8到40个CPU核
+
+
+
+ a| 
+内存
+ a| 
+32 GB - 2 TB RAM最佳实践：强烈建议将分页文件大小设置为"`Windows managed`"。大小固定的小分页文件可能会妨碍Insight性能数据的成功存储。
+
+
+
+ a| 
+可用磁盘空间
+ a| 
+200 GB - 2 TB磁盘空间安装要求C：驱动器至少具有20 GB的可用空间。
+
+
+NOTE: 在Windows上、具有报告功能的Insight数据仓库要求在安装之前在安装驱动器上启用8dot3名称创建支持。C：驱动器通常会默认启用此功能。您可以通过运行以下命令(将D：替换为目标安装驱动器)来验证是否在目标安装驱动器上启用了8dot3名称创建：
+
+fsutil 8dot3name查询D：
+
+要启用8dot3名称创建、请执行以下命令(将D：替换为目标安装驱动器)：
+
+fsutil 8dot3name set D：0
+
+
+
+ a| 
+网络
+ a| 
+* 100 Mbps或1 Gbps以太网连接
+* 静态IP地址
+* 在Windows上安装具有报告功能的数据仓库之前、端口50000必须可用
+* 对于OnCommand Insight DWH服务器进程、端口80、443、1098、1099、 3873、8083和4444到4446
+* 对于报告引擎、端口1527、9362、9300和9399
+* 对于MySQL、端口3306
+* 通过执行确保DNS正常工作 `nslookup` 针对主机
+
+
+
+
+ a| 
+病毒扫描
+ a| 
+在安装此OnCommand Insight 组件期间、您必须完全禁用所有病毒扫描程序。安装后、必须从病毒扫描中排除Insight组件使用的路径(安装、备份和归档程序路径)以及所有DWH组件安装路径(SANscreen 、DB2和备份路径)。
+
+
+
+ a| 
+Visual Studio
+ a| 
+Visual Studio 2019 https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist["可重新分发"] 必须先安装、然后才能在Windows上安装具有报告功能的数据仓库。
+
+|===

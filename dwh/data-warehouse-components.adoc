@@ -1,0 +1,19 @@
+---
+permalink: dwh/data-warehouse-components.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据仓库包含多个组件。 
+---
+= 数据仓库组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据仓库包含多个组件。
+
+* 数据仓库门户
+* OnCommand Insight 报告门户
+* 报告创作工具
+

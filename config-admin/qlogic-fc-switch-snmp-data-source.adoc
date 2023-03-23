@@ -1,0 +1,124 @@
+---
+permalink: config-admin/qlogic-fc-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '在配置方面、QLogic FC交换机\(SNMP\)数据源需要FC交换机设备的网络地址(指定为IP地址)以及用于访问此设备的SNMP只读社区字符串。' 
+---
+= QLogic FC交换机数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在配置方面、QLogic FC交换机(SNMP)数据源需要FC交换机设备的网络地址(指定为IP地址)以及用于访问此设备的SNMP _read-onium_社区字符串。
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+SANSurfer交换机
+ a| 
+SANSurfer交换机的IP地址或完全限定域名
+
+
+
+ a| 
+SNMP 版本
+ a| 
+SNMP 版本
+
+
+
+ a| 
+SNMP社区
+ a| 
+SNMP 社区字符串
+
+
+
+ a| 
+用户名
+ a| 
+SANSurfer交换机的用户名
+
+
+
+ a| 
+Password
+ a| 
+SANSurfer交换机的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为15分钟)
+
+
+
+ a| 
+SNMP 身份验证协议
+ a| 
+SNMP 身份验证协议（仅限 SNMPv3 ）
+
+
+
+ a| 
+SNMP 重试
+ a| 
+SNMP 重试尝试次数
+
+
+
+ a| 
+SNMP 超时（毫秒）
+ a| 
+SNMP 超时（默认为 5000 毫秒）
+
+
+
+ a| 
+启用陷阱
+ a| 
+选择以启用陷阱
+
+
+
+ a| 
+陷阱之间的最短时间（秒）
+ a| 
+陷阱触发的两次采集尝试之间的最短时间（默认值为 10 秒）
+
+
+
+ a| 
+网络结构名称
+ a| 
+数据源要报告的网络结构名称。留空以将网络结构名称报告为 WWN 。
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

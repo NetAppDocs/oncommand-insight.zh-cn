@@ -1,0 +1,30 @@
+---
+permalink: install-linux/downloading-the-oncommand-insight-installer.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以从NetApp 支持站点 下载OnCommand Insight 安装程序。 
+---
+= 下载OnCommand Insight 安装程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从NetApp 支持站点 下载OnCommand Insight 安装程序。
+
+
+
+== 开始之前
+
+您必须登录到位于的NetApp 支持站点 http://mysupport.netapp.com/["mysupport.netapp.com"]。
+
+此外、您还必须具有解压缩实用程序才能打开安装 `.ZIP` 文件。
+
+
+
+== 步骤
+
+. 登录到要安装OnCommand Insight 的服务器。
+. 从NetApp 支持站点 下载安装文件。
+

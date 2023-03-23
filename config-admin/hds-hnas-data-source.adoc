@@ -1,0 +1,145 @@
+---
+permalink: config-admin/hds-hnas-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'HDS NAS\(HNAS\)数据源是一个清单和配置数据源、用于支持发现HDS NAS集群。Insight支持发现NFS和CIFS共享、文件系统(Insight内部卷)和跨区(Insight存储池)。' 
+---
+= HDS NAS (HNAS)数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HDS NAS (HNAS)数据源是一个清单和配置数据源、用于支持发现HDS NAS集群。Insight支持发现NFS和CIFS共享、文件系统(Insight内部卷)和跨区(Insight存储池)。
+
+此数据源基于SSH、因此要托管它的采集单元需要能够在HNAS本身或集群所连接的系统管理单元(Systems Management Unit、SMU)上启动与TCP 22的SSH会话。
+
+
+
+== 术语
+
+OnCommand Insight 从HNAS数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+层
+ a| 
+磁盘组
+
+
+
+ a| 
+集群
+ a| 
+存储
+
+
+
+ a| 
+Node
+ a| 
+存储节点
+
+
+
+ a| 
+范围
+ a| 
+存储池
+
+
+
+ a| 
+文件系统
+ a| 
+内部卷
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+以下是配置和使用此数据源的要求：
+
+* 设备 IP 地址
+* 端口 22 ， SSH 协议
+* username and password —权限级别： supervisor
+* 注意：此数据收集器基于SSH、因此托管此数据收集器的AU必须能够在HNAS本身或集群所连接的系统管理单元(SMU)上启动与TCP 22的SSH会话。
+
+
+[NOTE]
+====
+此数据收集器基于SSH、因此托管此数据收集器的AU必须能够在HNAS本身或集群所连接的系统管理单元(SMU)上启动与TCP 22的SSH会话。
+
+====
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+HNAS 主机
+ a| 
+HNAS 管理主机的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+HNAS CLI 的用户名
+
+
+
+ a| 
+Password
+ a| 
+HNAS CLI 使用的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为30分钟)
+
+
+
+ a| 
+SSH横幅等待超时(秒)
+ a| 
+SSH横幅等待超时(默认值为15秒)
+
+
+
+ a| 
+SSH命令超时(秒)
+ a| 
+SSH命令超时(默认为30秒)
+
+|===

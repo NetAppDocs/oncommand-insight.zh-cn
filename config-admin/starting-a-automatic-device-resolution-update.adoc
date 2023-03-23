@@ -1,0 +1,24 @@
+---
+permalink: config-admin/starting-a-automatic-device-resolution-update.html 
+sidebar: sidebar 
+keywords:  
+summary: 设备解析更新会提交自上次运行完全自动设备解析以来添加的手动更改。运行更新只能用于提交和运行对设备解析配置所做的新手动条目。不执行完整的设备解析运行。 
+---
+= 启动自动设备解析更新
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+设备解析更新会提交自上次运行完全自动设备解析以来添加的手动更改。运行更新只能用于提交和运行对设备解析配置所做的新手动条目。不执行完整的设备解析运行。
+
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*>*设备解析*
+. 在*设备解析*屏幕中、单击*运行AR*按钮中的向下箭头。
+. 单击 * 更新 * 开始更新。
+

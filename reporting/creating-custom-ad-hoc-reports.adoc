@@ -1,0 +1,21 @@
+---
+permalink: reporting/creating-custom-ad-hoc-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用报告创作工具创建自定义报告。创建报告后，您可以保存这些报告并定期运行它们。报告结果可以通过电子邮件自动发送给您自己和其他人。 
+---
+= 创建自定义临时报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用报告创作工具创建自定义报告。创建报告后，您可以保存这些报告并定期运行它们。报告结果可以通过电子邮件自动发送给您自己和其他人。
+
+本节中的示例显示了以下过程、可用于任何OnCommand Insight 数据模型：
+
+* 确定要使用报告回答的问题
+* 确定支持结果所需的数据
+* 选择报告的数据元素
+

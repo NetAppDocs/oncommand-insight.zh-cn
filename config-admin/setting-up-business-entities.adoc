@@ -1,0 +1,43 @@
+---
+permalink: config-admin/setting-up-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 在为公司设计业务实体层次结构后、您可以设置应用程序、然后将业务实体与应用程序相关联。此过程将在OnCommand Insight 数据库中创建业务实体结构。 
+---
+= 创建业务实体
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在为公司设计业务实体层次结构后、您可以设置应用程序、然后将业务实体与应用程序相关联。此过程将在OnCommand Insight 数据库中创建业务实体结构。
+
+
+
+== 关于此任务
+
+将应用程序与业务实体关联是可选的；但是、这是最佳实践。
+
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*并选择*业务实体*。
++
+此时将显示"Business Entities"页面。
+
+. 单击 image:../media/add-annotation-icon.gif[""] 开始构建新实体。
++
+此时将显示*添加业务实体*对话框。
+
+. 对于每个实体级别(租户、业务部门、业务单位和项目)、您可以执行以下任一操作：
++
+** 单击实体级别列表并选择一个值。
+** 键入新值并按Enter键。
+** 如果不想对业务实体使用实体级别、请将实体级别值保留为不适用。
+
+
+. 单击 * 保存 * 。
+

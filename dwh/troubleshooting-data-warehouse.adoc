@@ -1,0 +1,24 @@
+---
+permalink: dwh/troubleshooting-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以执行与数据仓库故障排除相关的各种任务。 
+---
+= 对数据仓库进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以执行与数据仓库故障排除相关的各种任务。
+
+* 使用OnCommand Insight ASUP。
+* 查看OnCommand Insight 日志。
+* 解决与升级和业务实体相关的问题。
+* 解决与整合多个OnCommand Insight 服务器相关的问题。
+
+
+您可以将多个OnCommand Insight 服务器整合到同一个数据仓库数据库中。许多配置可能会从多个连接器报告相同的对象(即、同一交换机存在于两个OnCommand Insight 实例中)。在这种情况下、数据仓库会将多个对象整合到一个对象中(选择一个主连接器、并且仅从该连接器中获取对象的数据)。
+
+存储管理员可以使用故障排除页面来解决与整合问题相关的问题。

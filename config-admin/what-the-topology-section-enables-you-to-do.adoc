@@ -1,0 +1,31 @@
+---
+permalink: config-admin/what-the-topology-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过拓扑部分、您可以查看网络中的资产如何彼此连接、并显示有关相关资产的信息。 
+---
+= 使用Topology部分
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过拓扑部分、您可以查看网络中的资产如何彼此连接、并显示有关相关资产的信息。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 通过执行以下任一操作找到资产页面：
++
+** 在Insight工具栏上、单击 image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]、键入资产的名称、然后从列表中选择资产。
+** 单击*信息板*、选择*资产信息板*、找到资产名称并单击它。此时将显示资产页面。您可以在资产页面的右上角找到Topology部分。
+
+
++
+如果资产的拓扑大于本节所示的范围、请单击*单击链接以查看Topologies*超链接。
+
+. 要查看有关基础资产的相关资产的详细信息、请将光标置于拓扑中的相关资产上、然后单击其名称以显示其资产页面。
+

@@ -1,0 +1,56 @@
+---
+permalink: config-admin/exporting-fc-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以通过OnCommand Insight 设备解析功能将现有光纤通道设备标识导出到CSV文件。您可能希望导出设备标识、以便对其进行修改、然后将其导回Insight、在此可以使用它来标识与导出标识最初匹配的设备类似的设备。 
+---
+= 将光纤通道设备标识导出到CSV文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过OnCommand Insight 设备解析功能将现有光纤通道设备标识导出到CSV文件。您可能希望导出设备标识、以便对其进行修改、然后将其导回Insight、在此可以使用它来标识与导出标识最初匹配的设备类似的设备。
+
+
+
+== 关于此任务
+
+如果设备具有类似的属性、可以在CSV文件中轻松编辑这些属性、然后将其导回系统、则可能会出现这种情况。
+
+将光纤通道设备标识导出到CSV文件时、该文件将按所示顺序包含以下信息：
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Name
+
+
+
+ a| 
+Type
+
+|===
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*>*设备解析*
+. 选择* FC Identify"*选项卡。
+. 选择要导出其标识的一个或多个光纤通道设备。
+. 单击导出 image:../media/export-to-csv.gif[""] 图标。
+. 选择是要打开CSV文件还是保存该文件。
+

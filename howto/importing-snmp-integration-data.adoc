@@ -1,0 +1,50 @@
+---
+permalink: howto/importing-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以使用Web UI将SNMP集成软件包导入到OnCommand Insight 中。集成软件包通过ZIP文件中的integration.json配置文件中定义的"integrationPackName"值进行标识。' 
+---
+= 导入SNMP集成软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Web UI将SNMP集成软件包导入到OnCommand Insight 中。集成软件包通过中定义的"integrationPackName"值进行标识 `integration.json` ZIP文件中包含的配置文件。
+
+
+
+== 开始之前
+
+您必须已创建格式正确的ZIP文件、其中包含要导入到OnCommand Insight 服务器的集成软件包。
+
+
+
+== 关于此任务
+
+按照以下步骤将SNMP集成软件包导入到Insight服务器中。
+
+
+
+== 步骤
+
+. 单击*管理*>*设置*>* SNMP集成*
++
+系统将显示导入SNMP软件包屏幕： image:../media/oci-import-snmp.gif[""]
+
+. 单击*选择文件*以选择包含SNMP软件包的本地文件。
++
+您选择的文件将显示在文件框中。
+
++
+[NOTE]
+====
+任何同名的现有集成软件包都会被覆盖。
+
+====
+. 单击*导入*
++
+此文件将导入到Insight服务器中。
+
+

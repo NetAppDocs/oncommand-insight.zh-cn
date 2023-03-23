@@ -1,0 +1,23 @@
+---
+permalink: dwh/canceling-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以取消所有计划的作业。作业状态将变为"已中止"。' 
+---
+= 取消"从历史记录构建"作业
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以取消所有计划的作业。作业状态将变为"`Aborted`"。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*从历史记录构建*。
+. 单击 * 取消 * 。
+

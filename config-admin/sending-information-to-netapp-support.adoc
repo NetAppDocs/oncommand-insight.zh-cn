@@ -1,0 +1,27 @@
+---
+permalink: config-admin/sending-information-to-netapp-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'NetApp自动化支持\(ASUP\)工具会将故障排除信息直接发送给NetApp客户支持团队。您可以强制发送特殊报告。' 
+---
+= 将信息发送给NetApp支持部门
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp自动化支持(ASUP)工具会将故障排除信息直接发送给NetApp客户支持团队。您可以强制发送特殊报告。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
+. 单击*设置*。
+. 单击*备份/ASUP*选项卡。
+. 在发送/收集数据区域中、单击*立即发送ASUP *、将日志、记录和备份提交给NetApp支持部门。
++
+image::../media/oci-7-backup-restore-gif.gif[备份和还原页面]
+
+

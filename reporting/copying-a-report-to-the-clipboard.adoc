@@ -1,0 +1,32 @@
+---
+permalink: reporting/copying-a-report-to-the-clipboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用此过程将报告复制到剪贴板。 
+---
+= 将报告复制到剪贴板
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此过程将报告复制到剪贴板。
+
+
+
+== 步骤
+
+. 打开Cognos 11报告门户： https://server-name:9300/bi/[]
+. 在工具栏中、单击 image:../media/new-report.gif[""]
+. 单击 * 报告 *
+. 单击 * 页面 * 图标image:../media/pages-icon.gif[""]
++
+*报告*图标 image:../media/report-icon.gif[""] 将显示
+
+. 左键单击*报告*图标
++
+此时将显示报告选项。
+
+. 单击 * 将报告复制到剪贴板 * 。
+

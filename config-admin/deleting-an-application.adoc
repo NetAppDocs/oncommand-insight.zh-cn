@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-an-application.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果某个应用程序不再满足您环境的需求、您可能需要将其删除。 
+---
+= 删除应用程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某个应用程序不再满足您环境的需求、您可能需要将其删除。
+
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*并选择*应用程序*。
+. 将光标置于要删除的应用程序上、然后单击 image:../media/trash-can-query.gif[""]。
++
+此时将显示一个确认对话框、询问您是否要删除此应用程序。
+
+. 单击 * 确定 * 。
+

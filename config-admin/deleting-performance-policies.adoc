@@ -1,0 +1,31 @@
+---
+permalink: config-admin/deleting-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您认为某个性能策略不再适用于监控网络中的对象、则可以将其删除。 
+---
+= 正在删除性能策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您认为某个性能策略不再适用于监控网络中的对象、则可以将其删除。
+
+
+
+== 步骤
+
+. 在浏览器中打开Insight。
+. 从*管理*菜单中、选择*性能策略*。
++
+此时将显示性能策略页面。
+
+. 将光标悬停在对象性能策略列表中的策略名称上。
+. 单击 image:../media/oci-delete-policy-threshold-icon.gif[""]。
++
+此时将显示一条消息、询问您是否要删除此策略。
+
+. 单击 * 确定 * 。
+

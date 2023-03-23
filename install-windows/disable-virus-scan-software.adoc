@@ -1,0 +1,18 @@
+---
+permalink: install-windows/disable-virus-scan-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果系统上的防病毒软件处于活动状态、则OnCommand Insight 安装将失败。您可以通过在安装之前禁用病毒扫描软件来防止此问题。 
+---
+= 禁用病毒扫描软件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果系统上的防病毒软件处于活动状态、则OnCommand Insight 安装将失败。您可以通过在安装之前禁用病毒扫描软件来防止此问题。
+
+为了防止由于病毒扫描软件处于活动状态而导致安装失败、在安装每个OnCommand Insight 组件期间、您必须完全禁用所有病毒扫描程序。安装后、Insight组件使用的路径(安装、备份和归档程序路径)必须从病毒扫描中排除。
+
+此外、在安装后、您还必须从防病毒扫描中排除IBM/DB2文件夹(例如_C：\Program Files\IBM\DB2_)。

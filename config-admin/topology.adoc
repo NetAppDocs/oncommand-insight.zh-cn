@@ -1,0 +1,20 @@
+---
+permalink: config-admin/topology.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果要将应用程序应用于某个资产、可通过拓扑部分查看基础资产如何连接到其相关资产。 
+---
+= 拓扑
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果适用于某个资产、可通过拓扑部分查看基础资产如何连接到其相关资产。
+
+以下示例显示了虚拟机资产页面的Topology部分可能显示的内容。
+
+image::../media/topology-section.gif[拓扑部分]
+
+如果资产的拓扑大于本节所示的范围、则会显示*单击链接以查看拓扑*超链接。

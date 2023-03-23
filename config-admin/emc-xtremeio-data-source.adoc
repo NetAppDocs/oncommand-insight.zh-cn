@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-xtremeio-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '要配置EMC XtremIO \(http\)数据源、您必须具有XtremIO管理服务器\(XMS\)主机地址和具有管理员权限的帐户。' 
+---
+= EMC XtremIO数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要配置EMC XtremIO (HTTP)数据源、您必须具有XtremIO管理服务器(XMS)主机地址和具有管理员权限的帐户。
+
+
+
+== 术语
+
+OnCommand Insight 从EMC XtremIO数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+磁盘（ SSD ）
+ a| 
+Disk
+
+
+
+ a| 
+集群
+ a| 
+存储
+
+
+
+ a| 
+控制器
+ a| 
+存储节点
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+LUN 映射
+ a| 
+卷映射
+
+
+
+ a| 
+启动程序、目标
+ a| 
+卷掩码
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 每个XtremIO管理服务器的IP地址
+* 具有管理员权限的帐户
+* 访问端口 443 （ HTTPS ）
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+XMS 主机
+ a| 
+XtremIO 管理服务器的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+XtremIO 管理服务器的用户名
+
+
+
+ a| 
+Password
+ a| 
+XtremIO 管理服务器的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+TCP 端口
+ a| 
+用于连接到XTremIO管理服务器的TCP端口(默认值为443)
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+连接超时(秒)
+ a| 
+连接超时(默认为60秒)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

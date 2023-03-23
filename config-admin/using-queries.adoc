@@ -1,0 +1,14 @@
+---
+permalink: config-admin/using-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: '通过查询、您可以根据用户选择的标准(标注和性能指标)在粒度级别搜索环境中的资产、从而监控网络并对其进行故障排除。此外、自动为资产分配标注的标注规则需要查询。' 
+---
+= 正在查询资产
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过查询、您可以根据用户选择的标准(标注和性能指标)在粒度级别搜索环境中的资产、从而监控网络并对其进行故障排除。此外、自动为资产分配标注的标注规则需要查询。

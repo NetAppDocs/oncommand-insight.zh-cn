@@ -1,0 +1,18 @@
+---
+permalink: config-admin/mapping-data-source-tags-to-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 将数据源配置为轮询标记数据时、Insight会自动为与标记同名的现有Insight标注设置标注值。 
+---
+= 将数据源标记映射到标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+将数据源配置为轮询标记数据时、Insight会自动为与标记同名的现有Insight标注设置标注值。
+
+如果在数据源中启用标记之前存在Insight标注、则数据源标记数据会自动添加到Insight标注中。
+
+启用标记后创建标注时、对数据源的初始轮询不会自动更新标注。替换或填充Insight标注所需的时间有所延迟。为了避免延迟、您可以通过延迟并恢复数据源来强制标记进行标注更新。

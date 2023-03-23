@@ -1,0 +1,16 @@
+---
+permalink: install-windows/missing-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 不同的OnCommand Insight 功能需要不同的许可证。您在OnCommand Insight 中看到的内容由已安装的许可证控制。有关每个许可证控制的功能的信息、请参见OnCommand Insight 许可证一节。 
+---
+= 缺少许可证
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不同的OnCommand Insight 功能需要不同的许可证。您在OnCommand Insight 中看到的内容由已安装的许可证控制。有关每个许可证控制的功能的信息、请参见OnCommand Insight 许可证一节。
+
+有关每个许可证控制的功能的信息、请参见OnCommand Insight 许可证一节。

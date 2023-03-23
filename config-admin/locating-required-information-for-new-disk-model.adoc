@@ -1,0 +1,109 @@
+---
+permalink: config-admin/locating-required-information-for-new-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: 要查找磁盘型号信息、请确定供应商和型号并运行Internet搜索。 
+---
+= 查找新磁盘型号所需的信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要查找磁盘型号信息、请确定供应商和型号并运行Internet搜索。
+
+
+
+== 关于此任务
+
+查找磁盘型号信息就像运行Internet搜索一样简单。在搜索之前、请务必记下供应商名称和磁盘型号。
+
+
+
+== 步骤
+
+. 建议在互联网上搜索供应商、型号和文档类型"`PDF`"、以查找供应商的数据表和/或驱动器安装指南。这些数据表通常是供应商磁盘信息的最佳来源。
+. 供应商规格并不总是根据完整的型号提供所有必要的信息。在供应商的站点上搜索型号字符串的不同部分来查找所有信息通常很有用。
+. 找到磁盘供应商名称、完整型号、磁盘大小和速度以及接口类型、以便在OnCommand Insight 中定义新的磁盘型号。您可以使用下表作为参考、在找到此信息时帮助您记下此信息：
++
+|===
+
+
+| 对于此字段： | 其中： | 输入以下内容： 
+
+
+ a| 
+型号(也称为密钥)
+ a| 
+Required
+ a| 
+
+
+
+ a| 
+供应商
+ a| 
+Required
+ a| 
+
+
+
+ a| 
+磁盘速度(RPM)
+ a| 
+Required
+ a| 
+
+
+
+ a| 
+大小(以GB为单位)
+ a| 
+Required
+ a| 
+
+
+
+ a| 
+接口类型(选择一项)
+ a| 
+Required
+ a| 
+ATA、SATA、SATA2、SATA3、FC、 SAS、FATA、SSD、其他
+
+
+
+ a| 
+寻道时间(以毫秒为单位)
+ a| 
+可选
+ a| 
+
+
+
+ a| 
+最大传输速率、以MB/秒为单位
+ a| 
+可选
+ a| 
+
+
+
+ a| 
+接口传输速率、以MB/秒为单位
+ a| 
+可选
+ a| 
+
+
+
+ a| 
+指向供应商/型号信息的链接
+ a| 
+可选、但建议使用
+ a| 
+
+|===
+. 在中输入此信息 `new_disk_models.txt` 文件请参见 link:content-of-the-new-disk-models-txt-file.md#["new_disk_models.txt文件的内容"] 格式、顺序和示例。
+

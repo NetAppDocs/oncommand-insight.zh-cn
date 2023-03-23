@@ -1,0 +1,22 @@
+---
+permalink: dwh/accessing-the-data-warehouse-and-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 通过数据仓库门户、您可以访问管理选项。您还可以从数据仓库门户访问报告门户。 
+---
+= 访问数据仓库和报告门户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过数据仓库门户、您可以访问管理选项。您还可以从数据仓库门户访问报告门户。
+
+
+
+== 步骤
+
+. 以管理员身份登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 在数据仓库工具栏上、单击 image:../media/oci-reporting-portal-icon.gif[""] 以打开报告门户。
+

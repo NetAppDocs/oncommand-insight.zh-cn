@@ -1,0 +1,78 @@
+---
+permalink: howto/finding-the-right-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在小工具筛选器和搜索中引用的Insight资产因资产类型而异。 
+---
+= 最佳实践：查找合适的资产
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在小工具筛选器和搜索中引用的Insight资产因资产类型而异。
+
+在信息板中、用于构建小工具的资产类型决定了您可以筛选或添加列的其他资产类型计数器。在构建小工具时，请记住以下几点：
+
+|===
+
+
+| 此资产类型 / 计数器： | 可以在以下资产下筛选： 
+
+
+ a| 
+虚拟机
+ a| 
+VMDK
+
+
+
+ a| 
+数据存储库
+ a| 
+内部卷VMDK
+
+虚拟机
+
+Volume
+
+
+
+ a| 
+虚拟机管理程序
+ a| 
+虚拟机
+
+
+
+ a| 
+是虚拟机管理程序
+ a| 
+主机
+
+
+
+ a| 
+主机
+ a| 
+内部卷
+
+
+
+ a| 
+集群
+ a| 
+HostVirtual Machine
+
+
+
+ a| 
+网络结构
+ a| 
+Port
+
+|===
+这不是一个全面的列表。
+
+最佳实践：如果要筛选列表中未显示的特定资产类型、请尝试使用备用资产类型构建查询。

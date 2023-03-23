@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-your-data-sources-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 在尝试维护Insight环境时、数据源是最关键的组件。数据源可发现用于分析和验证的网络信息。您需要在Insight中配置数据源、以便可以在网络中对其进行监控。 
+---
+= 在Insight中设置数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在尝试维护Insight环境时、数据源是最关键的组件。数据源可发现用于分析和验证的网络信息。您需要在Insight中配置数据源、以便可以在网络中对其进行监控。
+
+对于每个数据源、定义该数据源的具体要求取决于相应设备的供应商和型号。在添加数据源之前、您需要所有设备的网络地址、帐户信息和密码、可能还需要以下附加详细信息：
+
+* 交换机
+* 设备管理工作站
+* 具有IP连接的存储系统
+* 存储管理工作站
+* 运行管理软件的主机服务器、用于没有IP连接的存储设备
+
+
+有关数据源定义的详细信息、请参见本节中的"供应商专用数据源参考"信息。

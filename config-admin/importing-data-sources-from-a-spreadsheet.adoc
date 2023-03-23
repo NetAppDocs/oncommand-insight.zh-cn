@@ -1,0 +1,53 @@
+---
+permalink: config-admin/importing-data-sources-from-a-spreadsheet.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以从电子表格将多个数据源导入到OnCommand Insight 中。如果您已在电子表格中维护发现设备、则此操作可能会很有用。此过程会添加新的数据源、但不能用于更新现有数据源。 
+---
+= 从电子表格导入数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从电子表格将多个数据源导入到OnCommand Insight 中。如果您已在电子表格中维护发现设备、则此操作可能会很有用。此过程会添加新的数据源、但不能用于更新现有数据源。
+
+
+
+== 关于此任务
+
+OnCommand Insight 包含一个电子表格、可帮助您创建数据源。此电子表格具有以下属性：
+
+* 该电子表格可用于Microsoft Excel 2003或更高版本。
+* 每个选项卡都包含一种数据源类型、例如Brocade SSH/CLI。
+* 每行表示要创建的新数据源的一个实例。
+
+
+该电子表格包含一个宏、用于在OnCommand Insight 中创建新的数据源。
+
+
+
+== 步骤
+
+. 在中找到电子表格 `<install_directory>/SANscreen/acq/bin/acqcli/SiteSurvey_DataSourceImporter_w_Macro.zip`。
+. 在电子表格的彩色单元格中输入数据源信息。
+. 删除空行。
+. 从电子表格中、运行 `CreateDataSources` 用于创建数据源的宏。
+. 当系统提示输入凭据时、输入OnCommand Insight 服务器管理用户名和密码。
++
+结果将记录在采集日志中。
+
+. 此时将出现一个提示、询问当前运行宏的计算机是否已安装OnCommand Insight。
++
+选择以下选项之一：
+
++
+** 否：如果要创建必须在OnCommand Insight 计算机上运行的批处理文件、请选择"否"。从安装目录运行此批处理文件。
+** 是：如果已安装OnCommand Insight 、并且不需要执行其他步骤来生成数据源信息、请选择"是"。
+
+
+. 要验证是否已添加数据源、请在浏览器中打开Insight。
+. 在Insight工具栏上、单击*管理*。
+. 检查"Data sources"列表中是否存在您导入的数据源。
+

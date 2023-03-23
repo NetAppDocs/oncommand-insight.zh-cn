@@ -1,0 +1,34 @@
+---
+permalink: config-admin/adding-ip-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以使用"IP Identify"屏幕中提供的手动添加功能将IP设备手动添加到OnCommand Insight。' 
+---
+= 手动添加 IP 设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用"IP Identify"屏幕中提供的手动添加功能将IP设备手动添加到OnCommand Insight。
+
+
+
+== 步骤
+
+. 登录到Insight Web UI。
+. 单击*管理*>*设备解析*
+. 单击* IP Identif*选项卡。
+. 单击添加按钮。
++
+此时将显示添加设备对话框
+
+. 输入地址， IP 地址和唯一设备名称。
+
+
+
+
+== 结果
+
+您输入的设备将添加到"IP Identify"选项卡的设备列表中。

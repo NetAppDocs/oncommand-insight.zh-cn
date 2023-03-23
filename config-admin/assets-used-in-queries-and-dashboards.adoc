@@ -1,0 +1,42 @@
+---
+permalink: config-admin/assets-used-in-queries-and-dashboards.html 
+sidebar: sidebar 
+keywords: queryable,Data Store,objects,custom landing page 
+summary: Insight查询和信息板小工具可用于各种资产类型 
+---
+= 查询和信息板中使用的资产
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight查询和信息板小工具可用于各种资产类型
+
+以下资产类型可用于查询、信息板小工具和自定义资产页面。可用于筛选器，表达式和显示的字段和计数器因资产类型而异。并非所有资产都可以在所有小工具类型中使用。
+
+* 应用程序
+* 数据存储库
+* Disk
+* 网络结构
+* 通用设备
+* 主机
+* 内部卷
+* iSCSI 会话
+* iSCSI 网络门户
+* 路径
+* Port
+* qtree
+* 配额
+* 共享
+* 存储
+* 存储节点
+* 存储池
+* 交换机
+* 磁带
+* VMDK
+* 虚拟机
+* Volume
+* 分区
+* 区域成员
+

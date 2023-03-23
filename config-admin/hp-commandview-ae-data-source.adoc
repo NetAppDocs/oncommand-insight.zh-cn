@@ -1,0 +1,277 @@
+---
+permalink: config-admin/hp-commandview-ae-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'HP CommandView高级版\(AE)和CommandView AE CLI/SMI \(AE精简版)数据源支持来自CommandView \(也称为HiCommand) Device Manager服务器的清单和性能。' 
+---
+= HP CommandView AE数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HP CommandView高级版(AE)和CommandView AE CLI/SMI (AE精简版)数据源支持CommandView (也称为HiCommand) Device Manager服务器的清单和性能。
+
+
+
+== 术语
+
+OnCommand Insight 从HP CommandView AE和AE精简版数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+PDEV
+ a| 
+Disk
+
+
+
+ a| 
+日志池
+ a| 
+磁盘组
+
+
+
+ a| 
+存储阵列
+ a| 
+存储
+
+
+
+ a| 
+端口控制器
+ a| 
+存储节点
+
+
+
+ a| 
+阵列组， DP 池
+ a| 
+存储池
+
+
+
+ a| 
+逻辑单元， LDEV
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 清单要求
+
+* HiCommand Device Manager 服务器的 IP 地址
+* CommandView AE软件的只读用户名和密码以及对等权限
+* 设备管理器的CommandView AE精简版仅许可使用CLI
+* 端口要求： 2001
+
+
+
+
+== 性能要求
+
+* HDS USP ， USP V 和 VSP 性能
++
+** Performance Monitor 必须获得许可。
+** 必须启用监控交换机。
+** 导出工具 (`Export.exe`)必须复制到OnCommand Insight 服务器。
+** 导出工具版本必须与目标阵列的微代码版本匹配。
+
+
+* HDS AMS性能
++
+** Performance Monitor需要获得许可。
+** OnCommand Insight 服务器上需要安装存储导航器模块化2 (SNM2)命令行界面实用程序。
+** 您必须使用以下命令注册所有需要由OnCommand Insight 获取性能的AMS、WMS、SMS存储阵列：
++
+
+
+** 您必须确保已注册的所有阵列均在此命令的输出中列出： `auunitref.exe`。
+
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+HiCommand 服务器
+ a| 
+HiCommand Device Manager 服务器的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+HiCommand Device Manager 服务器的用户名。
+
+
+
+ a| 
+Password
+ a| 
+HiCommand Device Manager 服务器使用的密码。
+
+
+
+ a| 
+设备—USP、USP V、VSP/R600存储
+ a| 
+VSP G1000 （ R800 ）， VSP （ R700 ）， HUS VM （ HM700 ）和 USP 存储的设备列表。每个存储都需要：
+
+* Array's IP：存储的IP地址
+* User Name：存储的用户名
+* Password：存储的密码
+* Folder Containing Export Utility JAR Files：包含导出实用程序的文件夹 `.jar` 文件
+
+
+
+
+ a| 
+SNM2Devices — WMS/SMS/AMS 存储
+ a| 
+WMS/SMS/AMS 存储的设备列表。每个存储都需要：
+
+* Array's IP：存储的IP地址
+* 存储导航器CLI路径：SNM2 CLI路径
+* Account Authentication Valid：选择可选择有效的帐户身份验证
+* User Name：存储的用户名
+* Password：存储的密码
+
+
+
+
+ a| 
+选择性能调整管理器
+ a| 
+选择性能调整管理器并覆盖其他性能选项
+
+
+
+ a| 
+调整管理器主机
+ a| 
+调整管理器的 IP 地址或完全限定域名
+
+
+
+ a| 
+调整管理器端口
+ a| 
+用于调整管理器的端口
+
+
+
+ a| 
+调整管理器用户名
+ a| 
+调整管理器的用户名
+
+
+
+ a| 
+调整管理器密码
+ a| 
+调整管理器的密码
+
+|===
+[NOTE]
+====
+在HDS USP、USP V和VSP中、任何磁盘都可以属于多个阵列组。
+
+====
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+HiCommand 服务器端口
+ a| 
+HiCommand Device Manager 所使用的端口
+
+
+
+ a| 
+已启用 HTTPS
+ a| 
+选择以启用 HTTPS
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔（默认为 40 分钟）
+
+
+
+ a| 
+选择 " 排除 " 或 " 包括 " 以指定列表
+ a| 
+指定在收集数据时是包含还是排除以下阵列列表
+
+
+
+ a| 
+排除或包括设备
+ a| 
+要包含或排除的设备 ID 或阵列名称的逗号分隔列表
+
+
+
+ a| 
+查询 Host Manager
+ a| 
+选择以查询主机管理器
+
+
+
+ a| 
+HTTP超时(秒)
+ a| 
+HTTP连接超时(默认为60秒)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+
+
+ a| 
+导出超时（以秒为单位）
+ a| 
+导出实用程序超时(默认值为300秒)
+
+|===

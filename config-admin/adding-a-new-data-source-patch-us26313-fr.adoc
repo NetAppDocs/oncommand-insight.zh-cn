@@ -1,0 +1,33 @@
+---
+permalink: config-admin/adding-a-new-data-source-patch-us26313-fr.html 
+sidebar: sidebar 
+keywords:  
+summary: 新数据源将作为修补程序文件发布、可以使用修补程序过程将这些文件加载到系统中。通过此过程、可以在OnCommand Insight 的计划版本之间使用新的数据源。 
+---
+= 通过修补程序添加新数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新数据源将作为修补程序文件发布、可以使用修补程序过程将这些文件加载到系统中。通过此过程、可以在OnCommand Insight 的计划版本之间使用新的数据源。
+
+
+
+== 开始之前
+
+您必须已上传要安装的修补程序文件。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
+. 选择*修补程序*。
+. 选择*操作*>*安装服务包或修补程序*。
+. 在*安装Service Pack或Patch*对话框中、单击*浏览*以查找并选择您上传的修补程序文件。
+. 单击*修补程序摘要*对话框中的*下一步*。
+. 查看*请阅读*信息、然后单击*下一步*继续。
+. 在*安装*对话框中、单击*完成*。
+

@@ -1,0 +1,36 @@
+---
+permalink: config-admin/certificate-login-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 支持使用智能卡\(CAC)和证书对登录到Insight服务器的用户进行身份验证。要启用这些功能、必须对系统进行配置。' 
+---
+= 支持智能卡和证书登录
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 支持使用智能卡(CAC)和证书对登录到Insight服务器的用户进行身份验证。要启用这些功能、必须对系统进行配置。
+
+将系统配置为支持CAC和证书后、导航到新的OnCommand Insight 会话会导致浏览器显示一个本机对话框、为用户提供一个可供选择的个人证书列表。这些证书将根据OnCommand Insight 服务器信任的CA颁发的一组个人证书进行筛选。大多数情况下、只有一个选择。默认情况下、如果只有一个选项、Internet Explorer将跳过此对话框。
+
+对于Java客户端、将显示一个自定义对话框、其中包含所有个人证书、而不考虑颁发者。
+
+[NOTE]
+====
+对于CAC用户、智能卡包含多个证书、其中只有一个证书可以与受信任的CA匹配。的CAC证书 `identification` 应使用。
+
+====
+[NOTE]
+====
+有关最新的CAC和证书说明、请参见以下知识库文章(需要支持登录)：
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["如何为OnCommand Insight 配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["如何为OnCommand Insight 数据仓库配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["如何创建证书颁发机构(CA)签名证书并将其导入到OnComand Insight和OnCommand Insight 数据仓库7.3.x中"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["如何在Windows主机上安装的OnCommand Insight 7.3.X中创建自签名证书"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["如何将Cognos证书颁发机构(CA)签名证书导入到OnCommand 数据中心7.3.3及更高版本中"]
+
+
+====

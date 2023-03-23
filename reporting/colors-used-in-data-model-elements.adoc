@@ -1,0 +1,18 @@
+---
+permalink: reporting/colors-used-in-data-model-elements.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据模型元素上的颜色具有不同的指示。 
+---
+= 数据模型元素中使用的颜色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据模型元素上的颜色具有不同的指示。
+
+* 黄色资产：表示测量值。
+* 非黄色资产：表示属性。这些值不会聚合。
+

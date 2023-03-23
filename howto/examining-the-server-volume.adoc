@@ -1,0 +1,18 @@
+---
+permalink: howto/examining-the-server-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: 卷登录页面显示的IOPS峰值与在相关资产中看到的相同。 
+---
+= 检查卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+卷登录页面显示的IOPS峰值与在相关资产中看到的相同。
+
+image::../media/server-vol-lp.gif[服务器卷LP]
+
+在"Resources"部分中、系统将确定差旅预订应用程序的VM。单击VM链接可查看VM登录页面。

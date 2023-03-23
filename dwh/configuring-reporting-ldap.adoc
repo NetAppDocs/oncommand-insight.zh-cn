@@ -1,0 +1,144 @@
+---
+permalink: dwh/configuring-reporting-ldap.html 
+sidebar: sidebar 
+keywords:  
+summary: 管理员可以从数据仓库门户为数据仓库和报告配置LDAP使用情况。 
+---
+= 配置LDAP以进行报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理员可以从数据仓库门户为数据仓库和报告配置LDAP使用情况。
+
+
+
+== 开始之前
+
+要执行此任务、您必须以管理员身份登录到Insight。
+
+对于所有安全Active Directory (例如LDAPS)用户、您必须使用证书中定义的AD服务器名称。不能使用IP地址进行安全AD登录。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*用户管理*。
+. 单击* LDAP配置*。
+. 选择*启用LDAP*以启动LDAP用户身份验证和授权过程。
+. 进行必要的更改以配置LDAP。
++
+大多数字段都包含默认值。默认设置对Active Directory有效。
+
++
+** *用户主体名称属性*
++
+用于标识LDAP服务器中每个用户的属性。默认值为 `userPrincipalName`、全局唯一。OnCommand Insight 会尝试将此属性的内容与上述提供的用户名进行匹配。
+
+** *角色属性*
++
+用于确定用户是否适合指定组的LDAP属性。默认值为 `memberOf`。
+
+** *邮件属性*
++
+用于标识用户电子邮件地址的LDAP属性。默认值为 `mail`。如果您要订阅OnCommand Insight 提供的报告、此功能非常有用。Insight会在每个用户首次登录时获取用户的电子邮件地址、之后不会查找该地址。
+
++
+[NOTE]
+====
+如果LDAP服务器上的用户电子邮件地址发生变化、请务必在Insight中对其进行更新。
+
+====
+** *可分辨名称属性*
++
+用于标识用户可分辨名称的LDAP属性。默认值为 `distinguishedName`。
+
+** *转介*
++
+指示如果企业中有多个域、是否遵循其他域的路径。您必须始终使用默认值 `follow` 设置。
+
+** *超时*
++
+超时前等待LDAP服务器响应的时间长度、以毫秒为单位。默认值为2、000、这在所有情况下都是足够的、不应修改。
+
+** * LDAP服务器*
++
+这是用于标识LDAP服务器的IP地址或DNS名称。标识特定端口、其中 `ldap-server-address` 是LDAP服务器的名称、您可以使用以下格式：
+
++
+[listing]
+----
+ldap://ldap-server-address:port
+----
++
+要使用默认端口、可以使用以下格式：
+
++
+[listing]
+----
+ldap://ldap-server-address
+----
++
+[NOTE]
+====
+ When entering multiple LDAP servers in this field, separate entries with a comma, and ensure that the correct port number is used in each entry.
++要导入LDAP证书、请单击*导入证书*并自动导入或手动查找证书文件。
+
+====
+** *域*
++
+OnCommand Insight 应开始查找LDAP用户的LDAP节点。通常、这是组织的顶级域。例如：
+
++
+[listing]
+----
+DC=<enterprise>,DC=com
+----
+** * Insight服务器管理员组*
++
+具有Insight Server管理员权限的用户的LDAP组。默认值为 `insight.server.admins`。
+
+** * Insight管理员组*
++
+具有Insight管理员权限的用户的LDAP组。默认值为 `insight.admins`。
+
+** * Insight用户组*
++
+具有Insight用户权限的用户的LDAP组。默认值为 `insight.users`。
+
+** * Insight子系统组*
++
+具有Insight来宾权限的用户的LDAP组。默认值为 `insight.guests`。
+
+** *报告管理员组*
++
+具有Insight报告管理员权限的用户的LDAP组。默认值为 `insight.report.admins`。
+
+** *报告专业作者组*
++
+具有Insight报告专业作者权限的用户的LDAP组。默认值为 `insight.report.proauthors`。
+
+** *报告业务作者组*
++
+具有Insight报告业务作者权限的用户的LDAP组。默认值为 `insight.report.business.authors`。
+
+** *报告业务使用者组*
++
+具有Insight报告业务使用者权限的用户的LDAP组。默认值为 `insight.report.business.consumers`。
+
+** *报告收件人组*
++
+具有Insight报告收件人权限的用户的LDAP组。默认值为 `insight.report.recipients`。
+
+
+
+. 如果进行了任何更改、请在*目录查找用户*和*目录查找用户密码*字段中输入值。
++
+如果未在这些字段中输入修订后的值、则不会保存所做的更改。
+
+. 在*确认目录查找用户密码*字段中重新键入目录查找用户密码、然后单击*验证密码*以验证服务器上的密码。
+. 单击*更新*以保存更改。单击*取消*以删除更改。
+

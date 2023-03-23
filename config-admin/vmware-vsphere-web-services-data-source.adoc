@@ -1,0 +1,190 @@
+---
+permalink: config-admin/vmware-vsphere-web-services-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'VMware vSphere \(Web服务\)数据源收集ESX主机信息、并要求对虚拟中心内的所有对象具有只读权限。' 
+---
+= VMware vSphere数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere (Web服务)数据源收集ESX主机信息、并要求对虚拟中心内的所有对象具有_read-ononly_特权。
+
+
+
+== 术语
+
+OnCommand Insight 从VMware vSphere数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+虚拟磁盘
+ a| 
+Disk
+
+
+
+ a| 
+主机
+ a| 
+主机
+
+
+
+ a| 
+虚拟机
+ a| 
+虚拟机
+
+
+
+ a| 
+数据存储
+ a| 
+数据存储
+
+
+
+ a| 
+LUN
+ a| 
+LUN
+
+
+
+ a| 
+光纤通道端口
+ a| 
+Port
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* Virtual Center 服务器的 IP 地址
+* Virtual Center 中的只读用户名和密码
+* 对虚拟中心内的所有对象具有只读权限。
+* 在Virtual Center服务器上访问SDK
+* 端口要求： HTTP-80 https-443
+* 通过使用您的用户名和密码登录到Virtual Center Client并输入验证是否已启用SDK来验证访问 `telnet <vc_ip\> 443`。
+
+
+
+
+== Configuration
+
+|===
+| * 字段 * 
+
+
+| * 问题描述 * 
+
+
+ a| 
+虚拟中心地址
+
+
+
+ a| 
+虚拟中心或vSphere服务器的网络地址、指定为IP _(nnn.nnn.nnn.nnn_格式)地址或可通过DNS解析的主机名。
+
+
+
+ a| 
+用户名
+
+
+
+ a| 
+VMware服务器的用户名。
+
+
+
+ a| 
+Password
+
+
+
+ a| 
+VMware服务器的密码。
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+连接超时(毫秒)
+ a| 
+连接超时(默认值为60000毫秒)
+
+
+
+ a| 
+按筛选 VM
+ a| 
+选择如何筛选VM
+
+
+
+ a| 
+选择 " 排除 " 或 " 包括 " 以指定列表
+ a| 
+指定在收集数据时是包含还是排除以下虚拟机列表
+
+
+
+ a| 
+要筛选的VM列表(如果值中使用了逗号、则以逗号分隔或以分号分隔)
+ a| 
+要在轮询中包括或排除的VM的逗号分隔或分号分隔列表
+
+
+
+ a| 
+vCenter请求的重试次数
+ a| 
+vCenter请求重试尝试次数
+
+
+
+ a| 
+通信端口
+ a| 
+用于VMware服务器的端口
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

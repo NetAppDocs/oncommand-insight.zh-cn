@@ -1,0 +1,105 @@
+---
+permalink: config-admin/emc-vnx-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '在配置方面、EMC VNX \(SSH\)数据源需要控制站的IP地址以及只读用户名和密码。' 
+---
+= EMC VNX数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在配置方面、EMC VNX (SSH)数据源需要控制站的IP地址以及_read-ononly_用户名和密码。
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+VNX IP
+ a| 
+VNX 控制站的 IP 地址或完全限定域名
+
+
+
+ a| 
+VNX用户名
+ a| 
+VNX 控制站的用户名
+
+
+
+ a| 
+VNX密码
+ a| 
+VNX 控制站的密码
+
+|===
+
+
+== 要求
+
+* Control Station的IP地址
+* 只读用户名和密码。
+* 访问验证：通过PuTTY验证SSH访问。
+
+
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔（默认为 40 分钟）
+
+
+
+ a| 
+VNX SSH进程等待超时(秒)
+ a| 
+VNX SSH进程超时(默认值为600秒)
+
+
+
+ a| 
+Celerra命令重试尝试次数
+ a| 
+Celerra命令重试的次数
+
+
+
+ a| 
+CLARiiON清单外部进程超时(秒)
+ a| 
+CLARiiON清单外部进程超时(默认值为1800秒)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+
+
+ a| 
+CLARiiON性能外部进程超时(秒)
+ a| 
+CLARiiON性能外部进程超时(默认值为1800秒)
+
+|===

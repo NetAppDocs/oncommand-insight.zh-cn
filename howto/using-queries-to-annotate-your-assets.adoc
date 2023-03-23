@@ -1,0 +1,16 @@
+---
+permalink: howto/using-queries-to-annotate-your-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 现在、您已经创建了初始标注、现在让我们来了解一下如何将这些标注与特定资产相关联。 
+---
+= 使用查询为资产添加标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+现在、您已经创建了初始标注、下面我们来了解如何将这些标注与特定资产相关联。
+
+在下面的示例中、我们会将这些标注应用于特定资产。例如、我们将创建一个查询来列出驻留在特定数据中心中的所有存储阵列、并使用相应的标注对这些存储阵列进行标记。然后、我们将对属于特定层和服务级别的资产执行相同的操作。

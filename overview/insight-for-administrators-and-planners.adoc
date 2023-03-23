@@ -1,0 +1,32 @@
+---
+permalink: overview/insight-for-administrators-and-planners.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 提供的信息对于存储管理员、管理人员和存储架构师执行故障排除和分析至关重要。 
+---
+= 管理员、经理和规划人员如何使用Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 提供的信息对于存储管理员、管理人员和存储架构师执行故障排除和分析至关重要。
+
+经验丰富的存储管理员可以利用OnCommand Insight 及其网络存储知识来完成以下典型任务：
+
+* 管理SAN和NAS环境。
+* 与SAN工程师一起解决网络问题。
+* 评估新存储技术并将其集成到环境中。
+* 对性能问题、警报、策略违规、违规和漏洞进行故障排除。
+
+
+经理和网络规划人员使用OnCommand Insight 执行以下业务任务：
+
+* 容量规划
+* 制定项目预算和时间表。
+* 评估和修订项目计划以满足不断变化的项目需求。
+* 管理项目规划和支出。
+* 购买硬件和软件。
+* 提供有关容量管理、计费、合理规模估算和服务级别协议的业务报告。
+

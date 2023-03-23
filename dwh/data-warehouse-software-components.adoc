@@ -1,0 +1,32 @@
+---
+permalink: dwh/data-warehouse-software-components.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 数据仓库包含多个软件组件。 
+---
+= 数据仓库软件组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 数据仓库包含多个软件组件。
+
+* MySQL 数据库
++
+数据集市表的后端存储库
+
+* IBM Cognos
++
+OnCommand Insight 的报告引擎
+
+* Apache Derby数据库
++
+用于存储Cognos配置和内容
+
+* WildFly
++
+托管OnCommand Insight 组件的Java Enterprise应用程序服务器
+
+

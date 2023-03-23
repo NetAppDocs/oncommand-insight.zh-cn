@@ -1,0 +1,29 @@
+---
+permalink: config-admin/deleting-a-data-source-from-the-monitoring-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您已从环境中删除数据源、则还必须从OnCommand Insight 监控环境中删除该数据源。 
+---
+= 删除数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您已从环境中删除数据源、则还必须从OnCommand Insight 监控环境中删除该数据源。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
++
+此时将打开数据源列表。
+
+. 选择要删除的数据源。
+. 单击链接的数据源名称。
+. 在摘要页面上检查选定数据源的信息、以确保该数据源是您要删除的数据源。
+. 单击 * 删除 * 。
+. 单击*确定*确认操作。
+

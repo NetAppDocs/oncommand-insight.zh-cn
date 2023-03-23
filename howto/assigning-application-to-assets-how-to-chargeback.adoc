@@ -1,0 +1,14 @@
+---
+permalink: howto/assigning-application-to-assets-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: 定义应用程序后、您需要将这些应用程序与特定资产相关联。您可以使用简单的临时方法将应用程序应用于资产。希望批量应用应用应用程序的用户应使用查询方法确定要分配给应用程序的资产。 
+---
+= 将应用程序分配给资产
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+定义应用程序后、您需要将这些应用程序与特定资产相关联。您可以使用简单的临时方法将应用程序应用于资产。希望批量应用应用应用程序的用户应使用查询方法确定要分配给应用程序的资产。

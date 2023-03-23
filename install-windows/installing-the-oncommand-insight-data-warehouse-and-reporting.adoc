@@ -1,0 +1,79 @@
+---
+permalink: install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: '此安装是一个独立的安装、包含运行和操作OnCommand Insight 数据仓库(DWH)和报告实用程序所需的要素。' 
+---
+= 安装OnCommand Insight 数据仓库和报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此安装是一个独立的安装、包含运行和操作OnCommand Insight 数据仓库(DWH)和报告实用程序所需的要素。
+
+
+
+== 开始之前
+
+请在安装或升级之前注意以下事项。
+
+* 如果要升级、请备份DWH。
+* 您必须具有本地_administrator___permissions才能安装具有报告功能的OnCommand Insight 数据仓库。
+* 确保已启用Windows Modules Installer服务(自动或手动)。
+* 如果安装在非C：驱动器上、则必须启用短文件名。如果未启用、安装程序将启用它。
+* 对于DB2组件、DB2用户可以是_domain_ user或_local_ user。
++
+** 如果DB2用户是_domain_用户、则必须满足以下条件：
++
+*** 必须已创建DB2用户、并且您必须知道用户名和密码
+*** 作为安装具有报告功能的DWH的用户、您必须能够查询DB2用户。您可以使用以下命令验证此设置：
++
+**** `net user <db2 user name> /domain`
+
+
+
+
+** 如果DB2用户是_local_用户、则必须满足以下条件：
++
+*** 要用作DB2用户的用户的用户名和密码。如果此用户不存在、安装程序将创建此用户。
+
+
+** 注意
+
+
+
+
+[]
+====
+DB2用户名和Windows登录名具有以下限制：*有效字符包括："A"到"Z"；"A"到"z"；"0"到"9"；"#"；"@"； "_"；"！"；"("；")"；"｛"； "｝"、"-"和"."。*如果使用特殊字符"！"、"("；")"、"｛"；"｝"； "-"；和"." 用户名必须使用所有大写字母。*字符串中的第一个字符必须为字母字符@、#或$；不能为数字或字母序列_SYS_、_DBM_或_IBM_*长度不能超过128字节。*不能是用户、管理员、来宾、公共、本地或任何SQL保留字。
+
+====
+* DB2用户不能与执行安装的用户相同。
+
+
+
+
+== 步骤
+
+. 使用具有管理员权限的帐户登录到数据仓库服务器。
+. 下载包含Reporting .zip文件的数据仓库、并将这些文件解压缩到安装文件夹。
+. 导航到_OCI_dwh_installer\_<download location> 文件夹、然后运行_install_oci_dwh.bat_脚本。
++
+[NOTE]
+====
+对于OnCommand Insight 7.3.10及更高版本、您必须运行此脚本以正确安装DWH或报告。请勿运行.MSI安装可执行文件。
+
+====
+. 输入DB2域、或者按Enter键输入本地域。
+. 输入DB2用户名。有关用户名限制、请参见上文。
+. 输入DB2用户的密码。出现提示时、重新输入密码。
+. 输入DB2组件的安装路径、或者默认按Enter键。
+. 此时将显示您输入的信息。请仔细验证所有设置。按Enter开始安装。
+. 如果出现提示、请允许Windows继续进行DB2安装。
+. 在DB2安装之后、DWH安装向导将运行。按照其说明安装具有报告功能的DWH。
++
+安装报告的数据仓库可能需要长达一小时才能完成。
+
+

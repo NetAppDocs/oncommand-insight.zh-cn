@@ -1,0 +1,16 @@
+---
+permalink: dwh/why-i-cannot-see-my-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您在数据仓库中看不到标注、则可能需要强制更新标注、然后启动数据仓库构建。 
+---
+= 为什么我看不到我的标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在数据仓库中看不到标注、则可能需要强制更新标注、然后启动数据仓库构建。
+
+缺少标注会影响将数据导入到数据仓库并显示在报告中的方式。例如、如果标注"`Tier`"不可用、您将无法在数据仓库报告中按层对存储系统进行分组。

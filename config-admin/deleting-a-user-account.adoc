@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-a-user-account.html 
+sidebar: sidebar 
+keywords:  
+summary: '任何具有管理员权限的用户都可以删除不再使用的用户帐户(对于本地用户定义)、或者强制OnCommand Insight 在用户下次登录时重新发现用户信息(对于LDAP用户)。' 
+---
+= 删除用户帐户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+任何具有管理员权限的用户都可以删除不再使用的用户帐户(对于本地用户定义)、或者强制OnCommand Insight 在用户下次登录时重新发现用户信息(对于LDAP用户)。
+
+
+
+== 步骤
+
+. 使用管理员权限登录到OnCommand Insight。
+. 在Insight工具栏上、单击*管理*。
+. 单击*设置*。
+. 单击*用户*选项卡。
+. 找到显示要删除的用户帐户的行。
+. 单击用户信息右侧的*删除用户帐户*"* x*"图标。
+. 单击 * 保存 * 。
+

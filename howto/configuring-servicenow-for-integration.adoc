@@ -1,0 +1,45 @@
+---
+permalink: howto/configuring-servicenow-for-integration.html 
+sidebar: sidebar 
+keywords:  
+summary: 将ServiceNow与Insight集成需要执行多项设置任务。 
+---
+= 配置ServiceNow以实现集成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+将ServiceNow与Insight集成需要执行多项设置任务。
+
+
+
+== 关于此任务
+
+在将ServiceNow与Insight集成时、必须执行以下任务：
+
+在ServiceNow端：
+
+* 提升角色
+* 安装更新集
+* 设置用户
+
+
+在Insight端：
+
+* 添加ServiceNow用户
+
+
+在Python连接器端：
+
+* 安装Python
+* 安装其他库
+* 初始化连接器
+* 编辑config.ini文件
+* 测试连接器
+* 同步连接器
+* 计划每日任务执行
+
+
+以下各节将更详细地介绍其中每一项。

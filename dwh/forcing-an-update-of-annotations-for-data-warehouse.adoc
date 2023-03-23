@@ -1,0 +1,33 @@
+---
+permalink: dwh/forcing-an-update-of-annotations-for-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以启动将标注从OnCommand Insight 更新到数据仓库的操作。 
+---
+= 强制更新数据仓库的标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以启动将标注从OnCommand Insight 更新到数据仓库的操作。
+
+
+
+== 关于此任务
+
+您可以使用以下两个选项之一更新标注：
+
+* 包括已删除的对象：包括有关不再存在的设备的数据、例如已删除的主机、存储阵列或交换机。如果要使用历史数据点构建数据仓库数据、则需要执行此操作。
+* 不包括已删除的对象：如果要排除已删除的对象、请选择此选项。
+
+
+
+
+== 步骤
+
+. 以管理员身份登录到OnCommand Insight 门户 `+https://hostname+`、其中 `hostname` 是安装了OnCommand Insight 的系统的名称。
+. 单击*管理*>*故障排除*。在页面底部、单击*高级故障排除*。
+. 在*操作*选项卡中、单击*更新DWH标注(包括已删除)*。
+

@@ -1,0 +1,37 @@
+---
+permalink: config-admin/deleting-inactive-devices.html 
+sidebar: sidebar 
+keywords:  
+summary: 删除处于非活动状态的设备有助于保持数据更干净、更易于导航。 
+---
+= 删除非活动设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+删除处于非活动状态的设备有助于保持数据更干净、更易于导航。
+
+
+
+== 关于此任务
+
+要从Insight中删除非活动设备、请执行以下操作：
+
+
+
+== 步骤
+
+. 创建新查询或打开现有查询。
+. 选择_generic device_、_host_、_storage_、_switch_或_tape_asset类型。
+. 为*处于活动状态*添加一个筛选器、并将此筛选器设置为*否*。
++
+结果表仅显示非活动资产。
+
+. 选择要删除的设备。
+. 单击*操作*按钮并选择*删除非活动设备*。
++
+您的非活动设备将被删除、并且将不再显示在Insight中。
+
+

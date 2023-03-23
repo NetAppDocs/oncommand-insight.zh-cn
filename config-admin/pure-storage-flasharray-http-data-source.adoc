@@ -1,0 +1,156 @@
+---
+permalink: config-admin/pure-storage-flasharray-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Pure Storage FlashArray\(http\)数据源用于从Pure Storage Flash Array收集信息。Insight支持清单和性能收集。' 
+---
+= Pure Storage FlashArray数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pure Storage FlashArray (HTTP)数据源用于从Pure Storage Flash Array收集信息。Insight支持清单和性能收集。
+
+
+
+== 术语
+
+OnCommand Insight 从Pure Storage FlashArray数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+驱动器（ SSD ）
+ a| 
+Disk
+
+
+
+ a| 
+数组
+ a| 
+存储
+
+
+
+ a| 
+控制器
+ a| 
+存储节点
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+LUN映射(主机、主机组、目标端口)
+ a| 
+卷映射，卷掩码
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 存储系统 IP 地址
+* Pure 存储系统管理员帐户的用户名和密码。
+* 端口要求： HTTP/HTTPS 80/443
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+FlashArray主机
+ a| 
+FlashArray管理服务器的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+FlashArray管理服务器的用户名
+
+
+
+ a| 
+Password
+ a| 
+FlashArray管理服务器的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+连接类型
+ a| 
+管理服务器
+
+
+
+ a| 
+TCP 端口
+ a| 
+用于连接到FlashArray服务器的TCP端口(默认值为443)
+
+
+
+ a| 
+连接超时（秒）
+ a| 
+连接超时(默认为60秒)
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔(默认值为300秒)
+
+|===

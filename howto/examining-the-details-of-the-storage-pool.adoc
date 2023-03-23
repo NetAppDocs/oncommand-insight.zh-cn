@@ -1,0 +1,16 @@
+---
+permalink: howto/examining-the-details-of-the-storage-pool.html 
+sidebar: sidebar 
+keywords: vm 
+summary: 检查存储池登录页面会显示在其相关资产中看到的相同IOPS峰值。在资源部分中、您可以看到此存储池登录页面链接到差旅应用程序的卷。单击卷以打开卷登录页面。 
+---
+= 检查存储池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+检查存储池登录页面会显示在其相关资产中看到的相同IOPS峰值。在资源部分中、您可以看到此存储池登录页面链接到差旅应用程序的卷。单击卷以打开卷登录页面。
+
+image::../media/storage-pool-landing-page.gif[存储池登录页面]

@@ -1,0 +1,165 @@
+---
+permalink: install-windows/insight-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 建议使用专用服务器。请勿在安装了任何其他应用程序的服务器上安装Insight。物理服务器和虚拟服务器均受支持、但前提是满足产品要求。 
+---
+= Insight服务器要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+建议使用专用服务器。请勿在安装了任何其他应用程序的服务器上安装Insight。物理服务器和虚拟服务器均受支持、但前提是满足产品要求。
+
+您必须具有本地管理员权限才能安装OnCommand Insight 服务器软件。
+
+[NOTE]
+====
+OnCommand Insight 的规模估算具有多种依赖关系、例如数据源类型和大小、环境中的资产数量、轮询间隔等。以下规模估算示例仅供参考；它们表示已对Insight进行测试的某些环境。更改环境中的上述任何因素或其他因素都可能会更改Insight的规模估算要求。这些准则包括最多可容纳90天性能归档数据的磁盘空间。
+
+====
+在安装或升级Insight之前、建议联系您的销售工程师以获取详细的规模估算指导。
+
+*示例：*
+
+|===
+
+
+| 环境因素： | 测试的磁盘空间、CPU和内存： 
+
+
+ a| 
+80个存储阵列4、000个卷
+
+4、000个VM
+
+4、000个交换机端口
+ a| 
+250 GB磁盘空间8个核心
+
+32 GB RAM
+
+
+
+ a| 
+160个存储阵列40、000个卷
+
+8、000个VM
+
+8、000个交换机端口
+ a| 
+1 TB磁盘空间12个核心
+
+48 GB RAM
+
+|===
+*要求：*
+
+|===
+
+
+| 组件 | Required 
+
+
+ a| 
+操作系统
+ a| 
+一台运行64位Microsoft Windows Server 2012、2012 R2、2016或2019且具有最新Service Pack的计算机。
+
+Windows Server 2012中引入的弹性文件系统(Resilient File System、ReFS)与OnCommand Insight 不兼容。只有NTFS文件系统才支持OnCommand Insight 的Windows安装。
+
+建议使用专用服务器。
+
+
+
+ a| 
+虚拟机(VM)
+ a| 
+如果为实例预留了CPU和内存资源、则此组件可以在虚拟环境中运行。
+
+
+
+ a| 
+内存和CPU
+ a| 
+24 - 256 GB RAM
+
+8到32个核心
+
+强烈建议将分页文件大小设置为"`Windows managed`"。大小固定的小分页文件可能会妨碍Insight性能数据的成功存储。
+
+
+
+ a| 
+可用磁盘空间
+ a| 
+100 GB—3 TB安装磁盘空间
+
+50 GB—1 TB性能归档磁盘空间
+
+建议将SSD磁盘用于Insight安装空间。
+
+
+
+ a| 
+网络
+ a| 
+以太网连接和端口：
+
+* 100 Mbps或1 Gbps以太网连接、具有专用(静态) IP地址和与SAN中所有组件(包括FC设备和远程采集单元)的IP连接。
+* OnCommand Insight 服务器进程的端口要求为80、443、1090到1100、3873、8083、 4444到4446、5445、5455、4712到4714、5500、 和5501。
+* 采集过程的端口要求为12123和5679。
+* MySQL的端口要求为3306。
+* Elasticsearch的端口要求为9200和9310
+* Win2008/2012上的动态端口要求为49152到65535
+
+
+端口443和3306需要通过任何防火墙进行外部访问。
+
+
+
+ a| 
+权限
+ a| 
+OnCommand Insight 服务器需要本地管理员权限。
+
+如果以下任一文件夹为符号链接、请确保目标目录具有"755"权限。
+
+* /opt/netapp
+* /var/lib/netapp
+* /var/log/netapp
+
+
+
+
+ a| 
+远程连接
+ a| 
+Internet连接、用于访问WebEx或远程桌面连接、以方便安装和安装后支持。
+
+
+
+ a| 
+可访问性
+ a| 
+需要HTTPS访问。
+
+
+
+ a| 
+病毒扫描
+ a| 
+在安装此OnCommand Insight 组件期间、您必须完全禁用所有病毒扫描程序。安装后、Insight组件使用的路径(安装、备份和归档程序路径)必须从病毒扫描中排除。
+
+此外、在安装后、您还必须从防病毒扫描中排除IBM/DB2文件夹(例如_C：\Program Files\IBM\DB2_)。
+
+
+
+ a| 
+HTTP或HTTPS服务器
+ a| 
+Microsoft Internet信息服务(IIS)或其他HTTPS服务器不应与OnCommand Insight 服务器争用相同的端口(443)、并且不应自动启动。如果它们必须侦听端口443、则必须将OnCommand Insight 服务器配置为使用其他端口。
+
+|===

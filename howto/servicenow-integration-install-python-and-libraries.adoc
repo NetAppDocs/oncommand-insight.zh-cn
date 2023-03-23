@@ -1,0 +1,52 @@
+---
+permalink: howto/servicenow-integration-install-python-and-libraries.html 
+sidebar: sidebar 
+keywords:  
+summary: Python可以安装在Insight服务器上、也可以安装在独立主机或VM上。 
+---
+= 安装Python和库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Python可以安装在Insight服务器上、也可以安装在独立主机或VM上。
+
+
+
+== 步骤
+
+. 在虚拟机或主机上、下载Python 3.6或更高版本。
+. 选择自定义安装并选择以下选项。这些功能对于正确的连接器脚本操作是必需的、或者强烈建议使用。
++
+** 为所有用户安装启动程序
+** 将Python添加到路径
+** 安装pip (允许Python安装其他软件包)
+** 安装TK-TCL并使其闲置
+** 安装Python测试套件
+** 为所有用户安装py启动程序
+** 将文件与Python关联
+** 为已安装应用程序创建快捷方式
+** 将python添加到环境变量
+** 预编译标准库
+
+
+. 安装Python后、请安装"`requests`"和"`pthen`" Python库。运行以下命令： `python -m pip install requests pysnow`
++
+*注：*在代理环境下运行时、此命令可能会失败。要解决此问题描述 、您需要手动下载每个Python库、并按正确顺序逐个运行安装请求。
+
++
+此命令将安装多个文件。
+
+. 验证是否已正确安装Python库。使用以下方法之一启动Python：
++
+** 打开cmd提示符并键入 `python`
+** 在Windows上、打开*开始*、然后选择* Python *>* python-thm.exe <version>
+
+
+. 在Python提示符处、键入 `modules`
++
+Python会要求您等待一段时间、以便收集模块列表、然后显示这些模块。
+
+

@@ -1,0 +1,43 @@
+---
+permalink: install-windows/verifying-new-oncommand-insight-services.html 
+sidebar: sidebar 
+keywords:  
+summary: 成功安装后、您应验证Insight组件的服务是否正在您的服务器上运行。 
+---
+= 验证新的Insight服务
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+成功安装后、您应验证Insight组件的服务是否正在您的服务器上运行。
+
+
+
+== 步骤
+
+. 要显示当前正在运行的服务列表、请执行以下操作：
++
+.. 单击*开始*按钮。
+.. 单击 * 运行 * 。
+.. 键入以下命令：
++
+`cmd`
+
+.. 按 Enter 键。
+.. 在*命令提示符*窗口中键入以下命令：
++
+`net start`
+
+
+
+. 在列表中检查以下Insight服务：
++
+** * SANscreen Server*
+** * SANscreen Acq*(采集过程)
+** * MySQL *(Insight SQL数据库)
+** *弹性搜索*(Insight数据的数据存储)如果这些服务未显示在列表中、请联系技术支持。
+
+
+

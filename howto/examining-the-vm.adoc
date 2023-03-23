@@ -1,0 +1,20 @@
+---
+permalink: howto/examining-the-vm.html 
+sidebar: sidebar 
+keywords:  
+summary: '在VM登录页面中、选择要显示的其他指标、并包括CPU利用率和内存利用率。CPU和内存利用率的图形显示、这两个磁盘的运行容量几乎为其容量的100%。这告诉我们、Exchange服务器的问题不是存储问题、而是VM CPU和内存利用率较高以及I/O与磁盘的内存交换所造成的。' 
+---
+= 检查虚拟机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在VM登录页面中、选择要显示的其他指标、并包括CPU利用率和内存利用率。CPU和内存利用率的图形显示、这两个磁盘的运行容量几乎为其容量的100%。这告诉我们、Exchange服务器的问题不是存储问题、而是VM CPU和内存利用率较高以及I/O与磁盘的内存交换所造成的。
+
+image::../media/travbook-vm.gif[工作簿VM]
+
+要解决此问题、您可以查找其他类似资源。在Additional Resources输入对话框中输入"`Node`"、以显示与Exchange VM类似的资产的指标。此比较有助于确定在需要更改时更适合托管工作负载的节点。
+
+image::../media/resources-vm.gif[资源VM]

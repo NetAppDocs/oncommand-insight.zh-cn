@@ -1,0 +1,25 @@
+---
+permalink: config-admin/bundling-logs-for-support.html 
+sidebar: sidebar 
+keywords:  
+summary: '在解决Insight软件的问题时、您可以快速生成日志和采集记录的zip文件(使用"gz"格式)、以发送给NetApp客户支持。' 
+---
+= 捆绑支持日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在解决Insight软件的问题时、您可以快速生成日志和采集记录的zip文件(使用"gz"格式)、以发送给NetApp客户支持。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
+. 单击*故障排除*。
+. 在发送/收集数据部分中、单击*捆绑包日志*。
+. 单击*保存文件*。
+. 单击 * 确定 * 。
+

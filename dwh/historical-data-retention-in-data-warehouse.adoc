@@ -1,0 +1,243 @@
+---
+permalink: dwh/historical-data-retention-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据会按计划在数据仓库中进行维护。随着数据变旧、数据记录保留率也会降低。 
+---
+= 历史数据在数据仓库中的保留方式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据会按计划在数据仓库中进行维护。随着数据变旧、数据记录保留率也会降低。
+
+数据仓库会根据数据集市和数据粒度保留历史数据、如下表所示。
+
+|===
+
+
+| 数据集市 | 测量对象 | 粒度 | 保留期限 
+
+
+ a| 
+性能集市
+ a| 
+卷和内部卷
+ a| 
+每小时
+ a| 
+14 天
+
+
+
+ a| 
+性能集市
+ a| 
+卷和内部卷
+ a| 
+每天
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+应用程序
+ a| 
+每小时
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+主机
+ a| 
+每小时
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+端口的交换机性能
+ a| 
+每小时
+ a| 
+5周
+
+
+
+ a| 
+性能集市
+ a| 
+主机，存储和磁带的交换机性能
+ a| 
+每小时
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+存储节点
+ a| 
+每小时
+ a| 
+14 天
+
+
+
+ a| 
+性能集市
+ a| 
+存储节点
+ a| 
+每天
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+虚拟机性能
+ a| 
+每小时
+ a| 
+14 天
+
+
+
+ a| 
+性能集市
+ a| 
+虚拟机性能
+ a| 
+每天
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+虚拟机管理程序性能
+ a| 
+每小时
+ a| 
+14 天
+
+
+
+ a| 
+性能集市
+ a| 
+虚拟机管理程序性能
+ a| 
+每天
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+VMDK 性能
+ a| 
+每小时
+ a| 
+14 天
+
+
+
+ a| 
+性能集市
+ a| 
+VMDK 性能
+ a| 
+每天
+ a| 
+13 个月
+
+
+
+ a| 
+性能集市
+ a| 
+磁盘性能
+ a| 
+每小时
+ a| 
+14 天
+
+
+
+ a| 
+性能集市
+ a| 
+磁盘性能
+ a| 
+每天
+ a| 
+13 个月
+
+
+
+ a| 
+容量集市
+ a| 
+全部（单个卷除外）
+ a| 
+每天
+ a| 
+13 个月
+
+
+
+ a| 
+容量集市
+ a| 
+全部（单个卷除外）
+ a| 
+每月代表
+ a| 
+14 个月及以上
+
+
+
+ a| 
+清单数据集市
+ a| 
+单个卷
+ a| 
+当前状态
+ a| 
+1 天（或直到下一 ETL ）
+
+|===
+13个月后(可配置)、数据仓库每月仅保留一条记录、而不是每天在以下数据表中保留一条容量、性能和资源数据记录：
+
+* 成本分摊数据表(dwh_capacity.chargeback_fact)
+* 文件系统利用率数据表(dwh_fs_util.fs_util_fact)
+* 主机数据表(dwh_sa.sa_host_fact)
+* 内部卷容量数据表(dwh_capacity.internal_volume_capacity_fact)
+* 端口数据表(dwh_ports.ports_fact)
+* qtree容量数据表(dwh_capacity.qtree_capacity_fact)
+* 存储和存储池容量数据表(dwh_capacity.storage_and_storage_pool_capacity_fact)
+* 卷容量数据表(dwh_capacity.vm_capacity_fact)
+* 存储节点每小时性能(storage_node_hourly_performance_fact)和存储节点每日性能(storage_node_daily_performance_fact)数据表
+

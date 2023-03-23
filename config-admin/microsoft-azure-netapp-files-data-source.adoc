@@ -1,0 +1,87 @@
+---
+permalink: config-admin/microsoft-azure-netapp-files-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '此数据源用于获取Azure NetApp Files \(ANF\)的清单和性能数据。' 
+---
+= Azure NetApp Files 数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源用于获取Azure NetApp Files (ANF)的清单和性能数据。
+
+
+
+== 要求
+
+以下是配置此数据源的要求：
+
+* 端口要求： 443 HTTPS
+* Azure 管理 REST IP （ management.azure.com ）
+* Azure服务主体应用程序(客户端) ID (用户帐户)
+* Azure服务主体身份验证密钥(用户密码)
+* 您需要为 Cloud Insights 发现设置 Azure 帐户。
++
+正确配置帐户并在 Azure 中注册应用程序后，您将拥有在 Cloud Insights 中发现 Azure 实例所需的凭据。以下链接介绍如何设置帐户以进行发现：
+
++
+https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+Azure服务主体应用程序(客户端) ID
+ a| 
+登录到 Azure 的 ID
+
+
+
+ a| 
+Azure 租户 ID
+ a| 
+Azure 租户 ID
+
+
+
+ a| 
+Azure 服务主体身份验证密钥
+ a| 
+登录身份验证密钥
+
+
+
+ a| 
+我了解 Microsoft 为 API 请求向我收费
+ a| 
+选中此复选框可验证您是否了解 Microsoft 会为 Insight 轮询发出的 API 请求向您收费。
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+默认值为 60 分钟
+
+|===

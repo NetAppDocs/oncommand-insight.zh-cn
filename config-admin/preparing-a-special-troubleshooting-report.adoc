@@ -1,0 +1,16 @@
+---
+permalink: config-admin/preparing-a-special-troubleshooting-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight会通过您在安装软件后设置的ASUP系统自动向NetApp客户支持发送信息。但是、您可能需要创建故障排除报告、并与支持团队就特定问题创建案例。 
+---
+= 准备特殊的故障排除报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight会通过您在安装软件后设置的ASUP系统自动向NetApp客户支持发送信息。但是、您可能需要创建故障排除报告、并与支持团队就特定问题创建案例。
+
+您可以使用Insight中的工具执行手动Insight备份、捆绑日志并将这些信息发送给NetApp客户支持。

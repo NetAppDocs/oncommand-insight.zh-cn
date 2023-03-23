@@ -1,0 +1,20 @@
+---
+permalink: install-windows/backing-up-the-security-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: 当Insight组件使用非默认安全配置时、您必须备份安全配置、然后在安装新软件后还原所有组件上的配置。在还原数据仓库数据库备份之前、必须还原安全配置。 
+---
+= 备份安全配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当Insight组件使用非默认安全配置时、您必须备份安全配置、然后在安装新软件后还原所有组件上的配置。在还原数据仓库数据库备份之前、必须还原安全配置。
+
+
+
+== 关于此任务
+
+您可以使用 `securityadmin` 用于创建配置备份和还原已保存配置的工具。有关详细信息、请搜索 `securityadmin` 在OnCommand Insight 文档中心中： http://docs.netapp.com/oci-73/index.jsp[]

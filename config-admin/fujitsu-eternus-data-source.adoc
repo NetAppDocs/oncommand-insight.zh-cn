@@ -1,0 +1,128 @@
+---
+permalink: config-admin/fujitsu-eternus-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Fujitsu Eternus数据源需要存储的IP地址。不能以逗号分隔。 
+---
+= Fujitsu Eternus数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fujitsu Eternus数据源需要存储的IP地址。不能以逗号分隔。
+
+
+
+== 术语
+
+OnCommand Insight 从Fujitsu Eternus数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+存储
+ a| 
+存储
+
+
+
+ a| 
+精简池、灵活层池、
+
+RAID 组
+ a| 
+存储池
+
+
+
+ a| 
+标准卷、快照数据卷(SDV)、
+
+快照数据池卷(SDPV)、
+
+精简配置卷(TPV)
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* Eternus 存储的 IP 地址，不能以逗号分隔
+* SSH 管理级别的用户名和密码
+* 端口 22
+* 确保已禁用页面滚动。(clienv-show-more-sl滚动 禁用)
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+Eternus 存储的 IP 地址
+ a| 
+Eternus 存储的 IP 地址
+
+
+
+ a| 
+用户名
+ a| 
+Eternus 存储的用户名
+
+
+
+ a| 
+Password
+ a| 
+用于ternus的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+SSH进程等待超时(秒)
+ a| 
+SSH进程超时(默认值为600秒)
+
+|===

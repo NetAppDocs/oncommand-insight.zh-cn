@@ -1,0 +1,23 @@
+---
+permalink: config-admin/capacity-as-time-series.html 
+sidebar: sidebar 
+keywords:  
+summary: 在OnCommand Insight 7.3.1中、容量信息会作为时间序列数据进行报告和图表绘制。 
+---
+= 容量作为时间序列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在OnCommand Insight 7.3.1中、容量信息会作为时间序列数据进行报告和图表绘制。
+
+以前、从数据源获取的容量信息仅是"时间点"(Point-In-Time、PIT)数据、这意味着它不能在图表中用作时间序列数据。现在、资产的容量值可通过以下方式用作时间序列数据：
+
+* 在表、小工具、专家视图以及显示时间序列数据的任何位置绘制图形
+* 使用现有语义应用于存在违规的性能阈值
+* 在表达式中使用、并在适当的情况下与其他性能计数器结合使用
+
+
+请注意、如果您从先前版本的Insight升级、则自定义信息板的查询或筛选器中使用的先前PIT容量值将替换为时间序列容量数据。与先前Insight版本中的等效数据相比、这可能会导致报告或筛选容量数据的方式发生小变化。

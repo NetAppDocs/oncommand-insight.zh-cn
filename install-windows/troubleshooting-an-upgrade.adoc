@@ -1,0 +1,44 @@
+---
+permalink: install-windows/troubleshooting-an-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您在OnCommand Insight 升级后遇到问题、查看与某些可能的问题相关的故障排除信息可能会很有帮助。 
+---
+= 对升级进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在OnCommand Insight 升级后遇到问题、查看与某些可能的问题相关的故障排除信息可能会很有帮助。
+
+
+
+== 无法从Windows的"开始"菜单启动Cognos
+
+之前是否存在空格 `\SANscreen\cognos` 路径名称为问题描述。有关详细信息、请参见NetApp客户成功社区中的以下内容： https://forums.netapp.com/thread/62721[]。
+
+
+
+== "`不是有效的Win32应用程序`"错误消息
+
+这是采用Microsoft Windows的问题描述。要解析此问题描述 、您必须在注册表中的映像路径周围加上引号。有关详细信息、请参见以下文档： https://support.microsoft.com/en-us/kb/812486/en-us[]。
+
+
+
+== 标注不存在
+
+当数据仓库ETL作业从Insight实例查询标注时、它有时会错误地收到空响应(0结果)。此错误会导致某些对象的标注在数据仓库中的"`Present`"和"`Not Present`"状态之间来回移动。有关详细信息，请参见以下内容： https://forums.netapp.com/docs/DOC-44167[]
+
+
+
+== 报告中显示的值存在差异
+
+在7.0之前的版本中、报告基于整数。现在、它们是基于十进制的；因此、升级后、您可能会发现这些值的显示方式有所增加或减少。
+
+
+
+== 数据不会显示在报告中
+
+在7.0.1中、更改了多个型号名称(例如、Symmetrix更改为Symmetrix VMAX)。因此、如果报告中包含"v í`Symmetrix`"的筛选器、则在运行报告时、您将看不到任何数据。要更改报告、您必须在Report Studio中使用查询资源管理器打开报告、搜索型号名称、将其替换为新型号名称、然后保存报告。

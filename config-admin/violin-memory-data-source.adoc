@@ -1,0 +1,153 @@
+---
+permalink: config-admin/violin-memory-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Violin 6000系列闪存阵列\(http\)数据源可从Violin 6000系列闪存阵列收集网络信息以供分析和验证。' 
+---
+= Violin Flash Memory阵列数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Violin 6000系列闪存阵列(HTTP)数据源可从Violin 6000系列闪存阵列收集网络信息以供分析和验证。
+
+
+
+== 术语
+
+[NOTE]
+====
+从OnCommand Insight 7.3.11开始、此数据收集器不再可用。
+
+====
+OnCommand Insight 从Violin 6000系列闪存阵列数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Violin智能内存模块(VIMM)
+ a| 
+Disk
+
+
+
+ a| 
+容器
+ a| 
+存储
+
+
+
+ a| 
+内存网关
+ a| 
+存储节点
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+启动程序、启动程序组、目标
+ a| 
+卷映射，卷掩码
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 您需要存储的只读用户名和密码。
+* 使用存储IP地址验证Web浏览器的访问。
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+Violin内存阵列主网关的IP地址或FQDN
+ a| 
+Violin内存阵列主网关的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+Violin内存阵列主网关的用户名
+
+
+
+ a| 
+Password
+ a| 
+Violin内存阵列主网关的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+通信端口
+ a| 
+用于与Violin阵列通信的端口
+
+
+
+ a| 
+已启用HTTPS
+ a| 
+选择以使用HTTPS
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+连接超时(秒)
+ a| 
+连接超时(默认为60秒)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

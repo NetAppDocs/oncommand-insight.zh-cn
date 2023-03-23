@@ -1,0 +1,16 @@
+---
+permalink: install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: 在数据仓库升级过程中、不会自动备份自定义Cognos设置、例如非默认SMTP电子邮件设置。您需要手动记录自定义设置、然后在升级后还原这些设置。 
+---
+= 在数据仓库升级期间保留自定义Cognos设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在数据仓库升级过程中、不会自动备份自定义Cognos设置、例如非默认SMTP电子邮件设置。您需要手动记录自定义设置、然后在升级后还原这些设置。
+
+在升级数据仓库之前、请准备一份包含要保留的任何自定义Cognos设置的检查清单、并在升级系统之前查看此列表。升级完成后、您可以手动还原这些值、以将其恢复为原始配置中的设置。

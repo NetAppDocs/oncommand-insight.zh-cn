@@ -1,0 +1,14 @@
+---
+permalink: config-admin/asset-page-sections.html 
+sidebar: sidebar 
+keywords:  
+summary: 资产页面会显示多个部分、其中包含与资产相关的信息。您看到的部分取决于资产类型。 
+---
+= 资产页面部分
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+资产页面会显示多个部分、其中包含与资产相关的信息。您看到的部分取决于资产类型。

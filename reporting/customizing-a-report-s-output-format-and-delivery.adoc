@@ -1,0 +1,37 @@
+---
+permalink: reporting/customizing-a-report-s-output-format-and-delivery.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以自定义报告的格式和交付方法。 
+---
+= 自定义报告的输出格式和交付
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以自定义报告的格式和交付方法。
+
+
+
+== 步骤
+
+. 打开OnCommand Insight 报告门户、选择要自定义的报告、然后单击*。
++
+image::../media/run-report.gif[运行报告]
+
+. 单击*属性*>*计划*
++
+image::../media/email-report.gif[通过电子邮件发送报告]
+
+. 您可以设置以下选项：
++
+** *计划*要运行报告的时间。
+** *格式化*报告输出。
+** *传送*打印、保存报告或通过电子邮件发送报告。
+** *语言*定义报告的交付语言。
+
+
+. 单击 * 创建 * 以使用您所做的选择生成报告。
+

@@ -1,0 +1,55 @@
+---
+permalink: install-linux/installing-oncommand-insight-data-warehouse-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: '此安装是一个独立的安装、包含运行和操作OnCommand Insight 数据仓库(DWH)所需的要素。' 
+---
+= 安装OnCommand Insight 数据仓库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此安装是一个独立的安装、包含运行和操作OnCommand Insight 数据仓库(DWH)所需的要素。
+
+
+
+== 开始之前
+
+您必须已完成所有安装前提条件。
+
+
+
+== 关于此任务
+
+数据仓库具有Cognos报告功能。如果在Linux服务器上安装Insight、则只有在Windows服务器上安装数据仓库时、才能使用这些功能。有关在Windows上安装数据仓库和Cognos报告功能的信息、请参阅适用于OnCommand Insight Microsoft Windows_的_Microsoft安装指南。
+
+
+
+== 步骤
+
+. 使用具有sudo权限的帐户登录到数据仓库服务器。
+. 导航到安装文件所在的服务器上的目录、然后键入以下命令：
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+请务必检查安装文件的版本号；版本号可能与命令中显示的版本号不同。
+
+. 您可以查看的语法、命令参数和参数用法 `oci-install.sh` 开始安装之前：
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. 运行安装脚本：
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. 阅读并接受许可协议、然后按照提示进行操作。
+
+
+
+
+== 结果
+
+在问题解答 所有提示后、安装将开始、并且大约需要10分钟、具体取决于所安装的应用程序。

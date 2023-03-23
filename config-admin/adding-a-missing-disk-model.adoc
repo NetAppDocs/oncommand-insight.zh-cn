@@ -1,0 +1,37 @@
+---
+permalink: config-admin/adding-a-missing-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果由于磁盘型号未知而导致采集失败、您可以将缺少的磁盘型号添加到new_disk_models.txt文件中、然后再次运行采集。 
+---
+= 添加缺少的磁盘型号
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果由于磁盘型号未知而导致采集失败、您可以将缺少的磁盘型号添加到 `new_disk_models.txt` 文件并再次运行采集。
+
+
+
+== 关于此任务
+
+在通过OnCommand Insight 采集对存储设备进行轮询的过程中、将读取存储设备上的磁盘型号。如果供应商向其阵列中添加了Insight不知道的新磁盘型号、或者Insight查找的型号与存储设备返回的型号不匹配、则该数据源的采集将失败并显示错误。为了防止出现这些错误、必须更新Insight已知的磁盘型号信息。Insight中添加了新的磁盘型号以及更新、修补程序和维护版本。但是、您可以决定手动更新此信息、而不是等待修补程序或更新。
+
+由于OnCommand Insight 每五分钟读取一次磁盘型号文件、因此您输入的任何新数据型号信息都会自动更新。您无需重新启动服务器即可使更改生效、但可以选择重新启动服务器和任何远程采集单元(RAU)、以便在下次更新之前使更改生效。
+
+磁盘型号更新将添加到 `new_disk_models.txt` 文件位于中``<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war`` 目录。在更新之前、了解描述新磁盘型号所需的信息 `new_disk_models.txt` 文件文件中的信息不准确会产生不正确的系统数据、并可能导致采集失败。
+
+按照以下说明手动更新Insight磁盘型号：
+
+
+
+== 步骤
+
+. 找到适用于您的磁盘型号的正确信息。
+. 使用文本编辑器打开 `new_disk_models.txt` 文件
+. 为新数据源添加所需信息。
+. 将文件保存在中 `<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war` 目录。
+. 备份 `new_disk_models.txt` 将文件保存到安全位置。在后续的OnCommand Insight 升级期间、此文件将被覆盖。如果升级后的文件中不存在磁盘型号信息、则需要重新输入该信息。
+

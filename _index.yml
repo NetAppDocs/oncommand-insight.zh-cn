@@ -1,0 +1,24 @@
+---
+indexpage:
+  lead: OnCommand Insight 简化了内部环境以及公共云和私有云中混合IT基础架构的运营管理。
+  tiles:
+  - title: 入门
+    links:
+    - title: 安装(Windows)
+      url: install-windows/installation-prerequisites.html
+    - title: 安装(Linux)
+      url: install-linux/installation-prerequisites.html
+    - title: 配置和管理
+      url: config-admin/setting-up-insight.html
+  - title: 报告
+    links:
+    - title: 数据仓库管理
+      url: dwh/welcome-to-data-warehouse.html
+    - title: 报告
+      url: reporting/welcome-to-oncommand-insight-reporting.html
+  - title: 操作说明和常见问题解答
+    links:
+    - title: 操作说明
+      url: howto/getting-started-with-insight.html
+    - title: 常见问题解答
+      url: faq/faq-general-insight-questions.html

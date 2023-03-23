@@ -1,0 +1,23 @@
+---
+permalink: dwh/configuring-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 要配置用户帐户、您必须完成几个步骤。 
+---
+= 配置用户帐户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要配置用户帐户、您必须完成几个步骤。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*用户管理*。
+. 配置每个用户帐户。
+

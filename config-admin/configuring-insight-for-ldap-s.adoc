@@ -1,0 +1,180 @@
+---
+permalink: config-admin/configuring-insight-for-ldap-s.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 必须使用在公司LDAP域中配置的轻型目录访问协议\(ldap\)设置进行配置。' 
+---
+= 为LDAP配置Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 必须使用在公司LDAP域中配置的轻型目录访问协议(LDAP)设置进行配置。
+
+在配置Insight以与LDAP或安全LDAP (LDAPS)结合使用之前、请记下企业环境中的Active Directory配置。Insight设置必须与您组织的LDAP域配置中的设置匹配。在配置Insight以用于LDAP之前、请查看以下概念、并与LDAP域管理员联系、了解要在您的环境中使用的正确属性。
+
+对于所有安全Active Directory (例如LDAPS)用户、您必须使用证书中定义的AD服务器名称。不能使用IP地址进行安全AD登录。
+
+[NOTE]
+====
+OnCommand Insight 通过Microsoft Active Directory服务器或Azure AD支持LDAP和LDAPS。其他LDAP实施可能有效、但尚未通过Insight认证。这些指南中的过程假定您使用的是Microsoft Active Directory版本2或3 LDAP (轻型目录访问协议)。
+
+====
+*用户主体名称属性：*
+
+Insight使用LDAP User Principal Name属性(userPrincipalName)作为username属性。用户主体名称保证在Active Directory (AD)林中具有全局唯一性、但在许多大型组织中、用户主体名称可能不会立即为其所识别或识别。您的组织可能会在主用户名中使用User Principal Name属性的替代项。
+
+以下是User Principal Name属性字段的一些备用值：
+
+* * sAMAccountName*
++
+此用户属性是旧版Windows 2000 NT之前的用户名、大多数用户都习惯使用此用户登录到其个人Windows计算机。这并不能保证在整个AD林中具有全局唯一性。
+
++
+
+NOTE: 对于User Principal Name属性、sAMAccountName区分大小写。
+
+* *邮件*
++
+在使用MS Exchange的AD环境中、此属性是最终用户的主电子邮件地址。与userPrincipalName属性不同、此属性在整个AD林中应具有全局唯一性(最终用户也很熟悉)。大多数非MS Exchange环境中都不存在邮件属性。
+
+* *转介*
++
+LDAP转介是指域控制器向客户端应用程序指示其没有所请求对象的副本(或者更准确地说、 它不会保留目录树中该对象所在的部分(如果该对象确实存在)、并为客户端提供更可能持有该对象的位置。而客户端又会使用转介作为对域控制器进行DNS搜索的基础。理想情况下、转介始终引用确实持有该对象的域控制器。但是、转介到的域控制器可能会生成另一个转介、但通常不需要很长时间才能发现对象不存在并通知客户端。
+
+
+
+
+TIP: sAMAccountName通常优先于用户主体名称。sAMAccountName在域中是唯一的(虽然在域林中可能不是唯一的)、但它是用户通常用于登录的字符串域(例如、_NetApp\username_)。Distinguished Name是林中的唯一名称、但通常不为用户所知。
+
+
+TIP: 在同一域的Windows系统部分上、您可以始终打开命令提示符并键入set以查找正确的域名(USERDOMAIN=)。然后、OCI登录名将为 `USERDOMAIN\sAMAccountName`。
+
+域名*：mydomain.x.y.z.com *、请使用 `DC=x,DC=y,DC=z,DC=com` 在Insight的域字段中。
+
+* 端口 * ：
+
+LDAP的默认端口为389、LDAPS的默认端口为636
+
+LDAPS的典型URL： `ldaps://<ldap_server_host_name>:636`
+
+日志位于：``\\<install directory>\SANscreen\wildfly\standalone\log\ldap.log``
+
+默认情况下、Insight需要以下字段中记录的值。如果这些更改在Active Directory环境中发生、请务必在Insight LDAP配置中进行更改。
+
+|===
+
+
+ a| 
+Role属性
+
+
+
+ a| 
+成员
+
+
+
+ a| 
+Mail属性
+
+
+
+ a| 
+邮件
+
+
+
+ a| 
+Distinguished Name属性
+
+
+
+ a| 
+distinguishedName
+
+
+
+ a| 
+转介
+
+
+
+ a| 
+请遵循
+
+|===
+*组：*
+
+要对OnCommand Insight 和DWH服务器中具有不同访问角色的用户进行身份验证、您必须在Active Directory中创建组、并在OnCommand Insight 和DWH服务器中输入这些组名称。以下组名称仅为示例；您在Insight中为LDAP配置的名称必须与为Active Directory环境设置的名称匹配。
+
+|===
+
+
+| Insight Group | 示例 
+
+
+ a| 
+Insight服务器管理员组
+ a| 
+insight.server.admins
+
+
+
+ a| 
+Insight管理员组
+ a| 
+insight.m管理员
+
+
+
+ a| 
+Insight用户组
+ a| 
+insight.users
+
+
+
+ a| 
+Insight来宾组
+ a| 
+insight.guests
+
+
+
+ a| 
+报告管理员组
+ a| 
+insight.report.管理员
+
+
+
+ a| 
+报告专业作者组
+ a| 
+insight.report.proauthors
+
+
+
+ a| 
+报告作者组
+ a| 
+insight.report.business.authors
+
+
+
+ a| 
+报告使用者组
+ a| 
+insight.report.business.consumers
+
+
+
+ a| 
+报告收件人组
+ a| 
+insight.report.recipients
+
+|===

@@ -1,0 +1,69 @@
+---
+permalink: install-windows/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: '您必须安装远程采集单元(RAU)才能从位于防火墙后面、远程站点、专用网络或不同网段中的SAN设备获取信息。在安装RAU之前、您应确保环境满足RAU操作系统、CPU、内存和磁盘空间要求。' 
+---
+= 远程采集单元服务器要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须安装远程采集单元(RAU)才能从位于防火墙后面、远程站点、专用网络或不同网段中的SAN设备获取信息。在安装RAU之前、您应确保环境满足RAU操作系统、CPU、内存和磁盘空间要求。
+
+|===
+
+
+| 组件 | 要求 
+
+
+ a| 
+操作系统
+ a| 
+一台运行64位Microsoft Windows Server 2012、2012 R2、2016或2019且具有最新Service Pack的计算机
+
+
+
+ a| 
+CPU
+ a| 
+4 个 CPU 核
+
+
+
+ a| 
+内存
+ a| 
+16 GB RAM
+
+
+
+ a| 
+可用磁盘空间
+ a| 
+40 GB
+
+
+
+ a| 
+网络
+ a| 
+100 Mbps/1 Gbps以太网连接、静态IP地址、与所有FC设备的IP连接以及与OnCommand Insight 服务器的所需端口(80或443)。
+
+
+
+ a| 
+权限
+ a| 
+对RAU服务器的本地管理员权限
+
+
+
+ a| 
+病毒扫描
+ a| 
+在安装此OnCommand Insight 组件期间、您必须完全禁用所有病毒扫描程序。安装后、Insight组件使用的路径必须从病毒扫描中排除。此外、在安装后、您还必须从防病毒扫描中排除IBM/DB2文件夹(例如_C：\Program Files\IBM\DB2_)。
+
+|===

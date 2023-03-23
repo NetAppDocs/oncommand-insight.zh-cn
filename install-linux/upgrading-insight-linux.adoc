@@ -1,0 +1,21 @@
+---
+permalink: install-linux/upgrading-insight-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: '如果有新版本的OnCommand Insight 、您可能需要升级以利用新功能和问题修复。您必须单独升级Insight服务器和数据仓库\(DWH)。' 
+---
+= 升级Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果有新版本的OnCommand Insight 、您可能需要升级以利用新功能和问题修复。您必须单独升级Insight服务器和数据仓库(DWH)。
+
+
+IMPORTANT: 您不应将任何自动或手动备份存储在Insight安装目录中、因为整个安装文件夹会在升级过程中被覆盖。如果您已将备份文件存储在其中任何目录中、则必须先将备份移动到其他位置、然后才能执行任何升级或卸载过程。
+
+较新版本的Insight对磁盘空间、内存和CPU的要求更高。在升级到Insight的最新版本之前、请查看安装要求。在安装或升级Insight之前、强烈建议联系您的销售工程师以获取详细的规模估算指导。
+
+最好在升级Insight软件之前执行安全备份和数据库备份。

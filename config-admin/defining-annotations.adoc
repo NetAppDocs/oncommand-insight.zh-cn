@@ -1,0 +1,24 @@
+---
+permalink: config-admin/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 在自定义OnCommand Insight 以跟踪符合企业要求的数据时、您可以定义提供完整数据视图所需的任何专用标注：例如、资产使用寿命结束、数据中心、构建位置、存储层或卷、 和内部卷服务级别。 
+---
+= 定义标注
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在自定义OnCommand Insight 以跟踪符合企业要求的数据时、您可以定义提供完整数据视图所需的任何专用标注：例如、资产使用寿命结束、数据中心、构建位置、存储层或卷、 和内部卷服务级别。
+
+
+
+== 步骤
+
+. 列出环境数据必须关联的任何行业术语。
+. 列出环境数据必须关联的企业术语、尚未使用业务实体对其进行跟踪。
+. 确定您可以使用的任何默认标注类型。
+. 确定需要创建哪些自定义标注。
+

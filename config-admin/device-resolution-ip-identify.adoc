@@ -1,0 +1,16 @@
+---
+permalink: config-admin/device-resolution-ip-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: '"IP Identify" 屏幕将显示通过自动设备解析或手动设备解析标识的任何 iSCSI 和 CIFS 或 NFS 共享。此外，还会显示未标识的设备。此屏幕包括设备的 IP 地址，名称，状态， iSCSI 节点和共享名称。此外，还会显示已成功标识的设备的百分比。' 
+---
+= IP 设备解析
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"IP Identify" 屏幕将显示通过自动设备解析或手动设备解析标识的任何 iSCSI 和 CIFS 或 NFS 共享。此外，还会显示未标识的设备。此屏幕包括设备的 IP 地址，名称，状态， iSCSI 节点和共享名称。此外，还会显示已成功标识的设备的百分比。
+
+image::../media/ipidentify.gif[ipidentify]

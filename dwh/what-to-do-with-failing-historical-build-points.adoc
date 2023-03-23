@@ -1,0 +1,16 @@
+---
+permalink: dwh/what-to-do-with-failing-historical-build-points.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以从历史记录进行构建、并通过启用跳过历史记录构建失败选项来省略任何失败的构建。 
+---
+= 如何处理失败的历史构建点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过启用*跳过历史记录构建失败*选项从历史记录构建、省略任何失败的构建。
+
+如果执行此操作、则会继续从历史记录进行构建。如果构建失败且启用了此选项、则数据仓库将继续构建、并忽略任何失败的构建。在这种情况下、历史数据中没有任何已跳过的构建的数据点。如果未启用此选项、并且构建失败、则所有后续作业都将中止。

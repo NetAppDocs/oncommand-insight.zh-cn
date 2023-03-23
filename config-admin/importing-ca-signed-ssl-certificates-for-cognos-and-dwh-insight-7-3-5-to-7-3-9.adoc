@@ -1,0 +1,113 @@
+---
+permalink: config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html 
+sidebar: sidebar 
+keywords: CAC,Cognos 11,SSL certificates 
+summary: 您可以添加SSL证书、以便为数据仓库和Cognos环境启用增强型身份验证和加密。 
+---
+= 导入Cognos和DWH的CA签名SSL证书(Insight 7.3.5至7.3.9)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以添加SSL证书、以便为数据仓库和Cognos环境启用增强型身份验证和加密。
+
+
+
+== 开始之前
+
+此操作步骤 适用于运行OnCommnand Insight 7.3.5至7.3.9的系统。
+
+[NOTE]
+====
+有关最新的CAC和证书说明、请参见以下知识库文章(需要支持登录)：
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["如何为OnCommand Insight 配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["如何为OnCommand Insight 数据仓库配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["如何创建证书颁发机构(CA)签名证书并将其导入到OnComand Insight和OnCommand Insight 数据仓库7.3.x中"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["如何在Windows主机上安装的OnCommand Insight 7.3.X中创建自签名证书"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["如何将Cognos证书颁发机构(CA)签名证书导入到OnCommand 数据中心7.3.3及更高版本中"]
+
+
+====
+
+
+== 关于此任务
+
+要执行此操作步骤 、您必须具有管理员权限。
+
+
+
+== 步骤
+
+. 创建的备份 `..\SANScreen\cognos\analytics\configuration\cogstartup.xml`。
+. 在下创建"`certs`"和"`csk`"文件夹的备份 `..\ SANScreen\cognos\analytics\configuration`。
+. 从Cognos生成证书加密请求。在管理CMD窗口中、运行：
++
+.. CD `“\Program Files\sanscreen\cognos\analytics\bin”`
+.. `ThirdPartyCertificateTool.bat -java:local -c -e -p NoPassWordSet -a RSA -d “CN=FQDN,O=orgname,C=US” -r c:\temp\encryptRequest.csr`
+
+
+. 打开 `c:\temp\encryptRequest.csr` 归档并复制生成的内容。
+. 将encryptRequest.csr发送到证书颁发机构(CA)以获取SSL证书。
++
+请务必添加其他属性、例如"`San：dns=fqdn "(例如、hostname.netapp.com)`")以添加SubjectAltName。如果证书中缺少SubjectAltName、则Google Chrome 58及更高版本会进行投诉。
+
+. 使用PKCS7格式包含根证书以下载链证书
++
+此操作将下载FQDN.p7b文件
+
+. 从CA获取.p7b格式的证书。请使用一个名称将其标记为Cognos Web服务器的证书。
+. ThirdPartyCertificateTool.bat无法导入整个链、因此导出所有证书需要执行多个步骤。按如下所示单独导出链、从而拆分链：
++
+.. 在"`Crypto Shell扩展名`"中打开.p7b证书。
+.. 在左窗格中浏览到"`Certificates`"。
+.. 右键单击根CA >所有任务>导出。
+.. 选择Base64输出。
+.. 输入一个文件名、将其标识为根证书。
+.. 重复步骤8a到8c、将所有证书单独导出到.cer文件中。
+.. 将文件命名为intermediateX.cer和Cognos.cer。
+
+
+. 如果只有一个CA证书、请忽略此步骤、否则、请将root.cer和intermediateX.cer合并到一个文件中。
++
+.. 使用Notepad打开intermediate.cer并复制内容。
+.. 使用Notepad打开root.cer并保存9a中的内容。
+.. 将文件保存为CA.cer。
+
+
+. 使用管理CMD提示符将证书导入到Cognos密钥库中：
++
+.. cd "`Program Files\SANscreen\cognos\Analytics \bin`"
+.. ThirdPartyCertificateTool.bat -java：local -i -T -r c：\temp\cA.cer
++
+此操作会将CA.cer设置为根证书颁发机构。
+
+.. ThirdPartyCertificateTool.bat -java：local -i -e -r c：\temp\cognos.cer -t c：\temp\ca.cer
++
+此操作会将Cognos.cer设置为由CA.cer签名的加密证书。
+
+
+
+. 打开IBM Cognos配置。
++
+.. 选择本地配置->安全性->加密-> Cognos
+.. 更改"`使用第三方CA？`" 设置为True。
+.. 保存配置。
+.. 重新启动Cognos
+
+
+. 使用管理CMD提示符将最新的Cognos证书导出到Cognos.crt：
++
+.. "D：\Program Files\SANscreen\java\bin\keytool.exe"-exportcert -file "`c：\temp\Cognos.crt`-keystore D：\Program Files\SANscreen\cognos\Analytics \configuration\certs\CamKeystore"-storetype PKCS12 -storepass NoPassWordalias -encryption
+
+
+. 使用管理CMD提示符窗口将"`c：\temp\cognos.crt`"导入到dwh trustore中、以在Cognos和DWH之间建立SSL通信。
++
+.. "D：\Program Files\SANscreen\java\bin\keytool.exe"-importcert -file "`c：\temp\Cognos.crt`"-keystore "D：\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore"-storepchangeit -alias cognoscert
+
+
+. 重新启动SANscreen 服务。
+. 执行DWH备份以确保DWH与Cognos通信。
+

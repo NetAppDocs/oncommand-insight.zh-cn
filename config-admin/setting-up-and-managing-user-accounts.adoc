@@ -1,0 +1,53 @@
+---
+permalink: config-admin/setting-up-and-managing-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: '用户帐户、用户身份验证和用户授权可以通过以下两种方式之一进行定义和管理：在Microsoft Active Directory \(版本2或3) LDAP \(轻型目录访问协议\)服务器或内部OnCommand Insight 用户数据库中。为每个人设置不同的用户帐户可以控制访问权限、个人首选项和责任。请使用具有管理员权限的帐户执行此操作。' 
+---
+= 设置和管理用户帐户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+用户帐户、用户身份验证和用户授权可以通过以下两种方式定义和管理：在Microsoft Active Directory (版本2或3) LDAP (轻型目录访问协议)服务器或内部OnCommand Insight 用户数据库。为每个人设置不同的用户帐户可以控制访问权限、个人首选项和责任。请使用具有管理员权限的帐户执行此操作。
+
+
+
+== 开始之前
+
+您必须已完成以下任务：
+
+* 安装OnCommand Insight 许可证。
+* 为每个用户分配唯一的用户名。
+* 确定要使用的密码。
+* 分配正确的用户角色。
+
+
+[NOTE]
+====
+安全最佳实践要求管理员配置主机操作系统、以防止非管理员/标准用户交互登录。
+
+====
+
+
+== 步骤
+
+. 在浏览器中打开Insight。
+. 在Insight工具栏上、单击*管理*。
+. 单击*设置*。
+. 选择"*用户"*选项卡。
+. 要创建新用户、请单击*操作*按钮并选择*添加用户*。
++
+输入*名称*、*密码*、*电子邮件*地址、然后选择一个用户*角色*作为管理员、用户或来宾。
+
+. 要更改用户信息、请从列表中选择用户、然后单击用户问题描述 右侧的*编辑用户帐户*符号。
+. 要从OnCommand Insight 系统中删除用户、请从列表中选择该用户、然后单击用户问题描述 右侧的*删除用户帐户*。
+
+
+
+
+== 结果
+
+如果已启用LDAP、则在用户登录到OnCommand Insight 时、服务器会首先尝试通过LDAP进行身份验证。如果OnCommand Insight 在LDAP服务器上找不到该用户、则会在本地Insight数据库中搜索。

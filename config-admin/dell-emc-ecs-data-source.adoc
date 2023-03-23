@@ -1,0 +1,123 @@
+---
+permalink: config-admin/dell-emc-ecs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 此数据收集器从 EMC ECS 存储系统采集清单和性能数据。在配置方面、数据收集器需要ECS服务器的IP地址和管理级别域帐户。 
+---
+= Dell EMC ECS数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据收集器从 EMC ECS 存储系统采集清单和性能数据。在配置方面、数据收集器需要ECS服务器的IP地址和管理级别域帐户。
+
+
+
+== 术语
+
+OnCommand Insight 从EMC ECS数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+克隆用户
+ a| 
+存储
+
+
+
+ a| 
+租户
+ a| 
+存储池
+
+
+
+ a| 
+存储分段
+ a| 
+内部卷
+
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* ECS 管理控制台的 IP 地址
+* ECS 系统的管理级别域帐户
+* 端口 443 （ HTTPS ）。需要与 ECS 系统上的 TCP 端口 443 建立出站连接。
+* 对于性能，使用只读用户名和密码访问 ssh/scp 。
+* 为提高性能，需要端口 22 。
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+ECS 主机
+ a| 
+ECS系统的IP地址或完全限定域名
+
+
+
+ a| 
+ECS 主机端口
+ a| 
+用于与 ECS 主机通信的端口
+
+
+
+ a| 
+ECS 供应商 ID
+ a| 
+ECS 的供应商 ID
+
+
+
+ a| 
+Password
+ a| 
+用于 ECS 的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔。默认值为 360 分钟。
+
+|===

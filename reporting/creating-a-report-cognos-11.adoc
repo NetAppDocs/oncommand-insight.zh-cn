@@ -1,0 +1,63 @@
+---
+permalink: reporting/creating-a-report-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用Cognos 11创建报告与先前版本的Cognos不同。使用此操作步骤 可使用预定义的OnCommand Insight 报告创建报告。 
+---
+= 使用Cognos 11创建报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用Cognos 11创建报告与先前版本的Cognos不同。使用此操作步骤 可使用预定义的OnCommand Insight 报告创建报告。
+
+
+
+== 关于此任务
+
+按照以下步骤生成一份简单的报告、说明多个数据中心中存储和存储池的物理容量。
+
+
+
+== 步骤
+
+. 在工具栏中、单击 image:../media/new-report.gif[""]
+. 单击 * 报告 *
+. 单击*模板*>*空白*
+. 单击*主题*>*酷蓝*>*确定*
++
+此时将显示源和数据选项卡
+
+. 单击*源*>*image:../media/new-report.gif[""]*
+. 在打开文件对话框中、单击*团队内容*>*软件包*
++
+此时将显示可用软件包的列表。
+
+. 单击*存储和存储池容量*>*打开*
+. 单击 image:../media/new-report.gif[""]
++
+此时将显示报告的可用样式。
+
+. 单击 * 列表 *
++
+为列表和查询添加适当的名称
+
+. 单击 * 确定 * 。
+. 展开*物理容量*
+. 扩展到*数据中心*的最低级别
+. 拖动 image:../media/data-center.gif[""] 报告的目的。
+. 展开*容量(MB)*
+. 将*容量(MB)*拖动到报告平台。
+. 将*已用容量(MB)*拖动到报告平台。
+. 单击以运行报告 image:../media/run-report.gif[""] 并选择输出类型。
+
+
+
+
+== 结果
+
+此时将创建类似于以下内容的报告：
+
+image::../media/cognos-11-report.gif[Cognos 11报告]

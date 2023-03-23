@@ -1,0 +1,42 @@
+---
+permalink: config-admin/configuring-a-login-warning-message.html 
+sidebar: sidebar 
+keywords:  
+summary: 管理员可以通过OnCommand Insight 设置用户登录时显示的自定义文本消息。 
+---
+= 设置登录警告消息
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理员可以通过OnCommand Insight 设置用户登录时显示的自定义文本消息。
+
+
+
+== 步骤
+
+. 要在OnCommand Insight 服务器中设置消息、请执行以下操作：
++
+.. 导航到菜单：Admin[故障排除>高级故障排除>高级设置]。
+.. 在文本区域中输入登录消息。
+.. 单击*客户端显示登录警告消息*复选框。
+.. 单击 * 保存 * 。
++
+所有用户登录时都会显示此消息。
+
+
+
+. 要在数据仓库(DWH)和报告(Cognos)中设置消息、请执行以下操作：
++
+.. 导航到*系统信息*、然后单击*登录警告*选项卡。
+.. 在文本区域中输入登录消息。
+.. 单击 * 保存 * 。
++
+当DWH和Cognos报告所有用户登录时、将显示此消息。
+
+
+
+

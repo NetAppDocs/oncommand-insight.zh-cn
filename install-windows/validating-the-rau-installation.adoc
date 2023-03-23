@@ -1,0 +1,26 @@
+---
+permalink: install-windows/validating-the-rau-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 要验证远程采集单元的安装是否正确、您可以查看连接到服务器的远程采集单元的状态。 
+---
+= 验证远程采集单元安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要验证远程采集单元的安装是否正确、您可以查看连接到服务器的远程采集单元的状态。
+
+
+
+== 步骤
+
+. 在Insight工具栏上、单击*管理*。
+. 单击*采集单元*。
+. 验证新的远程采集单元是否已正确注册且处于已连接状态。
++
+否则、您必须联系技术支持。
+
+

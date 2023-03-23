@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 当查询不再收集有关资产的有用信息时、您可以将其删除。如果查询在标注规则中使用、则不能将其删除。 
+---
+= 删除查询
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当查询不再收集有关资产的有用信息时、您可以将其删除。如果查询在标注规则中使用、则不能将其删除。
+
+
+
+== 步骤
+
+. 登录到InsightWeb UI。
+. 单击 * 查询 * 并选择 * 显示所有查询 * 。
++
+此时将显示 "Queries" 页面。
+
+. 将光标置于要删除的查询上方并单击 image:../media/trash-can-query.gif[""]。
++
+此时将显示一条确认消息、询问您是否要删除此查询。
+
+. 单击 * 确定 * 。
+

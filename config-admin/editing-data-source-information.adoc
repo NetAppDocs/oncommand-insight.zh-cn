@@ -1,0 +1,29 @@
+---
+permalink: config-admin/editing-data-source-information.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以快速编辑数据源设置信息。 
+---
+= 编辑数据源信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以快速编辑数据源设置信息。
+
+
+
+== 步骤
+
+. 单击*管理*并导航到数据源列表视图
+. 找到要编辑的数据源。
+. 使用以下方法之一开始更改：
++
+** 单击选定数据源右侧的*编辑数据源*。
+** 单击选定数据源的链接名称、然后单击*编辑*。任一方法都会打开编辑数据源对话框。
+
+
+. 进行所需更改并单击*保存*。
+

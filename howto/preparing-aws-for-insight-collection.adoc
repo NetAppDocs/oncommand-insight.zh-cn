@@ -1,0 +1,56 @@
+---
+permalink: howto/preparing-aws-for-insight-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: 您的AWS帐户必须正确配置、以便Insight能够收集云成本数据。 
+---
+= 准备AWS以收集Insight数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您的AWS帐户必须正确配置、以便Insight能够收集云成本数据。
+
+
+
+== 关于此任务
+
+以下步骤可通过您的AWS帐户完成。有关详细信息、请参见Amazon文档： https://docs.aws.amazon.com["http://docs.aws.amazon.com"]。如果您不熟悉设置AWS云帐户、请联系您的云提供商以获得帮助。
+
+[NOTE]
+====
+本文档出于礼节的考虑提供了这些步骤、自发布之日起、这些步骤即被视为正确的。NetApp无法保证这些步骤的正确性。有关配置AWS帐户的信息或帮助、请联系您的云提供商或AWS帐户持有人。
+
+====
+最佳实践：Insight建议您在拥有用于上传计费报告的S3存储分段的同一帐户上创建一个主IAM用户、并使用此用户配置和收集AWS计费数据。
+
+要将AWS帐户配置为允许Insight收集数据、请执行以下步骤：
+
+
+
+== 步骤
+
+. 以身份访问管理(IAM)用户身份登录到AWS帐户。要正确收集、请登录到主IAM帐户、而不是组IAM帐户。
+. 请转到* Amazon S3*创建存储分段。输入唯一的存储分段名称并验证正确的区域。
+. 打开您的Amazon成本和使用情况报告。请参见 https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[] 以了解相关信息。
++
+.. 转到AWS的"*计费和成本管理信息板"、然后选择"*报告"。
+.. 单击*创建报告*并输入报告名称。对于*时间单位*、选择每日。选中框以包含*资源ID*、然后单击*下一步*。
+.. 单击Select delivery options页面中的*示例策略*链接。将框中的示例策略文本复制到剪贴板。单击 * 关闭 * 。
+.. 返回到已创建的S3存储分段、单击*权限*选项卡、然后选择*存储分段策略*按钮。
+.. 粘贴示例策略中的文本、然后替换 `<bucketname>` 在包含以下内容的每行中使用实际存储分段名称： `"Resource": "arn:aws:s3:: <bucketname>"`。*保存*策略。
+.. 返回创建报告屏幕、在S3存储分段中输入、然后单击*验证*按钮。单击 * 下一步 * 。
+.. 验证您的信息、然后单击*查看并完成*。
+
+
+. 您必须授予权限、Insight才能从AWS收集数据。以下链接详细介绍了如何授予*列出所有分段*的权限(步骤4.1)以及如何为文件夹中的对象设置权限(步骤5.2)： https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html[]。
+. 在IAM控制台中、转到*策略*并单击*创建策略*。
+. 在*策略名称*字段中输入一个名称、然后单击底部的*创建策略*。
+. 在IAM控制台中、选择您的用户、然后选择屏幕底部的*添加实时策略*。
+. 单击*选择服务*并选择S3。
+. 转到* JSON*选项卡。将AWS演练步骤5.1.2.g中的JSON示例文本复制到JSON框中。
+. 将JSON中的_companybucket_和_Development_字段替换为您的S3信息。
+. 单击*审核策略*以查看策略设置。
+

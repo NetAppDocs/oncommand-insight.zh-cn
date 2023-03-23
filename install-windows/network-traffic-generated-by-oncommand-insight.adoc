@@ -1,0 +1,32 @@
+---
+permalink: install-windows/network-traffic-generated-by-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 生成的网络流量、遍历网络的已处理数据量以及OnCommand Insight 在设备上放置的负载因多种因素而异。 
+---
+= OnCommand Insight 生成的网络流量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 生成的网络流量、遍历网络的已处理数据量以及OnCommand Insight 在设备上放置的负载因多种因素而异。
+
+不同环境的流量、数据和负载因以下因素而异：
+
+* 原始数据
+* 配置设备
+* OnCommand Insight 的部署拓扑
+* 不同的清单和性能数据源轮询间隔、可以缩短轮询间隔、以便发现速度较慢的设备或节省带宽
+
+
+OnCommand Insight 收集的原始配置数据可能会差别很大。
+
+以下示例说明了配置数据的不同之处、以及流量、数据和负载如何受到许多配置因素的影响。例如、您可能有两个阵列、每个阵列具有1、000个磁盘：
+
+* 阵列1：具有1、000个SATA磁盘、所有这些磁盘的大小均为1 TB。所有1、000个磁盘都位于一个存储池中、并且有1、000个LUN、所有LUN都呈现(映射并屏蔽)到ESX集群中的32个节点。
+* 阵列2：具有400个2 TB数据磁盘、560个600 GB FC磁盘和40个SSD。有3个存储池、但在传统RAID组中使用了320个FC磁盘。RAID组上划分的LUN使用传统屏蔽类型(symmaskdb)、而精简配置的基于池的LUN使用较新的屏蔽类型(symaccess)。有600个LUN提供给150个不同的主机。有200个BCV (600个LUN中200个LUN的完整块副本卷)。此外、还有200个R2卷、即位于不同站点的阵列上的卷的远程副本卷。
+
+
+每个阵列都有1、000个磁盘和1、000个逻辑卷。它们在数据中心占用的机架空间量上可能在物理上是相同的、甚至可能正在运行相同的固件、但第二个阵列的配置比第一个阵列复杂得多。

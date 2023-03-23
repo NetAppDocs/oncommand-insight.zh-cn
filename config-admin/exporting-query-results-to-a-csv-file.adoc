@@ -1,0 +1,65 @@
+---
+permalink: config-admin/exporting-query-results-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可能希望将查询结果导出到.CSV文件中、以便将数据导入到其他应用程序中。 
+---
+= 将查询结果导出到 .CSV 文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能希望将查询结果导出到.CSV文件中、以便将数据导入到其他应用程序中。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 单击 * 查询 * 并选择 * 显示所有查询 * 。
++
+此时将显示 "Queries" 页面。
+
+. 单击一个查询。
+. 单击 image:../media/export-to-csv.gif[""] 将查询结果导出到``.CSV`` 文件
+. 执行以下操作之一：
++
+** 单击 * 打开方式 * ，然后单击 * 确定 * 以使用 Microsoft Excel 打开文件并将文件保存到特定位置。
+** 单击 * 保存文件 * ，然后单击 * 确定 * 将文件保存到 "Downloads" 文件夹。仅导出显示列的属性。某些显示的列、尤其是属于复杂嵌套关系的列、不会导出。
+
+
++
+[NOTE]
+====
+如果资产名称中显示逗号、则导出将以引号将名称括起来、从而保留资产名称和正确的.csv格式。
+
+====
++
++导出查询结果时、请注意、结果表中的*所有*行将被导出、而不仅仅是那些在屏幕上选择或显示的行、最多可导出10、000行。
+
++
++
+
++
+[NOTE]
+====
+使用 Excel 打开导出的 .CSV 文件时，如果您的对象名称或其他字段的格式为 NN ： NN （两位数后跟一个冒号，再后跟两个数字），则 Excel 有时会将该名称解释为时间格式，而不是文本格式。这可能会导致 Excel 在这些列中显示不正确的值。例如，名为 "81 ： 45" 的对象将在 Excel 中显示为 "81 ： 45 ： 00" 。要解决此问题，请按照以下步骤将 .CSV 导入到 Excel 中：
+
++
+
+....
+-   Open a new sheet in Excel.
+-   On the "Data" tab, choose "From Text".
+-   Locate the desired .CSV file and click "Import".
+-   In the Import wizard, choose "Delimited" and click Next.
+-   Choose "Comma" for the delimiter and click Next.
+-   Select the desired columns and choose "Text" for the column data format.
+-   Click Finish.
+Your objects should show in Excel in the proper format.
+....
++
+
+====
+

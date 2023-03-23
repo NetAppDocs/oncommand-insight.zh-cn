@@ -1,0 +1,134 @@
+---
+permalink: config-admin/hitachi-content-platform-hcp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '此数据收集器支持使用HCP管理API的Hitachi内容平台(HCP\)。' 
+---
+= Hitachi Content Platform (HCP)数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据收集器使用 HCP 管理 API 支持 Hitachi 内容平台（ HCP ）。
+
+
+
+== 术语
+
+OnCommand Insight 从HCP数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+HCP 集群
+ a| 
+存储
+
+
+
+ a| 
+租户
+ a| 
+存储池
+
+
+
+ a| 
+命名空间
+ a| 
+内部卷
+
+
+
+ a| 
+Node
+ a| 
+Node
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 清单要求
+
+* HCP 服务器的 IP 地址
+* HCP 软件的只读用户名和密码以及对等权限
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+HCP 主机
+ a| 
+HCP 主机的 IP 地址或完全限定域名
+
+
+
+ a| 
+HCP 端口
+ a| 
+默认值为 9090
+
+
+
+ a| 
+HCP用户ID
+ a| 
+HCP主机的用户名
+
+
+
+ a| 
+HCP 密码
+ a| 
+用于HCP主机的密码
+
+
+
+ a| 
+HCP 身份验证类型
+ a| 
+选择 HCP_local 或 active_directory
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔(默认值为900秒)
+
+|===

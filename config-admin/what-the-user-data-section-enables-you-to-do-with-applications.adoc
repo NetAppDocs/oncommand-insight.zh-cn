@@ -1,0 +1,37 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以将环境中运行的应用程序分配给特定资产\(主机、虚拟机、卷、内部卷和虚拟机管理程序\)。通过"User Data"部分、您可以更改分配给资产的应用程序、或者为资产分配应用程序或其他应用程序。' 
+---
+= 使用 User Data 部分分配或修改应用程序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将环境中运行的应用程序分配给某些资产(主机、虚拟机、卷、内部卷和虚拟机管理程序)。通过"User Data"部分、您可以更改分配给资产的应用程序、或者为资产分配应用程序或其他应用程序。
+
+
+
+== 步骤
+
+. 登录到OnCommand Insight Web UI。
+. 通过执行以下任一操作找到资产页面：
++
+** 在Insight工具栏上、单击 image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]、键入资产的名称、然后从列表中选择资产。
+** 单击*信息板*、选择*资产信息板*、找到资产名称并单击它。此时将显示资产页面。
+
+
+. 您可以执行以下操作：
++
+** 要查看应用程序的资产页面、请单击应用程序的名称。
+** 要更改分配的应用程序或分配应用程序或其他应用程序、请将光标置于应用程序名称上(如果已分配应用程序)、或者将光标置于*无*之上(如果未分配任何应用程序)、单击 image:../media/pencil-icon-landing-page-be.gif[""]、键入以搜索应用程序或从列表中选择一个应用程序、然后单击 image:../media/check-box-ok.gif[""]。
++
+如果您选择的应用程序与某个业务实体关联、则该业务实体将自动分配给该资产。在这种情况下、将光标置于业务实体名称上方时、将显示_derived_词。如果您只希望维护资产的实体、而不希望维护关联应用程序的实体、则可以手动覆盖应用程序的分配。
+
+** 要删除应用程序、请单击 image:../media/trash-can-query.gif[""]。
+
+
+

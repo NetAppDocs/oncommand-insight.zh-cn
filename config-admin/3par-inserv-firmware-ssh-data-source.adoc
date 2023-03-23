@@ -1,0 +1,207 @@
+---
+permalink: config-admin/3par-inserv-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 使用3PAR InServ \(固件2.2.2+、SSH\)数据源发现HP 3PAR StoreServ存储阵列的清单。' 
+---
+= 3PAR InServ数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 使用3PAR InServ (固件2.2.2+、SSH)数据源发现HP 3PAR StoreServ存储阵列的清单。
+
+
+
+== 术语
+
+OnCommand Insight 从3PAR InServ数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+物理磁盘
+ a| 
+Disk
+
+
+
+ a| 
+存储系统
+ a| 
+存储
+
+
+
+ a| 
+控制器节点
+ a| 
+存储节点
+
+
+
+ a| 
+通用配置组
+ a| 
+存储池
+
+
+
+ a| 
+虚拟卷
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* InServ 集群的 IP 地址或 FQDN
+* 对于清单、InServ服务器的只读用户名和密码。
+* 为了提高性能、InServ服务器的读写用户名和密码。
+* 端口要求：22 (清单收集)、5988或5989 (性能收集)[注意：InServ OS 3.x+支持3PAR性能]
+* 对于性能收集，请通过 SSH 登录到 3PAR 阵列来确认 SMI-S 已启用。
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+集群 IP
+ a| 
+InServ集群的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+InServ服务器的用户名
+
+
+
+ a| 
+Password
+ a| 
+InServ服务器使用的密码
+
+
+
+ a| 
+SMI-S主机IP
+ a| 
+SMI-S提供程序主机的IP地址
+
+
+
+ a| 
+SMI-S 用户名
+ a| 
+SMI-S Provider 主机的用户名
+
+
+
+ a| 
+SMI-S 密码
+ a| 
+SMI-S Provider 主机使用的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔（默认为 40 分钟）
+
+
+
+ a| 
+排除设备
+ a| 
+要排除的设备IP的逗号分隔列表
+
+
+
+ a| 
+SSH进程等待超时(秒)
+ a| 
+SSH进程超时(默认值为60秒)
+
+
+
+ a| 
+SSH重试次数
+ a| 
+SSH重试尝试次数
+
+
+
+ a| 
+SSH横幅等待超时(秒)
+ a| 
+SSH横幅等待超时(默认为20秒)
+
+
+
+ a| 
+SMI-S端口
+ a| 
+SMI-S Provider主机使用的端口
+
+
+
+ a| 
+协议
+ a| 
+用于连接到 SMI-S 提供程序的协议
+
+
+
+ a| 
+SMI-S命名空间
+ a| 
+SMI-S命名空间
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+
+
+ a| 
+SMI-S连接重试次数
+ a| 
+SMI-S连接重试尝试次数
+
+|===

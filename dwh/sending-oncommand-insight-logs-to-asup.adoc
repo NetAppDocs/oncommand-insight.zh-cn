@@ -1,0 +1,30 @@
+---
+permalink: dwh/sending-oncommand-insight-logs-to-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以将ASUP日志发送给技术支持、以协助进行故障排除。适用于数据仓库的ASUP配置为自动运行。在数据仓库门户中、您可以禁用自动发送过程、选择包括数据仓库数据库的备份或启动向ASUP的传输。请求ASUP报告时、此报告请求会在数据仓库门户作业页面中显示为作业。 
+---
+= 将Insight日志发送到ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将ASUP日志发送给技术支持、以协助进行故障排除。适用于数据仓库的ASUP配置为自动运行。在数据仓库门户中、您可以禁用自动发送过程、选择包括数据仓库数据库的备份或启动向ASUP的传输。请求ASUP报告时、此报告请求会在数据仓库门户作业页面中显示为作业。
+
+
+
+== 关于此任务
+
+作业由作业队列管理、与处理其他作业类似。如果ASUP作业已处于"Pending"或"Running"状态、则会显示一条错误消息、指出无法将ASUP报告请求添加到作业请求中、因为作业队列包含待处理或正在运行的请求。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*故障排除*。
+. 在*故障排除*页面的* OnCommand Insight ASUP*部分中、单击*下载DWH故障排除报告*以检索故障排除报告。
+. 要将报告发送到数据仓库门户*连接器*页面中列为第一个连接器的OnCommand Insight 服务器、请单击*立即发送*。
+

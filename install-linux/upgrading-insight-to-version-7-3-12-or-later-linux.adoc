@@ -1,0 +1,250 @@
+---
+permalink: install-linux/upgrading-insight-to-version-7-3-12-or-later-linux.html 
+sidebar: sidebar 
+keywords: upgrade,previous version,wizard,backup,conversion 
+summary: 在从OnCommand Insight 7.3.10 - 7.3.11升级到7.3.12或更高版本之前、您必须运行OCI数据迁移工具。 
+---
+= 将Insight升级到7.3.12或更高版本—Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在从OnCommand Insight 7.3.10 - 7.3.11升级到7.3.12或更高版本之前、您必须运行OCI数据迁移工具。
+
+
+
+== 背景
+
+OnCommand Insight 7.3.12及更高版本使用的底层软件可能与先前版本不兼容。Insight 7.3.12及更高版本包含*数据迁移工具*、用于协助升级。
+
+[NOTE]
+====
+不再支持OnCommand Insight 7.3.9及更早版本。如果您运行的是上述版本之一、则在升级到7.3.12或更高版本之前、必须升级到Insight 7.3.10或更高版本(强烈建议使用7.3.11)。
+
+====
+
+
+== 数据迁移工具的作用是什么？
+
+迁移工具会执行初始兼容性检查、然后遵循三种不同的升级路径之一。选择的路径取决于当前版本的数据兼容性。
+
+[NOTE]
+====
+在升级之前、您必须运行数据迁移工具并按照建议的步骤进行操作。
+
+====
+
+
+== 开始之前
+
+* 强烈建议在运行数据迁移工具之前备份OnCommand Insight 系统。
+* 服务器上的Elasticsearch服务需要已启动且正在运行。
+* 在升级Insight之前、必须为数据库和任何性能归档运行数据迁移工具_mos_。
+
+
+
+
+== 运行数据迁移工具
+
+. 将最新版本的数据迁移工具(例如_SANScreenDataMigrationTool-x86-7.3.12-97.zip)下载到Insight服务器以及相应的Insight安装程序文件。解压缩到工作文件夹。可在上找到下载内容 https://mysupport.netapp.com/site/products/all/details/oncommand-insight/downloads-tab["NetApp 支持站点"]。
+. 打开命令窗口并导航到您的工作文件夹。
++
+** 建议使用bash shell。
+
+
+. 使用以下命令运行数据迁移工具：
++
+** _`sUdo ./SANScreenDataMigrationTool.sh`_
+
+
+. 根据需要按照说明进行操作。以下是一个示例。
+
+
+[listing]
+----
+sudo ./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool 7.3.12-132
+
+OCI 7.3.10.8.139 is installed
+Elasticsearch REST port = 9200
+
+Checking Elasticsearch service...
+Elasticsearch service is up
+
+Checking for obsolete (version 5) indexes...
+Found 54 obsolete indexes. Of these,
+    54 indexes may be migrated with OCI server running,
+       the most recent of which is for 2021-05-13
+
+Verifying migration component is present...
+SANscreen Server service is Running
+
+Proceed with online migration of 54 indexes (y or [n])?:
+----
+数据迁移工具将检查系统上是否存在废弃的索引、如果发现任何索引、则会进行报告。如果不存在、则此工具将退出。
+
+某些索引可能会在SANscreen 服务器服务运行时迁移。而其他则只能在服务器停止后进行迁移。如果没有可迁移的索引、该工具将退出。否则、请按照提示进行操作。
+
+数据迁移工具完成后、它将重新检查是否存在废弃的索引。如果所有索引均已迁移、该工具将通知您支持升级到OnCommand Insight 7.3.12。现在、您可以继续升级Insight。
+
+[listing]
+----
+sudo ./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool 7.3.12-132
+
+OCI 7.3.10.8.139 is installed
+Elasticsearch REST port = 9200
+
+Checking for obsolete (version 5) indexes...
+Found 76 obsolete OCI indexes. Of these,
+76 indexes may be migrated with OCI server running
+
+SANscreen Server service is running
+
+Proceed with online migration of 76 indexes (y or [n])? y
+If you supply performance archive location, entries for any dates with migrated
+indexes will be replaced. Each orginal entry will be renamed and you may delete
+it after migration is completed.
+When prompted enter the archive location including the site-name directory.
+
+Enter the location of the performance archive or blank if none:
+Performance archive entries will not be updated
+
+Running the migration application with options -u http://localhost:9200 --online -sa -
+
+Preparing to migrate oci-timeseries-disk-2021-03-22: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate oci-timeseries-internalvolume-2021-03-22: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate oci-timeseries-port-2021-03-22: copied; backup; delete old; restore new; cleanup; done.
+...
+Preparing to migrate oci-timeseries-disk-2021-03-27: copied; backup; delete old; restore new; cleanup; done.
+Execution time 0:08:17
+Checking for obsolete (version 5) indexes...
+
+No obsolete indexes found. Upgrade and Inline Upgrade to 7.3.12+ are supported
+----
+如果系统提示您停止SANscreen 服务、请在升级Insight之前重新启动该服务。
+
+
+
+== 验证失败
+
+如果索引验证失败、迁移工具将在退出之前通知您此问题。
+
+* OnCommand Insight 不存在：*
+
+[listing]
+----
+./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool V1.0
+
+Checking OnCommand Insight Installation...
+ERROR: OnCommand Insight is not installed
+----
+* Insight版本无效：*
+
+[listing]
+----
+./SanscreenDataMigrationTool.sh
+
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.4 (126) is installed
+ERROR: The OCI Data Migration Tool is intended to be run against OCI 7.3.5 - 7.3.11
+----
+* Elasticsearch服务未运行：*
+
+[listing]
+----
+./SanscreenDataMigrationTool.sh
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.11 (126) is installed
+
+Getting installation parameters...
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+ERROR: The Elasticsearch service is not running
+
+Please start the service and wait for initialization to complete
+Then rerun OCI Data Migration Tool
+----
+
+
+== 命令行选项
+
+数据迁移工具包含一些可选参数、这些参数会影响其运行。
+
+|===
+
+
+| 选项(Linux) | 功能 
+
+
+ a| 
+-s |-silent
+ a| 
+禁止所有提示
+
+
+
+ a| 
+-a |-archive
+ a| 
+如果指定此参数、则会替换索引迁移日期的现有归档条目。路径应指向包含归档条目zip文件的目录。
+
+可以指定"-"参数以指示没有要更新的性能归档。
+
+如果存在此参数、则会禁止显示归档位置提示。
+
+
+
+ a| 
+-c |-check
+ a| 
+如果存在此参数、则此脚本将在报告索引计数后立即退出。
+
+
+
+ a| 
+-d |-dryrun
+ a| 
+如果存在此参数、则迁移可执行文件将报告所采取的操作(迁移数据和更新归档条目)、但不会执行这些操作。
+
+
+
+ a| 
+-p |-port
+ a| 
+如果存在、请使用提供的值作为Elasticsearch的REST端口。如果不存在、请尽可能从安装中获取值；否则、请使用默认值9200。
+
+
+NOTE: 在某些Linux OnCommand Insight 安装中、Elasticsearch REST端口可能未在默认9200端口上运行。在这种情况下、请使用-port选项提供值
+
+
+
+ a| 
+-h |-help
+ a| 
+显示使用情况信息
+
+|===
+
+
+== 故障排除
+
+如果已更新归档条目、您必须_确保已更新归档的所有权和权限正确无误。它们应为* ocisys ocisys 64*。如果不是、请导航到性能归档文件夹并运行以下命令：
+
+[listing]
+----
+chown ocisys *
+chgrp ocisys *
+chmod 644 *
+----

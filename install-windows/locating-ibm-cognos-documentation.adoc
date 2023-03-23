@@ -1,0 +1,25 @@
+---
+permalink: install-windows/locating-ibm-cognos-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: 有关如何启动和停止报告门户软件等基本信息、请参见随产品一起安装的IBM Cognos文档。您可以在Web浏览器中搜索有关任何IBM Cognos报告产品的信息、例如、查询Studio、Report Studio、Business Insight或Business Insight Advanced等这些软件产品位于IBM网站的信息中心中。 
+---
+= 查找IBM Cognos文档
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有关如何启动和停止报告门户软件等基本信息、请参见随产品一起安装的IBM Cognos文档。您可以在Web浏览器中搜索有关任何IBM Cognos报告产品的信息、例如、查询Studio、Report Studio、Business Insight或Business Insight Advanced等这些软件产品位于IBM网站的信息中心中。
+
+
+
+== 步骤
+
+. 要查找随OnCommand Insight 安装的IBM Cognos文档、请导航到此目录。
++
+`<install_dir\>\cognos\c10_64\webcontent\documentation\help_docs.html`
+
+. 您还可以显示描述OnCommand Insight 报告门户中使用的各个IBM Cognos窗口的主题。单击窗口工具栏上的*？*图标。
+

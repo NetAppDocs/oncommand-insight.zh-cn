@@ -1,0 +1,24 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: 适用于HDS存储节点资产登录页面上可能存在的对象或引用的术语。 
+---
+= HDS存储节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于HDS存储节点资产登录页面上可能存在的对象或引用的术语。
+
+
+
+== HDS存储节点术语
+
+以下术语适用于您在 HDS 存储节点资产登录页面上可能找到的对象或引用。其中许多术语也适用于其他数据收集器。
+
+* name—单片阵列上的前端控制器(FED)或通道适配器的名称、或者模块化阵列上的控制器的名称。一个给定的 HDS 阵列将具有 2 个或更多存储节点
+* Volumes—卷表将显示映射到此存储节点拥有的任何端口的任何卷
+

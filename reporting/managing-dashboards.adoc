@@ -1,0 +1,20 @@
+---
+permalink: reporting/managing-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 以动态信息板的形式提供报告分组、以显示与特定管理问题相关的不同数据视图。单击信息板中的元素可显示更详细的信息。 
+---
+= 管理信息板
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 以动态信息板的形式提供报告分组、以显示与特定管理问题相关的不同数据视图。单击信息板中的元素可显示更详细的信息。
+
+关于此任务、信息板将对相关主题的信息进行分组、并提供以下动态功能：
+
+单击图表元素可重新生成图表、以显示选定项的更多详细信息。指向其他报告和更详细信息的链接。如果您有收藏夹信息板、则可以使用以下方法之一为其添加选项卡：
+
+从公共文件夹中添加信息板选项卡。从用户首选项中添加信息板选项卡。

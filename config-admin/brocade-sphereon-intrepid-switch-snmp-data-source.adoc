@@ -1,0 +1,153 @@
+---
+permalink: config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 使用Brocade Sphereon/Intrepid交换机\(SNMP\)数据源发现Brocade Sphereon或Intrepid交换机的清单。' 
+---
+= Brocade Sphereon/Intrepid交换机数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 使用Brocade Sphereon/Intrepid交换机(SNMP)数据源发现Brocade Sphereon或Intrepid交换机的清单。
+
+
+
+== 要求
+
+[NOTE]
+====
+从OnCommand Insight 7.3.11开始、此数据收集器不可用。
+
+====
+* 网络结构中的所有交换机都必须具有 IP 连接。如果选中发现网络结构中的所有交换机复选框、OCI将标识网络结构中的所有交换机；但是、它需要通过IP连接到这些附加交换机才能发现它们。
+* 如果使用 SNMP V1 或 SNMP V2 ，则为只读社区字符串。
+* 通过 HTTP 访问交换机以获取分区信息。
+* 通过运行进行访问验证 `snmpwalk` 实用程序连接到交换机(请参见 `<install_path\>\bin\)`。
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+Sphereon 交换机
+ a| 
+交换机的 IP 地址或完全限定域名
+
+
+
+ a| 
+SNMP 版本
+ a| 
+SNMP 版本
+
+
+
+ a| 
+SNMP社区
+ a| 
+用于访问交换机的 SNMP 只读社区字符串
+
+
+
+ a| 
+用户名
+ a| 
+交换机的 SMI-S 用户名（仅限 SNMP v3 ）
+
+
+
+ a| 
+Password
+ a| 
+交换机的 SMI-S 密码（仅限 SNMP v3 ）
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为15分钟)
+
+
+
+ a| 
+SNMP 身份验证协议
+ a| 
+SNMP 身份验证协议（仅限 SNMPv3 ）
+
+
+
+ a| 
+SNMP 隐私协议
+ a| 
+SNMP 隐私协议（仅限 SNMPv3 ）
+
+
+
+ a| 
+SNMP 隐私密码
+ a| 
+SNMP隐私密码
+
+
+
+ a| 
+SNMP 重试次数
+ a| 
+SNMP 重试尝试次数
+
+
+
+ a| 
+SNMP 超时（毫秒）
+ a| 
+SNMP 超时（默认为 5000 毫秒）
+
+
+
+ a| 
+网络结构名称
+ a| 
+数据源要报告的网络结构名称。留空以将网络结构名称报告为 WWN 。
+
+
+
+ a| 
+启用陷阱
+ a| 
+选择此选项可在从设备收到 SNMP 陷阱时启用采集。如果选择启用陷阱，则还必须激活 SNMP 。
+
+
+
+ a| 
+两次陷阱之间的最短时间(秒)
+ a| 
+陷阱触发的两次采集尝试之间的最短时间（默认值为 10 秒）
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

@@ -1,0 +1,14 @@
+---
+permalink: howto/finding-assets-querying.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用功能强大的查询轻松地查找和显示环境中的资产。 
+---
+= 查找资产：查询
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用功能强大的查询轻松地查找和显示环境中的资产。

@@ -1,0 +1,79 @@
+---
+permalink: config-admin/netapp-storagegrid-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 此数据源收集StorageGRID 的清单和性能数据。 
+---
+= NetApp StorageGRID 数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源收集StorageGRID 的清单和性能数据。
+
+
+
+== 要求
+
+以下是配置此数据源的要求：
+
+* StorageGRID 主机 IP 地址
+* 分配了 Metric 查询和租户访问角色的用户的用户名和密码
+* 端口 443
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+StorageGRID 主机IP地址(MVIP)
+ a| 
+StorageGRID 的主机IP地址
+
+
+
+ a| 
+用户名
+ a| 
+用于登录到StorageGRID 的名称
+
+
+
+ a| 
+Password
+ a| 
+用于登录到StorageGRID 的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔(默认值为900秒)
+
+|===

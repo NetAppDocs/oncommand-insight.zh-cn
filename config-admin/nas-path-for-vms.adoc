@@ -1,0 +1,43 @@
+---
+permalink: config-admin/nas-path-for-vms.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3支持虚拟机到存储共享的NAS路径。这些路径类似于主机到存储共享的NAS路径。如果允许VM的IP地址访问共享、则会创建NAS路径。 
+---
+= VM的NAS路径
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3支持虚拟机到存储共享的NAS路径。这些路径类似于主机到存储共享的NAS路径。如果允许VM的IP地址访问共享、则会创建NAS路径。
+
+虚拟机的NAS路径显示在内部卷登录页面上。此页面包含一个子系统挂载的存储资源小工具、用于标识VM可以访问的内部卷。
+
+* 当虚拟机能够访问后端共享时、将创建NAS路径。无法确认虚拟机是否访问共享。
+* 关联计算基于延迟和IOPS、不包括VM具有后端存储NAS路径的情况。
+* 用户可以按启动程序IP地址查询共享、但不支持按路径查询。
+
+
+现在、内部卷的计算资源表还会显示具有NAS路径的虚拟机。为每个VM提供CPU和内存、利用率和性能数据。
+
+
+
+== 数据仓库影响
+
+升级到OnCommand Insight 7.3后对数据仓库所做的更改包括以下内容：
+
+* dwh_inventory.nas_logical表将从清单数据集市中删除并替换为视图。
++
+包含NFS路径表的所有Insight 7.2.x报告都会保留下来。
+
+* dwh_inventory.nas_cr_logical表将添加到清单数据集市中、其中包括以下内容：
++
+** 计算资源
+** 内部卷
+** 存储
+** NAS共享
+
+
+

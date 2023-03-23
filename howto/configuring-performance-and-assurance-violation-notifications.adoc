@@ -1,0 +1,30 @@
+---
+permalink: howto/configuring-performance-and-assurance-violation-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 支持发出性能通知并确保违规。默认情况下、Insight不会针对这些违规发送通知；您必须将Insight配置为发送电子邮件、向系统日志服务器发送系统日志消息或在发生违规时发送SNMP通知。 
+---
+= 配置性能并确保违规通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 支持发出性能通知并确保违规。默认情况下、Insight不会针对这些违规发送通知；您必须将Insight配置为发送电子邮件、向系统日志服务器发送系统日志消息或在发生违规时发送SNMP通知。
+
+
+
+== 开始之前
+
+您必须已为违规配置电子邮件、系统日志和SNMP发送方法。
+
+
+
+== 步骤
+
+. 单击*管理*>*通知*。
+. 单击*事件*。
+. 在*性能违规事件*或*确保违规事件*部分中、单击所需通知方法(*电子邮件*、*系统日志*或* SNMP *)的列表、然后选择违规的严重性级别(*警告及以上*或*严重*)。
+. 单击 * 保存 * 。
+

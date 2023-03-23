@@ -1,0 +1,32 @@
+---
+permalink: install-windows/verifying-the-extract-transform-and-load-process.html 
+sidebar: sidebar 
+keywords:  
+summary: '升级后、您应确保提取、转换和加载\(ETL\)进程正在从OnCommand Insight 数据库中检索数据、转换数据并将其保存到数据集市中。' 
+---
+= 验证提取、转换和加载计划
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+升级后、您应确保提取、转换和加载(ETL)过程正在从OnCommand Insight 数据库中检索数据、转换数据并将其保存到数据集市中。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://fqdn/dwh+`。
+. 从左侧导航窗格中、单击*计划*。
+. 单击*编辑计划*。
+. 从*类型*列表中选择*每日*或*每周*。
++
+建议将ETL计划为每天运行一次。
+
+. 验证选定时间是否为要运行作业的时间。
++
+这样可以确保构建作业自动运行。
+
+. 单击 * 保存 * 。
+

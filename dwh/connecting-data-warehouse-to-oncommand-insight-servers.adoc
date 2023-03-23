@@ -1,0 +1,103 @@
+---
+permalink: dwh/connecting-data-warehouse-to-oncommand-insight-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: 连接器用于建立从OnCommand Insight 数据仓库到OnCommand Insight 服务器的连接。您可以将数据仓库连接到一个或多个OnCommand Insight 服务器。您可以添加或删除与OnCommand Insight 数据库的连接。 
+---
+= 将数据仓库连接到OnCommand Insight 服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+连接器用于建立从OnCommand Insight 数据仓库到OnCommand Insight 服务器的连接。您可以将数据仓库连接到一个或多个OnCommand Insight 服务器。您可以添加或删除与OnCommand Insight 数据库的连接。
+
+
+
+== 关于此任务
+
+数据仓库会为连接器分配一个全局唯一ID、该ID与连接器名称结合使用。添加连接器后、数据仓库会向OnCommand Insight 数据库查询OnCommand Insight 站点名称和版本。
+
+您可以选择使用或不使用SSL连接到数据源。选择安全数据源会强制连接在与OnCommand Insight 远程数据库通信时使用SSL。
+
+数据仓库可以提供来自多个OnCommand Insight 安装的数据的整合视图。此整合数据库可提供以下信息：
+
+* 全局唯一标识符
++
+为每个对象分配一个全局唯一ID、该ID与各个站点使用的ID无关、以避免ID冲突并启用重复检测。这些ID在所有数据集市之间共享。此ID是清单数据集市表的注释列中的全局唯一ID (GUID)。
+
+* 无重复
++
+多个OnCommand Insight 数据库中的实体只会在整合数据库中注册一次。
+
+* 当前记录
++
+整合数据库(清单数据集市)中的数据始终是最新的。
+
+
+
+添加或编辑连接时、您还可以测试连接。此测试将执行以下操作：
+
+* 验证主机IP地址、用户名和密码、并确保可以建立连接。
++
+无效连接显示为红色。
+
+* 将OnCommand Insight 版本与数据仓库版本进行比较。
++
+如果版本不兼容、则会显示一条错误消息。
+
+* 验证OnCommand Insight 数据库是否未更改或还原到上次数据仓库处理所发现的其他数据库。如果发生了更改、则会显示一条错误消息。
+
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://hostname/dwh+`、其中 `hostname` 是安装了OnCommand Insight 数据仓库的系统的名称。
+. 从左侧导航窗格中、单击*连接器*。
++
+"Connectors"表最初显示为空、并在添加连接器后显示连接器信息。
+
+. 单击*新建*以添加新连接器。
+. 输入以下内容：
++
+** * 加密 *
++
+要使用SSL加密发出数据仓库请求、请选择 `Enabled`。
+
+** * 名称 *
++
+用于在连接器视图中标识连接器的连接器名称。
+
+** * 主机 *
++
+主机 IP 地址
+
+** * 用户名 *
++
+"`清单`"
+
++
+[NOTE]
+====
+使用此用户名和密码、您可以登录到远程OnCommand Insight 数据库并对数据执行查询。
+
+====
+** * 密码 *
++
+" SANscreen "
+
+
+
+. 要指定用于主机TCP连接的端口、请单击*高级*并输入TCP端口号。
+. 要指定用于主机HTTPS连接的端口(默认端口除外)、请单击*高级*并输入端口号。
+. 单击 * 测试 * 。
++
+数据仓库会测试连接。
+
+. 单击 * 保存 * 。
++
+如果为多个安装输入多个连接、则数据仓库会调用独立的构建过程、每个数据库对应一个构建过程、应从中提取数据。每个此类构建过程都会从OnCommand Insight 数据库中提取数据并将其加载到整合数据库中。
+
+

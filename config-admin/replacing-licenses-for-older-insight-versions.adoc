@@ -1,0 +1,16 @@
+---
+permalink: config-admin/replacing-licenses-for-older-insight-versions.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您购买的新Insight版本与旧版本的产品不向后兼容、则必须将旧许可证替换为新许可证。 
+---
+= 替换旧版Insight的许可证
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您购买的新Insight版本与旧版本的产品不向后兼容、则必须将旧许可证替换为新许可证。
+
+安装新许可证时、必须先选择*替换*操作、然后再保存许可证密钥文本。

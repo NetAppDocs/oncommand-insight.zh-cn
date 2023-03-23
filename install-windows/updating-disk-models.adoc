@@ -1,0 +1,31 @@
+---
+permalink: install-windows/updating-disk-models.html 
+sidebar: sidebar 
+keywords:  
+summary: 升级后、您应该拥有任何更新的磁盘型号；但是、如果由于某种原因Insight无法发现新的磁盘型号、您可以手动更新这些型号。 
+---
+= 更新磁盘型号
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+升级后、您应该拥有任何更新的磁盘型号；但是、如果由于某种原因Insight无法发现新的磁盘型号、您可以手动更新这些型号。
+
+
+
+== 开始之前
+
+您必须已从技术支持获得 `.zip` 包含最新数据源修补程序的文件。
+
+
+
+== 步骤
+
+. 停止SANscreen Acq服务。
+. 导航到以下目录： `<install directory>\SANscreen\wildfly\standalone\deployments\datasources.war`。
+. 移动当前 `diskmodels.jar` 文件到其他位置。
+. 复制新的 `diskmodels.jar` 将文件保存到中 `datasources.war` 目录。
+. 启动SANscreen Acq服务。
+

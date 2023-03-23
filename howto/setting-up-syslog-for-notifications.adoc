@@ -1,0 +1,31 @@
+---
+permalink: howto/setting-up-syslog-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight可以针对容量或路径违规以及性能警报发送系统日志事件。 
+---
+= 设置用于日志记录的系统日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight可以针对容量或路径违规以及性能警报发送系统日志事件。
+
+
+
+== 关于此任务
+
+按照以下基本步骤在Insight中配置系统日志通知：
+
+
+
+== 步骤
+
+. 单击*管理*>*通知*、然后转到*系统日志*部分。
+. 选中*已启用系统日志*复选框。
+. 在*服务器*字段中、输入日志服务器的IP地址。
+. 在*设施*字段中、选择与记录消息的程序类型对应的设施级别。
+. 单击 * 保存 * 。
+

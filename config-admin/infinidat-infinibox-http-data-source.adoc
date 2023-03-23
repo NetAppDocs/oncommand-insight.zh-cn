@@ -1,0 +1,154 @@
+---
+permalink: config-admin/infinidat-infinibox-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Infinidat InfiniBox \(http\)数据源用于从Infinidat InfiniBox存储收集信息。您必须有权访问InfiniBox管理节点。' 
+---
+= Infinidat InfiniBox数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Infinidat InfiniBox (HTTP)数据源用于从Infinidat InfiniBox存储收集信息。您必须有权访问InfiniBox管理节点。
+
+
+
+== 术语
+
+OnCommand Insight 从InfiniBox数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+驱动器
+ a| 
+Disk
+
+
+
+ a| 
+Infiniband
+ a| 
+存储
+
+
+
+ a| 
+Node
+ a| 
+存储节点
+
+
+
+ a| 
+池
+ a| 
+存储池
+
+
+
+ a| 
+Volume
+ a| 
+Volume
+
+
+
+ a| 
+FC 端口
+ a| 
+Port
+
+
+
+ a| 
+文件系统
+ a| 
+内部卷
+
+
+
+ a| 
+文件系统
+ a| 
+文件共享
+
+
+
+ a| 
+文件系统导出
+ a| 
+共享
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+InfiniBox 主机
+ a| 
+InfiniBox 管理节点的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+InfiniBox 管理节点的用户名
+
+
+
+ a| 
+Password
+ a| 
+InfiniBox 管理节点的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+TCP 端口
+ a| 
+用于连接到InfiniBox服务器的TCP端口(默认值为443)
+
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认值为60分钟)
+
+
+
+ a| 
+连接超时
+ a| 
+连接超时(默认为60秒)
+
+|===

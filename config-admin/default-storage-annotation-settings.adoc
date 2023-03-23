@@ -1,0 +1,28 @@
+---
+permalink: config-admin/default-storage-annotation-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 为了加快向资源分配存储标注的速度、OnCommand Insight 提供了21个默认标注规则、这些规则会将层级别与存储层模型相关联。在您的环境中获取资产后、您的所有存储资源都会自动与某个层相关联。 
+---
+= 默认存储标注规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为了加快向资源分配存储标注的速度、OnCommand Insight 提供了21个默认标注规则、这些规则会将层级别与存储层模型相关联。在您的环境中获取资产后、您的所有存储资源都会自动与某个层相关联。
+
+默认标注规则按以下方式应用层标注：
+
+* 第1层、存储质量层
++
+第1层标注适用于以下供应商及其指定系列：EMC (Symmetrix)、HDS (HDS9500V、HDS9900、HDS9900V、R600、 R700、USP r、USP V)、IBM (DS8000)、NetApp (FAS6000或FAS6200)和Violin (内存)。
+
+* 第2层、存储质量层
++
+第2层标注适用于以下供应商及其指定系列：HP (3PAR StoreServ或EVA)、EMC (CLARiiON)、HDS (AMS或D800)、IBM (XIV)和NetApp (FAS3000、FAS3100和FAS3200)。
+
+
+
+您可以根据层要求编辑这些规则的默认设置、也可以在不需要时将其删除。

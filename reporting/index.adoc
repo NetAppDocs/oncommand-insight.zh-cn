@@ -1,0 +1,12 @@
+---
+permalink: reporting/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 《OnCommand Insight 7.3.3及更高版本报告指南》
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

@@ -1,0 +1,41 @@
+---
+permalink: install-windows/uninstalling-the-data-warehouse-software.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须先卸载数据仓库软件、然后才能进行升级。 
+---
+= 卸载数据仓库软件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须先卸载数据仓库软件、然后才能进行升级。
+
+
+
+== 开始之前
+
+如果您对要保留的报告进行了更改、请务必在卸载数据仓库之前创建备份。卸载数据仓库会永久删除以前收集的所有数据并删除所有报告、包括任何新创建或编辑的报告。
+
+
+
+== 步骤
+
+. 登录到数据仓库服务器。
+. 确保服务器上的所有Insight窗口均已关闭。
+. 要使用控制面板卸载、请执行以下操作：
++
+.. 从控制面板打开*卸载程序*、然后选择要删除的OnCommand Insight 应用程序。单击*卸载*、然后按照提示进行操作。
+.. 选择要删除的IBM DB2应用程序。单击*卸载*、然后按照提示进行操作。
+.. 删除DB2安装文件夹(例如_C：\Program Files\IBM\DB2_)以完全删除DB2数据库。
+
+
+. 要使用提供的脚本卸载：
++
+.. 导航到_OCI\OCI_dwh_uninstall\_<download location> 文件夹、然后运行_uninstall_OCI_dwh.bat_脚本。
+
+
+. 重新启动服务器。
+

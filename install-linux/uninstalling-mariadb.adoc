@@ -1,0 +1,35 @@
+---
+permalink: install-linux/uninstalling-mariadb.html 
+sidebar: sidebar 
+keywords:  
+summary: 在安装OnCommand Insight 或数据仓库之前、您必须在Insight或数据仓库服务器上卸载MariaDB；否则、您无法继续安装。MySQL与MariaDB不兼容。如果您尝试在未删除MariaDB的情况下在任一服务器上安装、则安装将终止、并显示一条错误消息、指示您卸载MariaDB。 
+---
+= 卸载MariaDB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装OnCommand Insight 或数据仓库之前、您必须在Insight或数据仓库服务器上卸载MariaDB；否则、您无法继续安装。MySQL与MariaDB不兼容。如果您尝试在未删除MariaDB的情况下在任一服务器上安装、则安装将终止、并显示一条错误消息、指示您卸载MariaDB。
+
+
+
+== 开始之前
+
+您必须具有sudo权限。
+
+
+
+== 步骤
+
+. 登录到Insight服务器。
+. 获取MariaDB组件列表：
++
+`rpm -qa | grep mariadb`
+
+. 为服务器上安装的每个MariaDB组件键入以下命令：
++
+`yum remove component_name`
+
+

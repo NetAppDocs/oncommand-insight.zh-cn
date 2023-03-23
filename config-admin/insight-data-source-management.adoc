@@ -1,0 +1,28 @@
+---
+permalink: config-admin/insight-data-source-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 数据源是用于维护OnCommand Insight 环境的最关键的组件。由于它们是Insight的主要信息源、因此您必须保持数据源处于运行状态。 
+---
+= Insight数据源管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据源是用于维护OnCommand Insight 环境的最关键的组件。由于它们是Insight的主要信息源、因此您必须保持数据源处于运行状态。
+
+您可以通过选择一个数据源来检查与其状态相关的事件并注意可能导致问题的任何更改来监控网络中的数据源。
+
+除了检查单个数据源之外、您还可以执行以下操作：
+
+* 克隆数据源以在Insight中创建许多类似的数据源
+* 编辑数据源信息
+* 更改凭据
+* 控制轮询
+* 删除数据源
+* 安装数据源修补程序
+* 从修补程序安装新的数据源
+* 为NetApp客户支持准备错误报告
+

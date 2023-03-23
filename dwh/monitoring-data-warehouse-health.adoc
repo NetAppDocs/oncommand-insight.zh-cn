@@ -1,0 +1,35 @@
+---
+permalink: dwh/monitoring-data-warehouse-health.html 
+sidebar: sidebar 
+keywords: suppress 
+summary: '数据仓库\(DWH)包括一个运行状况监控器、用于显示有关DWH状态的信息。警报消息会显示在DWH的"Connectors"和"Jobs"页面上、并发送到已连接的Insight服务器、这些消息会显示在"Admin\>"运行状况"页面上。' 
+---
+= 监控数据仓库运行状况
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据仓库(DWH)包含一个运行状况监控器、用于显示有关DWH状态的信息。警报消息会显示在DWH的*连接器*和*作业*页面上、并发送到已连接的Insight服务器、这些消息会显示在*管理*>*运行状况*页面上。
+
+DWH每十分钟收集一次指标、并在以下情况下显示警报：
+
+* 与Insight服务器的连接已关闭
+* 磁盘利用率大于90%
+* 报告(Cognos)服务已关闭
+* 查询会长时间锁定任何表
+* 维护作业已禁用
+* 已禁用自动备份
+* 安全风险：检测到默认加密密钥
+
+
+数据仓库中的运行状况监控器警告最多可禁止30天。
+
+启用电子邮件通知后、这些事件也会通过电子邮件进行报告。请注意、此电子邮件不包含任何附件。
+
+这些事件将记录在中 `dwh_troubleshoot.log` 文件位于以下位置：
+
+* Windows `<install dir>\SANscreen\Wildfly\Standalone\Logs`
+* Linux ： `/var/log/netapp/oci/wildfly/`
+

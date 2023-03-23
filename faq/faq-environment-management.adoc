@@ -1,0 +1,20 @@
+---
+permalink: faq/faq-environment-management.html 
+sidebar: sidebar 
+keywords:  
+summary: 本常见问题解答解答解答了有关管理OnCommand Insight 环境的常见问题。 
+---
+= 管理您的环境
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本常见问题解答解答解答了有关管理OnCommand Insight 环境的常见问题。
+
+
+
+== 是否可以将OCI的访问权限授予特定用户、而将视图限制为仅包含特定资源(例如SVM 和相关卷， VM ，服务器）？
+
+OCI提供基于角色的访问。例如、对报告的访问通过OCI的数据仓库报告进行控制。可以计划报告，并通过电子邮件以 PDF ， HTML 或 CSV 格式发送报告，也可以发送到文件共享，甚至需要用户在查看之前进行身份验证的 URL 。基于用户的访问权限以管理员，用户和来宾的形式授予。此外，还支持 Active Directory/LDAP 。

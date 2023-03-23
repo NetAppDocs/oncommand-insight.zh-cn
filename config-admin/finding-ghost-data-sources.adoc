@@ -1,0 +1,26 @@
+---
+permalink: config-admin/finding-ghost-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您已删除设备、但设备数据仍保留、则可以找到任何虚影数据源、以便将其删除。 
+---
+= 查找虚影数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您已删除设备、但设备数据仍保留、则可以找到任何虚影数据源、以便将其删除。
+
+
+
+== 步骤
+
+. 在Web UI中、单击*管理*并选择*故障排除*。
+. 在页面底部的"Other tasks"区域中、单击*高级故障排除*链接。
+. 在*报告*选项卡上、单击*虚影数据源*链接。
++
+OnCommand Insight 会生成一个包含发起者及其设备信息的列表。
+
+

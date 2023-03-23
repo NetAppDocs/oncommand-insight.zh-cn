@@ -1,0 +1,29 @@
+---
+permalink: config-admin/acquisition-unit-status.html 
+sidebar: sidebar 
+keywords:  
+summary: Acquisition Unit屏幕可显示所有采集单元的视图、包括状态和存在的任何错误。 
+---
+= 采集单元状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Acquisition Unit屏幕可显示所有采集单元的视图、包括状态和存在的任何错误。
+
+连接到服务器的Insight采集单元的状态显示在*管理*>*采集单元*表中。此表显示了每个采集单元的以下信息：
+
+* * 名称 *
+* * IP *
+* *状态*是采集单元的运行状态。
+* 上次报告的时间*显示连接到采集单元的数据源上次报告的时间。
+* *注释*显示用户输入的与AU相关的注释。
+
+
+如果列表中的采集单元出现问题、则状态字段将显示一个红色圆圈、其中包含有关问题的简要信息。您应调查任何采集单元问题、因为它们可能会影响数据收集。
+
+要重新启动采集单元、请将鼠标悬停在该单元上、然后单击显示的_Restart Acquisition Unit"按钮。
+
+要添加文本注释、请将鼠标悬停在采集单元上、然后单击显示的_Add Note_按钮。仅显示最近输入的注释。

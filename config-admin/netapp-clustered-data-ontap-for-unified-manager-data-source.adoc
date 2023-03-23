@@ -1,0 +1,80 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '此数据源从Unified Manager \(UM\) 6.0+数据库收集ONTAP 8.1.x数据。使用此数据源、Insight会发现UM中配置和填充的所有集群。为了提高效率、Insight不会在集群本身上调用ZAPI。此数据源不支持性能。' 
+---
+= NetApp集群模式Data ONTAP for Unified Manager数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源从Unified Manager (UM) 6.0+数据库收集ONTAP 8.1.x数据。使用此数据源、Insight会发现UM中配置和填充的所有集群。为了提高效率、Insight不会在集群本身上调用ZAPI。此数据源不支持性能。
+
+
+
+== Configuration
+
+[NOTE]
+====
+从OnCommand Insight 7.3.11开始、此数据收集器不再可用。
+
+====
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+Unified Manager IP
+ a| 
+Unified Manager的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+Unified Manager的用户名
+
+
+
+ a| 
+Password
+ a| 
+Unified Manager的密码
+
+
+
+ a| 
+Port
+ a| 
+用于与Unified Manager通信的端口(默认值为3306)
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔(最小)间隔
+ a| 
+两次清单轮询的间隔(默认值为15分钟)
+
+
+
+ a| 
+排除集群
+ a| 
+要排除的集群IP的逗号分隔列表
+
+|===

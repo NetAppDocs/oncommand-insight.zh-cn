@@ -1,0 +1,38 @@
+---
+permalink: config-admin/modifying-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以修改标注规则以更改规则的名称、标注、标注值或与规则关联的查询。 
+---
+= 修改标注规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以修改标注规则以更改规则的名称，标注，标注值或与规则关联的查询。
+
+
+
+== 步骤
+
+. 登录到OnCommand InsightWeb UI。
+. 单击*管理*并选择*标注规则*。
++
+" 标注规则 " 页面将显示现有标注规则的列表。
+
+. 找到要修改的规则：
++
+** 在标注规则页面上、您可以通过在筛选器框中输入值来筛选标注规则。
+** 如果规则较多而无法在页面上显示、请单击页码以按页浏览标注规则。
+
+
+. 执行以下操作之一以显示*编辑规则*对话框：
++
+** 如果位于"Annotation Rules"页面上、请将光标置于标注规则上方、然后单击 image:../media/edit-annotation-icon.gif[""]。
+** 如果您位于资产页面上、请将光标置于与规则关联的标注上、将光标置于显示的规则名称上、然后单击规则名称。
+
+
+. 进行所需的更改并单击*保存*。
+

@@ -1,0 +1,144 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 此数据源应用于使用集群模式Data ONTAP 的存储系统、并且需要一个用于只读API调用的管理员帐户。 
+---
+= NetApp集群模式Data ONTAP 数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源应用于使用集群模式Data ONTAP 的存储系统、并且需要一个用于只读API调用的管理员帐户。
+
+
+
+== 术语
+
+OnCommand Insight 从集群模式Data ONTAP 数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+RAID 组
+ a| 
+磁盘组
+
+
+
+ a| 
+集群
+ a| 
+存储
+
+
+
+ a| 
+Node
+ a| 
+存储节点
+
+
+
+ a| 
+聚合
+ a| 
+存储池
+
+
+
+ a| 
+LUN
+ a| 
+Volume
+
+
+
+ a| 
+Volume
+ a| 
+内部卷
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* 用于只读API调用的管理员帐户
+* 目标IP是集群管理LIF
+* 用户名(将ontapi应用程序的只读角色名称添加到默认SVM)和密码、用于登录到NetApp集群
+* 端口要求： 80 或 443
+* 许可证要求：发现所需的FCP许可证和映射/屏蔽卷
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+NetApp 管理 IP
+ a| 
+NetApp 集群的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+NetApp集群的用户名
+
+
+
+ a| 
+Password
+ a| 
+NetApp集群的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+|===

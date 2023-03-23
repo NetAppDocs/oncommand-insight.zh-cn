@@ -1,0 +1,89 @@
+---
+permalink: config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html 
+sidebar: sidebar 
+keywords:  
+summary: '您必须修改OnCommand Insight 数据仓库配置以支持智能卡\(CAC)和证书登录。' 
+---
+= 为智能卡和证书登录配置数据仓库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须修改OnCommand Insight 数据仓库配置以支持智能卡(CAC)和证书登录。
+
+
+
+== 开始之前
+
+* 必须在系统上启用LDAP。
+* LDAP `User principal account name` 属性必须与包含用户的政府ID编号的LDAP字段匹配。
++
+政府颁发的CAC上存储的公用名(Common Name、CN)通常采用以下格式： `first.last.ID`。对于某些LDAP字段、例如 `sAMAccountName`、此格式太长。对于这些字段、OnCommand Insight 仅从CN中提取ID编号。
+
+
+
+[NOTE]
+====
+有关最新的CAC和证书说明、请参见以下知识库文章(需要支持登录)：
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["如何为OnCommand Insight 配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["如何为OnCommand Insight 数据仓库配置通用访问卡(CAC)身份验证"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["如何创建证书颁发机构(CA)签名证书并将其导入到OnComand Insight和OnCommand Insight 数据仓库7.3.x中"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["如何在Windows主机上安装的OnCommand Insight 7.3.X中创建自签名证书"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["如何将Cognos证书颁发机构(CA)签名证书导入到OnCommand 数据中心7.3.3及更高版本中"]
+
+
+====
+
+
+== 步骤
+
+. 使用regedit修改中的注册表值 `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun2.0\SANscreen Server\Parameters\Java`
++
+.. 更改JVM_Option `-DclientAuth=false` to `-DclientAuth=true`。
+
+
++
+对于Linux、修改 `clientAuth` 参数 `/opt/netapp/oci/scripts/wildfly.server`
+
+. 将证书颁发机构(CA)添加到数据仓库存储库：
++
+.. 在命令窗口中、转至 `..\SANscreen\wildfly\standalone\configuration`。
+.. 使用 `keytool` 用于列出受信任CA的实用程序： `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
++
+每行中的第一个词表示CA别名。
+
+.. 如有必要、请提供CA证书文件、通常为 `.pem` 文件要将客户的CA加入到数据仓库受信任的CA中、请转至 `..\SANscreen\wildfly\standalone\configuration` 并使用 `keytool` 导入命令： `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore server.trustore -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
++
+my_alias通常是一个可轻松在中标识CA的别名``keytool -list`` 操作。
+
+
+
+. 在OnCommand Insight 服务器上、 `wildfly/standalone/configuration/standalone-full.xml` 需要通过在中将verify-client更新为"已请求"来修改文件 ``/subsystem=undertow/server=default-server/https-listener=default-https``以启用CAC。登录到Insight服务器并运行相应的命令：
++
+|===
+
+
+| os | 脚本 
+
+
+ a| 
+Windows
+ a| 
+<install dir> \SANscreen\wildfly\bin\enableCACforRemoteEJB.bat
+
+
+
+ a| 
+Linux
+ a| 
+/opt/netapp/oci/wildfly/bin/enableCACforRemoteEJB.sh
+
+|===
++
+执行此脚本后、请等待此wildfly服务器的重新加载完成、然后再继续执行下一步。
+
+. 重新启动OnCommand Insight 服务器。
+

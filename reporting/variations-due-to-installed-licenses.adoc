@@ -1,0 +1,18 @@
+---
+permalink: reporting/variations-due-to-installed-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight 报告中的数据取决于您购买的OnCommand Insight 许可证。例如、如果没有Plan许可证、则清单数据集市中会显示有关容量和性能的时间点数据\(今天\)、但您无法对任何设备的容量或性能数据进行趋势分析\(一段时间内的报告\)。' 
+---
+= 由于安装的许可证而导致的变化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 报告中的数据取决于您购买的OnCommand Insight 许可证。例如、如果没有Plan许可证、则清单数据集市中会显示有关容量和性能的时间点数据(今天)、但您无法对任何设备的容量或性能数据进行趋势分析(在一段时间内报告)。
+
+如果没有Plan许可证、则无法创建新报告或编辑现有报告。您可能会发现OnCommand Insight 系统中的可用报告与文档中的插图不同。这些变化是由于系统上安装的许可证与系统上用于创建插图的许可证之间的差异造成的。
+
+有关许可证的详细信息、请参见《OnCommand Insight 安装指南》。

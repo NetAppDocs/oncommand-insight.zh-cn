@@ -1,0 +1,37 @@
+---
+permalink: howto/servicenow-integration-scheduling-daily-sync.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用Windows任务计划程序自动同步ServiceNow连接器。 
+---
+= 计划每天同步
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Windows任务计划程序自动同步ServiceNow连接器。
+
+
+
+== 关于此任务
+
+自动同步可确保Insight数据定期移动到ServiceNow。您可以使用任何方法进行计划。以下步骤使用Windows任务计划程序完成自动同步。
+
+
+
+== 步骤
+
+. 在Windows屏幕上、单击*开始*并输入*运行*>*任务计划程序*。
+. 单击*创建基本任务...*
+. 输入有意义的名称、例如"`OCI2SNOW Connector Sync`"。输入任务的问题描述。单击 * 下一步 * 。
+. 选择此选项可运行任务*每日*。单击 * 下一步 * 。
+. 选择一天中的某个时间来运行此任务。单击 * 下一步 * 。
+. 要执行操作、请选择*启动程序*。单击 * 下一步 * 。
+. 在*程序/脚本*字段中、输入 `C:\OCI2SNOW\oci_snow_sync_pyz`。在*参数*字段中、输入 `sync`。在*起始位置*字段中、输入 `C:\OCI2SNOW`。单击*下一步*。
+. 查看摘要详细信息、然后单击*完成*。
++
+现在、同步计划每天运行。
+
+

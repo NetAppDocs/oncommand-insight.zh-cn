@@ -1,0 +1,201 @@
+---
+permalink: config-admin/hp-eva-storage-sssu-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: '在配置方面、EVA存储\(SSSU\)数据源需要Command View \(CV\)服务器的IP地址以及CV软件的只读用户名和密码。用户必须在CV软件中进行定义。' 
+---
+= HP EVA存储数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在配置方面、EVA存储(SSSU)数据源需要Command View (CV)服务器的IP地址以及CV软件的_read-oned_用户名和密码。用户必须在CV软件中进行定义。
+
+
+
+== 术语
+
+OnCommand Insight 从HP EVA数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+磁盘组
+ a| 
+磁盘组(未建模)
+
+
+
+ a| 
+存储单元
+ a| 
+存储
+
+
+
+ a| 
+虚拟磁盘
+ a| 
+存储池
+
+
+
+ a| 
+虚拟磁盘
+ a| 
+Volume
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 清单要求
+
+* CV服务器的IP地址
+* CV软件的只读用户名和密码。用户必须在CV软件中进行定义。
+* OnCommand Insight Server/Rau上安装的第三方软件： `sssu.exe`。。 `sssu.exe` 版本应与CV版本相对应。
+* 访问验证：运行 `sssu.exe` 使用用户名和密码的命令。
+
+
+
+
+== 性能要求
+
+OnCommand Insight 服务器上必须安装HP StorageWorks Command View EVA软件套件。或者、您也可以在EVA服务器上安装远程采集单元(RAU)：
+
+. 在OnCommand Insight 服务器上安装HP StorageWorks Command View EVA软件套件、或者在Command View EVA服务器上安装远程采集单元。
+. 找到 `evaperf.exe` 命令：例如： `c:\Program Files\Hewlett-Packard\EVA Performance Monitor\`
+. 使用Command View服务器的IP执行以下步骤：
++
+.. 运行此命令、其中860为默认端口 `Evaperf.exe server <Command View Server IP\> 860 <username\>`
+.. 在密码提示符处输入Command View服务器密码。
++
+此操作应返回命令行提示符、而不返回任何其他内容。
+
+
+
+. 运行以验证设置 `evaperf.exe ls`。
++
+您应看到一个由Command View服务器管理的阵列或控制器列表。每行显示EVA阵列上的一个控制器。
+
+
+
+
+
+== Configuration
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+CommandView服务器
+ a| 
+EVA Storage Manager的IP地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+Command View管理器的用户名。此名称必须在Command View中定义。
+
+
+
+ a| 
+Password
+ a| 
+Command View管理器使用的密码。
+
+
+
+ a| 
+性能用户名
+ a| 
+为提高性能、命令视图管理器的用户名。此名称必须在Command View中定义。
+
+
+
+ a| 
+性能密码
+ a| 
+为提高性能、命令视图管理器使用的密码。
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| * 字段 * | * 问题描述 * 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔（默认为 40 分钟）
+
+
+
+ a| 
+命令行界面主页
+ a| 
+CLI主目录的完整路径名、其中 `sssu.exe` 已找到
+
+
+
+ a| 
+清单排除设备
+ a| 
+要包含的设备名称的逗号分隔列表
+
+
+
+ a| 
+性能轮询间隔（秒）
+ a| 
+性能轮询之间的时间间隔（默认值为 300 秒）
+
+
+
+ a| 
+性能命令行界面主页
+ a| 
+对于阵列性能、请输入sssu.exe所在的命令行界面主目录的完整路径名。要验证访问、请运行 `sssu.exe`
+
+
+
+ a| 
+命令超时(秒)
+ a| 
+`evaperf` 命令等待超时(默认值为600秒)
+
+
+
+ a| 
+性能排除设备
+ a| 
+收集性能数据时要排除的设备名称的逗号分隔列表
+
+|===

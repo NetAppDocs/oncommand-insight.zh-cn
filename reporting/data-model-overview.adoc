@@ -1,0 +1,20 @@
+---
+permalink: reporting/data-model-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 提供了多个数据模型、可用于报告开发。每个数据模型都是一个聚合、用于汇总数据、以便可以对其进行查询和搜索。例如、有关容量规划的报告使用容量数据模型。 
+---
+= 数据模型概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 提供了多个数据模型、可用于报告开发。每个数据模型都是一个聚合、用于汇总数据、以便可以对其进行查询和搜索。例如、有关容量规划的报告使用容量数据模型。
+
+OnCommand Insight 企业报告数据模型提供了数据要素以及数据要素之间的交互关系、这些数据要素可生成数据的业务视图。使用数据元素和关系、您可以使用NetApp建议的IBM Cognos Analytics报告生成工具创建报告。
+
+OnCommand Insight 还提供了数据集市、可用于开发您自己的SQL查询。这些SQL查询数据集市与报告中使用的数据模型之间存在区别。各个OnCommand Insight 报告数据模型使用数据集市中提供的底层OnCommand Insight 数据库架构；但是、数据模型使用其他表、有时还会使用表中的新元素。例如、数据模型在存储容量数据模型中包含一个基于数据库架构和数据集市中的容量数据表的每月容量数据表。数据模型筛选出数据库架构表中的值、以便仅显示月份信息。
+
+数据集市中使用的数据库架构与数据模型之间存在差异的另一个示例是违规表和违规类型列。数据模型将转换数据库中的编程命名值、以匹配OnCommand Insight Web UI中显示的文本。

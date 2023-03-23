@@ -1,0 +1,36 @@
+---
+permalink: config-admin/modifying-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果要更改要查询的资产的搜索条件，可以更改与查询关联的条件。 
+---
+= 修改查询
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要更改要查询的资产的搜索条件，可以更改与查询关联的条件。
+
+
+
+== 步骤
+
+. 登录到InsightWeb UI。
+. 单击 * 查询 * 并选择 * 显示所有查询 * 。
++
+此时将显示 "Queries" 页面。
+
+. 单击查询名称。
+. 要从查询中删除条件、请单击 image:../media/trash-can-query.gif[""]。
+. 要向查询添加条件，请单击 image:../media/more-button.gif[""]、然后从列表中选择一个条件。
+. 执行以下操作之一：
++
+** 单击*保存*以使用最初使用的名称保存查询。
+** 单击*另存为*以使用其他名称保存查询。
+** 单击*重命名*以更改最初使用的查询名称。
+** 单击*还原*将查询名称改回您最初使用的名称。
+
+
+

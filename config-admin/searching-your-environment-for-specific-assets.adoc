@@ -1,0 +1,30 @@
+---
+permalink: config-admin/searching-your-environment-for-specific-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用搜索工具查找有关特定资产的信息。例如、如果系统用户联系存储管理员、抱怨某个特定服务器、则管理员可以搜索服务器名称并显示一个资产页面、其中汇总了状态并提供了其他链接信息。 
+---
+= 在环境中搜索特定资产
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用搜索工具查找有关特定资产的信息。例如、如果系统用户联系存储管理员、抱怨某个特定服务器、则管理员可以搜索服务器名称并显示一个资产页面、其中汇总了状态并提供了其他链接信息。
+
+
+
+== 步骤
+
+. 打开OnCommand InsightWeb UI。
+. 在工具栏上、单击 image:../media/search-assets-icon.gif[""]。
++
+此时将显示*搜索资产*框。
+
+. 输入资产的名称或名称的一部分。
+. 从搜索结果中选择所需的资源。
++
+此时将显示该资源的资产页面。
+
+

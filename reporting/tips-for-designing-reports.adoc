@@ -1,0 +1,25 @@
+---
+permalink: reporting/tips-for-designing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 在设计报告时，有几个提示可能会很有用。 
+---
+= 有关设计报告的提示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在设计报告时，有几个提示可能会很有用。
+
+* 确定您需要使用当前数据还是历史数据。
++
+大多数报告只需要报告数据仓库中的最新可用数据。
+
+* 数据仓库提供有关容量和性能的历史信息、但不提供有关清单的历史信息。
+* 每个人都能看到所有数据；但是，您可能需要将数据限制为特定受众。
++
+要为不同用户细分信息，您可以创建报告并为其设置访问权限。
+
+

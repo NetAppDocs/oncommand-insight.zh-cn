@@ -1,0 +1,27 @@
+---
+permalink: install-windows/backing-up-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您创建了自定义报告、但没有这些报告的.xml源文件、则应在升级之前备份这些报告。然后、您应将其复制到数据仓库服务器以外的其他服务器。 
+---
+= 备份自定义数据仓库报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您创建了自定义报告、但没有 `.xml` 源文件、则应在升级之前备份这些报告。然后、您应将其复制到数据仓库服务器以外的其他服务器。
+
+
+
+== 步骤
+
+. 登录到数据仓库门户、网址为 `+https://fqdn/dwh+`。
+. 在数据仓库工具栏上、单击 image:../media/oci-reporting-portal-icon.gif[""] 以打开报告门户并登录。
+. 选择*文件*>*打开*。
+. 选择报告所在的文件夹、选择报告、然后单击*打开*。
+. 选择*工具*>*将报告复制到剪贴板*。
+. 打开文本编辑器、粘贴报告内容、然后将文件另存为 `report_name.txt`、其中 `report _name` 是报告的名称。
+. 将报告存储在数据仓库服务器以外的其他服务器上。
+

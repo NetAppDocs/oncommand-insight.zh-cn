@@ -1,0 +1,34 @@
+---
+permalink: config-admin/loading-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: 要加载性能数据归档、请执行以下步骤。 
+---
+= 正在加载性能归档
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要加载性能数据归档、请执行以下步骤。
+
+
+
+== 开始之前
+
+在加载性能数据归档之前、您必须还原有效的每周备份或手动备份。
+
+
+
+== 步骤
+
+. 在工具栏上、单击*管理*>*故障排除*。
+. 在还原部分的*加载性能归档*下、单击*加载*。
++
+[NOTE]
+====
+归档加载在后台处理。加载完整归档可能需要很长时间、因为每天的归档性能数据都会填充到Insight中。归档加载的状态将显示在此页面的归档部分中。
+
+====
+

@@ -1,0 +1,20 @@
+---
+permalink: config-admin/advanced-troubleshooting.html 
+sidebar: sidebar 
+keywords: Legacy portal 
+summary: '要完成OnCommand Insight 配置、您必须使用高级故障排除工具。这些工具在浏览器中运行、可从"Admin\>"故障排除"页面打开。' 
+---
+= 高级故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要完成OnCommand Insight 配置、您必须使用高级故障排除工具。这些工具可在浏览器中运行、并可从*管理*>*故障排除*页面打开。
+
+要在浏览器中打开高级故障排除工具、请单击页面底部的*高级故障排除*链接。
+
+通过高级故障排除工具、您可以查看各种报告、系统信息、已安装的软件包和日志、并执行许多操作、例如重新启动服务器或采集单元、更新DWH标注以及导入标注。
+
+有关所有可用选项、请参见高级故障排除页面。

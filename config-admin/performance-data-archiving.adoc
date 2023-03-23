@@ -1,0 +1,20 @@
+---
+permalink: config-admin/performance-data-archiving.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3引入了每天归档性能数据的功能。这是对配置和有限性能数据备份的补充。 
+---
+= 性能数据归档
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3引入了每天归档性能数据的功能。这是对配置和有限性能数据备份的补充。
+
+OnCommand Insight 可保留长达90天的性能和违规数据。但是、在为该数据创建备份时、备份中仅包含最新信息。通过归档、您可以保存其余性能数据、并根据需要加载这些数据。
+
+配置归档位置并激活归档后、Insight将每天将所有对象的前一天性能数据归档到归档位置。每天的归档将保存在归档文件夹中的一个单独文件中。归档会在后台进行、只要Insight正在运行、它就会继续进行。
+
+保留最近90天的归档；创建较新的归档文件时、会删除90天之前的归档文件。

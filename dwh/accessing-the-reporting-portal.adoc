@@ -1,0 +1,22 @@
+---
+permalink: dwh/accessing-the-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以从数据仓库门户访问报告门户、在此可以使用Workspace Advanced和Report Studio等报告创作工具创建自定义报告。 
+---
+= 访问报告门户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从数据仓库门户访问报告门户、在此可以使用Workspace Advanced和Report Studio等报告创作工具创建自定义报告。
+
+
+
+== 步骤
+
+. 在数据仓库工具栏上、单击 image:../media/oci-reporting-portal-icon.gif[""] 打开Insight报告门户。
+. 输入您的用户名和密码、然后单击*登录*。
+

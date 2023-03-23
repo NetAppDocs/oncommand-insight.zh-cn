@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-datadomain-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 此数据源从EMC Data Domain重复数据删除存储系统收集存储和配置信息。要添加数据源、您必须使用特定的配置说明和命令、并了解数据源要求和使用建议。 
+---
+= EMC Data Domain数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此数据源从EMC Data Domain重复数据删除存储系统收集存储和配置信息。要添加数据源、您必须使用特定的配置说明和命令、并了解数据源要求和使用建议。
+
+
+
+== 术语
+
+OnCommand Insight 从EMC Data Domain数据源采集以下清单信息。对于Insight获取的每种资产类型、均显示了此资产最常用的术语。查看此数据源或对其进行故障排除时，请记住以下术语：
+
+|===
+
+
+| 供应商 / 型号术语 | Insight术语 
+
+
+ a| 
+Disk
+ a| 
+Disk
+
+
+
+ a| 
+数组
+ a| 
+存储
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+文件系统
+ a| 
+内部卷
+
+
+
+ a| 
+Mtree
+ a| 
+qtree
+
+
+
+ a| 
+配额
+ a| 
+配额
+
+
+
+ a| 
+NFS 和 CIFS 共享
+ a| 
+文件共享
+
+|===
+[NOTE]
+====
+这些只是常见的术语映射、可能并不代表此数据源的所有情形。
+
+====
+
+
+== 要求
+
+* Data Domain 设备的 IP 地址
+* Data Domain 存储的只读用户名和密码
+* SSH 端口 22
+
+
+
+
+== Configuration
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+IP 地址
+ a| 
+Data Domain 存储阵列的 IP 地址或完全限定域名
+
+
+
+ a| 
+用户名
+ a| 
+Data Domain 存储阵列的用户名
+
+
+
+ a| 
+Password
+ a| 
+Data Domain 存储阵列的密码
+
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+ a| 
+清单轮询间隔（分钟）
+ a| 
+两次清单轮询的间隔(默认为20分钟)
+
+
+
+ a| 
+SSH进程等待超时(秒)
+ a| 
+SSH进程超时(默认值为180秒)
+
+
+
+ a| 
+SSH 端口
+ a| 
+SSH 服务端口
+
+|===

@@ -1,0 +1,23 @@
+---
+permalink: config-admin/maintaining-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: 无论您是Insight的新用户、要设置新系统、还是您的系统已运行一段时间、您都必须采取措施来保持Insight和您的网络平稳运行。维护的主要概念是、通常需要在Insight中适应网络的变化。 
+---
+= 维护Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+无论您是Insight的新用户、要设置新系统、还是您的系统已运行一段时间、您都必须采取措施来保持Insight和您的网络平稳运行。维护的主要概念是、通常需要在Insight中适应网络的变化。
+
+以下是最常见的维护任务：
+
+* 维护Insight备份
+* 更新已过期的Insight许可证
+* 协调数据源修补程序
+* 更新所有采集单元上的Insight版本
+* 从Insight中删除已删除的数据源
+
