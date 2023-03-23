@@ -69,7 +69,6 @@
   <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
   <block id="44255ed683c528ba0c41166a56d37b96" category="summary">OnCommand Insight 简化了内部环境以及公共云和私有云中混合IT基础架构的运营管理。</block>
   <block id="086156bc9cbd8e4be148e68dde15c618" category="doc">OnCommand Insight 文档</block>
-  <block id="6e33917dd8d71a6016eadb83a546533f" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。</block>
   <block id="8cc762b4a3f6f2951567f77120563288" category="summary">在哪里可以找到追加信息 ？</block>
   <block id="092bf78f9c97ba171b8232ddff585392" category="doc">追加信息</block>
   <block id="258f2022b13e94f3f3017d53dbaf5b48" category="paragraph">我可以从何处最终获得适用于OnCommand Insight 的追加信息 ？</block>
@@ -8206,4 +8205,5 @@
   <block id="135cca1b87ae0b4a874f6d6184055603" category="sidebar">观察对象随时间变化的行为</block>
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">将一个对象的总延迟与前10个对象的总延迟进行比较</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">自定义报告的输出格式和交付</block>
+  <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。</block>
 </blocks>
