@@ -35,9 +35,9 @@ summary: 客户端计算机需要使用中间件并修改浏览器、才能使�
 
 以下是常见的客户端配置要求：
 
-* 安装智能卡中间件、例如ActivClient (请参见 http://militarycac.com/activclient.htm)[]
-* 修改IE浏览器(请参见 http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
-* 修改Firefox浏览器(请参见 https://militarycac.com/firefox2.htm)[]
+* 安装智能卡中间件、例如ActivClient (请参见
+* 修改IE浏览器(请参见
+* 修改Firefox浏览器(请参见
 
 
 其他配置步骤包括：
