@@ -596,7 +596,7 @@
     <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/client-configuration-for-smart-card-and-certificate-login.html</loc>
       
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      <lastmod>2023-05-23T19:20:33+00:00</lastmod>
       
     </url>
   
@@ -860,14 +860,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/dwh/configuring-your-asup-processing.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/configuring-your-asup-processing.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/configuring-your-asup-processing.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/dwh/configuring-your-asup-processing.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -1154,6 +1154,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/data-source-support-information.html</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-linux/data-source-support-information.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
@@ -1162,13 +1169,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-windows/data-source-support-information.html</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/data-source-support-information.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2127,42 +2127,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/relnotes/</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-linux/</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/dwh/</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/faq/</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-windows/</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2176,7 +2141,42 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/faq/</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/dwh/</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/howto/</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-linux/</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-windows/</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2204,7 +2204,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/insight-architecture.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/insight-architecture.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2225,7 +2225,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/insight-architecture.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/insight-architecture.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2253,7 +2253,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/insight-for-administrators-and-planners.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/insight-for-administrators-and-planners.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2274,7 +2274,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/insight-for-administrators-and-planners.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/insight-for-administrators-and-planners.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2442,6 +2442,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/installing-your-insight-licenses.html</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-linux/installing-your-insight-licenses.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
@@ -2450,13 +2457,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-windows/installing-your-insight-licenses.html</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/installing-your-insight-licenses.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2932,6 +2932,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/oncommand-insight-licenses.html</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-linux/oncommand-insight-licenses.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
@@ -2946,14 +2953,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/oncommand-insight-licenses.html</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/oncommand-insight-overview.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/oncommand-insight-overview.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2974,7 +2974,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/oncommand-insight-overview.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/overview/oncommand-insight-overview.html</loc>
+      
+      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/opening-insight.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -2989,13 +2996,6 @@
   
     <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-windows/opening-insight.html</loc>
-      
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/opening-insight.html</loc>
       
       <lastmod>2023-03-23T19:50:46+00:00</lastmod>
       
@@ -3389,7 +3389,7 @@
     <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight//search.html</loc>
       
-      <lastmod>2023-03-23T21:09:01+00:00</lastmod>
+      <lastmod>2023-05-23T19:20:48+00:00</lastmod>
       
     </url>
   
@@ -3592,14 +3592,14 @@
     <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-linux/submitting-an-online-technical-support-request.html</loc>
       
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      <lastmod>2023-05-23T19:20:33+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/zh-cn/oncommand-insight/install-windows/submitting-an-online-technical-support-request.html</loc>
       
-      <lastmod>2023-03-23T19:50:46+00:00</lastmod>
+      <lastmod>2023-05-23T19:20:33+00:00</lastmod>
       
     </url>
   
