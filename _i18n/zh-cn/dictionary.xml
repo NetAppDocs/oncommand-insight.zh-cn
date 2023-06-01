@@ -8206,4 +8206,5 @@
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">将一个对象的总延迟与前10个对象的总延迟进行比较</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">自定义报告的输出格式和交付</block>
   <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。</block>
+  <block id="9a94b99275970f0f82451969eeccb836" category="sidebar">HDS 运营中心</block>
 </blocks>

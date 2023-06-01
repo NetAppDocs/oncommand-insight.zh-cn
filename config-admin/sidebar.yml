@@ -431,6 +431,8 @@ entries:
         url: "/config-admin/hds-landing-page-terminology-storage-pool.html"
       - title: HDS存储节点
         url: "/config-admin/hds-landing-page-terminology-storage-node.html"
+    - title: HDS 运营中心
+      url: "/collector_hds_ops_center.html"
     - title: HDS NAS (HNAS)数据源
       url: "/config-admin/hds-hnas-data-source.html"
     - title: HP CommandView AE数据源
