@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>显示系统信息</title>
+  <title>Hitachi Ops Center 数据收集器</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="显示系统信息" />
+  <meta property="og:title" content="Hitachi Ops Center 数据收集器" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/displaying-system-information.html" />
-	<meta property="og:description" content="您可以显示有关部署OnCommand Insight 服务器的系统的Microsoft Windows IP配置信息。" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" />
+	<meta property="og:description" content="配置 HDS 操作中心数据收集器。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/oncommand-insight/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以显示有关部署OnCommand Insight 服务器的系统的Microsoft Windows IP配置信息。">
-  <meta name="keywords" content=" "><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="配置 HDS 操作中心数据收集器。">
+  <meta name="keywords" content=" data collector, Hitachi Ops Center"><!-- Icons -->
   <link rel="icon" href="/zh-cn/oncommand-insight/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -32,17 +32,17 @@
   <link rel="stylesheet" href="/zh-cn/oncommand-insight/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/oncommand-insight/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
-  <link rel="canonical" href="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/displaying-system-information.html" />
-  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/config-admin/displaying-system-information.html" />
+  <link rel="canonical" href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" />
   <link rel='stylesheet' href='/zh-cn/oncommand-insight/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
@@ -177,7 +177,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.zh-cn/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/displaying-system-information.html&page-title=显示系统信息" class="page-nav-contribute-link" role="button"><img src="/zh-cn/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/config-admin/displaying-system-information.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.zh-cn/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html&page-title=Hitachi Ops Center 数据收集器" class="page-nav-contribute-link" role="button"><img src="/zh-cn/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/config-admin/collector_hds_ops_center.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -297,23 +297,23 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/de-de/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+          <a href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/es-es/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+          <a href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/it-it/oncommand-insight/config-admin/displaying-system-information.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+          <a href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
         </li></ul>
     </div>
     <!-- End Language Selector -->
@@ -2368,6 +2368,8 @@
             HDS HiCommand Device Manager数据源
           </a>
           
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -2383,6 +2385,8 @@
   
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -2790,8 +2794,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
 
@@ -7136,7 +7138,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="HDS 运营中心"
       data-li-level="5#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/zh-cn/oncommand-insight/collector_hds_ops_center.html">
         HDS 运营中心
       </a></li><li 
@@ -7164,7 +7166,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="HDS 运营中心"
       data-li-level="4#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/zh-cn/oncommand-insight/collector_hds_ops_center.html">
         HDS 运营中心
       </a></li><li 
@@ -7802,7 +7804,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="显示系统信息"
       data-li-level="4#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/zh-cn/oncommand-insight/config-admin/displaying-system-information.html">
         显示系统信息
       </a></li><li 
@@ -9791,14 +9793,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">显示系统信息</h1>
+  <h1 class="n-doc__component-detail-heading">Hitachi Ops Center 数据收集器</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2023-03-23 19:50:46 +0000">03/23/2023</time>
+    <time datetime="2023-06-01 18:05:41 +0000">06/01/2023</time>
     
   
 
@@ -9811,31 +9813,179 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>您可以显示有关部署OnCommand Insight 服务器的系统的Microsoft Windows IP配置信息。</p>
+<p>此数据收集器使用 Hitachi Ops Center 的集成应用程序套件来访问多个存储设备的清单和性能数据。要发现清单和容量，您的运营中心安装必须同时包含 " 通用服务 " 和 " 管理员 " 组件。要收集性能，您还必须部署 " 分析器 " 。</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="步骤">步骤</h2>
+<h2 id="术语">术语</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>在Insight工具栏上、单击*管理*并选择*故障排除*。</p>
-</li>
-<li>
-<p>在页面底部的"Other tasks"区域中、单击*高级故障排除*链接。</p>
-</li>
-<li>
-<p>在高级故障排除页面上、单击*报告*选项卡。</p>
-</li>
-<li>
-<p>单击*系统信息*。</p>
 <div class="paragraph">
-<p>Windows IP配置包括主机名、DNS、IP地址、子网掩码、操作系统信息、 内存、启动设备和连接名称。</p>
+<p>OnCommand Insight从此数据收集器采集以下清单信息。对于所采集的每种资产类型，均显示了此资产最常用的术语。查看此数据收集器或对其进行故障排除时，请记住以下术语：</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">供应商 / 型号术语</th>
+<th class="tableblock halign-left valign-top">OnCommand Insight 术语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储系统</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volume</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">奇偶校验组</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储池（ RAID ），磁盘组</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储池</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储池（精简，快照）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">外部奇偶校验组</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储池（后端），磁盘组</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储节点→控制器节点→端口</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">主机组</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">卷映射和屏蔽</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">卷对</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储同步</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>注意：这些只是常见的术语映射，可能并不代表此数据收集器的所有情形。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="清单要求">清单要求</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要收集清单数据，您必须满足以下条件：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>托管"通用服务"组件的操作中心服务器的IP地址或主机名</p>
 </li>
-</ol>
+<li>
+<p>托管Operations Center组件的所有服务器上存在的root/sysadmin用户帐户和密码。在Operations Center 10.8+之前、HDS未实施REST API支持以供LDAP/SSO用户使用</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="性能要求">性能要求</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要收集性能数据，必须满足以下要求：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>必须安装HDS Ops Center"分析器"模块</p>
+</li>
+<li>
+<p>存储阵列必须为运营中心的"分析器"模块馈送数据</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration">Configuration</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">字段</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hitachi Ops Center IP 地址</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">托管 " 通用服务 " 组件的操作中心服务器的 IP 地址或完全限定域名</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用户名</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operations Center 服务器的用户名。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用于 Operations Center 服务器的密码。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="高级配置">高级配置</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字段</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">连接类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTPS （端口 443 ）为默认值</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">覆盖 TCP 端口</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定要使用的端口（如果不是默认端口）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">清单轮询间隔（分钟）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">两次清单轮询的间隔。默认值为 40. 。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">选择 " 排除 " 或 " 包括 " 以指定列表</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定在收集数据时是包含还是排除以下阵列列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">筛选设备列表</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要包含或排除的设备序列号的逗号分隔列表</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">性能轮询间隔（秒）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">性能轮询之间的时间间隔。默认值为 300. 。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>可以从找到追加信息 <a href="concept_requesting_support.html">"支持"</a> 页面或中的 <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">"数据收集器支持列表"</a>。</p>
 </div>
 </div>
 </div>
