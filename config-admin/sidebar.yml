@@ -425,6 +425,8 @@ entries:
     - title: HDS HiCommand Device Manager数据源
       url: "/config-admin/hds-hicommand-devicemanager-data-source.html"
       entries:
+      - title: HDS 运营中心
+        url: "/collector_hds_ops_center.html"
       - title: HDS存储
         url: "/config-admin/hds-landing-page-terminology-storage.html"
       - title: HDS存储池

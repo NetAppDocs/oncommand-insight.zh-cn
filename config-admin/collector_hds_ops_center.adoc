@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: collector_hds_ops_center.html 
+keywords: data collector, Hitachi Ops Center 
+summary: 配置 HDS 操作中心数据收集器。 
+---
+= Hitachi Ops Center 数据收集器
+:allow-uri-read: 
+
+
+[role="lead"]
+此数据收集器使用 Hitachi Ops Center 的集成应用程序套件来访问多个存储设备的清单和性能数据。要发现清单和容量，您的运营中心安装必须同时包含 " 通用服务 " 和 " 管理员 " 组件。要收集性能，您还必须部署 " 分析器 " 。
+
+
+
+== 术语
+
+OnCommand Insight从此数据收集器采集以下清单信息。对于所采集的每种资产类型，均显示了此资产最常用的术语。查看此数据收集器或对其进行故障排除时，请记住以下术语：
+
+[cols="2*"]
+|===
+| 供应商 / 型号术语 | OnCommand Insight 术语 
+
+
+| 存储系统 | 存储 
+
+
+| Volume | Volume 
+
+
+| 奇偶校验组 | 存储池（ RAID ），磁盘组 
+
+
+| Disk | Disk 
+
+
+| 存储池 | 存储池（精简，快照） 
+
+
+| 外部奇偶校验组 | 存储池（后端），磁盘组 
+
+
+| Port | 存储节点→控制器节点→端口 
+
+
+| 主机组 | 卷映射和屏蔽 
+
+
+| 卷对 | 存储同步 
+|===
+注意：这些只是常见的术语映射，可能并不代表此数据收集器的所有情形。
+
+
+
+== 清单要求
+
+要收集清单数据，您必须满足以下条件：
+
+* 托管"通用服务"组件的操作中心服务器的IP地址或主机名
+* 托管Operations Center组件的所有服务器上存在的root/sysadmin用户帐户和密码。在Operations Center 10.8+之前、HDS未实施REST API支持以供LDAP/SSO用户使用
+
+
+
+
+== 性能要求
+
+要收集性能数据，必须满足以下要求：
+
+* 必须安装HDS Ops Center"分析器"模块
+* 存储阵列必须为运营中心的"分析器"模块馈送数据
+
+
+
+
+== Configuration
+
+[cols="2*"]
+|===
+| 字段 | Description 
+
+
+| Hitachi Ops Center IP 地址 | 托管 " 通用服务 " 组件的操作中心服务器的 IP 地址或完全限定域名 
+
+
+| 用户名 | Operations Center 服务器的用户名。 
+
+
+| Password | 用于 Operations Center 服务器的密码。 
+|===
+
+
+== 高级配置
+
+|===
+
+
+| 字段 | Description 
+
+
+| 连接类型 | HTTPS （端口 443 ）为默认值 
+
+
+| 覆盖 TCP 端口 | 指定要使用的端口（如果不是默认端口） 
+
+
+| 清单轮询间隔（分钟） | 两次清单轮询的间隔。默认值为 40. 。 
+
+
+| 选择 " 排除 " 或 " 包括 " 以指定列表 | 指定在收集数据时是包含还是排除以下阵列列表。 
+
+
+| 筛选设备列表 | 要包含或排除的设备序列号的逗号分隔列表 
+
+
+| 性能轮询间隔（秒） | 性能轮询之间的时间间隔。默认值为 300. 。 
+|===
+可以从找到追加信息 link:concept_requesting_support.html["支持"] 页面或中的 link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["数据收集器支持列表"]。

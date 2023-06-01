@@ -8205,6 +8205,42 @@
   <block id="135cca1b87ae0b4a874f6d6184055603" category="sidebar">观察对象随时间变化的行为</block>
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">将一个对象的总延迟与前10个对象的总延迟进行比较</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">自定义报告的输出格式和交付</block>
-  <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。</block>
   <block id="9a94b99275970f0f82451969eeccb836" category="sidebar">HDS 运营中心</block>
+  <block id="8020d56a67ade967a3254ada824b1406" category="summary">配置 HDS 操作中心数据收集器。</block>
+  <block id="edfa0366cb6c25de6aa46576a0e54251" category="doc">Hitachi Ops Center 数据收集器</block>
+  <block id="317ca49a534ef6dc0317a60fdf058fef" category="paragraph">此数据收集器使用 Hitachi Ops Center 的集成应用程序套件来访问多个存储设备的清单和性能数据。要发现清单和容量，您的运营中心安装必须同时包含 " 通用服务 " 和 " 管理员 " 组件。要收集性能，您还必须部署 " 分析器 " 。</block>
+  <block id="aa274d02dd5bbca295ce4b6cd3594c6d" category="paragraph">OnCommand Insight从此数据收集器采集以下清单信息。对于所采集的每种资产类型，均显示了此资产最常用的术语。查看此数据收集器或对其进行故障排除时，请记住以下术语：</block>
+  <block id="5c6ab1284b6b7a5a7102854a969c99be" category="cell">存储系统</block>
+  <block id="6fa6e2299a829e04bba19b10e38dc56c" category="cell">奇偶校验组</block>
+  <block id="7f47ab518e59deb2aed009c3db49ddbd" category="cell">存储池（ RAID ），磁盘组</block>
+  <block id="88bda324c3afff84ed43de6af0cfdc82" category="cell">存储池（精简，快照）</block>
+  <block id="b539957d5ac5efa3c17ecf122d0aef01" category="cell">外部奇偶校验组</block>
+  <block id="8d574b46d24459c09062877c134e14a5" category="cell">存储池（后端），磁盘组</block>
+  <block id="08aa09e012efb5b185b38b15d4ded675" category="cell">存储节点→控制器节点→端口</block>
+  <block id="a18b5712dface3f20bce7750886350d3" category="cell">主机组</block>
+  <block id="5b52c3da7acdc6837b619fa0e7beb98b" category="cell">卷映射和屏蔽</block>
+  <block id="b4a20e3a6be7e6cd6f8e3dcdd45cb2a8" category="cell">卷对</block>
+  <block id="561b06d0d233f84983c474e6cd225d20" category="paragraph">注意：这些只是常见的术语映射，可能并不代表此数据收集器的所有情形。</block>
+  <block id="ea9460ea7afc9634eafcb42137ae3f7b" category="paragraph">要收集清单数据，您必须满足以下条件：</block>
+  <block id="d96f025cc7db5db06dd47e78c55d8f1e" category="list-text">托管"通用服务"组件的操作中心服务器的IP地址或主机名</block>
+  <block id="8281bdee16e3d690812d635a332bd2cf" category="list-text">托管Operations Center组件的所有服务器上存在的root/sysadmin用户帐户和密码。在Operations Center 10.8+之前、HDS未实施REST API支持以供LDAP/SSO用户使用</block>
+  <block id="fdfceedcfadaa8fc4e641a9271ff7595" category="section-title">性能要求</block>
+  <block id="8f2fd5a7846dd234e704c033378310ab" category="paragraph">要收集性能数据，必须满足以下要求：</block>
+  <block id="d3a405c96e9fcea92b0929c28b531e59" category="list-text">必须安装HDS Ops Center"分析器"模块</block>
+  <block id="e71e6bc0f8f44471c52859083251c1b7" category="list-text">存储阵列必须为运营中心的"分析器"模块馈送数据</block>
+  <block id="8f4ab816532074b60c2865f1089b6d38" category="cell">Hitachi Ops Center IP 地址</block>
+  <block id="211ba4facc37bc8a85949c753a2fcfbd" category="cell">托管 " 通用服务 " 组件的操作中心服务器的 IP 地址或完全限定域名</block>
+  <block id="8db0f231405345684c1dab98cc049f52" category="cell">Operations Center 服务器的用户名。</block>
+  <block id="18bf6f2c111fb8ac2dbe99d3445cbadd" category="cell">用于 Operations Center 服务器的密码。</block>
+  <block id="bc742a3b20c159bc11ea844e4d798e34" category="cell">HTTPS （端口 443 ）为默认值</block>
+  <block id="d394f4a37cee9ff0a48907bfdacc4a9f" category="cell">覆盖 TCP 端口</block>
+  <block id="cd5f584259d833ff583a4824164dfbc3" category="cell">指定要使用的端口（如果不是默认端口）</block>
+  <block id="4908467e27b4191d95f9c906a4d8dcd3" category="cell">两次清单轮询的间隔。默认值为 40. 。</block>
+  <block id="07570853d28c7dc0401130aea747f9fb" category="cell">指定在收集数据时是包含还是排除以下阵列列表。</block>
+  <block id="e245ed75c6b828ee4ae338a39e57c9bc" category="cell">筛选设备列表</block>
+  <block id="0f6a3a02976086b90f48da7e5992aa82" category="cell">要包含或排除的设备序列号的逗号分隔列表</block>
+  <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">性能轮询之间的时间间隔。默认值为 300. 。</block>
+  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">数据收集器支持列表</block>
+  <block id="b13fdf15118fa90916588b42c9eab20f" category="paragraph">可以从找到追加信息 <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> 页面或中的 <block ref="6bcd41b5488d3cd417d31b80921f5af9" category="inline-link-macro-rx"></block>。</block>
+  <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。</block>
 </blocks>
