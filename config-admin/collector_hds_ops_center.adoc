@@ -114,4 +114,3 @@ OnCommand Insight从此数据收集器采集以下清单信息。对于所采集
 
 | 性能轮询间隔（秒） | 性能轮询之间的时间间隔。默认值为 300. 。 
 |===
-可以从找到追加信息 link:concept_requesting_support.html["支持"] 页面或中的 link:https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf["数据收集器支持列表"]。
