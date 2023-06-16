@@ -228,7 +228,6 @@
   <block id="f54e475559c1e0bbea40068043297640" category="list-text">一种部署计划、其中包括OnCommand Insight 服务器、数据仓库和报告以及远程采集单元的硬件和网络配置。</block>
   <block id="3f8a6e68b00f22c533895ece22d473da" category="list-text">适用于OnCommand Insight Java UI的Java 8。</block>
   <block id="d254861f20bb59d58db872722e57ba9c" category="inline-link">通知</block>
-  <block id="699321795769c28cf1c69b5372a7d45b" category="admonition">OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见<block ref="def4fc5b0e06154939b4ae3afd91bf54" category="inline-link-rx"></block> 页面以查看特定详细信息。</block>
   <block id="b9f2c94d18eb493993627757483e8d1e" category="summary">从NetApp收到包含Insight许可证密钥的许可证文件后、您可以使用设置功能同时安装所有许可证。</block>
   <block id="595e865728eb02f9590430ea2511cab5" category="doc">安装Insight许可证</block>
   <block id="fad1f300af08a9c525cdac95524a08aa" category="paragraph">Insight许可证密钥存储在中<block ref="be4117b0c842c4be8f9960294bdc2cd1" prefix=" " category="inline-code"></block> 或<block ref="38d7925a50d5b22cb1c850b0d12c9086" prefix=" " category="inline-code"></block> 文件</block>
@@ -8240,7 +8239,6 @@
   <block id="e245ed75c6b828ee4ae338a39e57c9bc" category="cell">筛选设备列表</block>
   <block id="0f6a3a02976086b90f48da7e5992aa82" category="cell">要包含或排除的设备序列号的逗号分隔列表</block>
   <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">性能轮询之间的时间间隔。默认值为 300. 。</block>
-  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">数据收集器支持列表</block>
-  <block id="b13fdf15118fa90916588b42c9eab20f" category="paragraph">可以从找到追加信息 <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> 页面或中的 <block ref="6bcd41b5488d3cd417d31b80921f5af9" category="inline-link-macro-rx"></block>。</block>
   <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。</block>
+  <block id="ee3e2c17548456b388eeca1c8945d0fb" category="admonition">OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见 <block ref="22f0bd9eac0233f917b202967c553066" category="inline-link-macro-rx"></block> 页面以查看特定详细信息。</block>
 </blocks>

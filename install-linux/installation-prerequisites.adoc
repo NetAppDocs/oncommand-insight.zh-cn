@@ -25,6 +25,6 @@ summary: 在安装OnCommand Insight 之前、您必须下载当前软件版本�
 * 适用于OnCommand Insight Java UI的Java 8。
 +
 
-NOTE: OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见 http://docs.netapp.com/oci-73/topic/com.netapp.ndc.notices/GUID-93BE9A1E-D79E-4A97-87A2-4DBE31372A16.html["通知"] 页面以查看特定详细信息。
+NOTE: OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见 link:legal-notices.html["通知"] 页面以查看特定详细信息。
 
 
