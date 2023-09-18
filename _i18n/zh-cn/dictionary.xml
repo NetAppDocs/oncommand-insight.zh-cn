@@ -8241,4 +8241,5 @@
   <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">性能轮询之间的时间间隔。默认值为 300. 。</block>
   <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。</block>
   <block id="ee3e2c17548456b388eeca1c8945d0fb" category="admonition">OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见 <block ref="22f0bd9eac0233f917b202967c553066" category="inline-link-macro-rx"></block> 页面以查看特定详细信息。</block>
+  <block id="e465e42419c3405f98dfba07fa9da3fc" category="paragraph">OnCommand洞察力仅支持对*Azure Active Directory*使用SSO。</block>
 </blocks>

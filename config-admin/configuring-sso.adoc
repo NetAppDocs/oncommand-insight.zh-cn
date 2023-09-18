@@ -20,6 +20,8 @@ summary: '单点登录(SSO)允许组织中的用户使用OnCommand Insight 、�
 ====
 SSO仅适用于Insight Server基于Web的UI。SSO不适用于数据仓库、报告或Java客户端UI组件。
 
+OnCommand洞察力仅支持对*Azure Active Directory*使用SSO。
+
 ====
 
 
