@@ -34,9 +34,14 @@ summary: '使用securityadmin工具可以管理本地采集用户\(LAU)上的安
 == 步骤
 
 . 远程登录到Insight服务器。
-. 以交互模式(-I)启动安全管理工具。
+. 在交互模式下启动安全管理工具：
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 系统请求登录凭据。
+
+
 
 . 输入具有"`Admin`"凭据的帐户的用户名和密码。
 . 选择*本地采集单元*以重新配置本地采集单元安全配置。
@@ -61,8 +66,6 @@ summary: '使用securityadmin工具可以管理本地采集用户\(LAU)上的安
 [NOTE]
 ====
 还原可用于同步多个服务器上的密码和密钥、例如：-更改LAU上的加密密钥-创建存储备份-将存储备份还原到每个RAU
-
-+
 
 ====
 ** *更改加密密钥*

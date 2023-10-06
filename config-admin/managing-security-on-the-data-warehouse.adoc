@@ -28,9 +28,14 @@ summary: 使用securityadmin工具可以管理数据仓库服务器上的安全�
 == 步骤
 
 . 远程登录到数据仓库服务器。
-. 在交互模式下启动安全管理工具： `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. 在交互模式下启动安全管理工具：
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux - `/bin/oci-securityadmin.sh -i`
 +
 系统请求登录凭据。
+
+
 
 . 输入具有"`Admin`"凭据的帐户的用户名和密码。
 +

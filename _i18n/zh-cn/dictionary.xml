@@ -3376,7 +3376,6 @@
   <block id="ae5ec4adfd829d0ce42eda85f1bf19f3" category="list-text">Windows -<block ref="09b50f27173fab90f2f09515f3322532" prefix=" " category="inline-code"></block></block>
   <block id="6d43f414975e3172b0e6b0387f3c9660" category="list-text">Linux -<block ref="9363a944a51c65486664aed0f6e192fa" prefix=" " category="inline-code"></block></block>
   <block id="2d805e40f048f8ac5921fd582a426f41" category="list-text">远程登录到数据仓库服务器。</block>
-  <block id="92c5c92115fe622170841b7252788aa3" category="list-text">在交互模式下启动安全管理工具：<block ref="977ec0e53c2f0026946e460f126d1758" prefix=" " category="inline-code"></block></block>
   <block id="1e0243d49be54f99f7eef9855a7cee80" category="paragraph">系统请求登录凭据。</block>
   <block id="445ee2e4288af83712e4c04825cf6c34" category="list-text">输入具有"`Admin`"凭据的帐户的用户名和密码。</block>
   <block id="c10f995fef645bfed0597a66f5e22e68" category="paragraph">系统将显示数据仓库的安全管理员菜单：</block>
@@ -4404,7 +4403,6 @@
   <block id="166ace9389f2989154d4edf8ca669668" category="doc">管理Insight服务器上的安全性</block>
   <block id="d71586f0584584e73897bf02e9802afa" category="paragraph">。<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> 使用工具可以管理Insight服务器上的安全选项。安全管理包括更改密码、生成新密钥、保存和还原您创建的安全配置或将配置还原为默认设置。</block>
   <block id="34466f85207045ded27b393581889d20" category="list-text">远程登录到Insight服务器。</block>
-  <block id="0bc4782a44f12c3fb60ecc61006b818c" category="list-text">在交互模式下启动安全管理工具：<block ref="095b9dfc195e5bbeafd5a7c2bb0ccd3f" prefix=" " category="inline-code"></block></block>
   <block id="4b2f543780a949ab3938618b76a6aeb5" category="list-text">选择 * 服务器 * 。</block>
   <block id="15cf432cc55f528ff3c57c6406d8bcd4" category="paragraph">可以使用以下服务器配置选项：</block>
   <block id="55ef7bc8b50b24453b764be4b80da043" category="paragraph">为包含所有密码和密钥的存储创建一个备份zip文件、并将该文件放置在用户指定的位置或以下默认位置：</block>
@@ -6252,7 +6250,6 @@
   <block id="0a03d1757c591cb47b67e3867b2aa573" category="doc">管理本地采集单元上的安全性</block>
   <block id="1843d0ce10aa71f1d72edd6683f93064" category="paragraph">。<block ref="4924cdf1992856713a11ebac184ceb81" prefix=" " category="inline-code"></block> 使用工具可以管理本地采集用户(LAU)上的安全选项。安全管理包括管理密钥和密码、保存和还原您创建的安全配置或将配置还原为默认设置。</block>
   <block id="70ba259bdcb1df4b8b8840343db3ba72" category="paragraph">您必须拥有<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> 执行安全配置任务的权限。</block>
-  <block id="19ba4ac9871bca5c94c0fac78e3c3a9b" category="list-text">以交互模式(-I)启动安全管理工具。</block>
   <block id="bf598265068097bdfb964fb65b464993" category="list-text">选择*本地采集单元*以重新配置本地采集单元安全配置。</block>
   <block id="3efa8859202eff1b280ec70c247e9ef0" category="paragraph">此时将显示以下选项：</block>
   <block id="db48c1af350671c4ffd32d01200d5950" category="paragraph">还原可用于同步多个服务器上的密码和密钥、例如：-更改LAU上的加密密钥-创建存储备份-将存储备份还原到每个RAU</block>
@@ -8242,4 +8239,7 @@
   <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight 是一个解决方案 、用于跨域、多供应商资源管理和分析物理和虚拟环境中的网络、存储和服务器。Insight可以帮助您优化当前基础架构、使您能够调整运营规模以满足业务需求。它简化了确定购买内容和购买时间的过程。它还可以通过确定哪些工作负载适合进行云迁移来降低复杂技术迁移(例如迁移到混合云)期间的风险。借助Insight、您可以将资源集成到公司的整个IT服务交付链中、从而将IT基础架构作为端到端服务进行管理。</block>
   <block id="ee3e2c17548456b388eeca1c8945d0fb" category="admonition">OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见 <block ref="22f0bd9eac0233f917b202967c553066" category="inline-link-macro-rx"></block> 页面以查看特定详细信息。</block>
   <block id="e465e42419c3405f98dfba07fa9da3fc" category="paragraph">OnCommand洞察力仅支持对*Azure Active Directory*使用SSO。</block>
+  <block id="1cb3ec988e29678c641cba59564947b3" category="list-text">在交互模式下启动安全管理工具：</block>
+  <block id="f098be646546d6fe2a75059a01c330f7" category="list-text">Windows -<block ref="6fc3ad2c3aa4e51a6e001ff98a533c91" prefix=" " category="inline-code"></block></block>
+  <block id="a8b0a56b2ae62eec476aea5806960a1a" category="list-text">Linux -<block ref="7e8977b89fc4dcb2507a133fc2b8b1fe" prefix=" " category="inline-code"></block></block>
 </blocks>
