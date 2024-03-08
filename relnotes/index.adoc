@@ -12,10 +12,4 @@ summary:
 
 OnCommand Insight 发行说明可从文档中心以外获得。系统将提示您使用 NetApp 支持站点凭据登录。
 
-发行说明有多种格式：
-
-link:https://library.netapp.com/ecmdocs/ECMLP2652943/html/frameset.html["HTML"^]
-
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["PDF"^]
-
-link:https://library.netapp.com/ecm/ecm_get_file2/ECMLP2652943?Rendition=EPUB["EPUB"^]
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["发行说明.PDF"^]
