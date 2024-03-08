@@ -35,7 +35,7 @@ image::../media/search-exchange.gif[搜索Exchange]
 ====
 . 从搜索结果中选择"Exchange 2015"后、系统将显示应用程序登录页面。
 +
-image::../media/exch2016-land-page.gif[2016年外页]
+image::../media/exch2016-land-page.png[2016年外页]
 
 +
 在应用程序登录页面中、您需要了解以下信息：

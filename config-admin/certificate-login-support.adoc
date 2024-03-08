@@ -15,8 +15,6 @@ OnCommand Insight 支持使用智能卡(CAC)和证书对登录到Insight服务�
 
 将系统配置为支持CAC和证书后、导航到新的OnCommand Insight 会话会导致浏览器显示一个本机对话框、为用户提供一个可供选择的个人证书列表。这些证书将根据OnCommand Insight 服务器信任的CA颁发的一组个人证书进行筛选。大多数情况下、只有一个选择。默认情况下、如果只有一个选项、Internet Explorer将跳过此对话框。
 
-对于Java客户端、将显示一个自定义对话框、其中包含所有个人证书、而不考虑颁发者。
-
 [NOTE]
 ====
 对于CAC用户、智能卡包含多个证书、其中只有一个证书可以与受信任的CA匹配。的CAC证书 `identification` 应使用。

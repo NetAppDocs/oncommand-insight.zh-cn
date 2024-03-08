@@ -22,10 +22,6 @@ entries:
     url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
   - title: 远程采集单元服务器要求
     url: "/install-windows/remote-acquisition-unit-server-requirements.html"
-  - title: 异常检测要求
-    url: "/install-windows/anomaly-detection-requirements.html"
-  - title: Insight Java UI要求
-    url: "/install-windows/insight-java-ui-requirements.html"
   - title: OnCommand Insight 支持的浏览器
     url: "/install-windows/insight-browser-support.html"
 - title: Insight安装说明
@@ -49,10 +45,6 @@ entries:
       url: "/install-windows/verifying-the-rau-service.html"
     - title: 验证远程采集单元安装
       url: "/install-windows/validating-the-rau-installation.html"
-  - title: 安装异常检测软件
-    url: "/install-windows/installing-the-anomaly-detection-software.html"
-  - title: 安装以太网监控单元
-    url: "/install-windows/installing-an-ethernet-monitoring-unit-linux.html"
   - title: 正在检查安装
     url: "/install-windows/checking-the-installation.html"
     entries:
@@ -111,8 +103,6 @@ entries:
       url: "/install-windows/back-up-the-security-configuration.html"
     - title: 升级远程采集单元服务器
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
-    - title: 升级异常检测引擎
-      url: "/install-windows/upgrading-the-anomaly-detection-engine.html"
   - title: 完成升级后任务
     url: "/install-windows/completing-post-upgrade-tasks.html"
     entries:
@@ -149,5 +139,3 @@ entries:
     url: "/install-windows/uninstalling-the-data-warehouse-software.html"
   - title: 卸载远程采集单元软件
     url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"
-  - title: 卸载异常检测引擎
-    url: "/install-windows/uninstalling-the-anomaly-detection-engine-linux.html"

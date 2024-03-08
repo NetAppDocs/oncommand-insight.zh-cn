@@ -59,29 +59,7 @@ summary: '您必须修改OnCommand Insight 主机配置、以支持智能卡\(CA
 对所有中间证书重复此步骤。
 
 . 在LDAP中指定与此示例匹配的域。
-. 在OnCommand Insight 服务器上、 `wildfly/standalone/configuration/standalone-full.xml` 需要通过在中将verify-client更新为"已请求"来修改文件 ``/subsystem=undertow/server=default-server/https-listener=default-https``以启用CAC。运行相应的命令：
-+
-|===
 
-
-| os | 脚本 
-
-
- a| 
-Windows
- a| 
-<install dir> \SANscreen\wildfly\bin\enableCACforRemoteEJB.bat
-
-
-
- a| 
-Linux
- a| 
-/opt/netapp/oci/wildfly/bin/enableCACforRemoteEJB.sh
-
-|===
-+
-执行此脚本后、请等待此wildfly服务器的重新加载完成、然后再继续执行下一步。
 
 . 重新启动服务器。
 

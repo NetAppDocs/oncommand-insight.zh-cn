@@ -60,7 +60,7 @@ OnCommand Insight 的规模估算具有多种依赖关系、例如环境中的�
  a| 
 操作系统
  a| 
-运行64位Microsoft Windows Server 2012、2012 R2、2016或2019且具有最新Service Pack的计算机。
+一台运行64位Microsoft Windows Server 2016、2019或2022并安装了最新Service Pack的计算机。
 
 
 

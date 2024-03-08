@@ -2,7 +2,7 @@
 permalink: install-windows/upgrade-insight.html 
 sidebar: sidebar 
 keywords:  
-summary: '通常、必须对所有Insight服务器(Insight服务器、数据仓库服务器、远程采集单元、以太网监控单元)执行升级、但运行异常检测软件的服务器除外。有关新版本OnCommand Insight 的升级要求、您应始终参考发行说明。' 
+summary: '通常、必须对所有Insight服务器\(Insight服务器、数据仓库服务器、远程采集单元)执行升级。有关新版本OnCommand Insight 的升级要求、您应始终参考发行说明。' 
 ---
 = 升级OnCommand Insight
 :allow-uri-read: 
@@ -11,6 +11,6 @@ summary: '通常、必须对所有Insight服务器(Insight服务器、数据仓�
 
 
 [role="lead"]
-通常、必须对所有Insight服务器(Insight服务器、数据仓库服务器、远程采集单元、以太网监控单元)执行升级、但运行异常检测软件的服务器除外。有关新版本OnCommand Insight 的升级要求、您应始终参考发行说明。
+通常、必须对所有Insight服务器(Insight服务器、数据仓库服务器、远程采集单元)执行升级。有关新版本OnCommand Insight 的升级要求、您应始终参考发行说明。
 
 除非另有说明、否则这些要求和过程适用于从Insight 7.x升级到Insight的最新版本。如果要从7.0之前的版本升级、请联系您的客户代表。

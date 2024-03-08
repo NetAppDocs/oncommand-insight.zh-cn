@@ -45,28 +45,6 @@ summary: 您应通过查看运行状况页面定期检查Insight系统组件的�
 
 
  a| 
-异常检测引擎
- a| 
-引擎容量
- a| 
-为检测异常而监控的应用程序数量
- a| 
-在48个可能的应用程序中、受监控的应用程序的数量和百分比。
-
-
-
- a| 
-异常检测引擎
- a| 
-引擎状态
- a| 
-异常检测引擎的状态
- a| 
-如果未检测到错误、则显示"`OK`"、否则显示有关发现的任何错误的信息。请参见 `prelert.log` 文件以了解更多信息。
-
-
-
- a| 
 DWH
  a| 
 备份
@@ -263,12 +241,4 @@ Service Pack可用性
 如果启用了每周备份、则会显示"`正常`"、否则会显示"`未启用每周备份`"。
 
 |===
-+
-[NOTE]
-====
-如果异常检测引擎显示错误、请参见 `prelert.log` 有关详细信息、请参见以下位置的文件：- Windows： `disk drive:\install directory\SANscreen\Wildfly\Standalone\Logs`—Linux： `/var/log/netapp/oci/wildfly/`
-
-+
-
-====
 

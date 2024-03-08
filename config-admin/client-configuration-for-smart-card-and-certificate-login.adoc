@@ -39,32 +39,3 @@ summary: 客户端计算机需要使用中间件并修改浏览器、才能使�
 * 修改IE浏览器(请参见
 * 修改Firefox浏览器(请参见
 
-
-其他配置步骤包括：
-
-
-
-== 步骤
-
-. 启动Java客户端时禁用不必要的对话框弹出窗口：
-+
-.. 打开"`Java`"控制面板。
-.. 选择"`高级`"选项卡。
-.. 选择"`Advanced Security Settings`"。
-.. 清除"`Use certificates and keys in browser keystore`"选项。
-
-
-. 使用Chrome浏览器将软证书导入到用户的个人证书中：
-+
-.. 导航到"`Advanced Settings`"。
-.. 选择`Manage Certificates`
-.. 选择"`Personal " certificates选项卡`。
-.. 选择"`Import...`"。
-.. 选择.p12文件。
-.. 完成向导、确保在密码字段中填写用于创建证书的密码。
-
-
-+
-要配置Internet Explorer和Firefox浏览器、需要执行类似的步骤。
-
-

@@ -28,8 +28,6 @@ entries:
       url: "/config-admin/editing-a-user-definition.html"
     - title: 删除用户帐户
       url: "/config-admin/deleting-a-user-account.html"
-    - title: 配置单点登录(SSO)
-      url: "/config-admin/configuring-sso.html"
   - title: 设置登录警告消息
     url: "/config-admin/configuring-a-login-warning-message.html"
   - title: Insight安全性
@@ -125,17 +123,6 @@ entries:
       url: "/config-admin/editing-applications.html"
     - title: 删除应用程序
       url: "/config-admin/deleting-an-application.html"
-  - title: OnCommand Insight 异常检测的工作原理
-    url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
-    entries:
-    - title: 配置应用程序以进行异常检测
-      url: "/config-admin/configuring-anomaly-detection-for-applications.html"
-    - title: 使用Anomalies部分
-      url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
-    - title: 异常检测监控状态
-      url: "/config-admin/anomaly-detection-monitoring-status.html"
-    - title: 创建应用程序性能策略
-      url: "/config-admin/creating-an-application-performance-policy.html"
   - title: 业务实体层次结构
     url: "/config-admin/your-business-entities-hierarchy.html"
     entries:
@@ -274,17 +261,6 @@ entries:
   url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
 - title: 导入SSL证书
   url: "/config-admin/importing-an-ssl-certificate.html"
-- title: OnCommand Insight 异常检测的工作原理
-  url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
-  entries:
-  - title: 配置应用程序以进行异常检测
-    url: "/config-admin/configuring-anomaly-detection-for-applications.html"
-  - title: 使用Anomalies部分
-    url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
-  - title: 异常检测监控状态
-    url: "/config-admin/anomaly-detection-monitoring-status.html"
-  - title: 创建应用程序性能策略
-    url: "/config-admin/creating-an-application-performance-policy.html"
 - title: 业务实体层次结构
   url: "/config-admin/your-business-entities-hierarchy.html"
   entries:
@@ -635,8 +611,6 @@ entries:
         url: "/config-admin/moving-mysql-data-using-the-command-line.html"
     - title: 正在强制更新标注
       url: "/config-admin/forcing-annotation-updates.html"
-    - title: 配置客户端设置
-      url: "/config-admin/configuring-client-settings.html"
     - title: 检查服务器资源的状态
       url: "/config-admin/checking-the-status-of-server-resources.html"
     - title: 查找虚影数据源
@@ -688,11 +662,6 @@ entries:
           url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html"
         - title: 使用 User Data 部分分配或修改标注
           url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html"
-      - title: 异常
-        url: "/config-admin/anomalies.html"
-        entries:
-        - title: 使用Anomalies部分
-          url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
       - title: 专家视图
         url: "/config-admin/expert-view.html"
         entries:

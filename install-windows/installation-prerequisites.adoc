@@ -22,11 +22,6 @@ summary: 在安装OnCommand Insight 之前、您必须下载当前软件版本�
 当前产品可能会占用早期版本的OnCommand Insight 产品未使用的其他硬件资源(由于OnCommand Insight 产品功能增强)。
 
 * 一种部署计划、其中包括OnCommand Insight 服务器、数据仓库和报告以及远程采集单元的硬件和网络配置。
-* 适用于OnCommand Insight Java UI的Java 8。
-+
-
-NOTE: OnCommand Insight 包括一个适用于Java SE 8的付费Oracle许可证。客户无需再购买任何其他Java SE 8许可证。此许可证适用于将Java SE 8与所有OCI组件结合使用。请参见 link:legal-notices.html["通知"] 页面以查看特定详细信息。
-
 * 已禁用病毒扫描软件
 +
 在安装OnCommand Insight 期间、您必须完全禁用所有病毒扫描程序。安装后、除了排除整个之外、Insight组件使用的路径(安装、备份和归档程序路径)还必须从病毒扫描中排除 `sanscreen` 扫描中的目录。
