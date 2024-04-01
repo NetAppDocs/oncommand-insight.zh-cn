@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_couchdb.html 
+keywords: telegraf, installation, install, couchdb 
+summary: CouchDB 数据收集器配置 
+---
+= CouchDB Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights 使用此数据收集器从 CouchDB 收集指标。
+
+
+
+== 安装
+
+. 从*Observability > Collectors*中，单击*+Data Collector*。选择CouchDB。
++
+选择安装了 Telegraf 代理的操作系统或平台。
+
+. 如果您尚未安装要收集的代理，或者您希望为其他操作系统或平台安装代理，请单击 _Show Instructions_展开 link:task_config_telegraf_agent.html["代理安装"] 说明。
+. 选择要用于此数据收集器的代理访问密钥。您可以通过单击 * + 代理访问密钥 * 按钮来添加新的代理访问密钥。最佳实践：仅当您要按操作系统 / 平台对数据收集器进行分组时，才使用其他代理访问密钥。
+. 按照配置步骤配置数据收集器。这些说明因用于收集数据的操作系统或平台的类型而异。
+
+
+image:CouchDBDCConfigLinux.png["CouchDB 配置"]
+
+
+
+== 设置
+
+有关信息，请参见 link:http://docs.couchdb.org/en/stable/["CouchDB 文档"]。
+
+
+
+== 对象和计数器
+
+将收集以下对象及其计数器：
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| 对象： | 标识符： | 属性： | 数据点： 
+
+
+| CouchDB | 命名空间
+服务器 | 节点名称
+节点IP | 身份验证缓存哈特
+未命中身份验证缓存
+数据库读取
+数据库写入
+数据库打开
+打开操作系统文件
+最长请求时间
+最短请求时间
+httpd请求方法副本
+httpd请求方法删除
+httpd请求方法get
+httpd请求方法标题
+httpd请求方法发布
+httpd请求方法已放置
+状态代码200
+状态代码201
+状态代码202.
+状态代码301.
+状态代码304.
+状态代码400
+状态代码401
+状态代码403
+状态代码404
+状态代码405
+状态代码409
+状态代码412.
+状态代码500 
+|===
+
+
+== 故障排除
+
+可以从找到追加信息 link:concept_requesting_support.html["支持"] 页面。

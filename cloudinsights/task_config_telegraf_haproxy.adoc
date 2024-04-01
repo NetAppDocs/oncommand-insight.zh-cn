@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_haproxy.html 
+keywords: telegraf, installation, install, haproxy 
+summary: HAProxy 数据收集器配置 
+---
+= HAProxy 数据收集器
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights 使用此数据收集器从 HAProxy 收集指标。
+
+
+
+== 安装
+
+. 从*Observability > Collectors*中，单击*+Data Collector*。选择HAProxy。
++
+选择安装了 Telegraf 代理的操作系统或平台。
+
+. 如果您尚未安装要收集的代理，或者您希望为其他操作系统或平台安装代理，请单击 _Show Instructions_展开 link:task_config_telegraf_agent.html["代理安装"] 说明。
+. 选择要用于此数据收集器的代理访问密钥。您可以通过单击 * + 代理访问密钥 * 按钮来添加新的代理访问密钥。最佳实践：仅当您要按操作系统 / 平台对数据收集器进行分组时，才使用其他代理访问密钥。
+. 按照配置步骤配置数据收集器。这些说明因用于收集数据的操作系统或平台的类型而异。
+
+
+image:HAProxyDCConfigLinux.png["HAProxy 配置"]
+
+
+
+== 设置
+
+Telegraf 的 HAProxy 插件依赖于启用 HAProxy 统计信息。这是一种内置在 HAProxy 中的配置，但它不会开箱即用。启用后， HAProxy 将显示一个 HTML 端点，您可以在浏览器上查看此端点或对其进行擦除，以便提取所有 HAProxy 配置的状态。
+
+
+
+=== 兼容性：
+
+配置是根据 HAProxy 1.0.4 版开发的。
+
+
+
+=== 设置：
+
+要启用统计信息，请编辑您的 haproxy 配置文件，并使用您自己的用户 / 密码和 / 或 haproxy URL 在 " 存储 " 部分后面添加以下行：
+
+[listing]
+----
+stats enable
+stats auth myuser:mypassword
+stats uri  /haproxy?stats
+----
+下面是一个简化的配置文件示例，该配置文件已启用统计信息：
+
+[listing]
+----
+global
+  daemon
+  maxconn 256
+
+defaults
+  mode http
+  stats enable
+  stats uri /haproxy?stats
+  stats auth myuser:mypassword
+  timeout connect 5000ms
+  timeout client 50000ms
+  timeout server 50000ms
+
+frontend http-in
+  bind *:80
+  default_backend servers
+
+frontend http-in9080
+  bind *:9080
+  default_backend servers_2
+
+backend servers
+  server server1 10.128.0.55:8080 check ssl verify none
+  server server2 10.128.0.56:8080 check ssl verify none
+
+backend servers_2
+  server server3 10.128.0.57:8080 check ssl verify none
+  server server4 10.128.0.58:8080 check ssl verify none
+----
+有关完整的最新说明，请参见 link:https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#4-stats%20enable["HAProxy 文档"]。
+
+
+
+== 对象和计数器
+
+将收集以下对象及其计数器：
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| 对象： | 标识符： | 属性： | 数据点： 
+
+
+| HAProxy 前端 | 命名空间
+Address
+代理 | 节点IP
+节点名称
+代理ID
+模式
+进程ID
+会话速率限制
+服务器ID
+会话限制
+Status | 字节输入
+字节输出
+缓存命中
+缓存查找
+已绕过数据压缩字节数
+数据压缩字节数
+数据压缩字节输出
+数据压缩响应
+连接速率
+最大连接速率
+总连接数
+连接规则拒绝了请求
+请求被安全问题拒绝
+安全问题拒绝了响应
+会话规则拒绝的请求
+请求错误
+响应1xx
+响应2xx
+响应3xx
+响应4xx
+响应5xx
+其他响应
+请求被截获
+会话速率
+最大会话速率
+请求率
+最大请求速率
+请求总数
+会话
+会话最大值
+会话总数
+请求重新写入 
+
+
+| HAProxy 服务器 | 命名空间
+Address
+代理
+服务器 | 节点IP
+节点名称
+检查完成时间
+检查跌落配置
+检查运行状况值
+检查Rise Configuration
+检查状态
+代理ID
+上次更改时间
+上次会话时间
+模式
+进程ID
+服务器ID
+Status
+重量 | 活动服务器
+备份服务器
+字节输入
+字节输出
+检查Downs (下行)
+检查失败
+客户端已Abots
+连接
+连接平均时间
+总停机时间
+拒绝响应
+连接错误
+响应错误
+响应1xx
+响应2xx
+响应3xx
+响应4xx
+响应5xx
+其他响应
+服务器选定总计
+队列当前
+队列最大值
+队列平均时间
+每秒会话数
+每秒会话数最大值
+连接重复使用
+平均响应时间
+会话
+会话最大值
+服务器传输已Abots.
+会话总数
+会话总时间平均值
+请求重新派单
+请求重置
+请求重新写入 
+
+
+| HAProxy 后端 | 命名空间
+Address
+代理 | 节点IP
+节点名称
+代理ID
+上次更改时间
+上次会话时间
+模式
+进程ID
+服务器ID
+会话限制
+Status
+重量 | 活动服务器
+备份服务器
+字节输入
+字节输出
+缓存命中
+缓存查找
+检查Downs (下行)
+客户端已Abots
+已绕过数据压缩字节数
+数据压缩字节数
+数据压缩字节输出
+数据压缩响应
+连接
+连接平均时间
+总停机时间
+请求被安全问题拒绝
+安全问题拒绝了响应
+连接错误
+响应错误
+响应1xx
+响应2xx
+响应3xx
+响应4xx
+响应5xx
+其他响应
+服务器选定总计
+队列当前
+队列最大值
+队列平均时间
+每秒会话数
+每秒会话数最大值
+请求总数
+连接重复使用
+平均响应时间
+会话
+会话最大值
+服务器传输已Abots.
+会话总数
+会话总时间平均值
+请求重新派单
+请求重置
+请求重新写入 
+|===
+
+
+== 故障排除
+
+可以从找到追加信息 link:concept_requesting_support.html["支持"] 页面。

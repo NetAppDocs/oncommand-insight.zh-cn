@@ -1,0 +1,477 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_agent.html 
+keywords: telegraf, installation, install, agent, telegraf agent 
+summary: Cloud Insights 支持Telegraf作为其收集集成数据的代理、并可在Windows或Linux上进行配置。 
+---
+= 配置代理以收集数据(Windows/Linux)
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights 使用 link:https://docs.influxdata.com/telegraf["Telegraf"] 作为收集集成数据的代理。Telegraf 是一种插件驱动的服务器代理，可用于收集和报告指标，事件和日志。输入插件用于通过直接访问系统 /OS ，调用第三方 API 或侦听已配置的流（例如 Kafka ， statsD 等）。输出插件用于将收集的指标，事件和日志从代理发送到 Cloud Insights 。
+
+Cloud Insights的当前Telegraf版本为*1.24.0*。
+
+有关在Kubnetes上安装的信息、请参见 link:task_config_telegraf_agent_k8s.html["此页面"]。
+
+
+NOTE: 为了准确地进行审核和报告数据，强烈建议使用 * 网络时间协议（ NTP ） * 或 * 简单网络时间协议（ SNTP ） * 同步 Agent 计算机上的时间。
+
+
+NOTE: 如果要在安装代理之前验证安装文件，请参见以下章节 <<验证校验和>>。
+
+
+
+== 安装代理
+
+如果您要安装服务数据收集器，但尚未配置代理，则系统会提示您先为相应的操作系统安装代理。本主题介绍如何在以下操作系统上安装 Telegraf 代理：
+
+* <<Windows>>
+* <<RHEL 和 CentOS>>
+* <<Ubuntu 和 Debian>>
+
+
+要安装代理，无论您使用的是哪个平台，都必须先执行以下操作：
+
+. 登录到要用于代理的主机。
+. 登录到Cloud Insights环境并导航到*Observability > Collectors *。
+. 单击 * + Data Collector* 并选择要安装的数据收集器。
+. 为您的主机选择合适的平台(Windows、Linux)
+. 对每个平台执行其余步骤。
+
+
+
+NOTE: 在主机上安装代理后，无需在该主机上重新安装代理。
+
+
+TIP: 在服务器 /VM 上安装代理后， Cloud Insights 除了从您配置的任何数据收集器收集数据之外，还会从该系统收集指标。这些指标将作为收集 link:task_config_telegraf_node.html["" 节点 " 指标"]。
+
+
+NOTE: 如果您使用的是代理，请在安装 Telegraf 代理之前阅读适用于您的平台的代理说明。
+
+
+
+=== 日志位置
+
+Telegraf日志消息会从stdout重定向到以下日志文件(默认为)：
+
+* rell/CentOS：/var/log/centraf/telegraf.log
+* Ubuntu或Debian：/var/log/unnellagaf/telegraf.log
+* Windows：C：\Program Files\tringaf\telegraf.log
+
+
+
+
+=== Windows
+
+
+
+==== 前提条件：
+
+* 必须安装 PowerShell
+* 如果您使用的是代理、则必须按照*为Windows配置代理支持"一节中的说明进行操作。
+
+
+
+
+==== 为 Windows 配置代理支持
+
+
+NOTE: 如果您的环境使用代理、请在安装之前阅读本节。
+
+
+NOTE: 以下步骤概述了设置 _http_proxy/https_proxy_environment 变量所需的操作。对于某些代理环境，用户可能还需要设置 _no_proxy environment_ 变量。
+
+对于驻留在代理后面的系统，请执行以下操作以设置 _https_proxy_ 和 / 或 _http_proxy_ 环境变量 * 先前 * 以安装 Telegraf 代理：
+
+ [System.Environment]::SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]::Machine)
+
+
+==== 安装代理
+
+image:AgentInstallWindows.png["Windows 代理安装"]
+
+.在 Windows 上安装代理的步骤：
+. 选择代理访问密钥。
+. 从代理安装对话框复制命令块。您可以单击剪贴板图标将命令快速复制到剪贴板。
+. 打开 PowerShell 窗口
+. 将命令粘贴到 PowerShell 窗口中，然后按 Enter 键。
+. 此命令将下载相应的代理安装程序并进行安装，然后设置默认配置。完成后，它将重新启动代理服务。此命令具有唯一的密钥，有效期为 24 小时。
+. 单击 * 完成 * 或 * 继续 *
+
+
+安装代理后，您可以使用以下命令启动 / 停止此服务：
+
+....
+Start-Service telegraf
+Stop-Service telegraf
+....
+
+
+==== 卸载代理
+
+要在 Windows 上卸载代理，请在 PowerShell 窗口中执行以下操作：
+
+. 停止并删除 Telegraf 服务：
++
+....
+Stop-Service telegraf
+sc.exe delete telegraf
+....
+. 从存储中删除证书：
++
+....
+cd Cert:\CurrentUser\Root
+//rm E5FB7B68C08B1CA902708584C274F8EFC7BE8ABC
+rm 1A918038E8E127BB5C87A202DF173B97A05B4996
+....
+. 删除 _C ： \Program Files\Ceraf_ 文件夹以删除二进制文件，日志和配置文件
+. 从注册表中删除 _system\CurrentControlSet\Services\EventLog\Application\Ceaf_ 密钥
+
+
+
+
+==== 升级代理
+
+要升级电报代理，请执行以下操作：
+
+. 停止并删除此电报服务：
++
+....
+Stop-Service telegraf
+sc.exe delete telegraf
+....
+. 从注册表中删除 _system\CurrentControlSet\Services\EventLog\Application\Ceaf_ 密钥
+. 删除 _C ： \Program Files\celaf\celeaf.conf
+. 删除 _C ： \Program Files\caraf\caraf.exe
+. link:#windows["安装新代理"]。
+
+
+
+
+=== RHEL 和 CentOS
+
+
+
+==== 前提条件：
+
+* 必须提供以下命令： curl ， sudo ， ping ， sha256sum ， openssl ， 和 dmidecode
+* 如果您使用的是代理、则必须按照*为RHEL/CentOS*配置代理支持"一节中的说明进行操作。
+
+
+
+
+==== 为 RHEL/CentOS 配置代理支持
+
+
+NOTE: 如果您的环境使用代理、请在安装之前阅读本节。
+
+
+NOTE: 以下步骤概述了设置 _http_proxy/https_proxy_environment 变量所需的操作。对于某些代理环境，用户可能还需要设置 _no_proxy environment_ 变量。
+
+对于驻留在代理后面的系统，请执行以下步骤 * 先前 * 以安装 Telegraf 代理：
+
+. 为当前用户设置 _https_proxy_ 和 / 或 _http_proxy_ 环境变量：
++
+ export https_proxy=<proxy_server>:<proxy_port>
+. 创建 _/etc/default/tengraf_ ，并插入 _https_proxy_and/or _http_proxy_ 变量的定义：
++
+ https_proxy=<proxy_server>:<proxy_port>
+
+
+
+
+==== 安装代理
+
+image:Agent_Requirements_Rhel.png["RHEL/CentOS 代理安装"]
+
+.在 RHEL/CentOS 上安装代理的步骤：
+. 选择代理访问密钥。
+. 从代理安装对话框复制命令块。您可以单击剪贴板图标将命令快速复制到剪贴板。
+. 打开 Bash 窗口
+. 将命令粘贴到 Bash 窗口中，然后按 Enter 键。
+. 此命令将下载相应的代理安装程序并进行安装，然后设置默认配置。完成后，它将重新启动代理服务。此命令具有唯一的密钥，有效期为 24 小时。
+. 单击 * 完成 * 或 * 继续 *
+
+
+安装代理后，您可以使用以下命令启动 / 停止此服务：
+
+如果您的操作系统使用的是 systemd （ CentOS 7+ 和 RHEL 7+ ）：
+
+....
+sudo systemctl start telegraf
+sudo systemctl stop telegraf
+....
+如果您的操作系统未使用 systemd （ CentOS 7+ 和 RHEL 7+ ）：
+
+....
+sudo service telegraf start
+sudo service telegraf stop
+....
+
+
+==== 卸载代理
+
+要在 Rhel/CentOS 上卸载代理，请在 Bash 终端中执行以下操作：
+
+. 停止 Telegraf 服务：
++
+....
+systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. 删除 Telegraf 代理：
++
+ yum remove telegraf
+. 删除可能遗留的任何配置或日志文件：
++
+....
+rm -rf /etc/telegraf*
+rm -rf /var/log/telegraf*
+....
+
+
+
+
+==== 升级代理
+
+要升级电报代理，请执行以下操作：
+
+. 停止电报服务：
++
+....
+systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. 删除先前的电报代理：
++
+ yum remove telegraf
+. link:#rhel-and-centos["安装新代理"]。
+
+
+
+
+=== Ubuntu 和 Debian
+
+
+
+==== 前提条件：
+
+* 必须提供以下命令： curl ， sudo ， ping ， sha256sum ， openssl ， 和 dmidecode
+* 如果您使用的是代理、则必须按照*为Ubuntu或Debian配置代理支持*一节中的说明进行操作。
+
+
+
+
+==== 为 Ubuntu 或 Debian 配置代理支持
+
+
+NOTE: 如果您的环境使用代理、请在安装之前阅读本节。
+
+
+NOTE: 以下步骤概述了设置 _http_proxy/https_proxy_environment 变量所需的操作。对于某些代理环境，用户可能还需要设置 _no_proxy environment_ 变量。
+
+对于驻留在代理后面的系统，请执行以下步骤 * 先前 * 以安装 Telegraf 代理：
+
+. 为当前用户设置 _https_proxy_ 和 / 或 _http_proxy_ 环境变量：
++
+ export https_proxy=<proxy_server>:<proxy_port>
+. 创建 /etc/default/celaff ，并插入 _https_proxy_and/or _http_proxy_ 变量的定义：
++
+ https_proxy=<proxy_server>:<proxy_port>
+
+
+
+
+==== 安装代理
+
+image:Agent_Requirements_Ubuntu.png["Ubuntu 或 Debian 代理安装"]
+
+.在 Debian 或 Ubuntu 上安装代理的步骤：
+. 选择代理访问密钥。
+. 从代理安装对话框复制命令块。您可以单击剪贴板图标将命令快速复制到剪贴板。
+. 打开 Bash 窗口
+. 将命令粘贴到 Bash 窗口中，然后按 Enter 键。
+. 此命令将下载相应的代理安装程序并进行安装，然后设置默认配置。完成后，它将重新启动代理服务。此命令具有唯一的密钥，有效期为 24 小时。
+. 单击 * 完成 * 或 * 继续 *
+
+
+安装代理后，您可以使用以下命令启动 / 停止此服务：
+
+如果您的操作系统使用的是 systemd ：
+
+....
+sudo systemctl start telegraf
+sudo systemctl stop telegraf
+....
+如果您的操作系统未使用 systemd ：
+
+....
+sudo service telegraf start
+sudo service telegraf stop
+....
+
+
+==== 卸载代理
+
+要在 Ubuntu 或 Debian 上卸载代理，请在 Bash 终端中运行以下命令：
+
+. 停止 Telegraf 服务：
++
+....
+systemctl stop telegraf (If your operating system is using systemd)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. 删除 Telegraf 代理：
++
+ dpkg -r telegraf
+. 删除可能遗留的任何配置或日志文件：
++
+....
+rm -rf /etc/telegraf*
+rm -rf /var/log/telegraf*
+....
+
+
+
+
+==== 升级代理
+
+要升级电报代理，请执行以下操作：
+
+. 停止电报服务：
++
+....
+systemctl stop telegraf (If your operating system is using systemd)
+/etc/init.d/telegraf stop (for systems without systemd support)
+....
+. 删除先前的电报代理：
++
+ dpkg -r telegraf
+. link:#ubuntu-and-debian["安装新代理"]。
+
+
+
+
+== 验证校验和
+
+Cloud Insights 代理安装程序会执行完整性检查，但某些用户可能希望在安装或应用下载的项目之前执行自己的验证。为此、可以下载安装程序并为下载的软件包生成校验和、然后将校验和与安装说明中显示的值进行比较。
+
+
+
+=== 下载安装程序包而不安装
+
+要执行仅下载操作(与默认的下载和安装操作相反)、用户可以编辑从UI获取的代理安装命令并删除尾随的"install"选项。
+
+请按照以下步骤操作：
+
+. 按照说明复制 Agent 安装程序代码片段。
+. 请将代码片段粘贴到文本编辑器中，而不是将其粘贴到命令窗口中。
+. 从命令中删除末尾的“--install”(Linux)或“-install”(Windows)。
+. 从文本编辑器复制整个命令。
+. 现在，将其粘贴到命令窗口（在工作目录中）并运行。
+
+
+非 Windows （这些示例适用于 Kubernetes ；实际脚本名称可能有所不同）：
+
+* Download and install （下载并安装）（默认）：
++
+ installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download –-install
+* 仅下载：
++
+ installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download
+
+
+Windows
+
+* Download and install （下载并安装）（默认）：
++
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download -install)
+* 仅下载：
++
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download)
+
+
+仅下载命令会将所有所需的项目从 Cloud Insights 下载到工作目录。这些项目包括但不限于：
+
+* 安装脚本
+* 环境文件
+* YAML文件
+* 校验和文件(以SHA256.signed/SHA256.ps1结尾)
+
+
+安装脚本，环境文件和 YAML 文件可以通过目视检查进行验证。
+
+
+
+=== 生成校验和值
+
+要生成校验和值、请对相应平台执行以下命令：
+
+* RHEL/Ubuntu：
++
+ sha256sum <package_name>
+* Windows
++
+ Get-FileHash telegraf.zip -Algorithm SHA256 | Format-List
+
+
+
+
+=== 验证校验和
+
+从校验和文件中提取预期的校验和
+
+* 非 Windows ：
++
+ openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any -nosigs -noverify
+* Windows
++
+ (Get-Content telegraf.zip.sha256.ps1 -First 1).toUpper()
+
+
+
+
+=== 安装下载的软件包
+
+在对所有项目进行满意的验证后，可以通过运行以下命令启动代理安装：
+
+非 Windows ：
+
+ sudo -E -H ./<installation_script_name> --install
+Windows
+
+ .\cloudinsights-windows.ps1 -install
+
+
+== 故障排除
+
+在设置代理时遇到问题时要尝试的一些操作：
+
+[cols="2*"]
+|===
+| 问题： | 请尝试以下操作： 
+
+
+| 配置新插件并重新启动Telegraf后、Telegraf无法启动。日志指示出现如下错误：
+
+"[报文]运行代理时出错：加载配置文件/etc/telvaf/telvaf.d/cludinsistins-default.conf：plugin outputs.http：line <linenumber>：configuration specified the fights ["use_system_proxy"]、bed b不过 它们未被使用" | 安装的Telegraf版本已过时。按照此页面上的步骤*为您的相应平台升级代理*。 
+
+
+| 我在旧安装上运行了安装程序脚本、现在代理不发送数据 | 卸载此电报代理、然后重新运行安装脚本。请按照此页面上适用于您的相应平台的*升级代理*步骤进行操作。 
+
+
+| 我已使用 Cloud Insights 安装代理 | 如果您已在主机 /VM 上安装了代理，则无需重新安装该代理。在这种情况下，只需在 Agent 安装屏幕中选择适当的平台和密钥，然后单击 * 继续 * 或 * 完成 * 。 
+
+
+| 我已安装代理，但未使用 Cloud Insights 安装程序安装代理 | 删除先前的代理并运行 Cloud Insights 代理安装，以确保正确的默认配置文件设置。完成后，单击 * 继续 * 或 * 完成 * 。 
+|===
+可以从找到追加信息 link:concept_requesting_support.html["支持"] 页面或中的 link:reference_data_collector_support_matrix.html["数据收集器支持列表"]。

@@ -1,0 +1,298 @@
+---
+sidebar: sidebar 
+permalink: telegraf_agent_k8s_config_options.html 
+keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s, options, configuration 
+summary: NetApp Kubarnetes Monitoring Operator提供了许多可配置选项。 
+---
+= NetApp Kubnetes监控操作员配置选项
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:nofooter: 
+:toclevels: 2
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes监控操作员"] 可以自定义安装和配置。
+
+下表列出了AgentConfiguration文件的可能选项：
+
+[cols="1,1,2"]
+|===
+| 组件 | 选项 | Description 
+
+
+| 代理 |  | 操作员可以安装的所有组件通用的配置选项。这些选项可视为"全局"选项。 
+
+
+|  | 文档报告员报告 | 与Cloud Insights Docker repo相比、使用dockerRepo覆盖从客户的专用Docker reposo中提取映像。默认值为Cloud Insights Docker repo 
+
+
+|  | dockerImagePullSecret | 可选：客户专用repo的机密 
+
+
+|  | clusterName | 自由文本字段、用于在所有客户集群中唯一标识集群。这在Cloud Insights 租户中应该是唯一的。默认值是客户在UI中为"Cluster Name"字段输入的内容 
+
+
+|  | 代理
+格式。
+代理：
+  服务器：
+  端口：
+  用户名：
+  密码：
+  NoProxy：
+  已启用isTelegrafProxy: 
+  已启用isAuProxy: 
+  isFluentbitProxyEnabled：
+  已启用isCollectorProxy: | 客户可选择设置代理。这通常是客户的公司代理。 
+
+
+| 电报 |  | 配置选项、可自定义操作员的安装 
+
+
+|  | secionInterval | 指标收集间隔(以秒为单位)(最大= 60秒) 
+
+
+|  | dsCpuLimit | 用于数据终端的CPU限制 
+
+
+|  | dsMemLimit | 用于数据的存储器限制 
+
+
+|  | dsCpuRequest | 为数据发送的CPU请求 
+
+
+|  | dsMemRequest | 为数据发送的内存请求 
+
+
+|  | rsCpuLimit | 用于RS的CPU限制 
+
+
+|  | rsMemLimit | 用于Rs的存储器限制 
+
+
+|  | rsCpuRequest | 对RS的CPU请求 
+
+
+|  | rsMemRequest | 对RS的存储器请求 
+
+
+|  | dockerMountPoint | 对dockerMountPoint路径的覆盖。这适用于在K8s平台(如云代工厂)上安装非标准Docker 
+
+
+|  | 文档UnixSocket | 对dockerUnixSocket路径的覆盖。这适用于在K8s平台(如云代工厂)上安装非标准Docker。 
+
+
+|  | 配置路径 | 对克里oSockPath路径的覆盖。这适用于在K8s平台(如云代工厂)上安装非标准Docker。 
+
+
+|  | run特权 | 在特权模式下运行该特拉夫容器。如果在K8s节点上启用了SELinux、请将此选项设置为true 
+
+
+|  | 批大小 | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | 缓冲区限制 | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | RoundInterval | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | Jitter | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | 精确度 | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | FlushInterval | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | Flush抖动 | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | 输出超时 | 请参见 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf配置文档"] 
+
+
+|  | 已启用dockerMetricCollection | 收集Docker指标。默认情况下、此值设置为true、系统将为基于Docker的内部部署K8s收集Docker指标。要禁用Docker指标收集、请将此选项设置为false。 
+
+
+|  | ds.公差 | Telegraf-DS的额外耐受性。 
+
+
+|  | Rs公差 | Telegraf-RS额外的耐受性。 
+
+
+| Kube-state-metrics |  | 可自定义操作员的KUbe状态指标安装的配置选项 
+
+
+|  | cpuLimit | Kube-state-metrics部署的CPU限制 
+
+
+|  | memLimit | Kube-state-metrics部署的MEM限制 
+
+
+|  | cpuQuest | KU状态指标部署的CPU请求 
+
+
+|  | MemQuest | MEM请求部署KIBEstate metrics 
+
+
+|  | 资源 | 要捕获的资源的逗号分隔列表。
+示例：cronjobs、守护程序集、部署、ingresses、作业、名称区、节点、永久性卷卷、
+持久性卷、Pod、复制集、资源均衡、服务、状态集 
+
+
+|  | 公差 | Kube-state-metrics的其他容错性。 
+
+
+|  | labels | 应捕获的Kube-state-metrics资源的逗号分隔列表
+
+++++
+示例：cronjobs=[*]、守护程序sets=[*]、部署=[*]、ingresses=[*]、Jobs=[*]、名称空间=[*]、节点=[*]、
+persistentvolumeclaims=[*]，persistentvolumes=[*]，Pod=[*]，复制集=[*]，资源公平otas=[*]，services =[*]，状态集=[*]
+++++ 
+
+
+| 日志 |  | 可自定义操作员日志收集和安装的配置选项 
+
+
+|  | readFromHead | true或false、则应以流畅位从head读取日志 
+
+
+|  | 超时 | 超时(以秒为单位) 
+
+
+|  | dnsMode | TCP/UDP、DNS的模式 
+
+
+|  | 流畅的位容差 | Fluent-Bit-DS的额外容差。 
+
+
+|  | 事件-导出器-容错 | 事件导出器附加容错。 
+
+
+| 工作负载映射 |  | 可自定义Operator的工作负载映射收集和安装的配置选项 
+
+
+|  | cpuLimit | Net observer DS的CPU限制 
+
+
+|  | memLimit | 净观察者DS的MEM限制 
+
+
+|  | cpuQuest | Net observer DS的CPU请求 
+
+
+|  | MemQuest | MEM请求提供Net observer DS 
+
+
+|  | metricRegationInterval | 指标聚合间隔(以秒为单位) 
+
+
+|  | bpfPolollInterval | BPF轮询间隔(以秒为单位) 
+
+
+|  | 启用DNSLook.e. | 是非题、启用DNS查找 
+
+
+|  | L4-公 差 | Net-obler-L4-DS附加容错。 
+|===
+
+
+== AgentConfiguration文件示例
+
+下面是一个AgentConfiguration文件示例。请注意、此处并未捕获所有选项：
+
+[listing]
+----
+apiVersion: monitoring.netapp.com/v1alpha1
+kind: AgentConfiguration
+metadata:
+  name: netapp-monitoring-configuration
+  namespace: NAMESPACE_PLACEHOLDER
+  labels:
+    installed-by: nkmo-NAMESPACE_PLACEHOLDER
+
+spec:
+  agent:
+    # a uniquely identifiable user friendly clustername. This clustername should be unique across
+    # all clusters in your cloud insights tenant
+    clusterName: pbhat-dev
+
+    # optional: proxy settings. This is usually your corporate proxy settings
+    proxy:
+      server: testserver
+      port: 3128
+      noproxy: websock.svc
+      username: user
+      password: pass
+      isTelegrafProxyEnabled: true
+      isFluentbitProxyEnabled: true
+      isCollectorsProxyEnabled: true
+      isAuProxyEnabled: false
+
+    # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
+    # Please see documentation link here:
+    dockerRepo: dummy.docker.repo/long/path/to/test
+    # Optional: A docker image pull secret that maybe needed for your private docker registry
+    dockerImagePullSecret: docker-secret-name
+
+    # Set runPrivileged to true SELinux is enabled on your kubernetes nodes
+    # runPrivileged: false
+
+  telegraf:
+    # use these settings to fine tune data collection
+    collectionInterval: 20s
+
+    # batchSize:
+    # bufferLimit:
+    # roundInterval:
+    # collectionJitter:
+    # precision:
+    # flushInterval:
+    # flushJitter:
+
+    # Collect kubernetes.system_container metrics and objects in the kube-system|cattle-system namespaces for managed kubernetes clusters
+    # (EKS, AKS, GKE, managed Rancher). Set this to true if you want collect these metrics.
+    #managedK8sSystemMetricCollectionEnabled: true|false
+
+    # Collect kubernetes.pod_volume (pod ephemeral storage) metrics. Set this to true if you want to collect these metrics.
+    #podVolumeMetricFilteringEnabled: true|false
+
+    # Declare Rancher cluster as managed. Set this to true if your Rancher cluster is managed as opposed to on-premise.
+    #isManagedRancher: true|false
+
+    # By default, docker metrics will be collected for on-premise, docker-based k8s deployments. To disable docker metric collection, set this to false.
+    # dockerMetricCollectionEnabled: true|false
+
+
+    # Deamonset CPU/Mem limits and requests
+    # dsCpuLimit:
+    # dsMemLimit:
+    # dsCpuRequest:
+    # dsMemRequest:
+
+    # Replicaset CPU/Mem limits and requests
+    # rsCpuLimit:
+    # rsMemLimit:
+    # rsCpuRequest:
+    # rsMemRequest:
+
+  kube-state-metrics:
+    # cpuLimit:
+    # memLimit:
+    # cpuRequest:
+    # memRequest:
+
+    # a comma separated list of resources to capture.
+    # example: cronjobs,daemonsets,deployments,ingresses,jobs,namespaces,nodes,persistentvolumeclaims,persistentvolumes,pods,replicasets,resourcequotas,services,statefulsets
+    # resources:
+
+    # a comma seperated list of resources that kube-state-metrics should capture
+    # example: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*],persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*]
+    # labels:
+----

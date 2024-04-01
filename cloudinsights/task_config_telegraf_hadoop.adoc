@@ -1,0 +1,543 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_hadoop.html 
+keywords: telegraf, installation, install, Hadoop 
+summary: Hadoop 数据收集器配置 
+---
+= Hadoop Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights 使用此数据收集器从 Hadoop 收集指标。
+
+
+
+== 安装
+
+. 从*Observability > Collectors*中，单击*+Data Collector*。选择Hadoop。
++
+选择安装了 Telegraf 代理的操作系统或平台。
+
+. 如果您尚未安装要收集的代理，或者您希望为其他操作系统或平台安装代理，请单击 _Show Instructions_展开 link:task_config_telegraf_agent.html["代理安装"] 说明。
+. 选择要用于此数据收集器的代理访问密钥。您可以通过单击 * + 代理访问密钥 * 按钮来添加新的代理访问密钥。最佳实践：仅当您要按操作系统 / 平台对数据收集器进行分组时，才使用其他代理访问密钥。
+. 按照配置步骤配置数据收集器。这些说明因用于收集数据的操作系统或平台的类型而异。
+
+
+image:HadoopDCConfigLinux-1.png["Hadoop 配置"]
+image:HadoopDCConfigLinux-2.png["Hadoop 配置"]
+
+
+
+== 设置
+
+完整的 Hadoop 部署包括以下组件：
+
+* NameNode ： Hadoop 分布式文件系统（ HDFS ）主系统。协调一系列 DataNode 。
+* Secondary NameNode ：主 NameNode 的热故障转移。在 Hadoop 中，不会自动升级到 NameNode 。二级 NameNode 从 NameNode 收集信息，以便在需要时可以进行升级。
+* DataNode ：数据的实际所有者。
+* ResourceManager ：计算主系统（ Yarn ）。协调一系列 NodeManager 。
+* NodeManager ：计算资源。运行应用程序的实际位置。
+* JobHistoryServer ：负责处理所有与作业历史记录相关的请求。
+
+
+Hadoop 插件基于此电报的 JOLokia 插件。例如，需要从所有 Hadoop 组件收集信息，因此需要在所有组件上通过 Jallokia 配置并公开 JMX 。
+
+
+
+=== 兼容性
+
+此配置是根据 Hadoop 2.9.2 版开发的。
+
+
+
+=== 设置
+
+
+
+==== JOLokia Agent Jar
+
+对于所有单个组件，必须下载一个版本的 jarokia 代理 JAR 文件。测试的版本为 link:https://jolokia.org/download.html["JOLokia 代理 1.6.0"]。
+
+以下说明假定已下载的 JAR 文件（ jolokia-jvm-1.6.0-agent.jar ）位于位置 "/op/hadoop/lib/" 下。
+
+
+
+==== NameNode
+
+要配置 NameNode 以公开此 JOLokia API ，您可以在 <Hadoot_home>/etc/Hadoop/Hadoop-env.sh 中设置以下内容：
+
+[listing]
+----
+export HADOOP_NAMENODE_OPTS="$HADOOP_NAMENODE_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7800,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8000 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8000 above) and Jolokia (7800). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== 二级 NameNode
+
+要配置二级 NameNode 以公开此 JOLokia API ，您可以在 <Hadoot_home>/etc/Hadoop/Hadoop-env.sh 中设置以下内容：
+
+[listing]
+----
+export HADOOP_SECONDARYNAMENODE_OPTS="$HADOOP_SECONDARYNAMENODE_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7802,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8002 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8002 above) and Jolokia (7802). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== DataNode
+
+要将 DataNode 配置为公开此 Jolokia API ，您可以在 <Hadoot_home>/etc/Hadoop/Hadoop-env.sh 中设置以下内容：
+
+[listing]
+----
+export HADOOP_DATANODE_OPTS="$HADOOP_DATANODE_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7801,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8001 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8001 above) and Jolokia (7801). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== ResourceManager
+
+要将 ResourceManager 配置为公开此 Jolokia API ，您可以在 <Hadoot_home>/etc/Hadoop/Hadoop-env.sh 中设置以下内容：
+
+[listing]
+----
+export YARN_RESOURCEMANAGER_OPTS="$YARN_RESOURCEMANAGER_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7803,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8003 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8003 above) and Jolokia (7803). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== NodeManager
+
+要配置 NodeManager 以公开此 JOLokia API ，您可以在 <Hadoot_home>/etc/Hadoop/Hadoop-env.sh 中设置以下内容：
+
+[listing]
+----
+export YARN_NODEMANAGER_OPTS="$YARN_NODEMANAGER_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7804,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8004 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8004 above) and Jolokia (7804). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+==== JobHistoryServer
+
+要将 JobHistoryServer 配置为公开 Joyokia API ，您可以在 <Hadoot_home>/etc/Hadoop/Hadoop-env.sh 中设置以下内容：
+
+[listing]
+----
+export HADOOP_JOB_HISTORYSERVER_OPTS="$HADOOP_JOB_HISTORYSERVER_OPTS -javaagent:/opt/hadoop/lib/jolokia-jvm-1.6.0-agent.jar=port=7805,host=0.0.0.0 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8005 -Dcom.sun.management.jmxremote.password.file=$HADOOP_HOME/conf/jmxremote.password"
+You can choose a different port for JMX (8005 above) and Jolokia (7805). If you have an internal IP to lock Jolokia onto you can replace the "catch all" 0.0.0.0 by your own IP. Notice this IP needs to be accessible from the telegraf plugin. You can use the option '-Dcom.sun.management.jmxremote.authenticate=false' if you don't want to authenticate. Use at your own risk.
+----
+
+
+== 对象和计数器
+
+将收集以下对象及其计数器：
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| 对象： | 标识符： | 属性： | 数据点： 
+
+
+| Hadoop 二级 NameNode | 集群
+命名空间
+服务器 | 节点名称
+节点IP
+编译信息
+version | GC计数
+GC副本计数
+GC Marks(色谱标记
+已超过GC号码信息阈值
+已超过GC编号警告阈值
+GC时间
+GC复制时间
+GC Marks(色谱标记
+GC总额外睡眠时间
+日志错误计数
+日志致命计数
+日志信息计数
+日志警告计数
+已提交内存堆
+内存堆最大值
+已用内存堆
+最大内存
+未提交堆内存
+内存非堆最大值
+未使用堆内存
+线程已阻止
+线程新增
+线程可运行
+线程已终止
+线程已等待时间
+线程正在等待 
+
+
+| Hadoop NodeManager | 集群
+命名空间
+服务器 | 节点名称
+节点IP | 已分配容器
+内存分配
+已分配内存机会
+虚拟核心分配机会
+已分配虚拟核心
+内存可用
+虚拟核心可用
+目录本地错误
+目录错误日志
+清理前的缓存大小
+容器启动持续时间平均时间
+容器启动持续时间操作数
+容器已完成
+容器出现故障
+容器正在使用
+容器已被终止
+容器已启动
+容器正在进行中
+容器在发生故障时回滚
+正在运行的容器
+磁盘利用率良好的本地目录
+磁盘利用率良好的日志目录
+私有删除的字节数
+公共字节数已删除
+运行机会性容器
+已删除字节数总计
+随机播放连接
+随机播放输出字节数
+随机播放输出失败
+随机播放输出正常
+GC计数
+GC副本计数
+GC Marks(色谱标记
+已超过GC号码信息阈值
+已超过GC编号警告阈值
+GC时间
+GC复制时间
+GC Marks(色谱标记
+GC总额外睡眠时间
+日志错误计数
+日志致命计数
+日志信息计数
+日志警告计数
+已提交内存堆
+内存堆最大值
+已用内存堆
+最大内存
+未提交堆内存
+内存非堆最大值
+未使用堆内存
+线程已阻止
+线程新增
+线程可运行
+线程已终止
+线程已等待时间
+线程正在等待 
+
+
+| Hadoop ResourceManager | 集群
+命名空间
+服务器 | 节点名称
+节点IP | ApplicationMaster启动延迟平均值
+ApplicationMaster启动延迟编号
+ApplicationMaster寄存器延迟平均值
+ApplicationMaster寄存器延迟编号
+nodeManager活动编号
+nodeManager已取消授权的编号
+NodeManager取消配置编号
+nodeManager丢失了编号
+nodeManager已重新启动编号
+NodeManager关闭编号
+nodeManager运行状况良好的数字
+NodeManager内存限制
+NodeManager虚拟核心数限制
+Used capacity
+活动应用程序
+活动用户
+已分配聚合容器
+聚合容器已被抢占
+已发布聚合容器
+聚合内存秒数已被抢占
+已分配聚合节点本地容器
+已分配聚合关闭交换机容器
+已分配聚合确认本地容器
+聚合虚拟核心秒数已被抢占
+已分配容器
+已分配内存
+已分配虚拟核心
+应用程序尝试第一次容器分配延迟平均时间
+应用程序尝试第一个容器分配延迟编号
+申请已完成
+应用程序失败
+应用程序已终止
+申请待处理
+正在运行的应用程序
+提交的申请
+内存可用
+虚拟核心可用
+容器待定
+内存待定
+虚拟核心待定
+容器已保留
+保留的内存
+保留虚拟核心
+已使用Memory ApplicationMaster
+已使用Virtual Cores ApplicationMaster
+已用容量
+GC计数
+GC副本计数
+GC Marks(色谱标记
+已超过GC号码信息阈值
+已超过GC编号警告阈值
+GC时间
+GC复制时间
+GC Marks(色谱标记
+GC总额外睡眠时间
+日志错误计数
+日志致命计数
+日志信息计数
+日志警告计数
+已提交内存堆
+内存堆最大值
+已用内存堆
+最大内存
+未提交堆内存
+内存非堆最大值
+未使用堆内存
+线程已阻止
+线程新增
+线程可运行
+线程已终止
+线程已等待时间
+线程正在等待 
+
+
+| Hadoop DataNode | 集群
+命名空间
+服务器 | 节点名称
+节点IP
+集群ID
+version | 收发器计数
+正在传输
+缓存容量
+已用缓存
+Capacity
+已使用DFS
+估计损失的总容量
+上次卷故障率
+块数已进行C凯 出
+无法缓存块数
+无法取消缓存块数
+卷编号失败
+剩余容量
+GC计数
+GC副本计数
+GC Marks(色谱标记
+已超过GC号码信息阈值
+已超过GC编号警告阈值
+GC时间
+GC复制时间
+GC Marks(色谱标记
+GC总额外睡眠时间
+日志错误计数
+日志致命计数
+日志信息计数
+日志警告计数
+已提交内存堆
+内存堆最大值
+已用内存堆
+最大内存
+未提交堆内存
+内存非堆最大值
+未使用堆内存
+线程已阻止
+线程新增
+线程可运行
+线程已终止
+线程已等待时间
+线程正在等待 
+
+
+| Hadoop NameNode | 集群
+命名空间
+服务器 | 节点名称
+节点IP
+上次写入的事务ID
+自上次加载编辑以来的时间
+HA状态
+文件系统状态
+块池ID
+集群ID
+编译信息
+不同版本计数
+version | 块容量
+块总数
+总容量
+已用容量
+已用容量(非DFS)
+块损坏
+估计损失的总容量
+块过多
+检测搏已过期
+文件总数
+文件系统锁定队列长度
+缺少块
+使用因子1阻止缺少的复制
+客户端处于活动状态
+数据节点已损坏
+数据节点停用停用
+实时停用数据节点
+取消数据节点配置
+加密区域编号
+数据节点正在进入维护状态
+文件正在构建中
+数据节点在维护中停用
+数据节点正在维护中
+数据节点实时运行
+存储陈旧
+复制待定超时
+数据节点消息待定
+块待删除
+块待复制
+块复制错误已延迟
+阻止计划的复制
+快照
+可快照目录
+数据节点陈旧
+文件总数
+总负载
+同步计数总计
+自上次完成的交易
+自上次日志滚动以来的事务
+块复制不足
+卷故障总数
+总同步时间
+对象最大值
+操作块添加
+操作允许快照
+工序块批处理
+操作块已排队
+已收到并删除操作块
+操作报告平均时间
+操作块报告编号
+缓存报告平均时间
+缓存报告编号
+操作创建文件
+操作创建快照
+操作创建符号链接
+操作删除文件
+操作删除快照
+操作禁止Snapshot
+操作文件输入/输出
+附加文件
+已创建文件
+已删除文件
+文件列表
+文件已重命名
+文件已截断
+文件系统加载时间
+操作生成EDEK平均时间
+操作会生成EDEK
+操作获取其他数据节点
+块获取位置
+获取编辑平均时间
+获取编辑编号
+获取图像平均时间
+获取映像编号
+操作获取链接目标
+操作获取列表
+操作列表可快照目录
+复制未计划编号
+放置图像平均时间
+放置图像编号
+操作重命名快照
+资源检查时间平均时间
+资源检查时间编号
+安全模式时间
+操作Snapshot差异报告
+操作存储块报告
+复制成功
+同步平均时间
+Operations Sync编号
+复制超时
+操作总数
+事务平均时间
+事务批处理处于同步状态
+事务编号
+平均EEK预热时间
+EEK预热编号
+块池已用空间
+缓存容量
+已用缓存
+可用容量
+块池已用百分比
+剩余百分比
+已用百分比
+线程数
+GC计数
+GC副本计数
+GC Marks(色谱标记
+已超过GC号码信息阈值
+已超过GC编号警告阈值
+GC时间
+GC复制时间
+GC Marks(色谱标记
+GC总额外睡眠时间
+日志错误计数
+日志致命计数
+日志信息计数
+日志警告计数
+已提交内存堆
+内存堆最大值
+已用内存堆
+最大内存
+未提交堆内存
+内存非堆最大值
+未使用堆内存
+线程已阻止
+线程新增
+线程可运行
+线程已终止
+线程已等待时间
+线程正在等待 
+
+
+| Hadoop JobHistoryServer | 集群
+命名空间
+服务器 | 节点名称
+节点IP | GC计数
+GC副本计数
+GC Marks(色谱标记
+已超过GC号码信息阈值
+已超过GC编号警告阈值
+GC时间
+GC复制时间
+GC Marks(色谱标记
+GC总额外睡眠时间
+日志错误计数
+日志致命计数
+日志信息计数
+日志警告计数
+已提交内存堆
+内存堆最大值
+已用内存堆
+最大内存
+未提交堆内存
+内存非堆最大值
+未使用堆内存
+线程已阻止
+线程新增
+线程可运行
+线程已终止
+线程已等待时间
+线程正在等待 
+|===
+
+
+== 故障排除
+
+可以从找到追加信息 link:concept_requesting_support.html["支持"] 页面。

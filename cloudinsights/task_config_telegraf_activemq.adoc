@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_activemq.html 
+keywords: telegraf, installation, install, ActiveMQ 
+summary: HTTP数据收集器配置 
+---
+= ActiveMQ 数据收集器
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights 使用此数据收集器从 ActiveMQ 收集指标。
+
+
+
+== 安装
+
+. 从*Observability > Collectors*中，单击*+Data Collector*。选择Active魔 力象限。
++
+选择安装了 Telegraf 代理的操作系统或平台。
+
+. 如果您尚未安装要收集的代理，或者您希望为其他操作系统或平台安装代理，请单击 _Show Instructions_展开 link:task_config_telegraf_agent.html["代理安装"] 说明。
+. 选择要用于此数据收集器的代理访问密钥。您可以通过单击 * + 代理访问密钥 * 按钮来添加新的代理访问密钥。最佳实践：仅当您要按操作系统 / 平台对数据收集器进行分组时，才使用其他代理访问密钥。
+. 按照配置步骤配置数据收集器。这些说明因用于收集数据的操作系统或平台的类型而异。
+
+
+image:ActiveMQDCConfigWindows.png["ActiveMQ 配置"]
+
+
+
+== 设置
+
+有关信息，请参见 http://activemq.apache.org/getting-started.html["ActiveMQ 文档"]
+
+
+
+== 对象和计数器
+
+将收集以下对象及其计数器：
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| 对象： | 标识符： | 属性： | 数据点： 
+
+
+| ActiveMQ 队列 | 命名空间
+队列
+Port
+服务器 | 节点名称
+节点IP
+节点 UUID | 使用者计数
+出列计数
+排队计数
+队列大小 
+
+
+| ActiveMQ 订阅者 | 客户端 ID
+连接ID
+Port
+服务器
+命名空间 | 处于活动状态
+目标
+节点名称
+节点IP
+节点 UUID
+节点操作系统
+选择器
+订阅。 | 出列计数
+派单计数
+派单队列大小
+排队计数
+待定队列大小 
+
+
+| ActiveMQ 主题 | 主题
+Port
+服务器
+命名空间 | 节点名称
+节点IP
+节点 UUID
+节点操作系统 | 使用者计数
+出列计数
+排队计数
+Size 
+|===
+
+
+== 故障排除
+
+可以从找到追加信息 link:concept_requesting_support.html["支持"] 页面。

@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_dcos.html 
+keywords: telegraf, installation, install, dcos 
+summary: Dcos 配置 
+---
+= 数据中心 / 操作系统数据收集器
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights 使用此数据收集器从数据中心 / 操作系统收集指标。
+
+
+
+== 安装
+
+. 从*Observability > Collectors*中，单击*+Data Collector*。选择*DC/OS*。
++
+如果尚未配置代理进行收集，系统将提示您 link:task_config_telegraf_agent.html["安装代理"] 在您的环境中。
+
++
+如果已配置代理，请选择相应的操作系统或平台，然后单击 * 继续 * 。
+
+. 按照 DC/OS 配置屏幕中的说明配置数据收集器。这些说明因用于收集数据的操作系统或平台的类型而异。
+
+
+
+
+== 设置
+
+有关设置信息，请参见 https://docs.mesosphere.com["DC/OS 文档"]。
+
+
+
+== 对象和计数器
+
+将收集以下对象及其计数器：
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| 对象 | 标识符 | 属性 | 数据点 
+
+
+| dcos_node | dcos_container
+dcos_app | 集群
+主机名
+路径(仅限文件系统字段)
+接口(仅限网络字段)
+container_id
+任务名称 | 系统正常运行时间(浮点)
+CPU_core (浮点型)
+CPU_Total (浮点型)
+CPU_USER (浮点型)
+CPU_SYSTEM (浮点型)
+CPU_IDLE (浮点型)
+CPU_WAIT (浮点型)
+load_1min (浮点型)
+load_5min (浮点型)
+load_2lea (浮动)
+文件系统容量总计字节(int)
+文件系统容量已用字节(int)
+文件系统容量免费字节(int)
+文件系统_inode_Total (浮点型)
+文件系统_inode_used (浮点型)
+文件系统_inode_free (浮点型)
+内存总字节数(int)
+memory_free字节(int)
+MEMORY_BUFFERS_Bytes)(整型)
+MEMORY_CACHEed_Bytes)(整型)
+Swap总字节数(int)
+SWAP_FREE_BYTESE (int)
+Swap已用字节(int)
+network_In_Bytes)(整型)
+network_out字节(int)
+network_ing_packets (浮点型)
+network_out数据包(浮点)
+network_ing_n_dleed (浮点)
+network_out丢弃(浮点)
+network_ing_错误(浮点)
+network_out错误(浮点)
+进程计数(浮点) 
+|===
+
+
+== 故障排除
+
+可以在中找到追加信息 link:concept_requesting_support.html["支持"] 页面。
