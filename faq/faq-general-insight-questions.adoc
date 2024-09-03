@@ -75,9 +75,9 @@ OnCommand Unified Manager在存储阵列的"`d`管理"层运行、可对集群�
 
 
 
-== 自动化店面中提到的OnCommand Insight 二级ETL是什么？
+== 什么是OnCommand Insight二级ETL？
 
-某些OnCommand Insight 自动化StoreFront报告下载中提及的"二级ETL"要求是指为填充到OnCommand Insight 数据仓库中的人员开发的专业服务实施、用于调用所捕获数据的额外提取、转换和加载(ETL)。
+"二级ETL"是指一种开发的专业服务实施方案、用于调用捕获数据的额外提取、转换和加载(ETL)、以便填充到OnCommand Insight数据仓库中。
 
 二级 ETL 流程的主要目的是预取 " 批量 " 数据，以便更快地生成更复杂的报告，或者按计划每天运行报告。
 
