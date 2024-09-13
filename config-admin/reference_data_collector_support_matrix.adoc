@@ -1,0 +1,16 @@
+---
+permalink: config-admin/reference_data_collector_support_matrix.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Data Collector (数据源)支持列表提供了有关受支持的数据收集器的信息。' 
+---
+= OnCommand Insight数据收集器支持列表
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+《Data Collector支持列表》提供了OCI支持的数据收集器的参考、包括供应商和型号信息。
+
+此页面为占位符。

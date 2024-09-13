@@ -7849,4 +7849,8 @@
   <block id="bcc7ff777637bae2501eae2f8ccdf7d1" category="paragraph">"二级ETL"是指一种开发的专业服务实施方案、用于调用捕获数据的额外提取、转换和加载(ETL)、以便填充到OnCommand Insight数据仓库中。</block>
   <block id="85dd174d18eb0c4d3fd90177f2a31485" category="paragraph">OCI与第三方CMDB、计费和流程编排技术的集成功能是其成功的关键价值、WFA也不例外。NetApp的专业服务已成功完成许多与WFA工作流和OCI的集成。</block>
   <block id="b220d44db6780bcb3edb81b057ad8db8" category="paragraph">是的、OCI提供了多个报告、而我们的专业服务目录也根据使用情形提供了许多其他报告。数据仓库模块还附带了一套Cognos报告创作工具、用户可以使用这些工具创建自己的报告。</block>
+  <block id="082d4fc1b30e86ee41f3aee683450d1e" category="summary">Data Collector (数据源)支持列表提供了有关受支持的数据收集器的信息。</block>
+  <block id="2fcf0efc6b86f1c82038c0503c617ffb" category="doc">OnCommand Insight数据收集器支持列表</block>
+  <block id="0509ce941df7b1b926535ae26a759985" category="paragraph">《Data Collector支持列表》提供了OCI支持的数据收集器的参考、包括供应商和型号信息。</block>
+  <block id="929760a91ec2d785d90375c3e050830f" category="paragraph">此页面为占位符。</block>
 </blocks>
