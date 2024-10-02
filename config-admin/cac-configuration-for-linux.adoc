@@ -13,12 +13,14 @@ summary: 要在Linux OnCommand Insight 服务器上启用CAC、需要进行一�
 [role="lead"]
 要在Linux OnCommand Insight 服务器上启用CAC、需要进行一些修改。
 
+根CA必须导入到信任存储库中。
+
 
 
 == 步骤
 
 . 导航到 `/opt/netapp/oci/conf/`
 . 编辑 `wildfly.properties` 并更改的值 `CLIENT_AUTH_ENABLED` 设置为"True"
-. 导入下存在的"`根证书`" `/opt/netapp/oci/wildfly/standalone/configuration/server.keystore`
+. 导入下的"`root certificATE`" `/opt/netapp/oci/wildfly/standalone/configuration/server.truststore`
 . 重新启动服务器
 

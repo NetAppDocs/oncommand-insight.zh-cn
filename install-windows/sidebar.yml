@@ -99,8 +99,6 @@ entries:
       entries:
       - title: 在数据仓库升级期间保留自定义Cognos设置
         url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
-    - title: 备份安全配置
-      url: "/install-windows/back-up-the-security-configuration.html"
     - title: 升级远程采集单元服务器
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
   - title: 完成升级后任务

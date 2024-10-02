@@ -20,6 +20,9 @@ summary: 您可以使用OnCommand Insight 设置向导轻松安装OnCommand Insi
 您必须已完成所有安装前提条件。
 
 
+NOTE: 如果您要升级OnCommand Insight、您*必须先备份存储、然后再卸载或升级*当前版本。
+
+
 
 == 步骤
 
@@ -32,6 +35,7 @@ summary: 您可以使用OnCommand Insight 设置向导轻松安装OnCommand Insi
 +
 *最佳实践：*使用客户名称作为站点的前缀：例如NetApp。
 
+. 输入管理员密码。确认密码。
 . 在*客户信息：配置NetApp ASUP*窗口中、执行以下操作：
 +
 .. 通过选择以下选项之一、选择包含要上传到ASUP的数据的数据库：
@@ -90,4 +94,23 @@ OnCommand Insight 服务器用于支持用户Web服务的端口、包括用于�
 安装过程大约需要20分钟、具体取决于所安装的应用程序。
 
 . 单击 * 完成 * 。
+. 如果要安装远程采集单元(RAU)、则必须运行SecurityAdmin Tool为_accurity_用户创建密码。安装RAU时需要此密码。
++
+注意：如果您已创建此密码、则不需要按如下所述同步服务器和RAU。
 
+
+
+
+
+== 将服务器与DWH和RAU同步
+
+
+IMPORTANT: 安装远程采集单元和/或数据仓库后、必须将RAU/DWH与OnCommand Insight服务器同步。按照以下步骤操作：
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["同步服务器和RAU (Windows)"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["同步服务器和DWH (Windows)"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["同步服务器和RAU (Linux)"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["同步服务器和DWH (Linux)"]

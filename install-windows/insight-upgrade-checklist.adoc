@@ -17,6 +17,13 @@ summary: 您可以使用提供的检查清单在准备升级时记录进度。�
 
 == 用于准备升级的检查清单(必需)
 
+[NOTE]
+====
+*必须在升级OnCommand Insight之前备份存储*。
+
+有关详细信息、请参见link:../config-admin\/security-management.html["securityadmin工具"]说明。
+
+====
 |===
 
 

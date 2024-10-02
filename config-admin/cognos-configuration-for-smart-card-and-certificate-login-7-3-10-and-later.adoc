@@ -38,17 +38,20 @@ summary: '您必须修改OnCommand Insight 数据仓库配置、以支持Cognos�
 . 将证书颁发机构(CA)添加到Cognos truestore。
 +
 .. 在命令窗口中、转至 `..\SANscreen\cognos\analytics\configuration\certs\`
-.. 使用 `keytool` 用于列出受信任CA的实用程序： `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
+.. 使用 `keytool`实用程序列出受信任的CA：`..\..\IBM-JRE\jre\bin\keytool.exe -list -keystore CAmKeystore.jks -storepass <password>
+
+
 +
 每行中的第一个词表示CA别名。
 
++
 .. 如果不存在合适的文件、请提供CA证书文件、通常为 `.pem` 文件
 .. 要将客户的CA与OnCommand Insight 可信CA结合使用、请转至 `..\SANscreen\cognos\analytics\configuration\certs\`。
 .. 使用 `keytool` 用于导入的实用程序 `.pem` 文件： `..\..\ibm-jre\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
 +
-`my_alias` 通常是一个可在中轻松标识CA的别名``keytool -list`` 操作。
+`my_alias`通常是一个别名、可在操作中轻松标识CA``keytool -list``。
 
-.. 当系统提示您输入密码时、输入 `NoPassWordSet`。
+.. 当系统提示您输入密码时、请输入_/Cognos_info.dAT_ SANscreen文件中的密码。
 .. 问题解答 `yes` 当系统提示您信任此证书时。
 
 

@@ -55,3 +55,24 @@ RAU服务器和OnCommand Insight 服务器之间必须至少有一个端口处�
 在问题解答 所有提示后、安装将开始、并且大约需要10分钟、具体取决于所安装的应用程序。
 
 
+
+如果您的数据开始采集、您就可以完成所有操作；您不需要同步服务器和RAU、如下所述。
+
+
+
+== 同步服务器和RAU
+
+
+IMPORTANT: 如果在安装远程采集单元后未开始采集数据、请将RAU与OnCommand Insight服务器同步。请按照以下步骤操作：
+
+. 在OnCommand Insight服务器系统上，以交互模式启动*SecurityAdmin*工具
++
+ securityadmin -i
+. 将Insight服务器的_ac购置_用户的密码更改为您选择的密码。*请记下此密码*，因为您在下面需要它。
+. 重新启动服务器/LAu。
+. 在远程采集单元(RAU)系统上，以交互模式启动*SecurityAdmin*工具。您需要上面步骤2中记下的密码。
++
+ securityadmin -i
+. 将_ac购置_用户的密码更改为步骤2中使用的密码。
+. 重新启动RAU。
+

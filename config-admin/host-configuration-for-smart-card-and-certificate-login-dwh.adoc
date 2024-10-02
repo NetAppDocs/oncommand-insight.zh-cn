@@ -51,7 +51,7 @@ summary: '您必须修改OnCommand Insight 数据仓库配置以支持智能卡\
 . 将证书颁发机构(CA)添加到数据仓库存储库：
 +
 .. 在命令窗口中、转至 `..\SANscreen\wildfly\standalone\configuration`。
-.. 使用 `keytool` 用于列出受信任CA的实用程序： `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
+.. 使用 `keytool`实用程序列出受信任的CA： `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass <password>`+有关设置或更改服务器密码的详细信息、请参见link:../config-admin/securityadmin-tool.html["安全管理员"]文档。
 +
 每行中的第一个词表示CA别名。
 

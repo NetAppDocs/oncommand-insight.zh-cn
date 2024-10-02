@@ -66,7 +66,7 @@ OnCommand Insight 的规模估算具有多种依赖关系、例如数据源类�
  a| 
 操作系统
  a| 
-一台运行64位Microsoft Windows Server 2016、2019或2022并安装了最新Service Pack的计算机。
+一台运行64位Microsoft Windows Server 2016、2019或2022并安装了最新Service Pack的计算机。在安装OnCommand Insight之前、需要安装Windows .NET Framework 3.5。
 
 Windows Server 2012中引入的弹性文件系统(Resilient File System、ReFS)与OnCommand Insight 不兼容。只有NTFS文件系统才支持OnCommand Insight 的Windows安装。
 

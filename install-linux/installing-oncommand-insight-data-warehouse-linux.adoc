@@ -45,6 +45,14 @@ summary: '此安装是一个独立的安装、包含运行和操作OnCommand Ins
 +
 `sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
 
++
+在CentOS 9 Stream、Red Hat Enterprise Linux 9.4或Oracle Linux 9.4上安装Insight服务器或数据仓库时、必须先更改为包含安装程序文件的目录、然后使用"--install-myql-依赖 关系"命令行选项执行安装命令：
+
++
+....
+cd /tmp/oci-7.3.16.1.297-linux-x86_64
+sudo ./oci-install.sh --install-mysql-dependencies
+....
 . 阅读并接受许可协议、然后按照提示进行操作。
 
 
@@ -53,3 +61,23 @@ summary: '此安装是一个独立的安装、包含运行和操作OnCommand Ins
 == 结果
 
 在问题解答 所有提示后、安装将开始、并且大约需要10分钟、具体取决于所安装的应用程序。
+
+
+
+== 同步服务器和DWH
+
+
+IMPORTANT: 安装数据仓库后，您*必须*将数据仓库与OnCommand Insight服务器同步。请按照以下步骤操作：
+
+. 在OnCommand Insight服务器系统上，以交互模式启动*SecurityAdmin*工具
++
+ securityadmin -i
+. 将_Inventory_和_dwh_INTERNAL_Users的密码更改为您选择的密码。*请记下这些密码*，因为您在下面需要这些密码。
+. 重新启动 DWH 服务。
+. 在*each Connecter*上，以交互模式启动*SecurityAdmin*工具。您需要上面步骤2中记下的密码。
++
+ securityadmin -i
+. 将_Inventory_和_dwh_INTERNAL_Users的密码更改为步骤2中使用的密码。
+. 重新启动连接器上的服务。
+. 使用步骤2中_Inventory_和_dwh_internal_users的密码将连接器添加到DWH
+

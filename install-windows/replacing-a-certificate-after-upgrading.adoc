@@ -31,7 +31,7 @@ summary: 升级后打开OnCommand Insight Web UI会导致证书警告。显示�
 
 . 列出密钥库的内容： `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
 +
-当系统提示您输入密码时、输入 `changeit`。
+有关设置或更改密钥库密码的详细信息、请参见link:../config-admin/securityadmin-tool.html["安全管理员"]文档。
 
 +
 密钥库中应至少有一个证书、 `ssl certificate`。

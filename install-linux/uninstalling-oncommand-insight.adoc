@@ -13,4 +13,11 @@ summary: 如果需要、您可以卸载OnCommand Insight 组件。您必须单�
 [role="lead"]
 如果需要、您可以卸载OnCommand Insight 组件。您必须单独卸载OnCommand Insight 组件。
 
+[NOTE]
+====
+*强烈建议在卸载OnCommand Insight之前备份存储*。
+
+有关详细信息、请参见link:../config-admin\/security-management.html["securityadmin工具"]说明。
+
+====
 每个组件都会单独卸载。

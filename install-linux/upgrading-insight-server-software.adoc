@@ -13,6 +13,13 @@ summary: 您可以在登录到OnCommand Insight 服务器后检查服务器更�
 [role="lead"]
 您可以在登录到OnCommand Insight 服务器后检查服务器更新。
 
+[NOTE]
+====
+强烈建议在升级OnCommand Insight之前备份存储和数据库。
+
+有关库的详细信息、请参阅link:../config-admin\/security-management.html["securityadmin工具"]说明。
+
+====
 
 
 == 步骤

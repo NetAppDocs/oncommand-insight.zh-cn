@@ -13,6 +13,13 @@ summary: 升级Insight服务器软件后、您必须升级远程采集软件。
 [role="lead"]
 升级Insight服务器软件后、您必须升级远程采集软件。
 
+[NOTE]
+====
+强烈建议在升级DWH之前备份存储和数据库。
+
+有关库的详细信息、请参阅link:../config-admin\/security-management.html["securityadmin工具"]说明。
+
+====
 
 
 == 步骤

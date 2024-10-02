@@ -13,6 +13,13 @@ summary: 在开始升级Insight之前、请务必了解升级过程。大多数I
 [role="lead"]
 在开始升级Insight之前、请务必了解升级过程。大多数Insight版本的升级过程都相同。
 
+[NOTE]
+====
+*必须在升级OnCommand Insight之前备份存储*。
+
+有关详细信息、请参见link:../config-admin\/security-management.html["securityadmin工具"]说明。
+
+====
 Insight的升级过程包括以下高级任务：
 
 * 下载安装包

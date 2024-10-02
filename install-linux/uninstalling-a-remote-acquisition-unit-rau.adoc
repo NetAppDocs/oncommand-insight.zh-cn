@@ -13,6 +13,13 @@ summary: 您可以在不再需要远程采集单元时将其卸载。
 [role="lead"]
 您可以在不再需要远程采集单元时将其卸载。
 
+[NOTE]
+====
+*强烈建议在卸载OnCommand Insight之前备份存储*。
+
+有关详细信息、请参见link:../config-admin\/security-management.html["securityadmin工具"]说明。
+
+====
 
 
 == 步骤

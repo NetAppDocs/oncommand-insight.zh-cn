@@ -21,11 +21,19 @@ summary: 完成所有前提任务后、您可以登录到远程采集单元服�
 * OnCommand Insight 安装包必须位于服务器上。
 
 
+[NOTE]
+====
+您必须在升级之前备份存储。
+
+有关库的详细信息、请参阅link:../config-admin\/security-management.html["securityadmin工具"]说明。
+
+====
 
 
 == 步骤
 
 . 使用具有Windows本地管理员权限的帐户登录到远程采集单元服务器。
+. 备份存储。
 . 找到Insight安装包 (`RAU-x64-version_number-build_number.msi`)并双击它。
 +
 此时将显示OnCommand Insight 设置向导。

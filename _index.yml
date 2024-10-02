@@ -1,5 +1,8 @@
 ---
 indexpage:
+  title: OnCommand Insight文档
+  summary: OnCommand Insight 简化了内部环境以及公共云和私有云中混合IT基础架构的运营管理。
+  keywords: oci, insight
   lead: OnCommand Insight 简化了内部环境以及公共云和私有云中混合IT基础架构的运营管理。
   tiles:
   - title: 入门

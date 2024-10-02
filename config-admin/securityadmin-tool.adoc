@@ -1,17 +1,17 @@
 ---
-permalink: config-admin/security-management.html 
+permalink: config-admin/securityadmin-tool.html 
 sidebar: sidebar 
 keywords: SecurityAdmin, security, password, keystore, truststore, trustore, 
 summary: OnCommand Insight的安全管理工具提供了一些功能、可使Insight环境在增强的安全性下运行、包括加密、密码哈希以及更改内部用户密码和密钥对以对密码进行加密和解密的功能。 
 ---
-= Insight安全性
+= securityadmin工具
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-OnCommand Insight提供的功能可使Insight环境在增强安全性的情况下运行。这些功能包括加密、密码哈希以及更改内部用户密码和用于加密和解密密码的密钥对的功能。您可以使用SecurityAdmin工具在Insight环境中的所有服务器上管理这些功能。
+OnCommand Insight提供的功能可使Insight环境在增强安全性的情况下运行。这些功能包括加密、密码哈希以及更改内部用户密码和用于加密和解密密码的密钥对的功能。您可以使用*SecurityAdmin Tool*在Insight环境中的所有服务器上管理这些功能。
 
 
 
@@ -105,6 +105,8 @@ Description
 * acq/conf/vault/*
 
 
+请注意、强烈建议您在备份OnCommand Insight数据库时备份存储。
+
 
 
  a| 
@@ -124,9 +126,8 @@ CORRECE-STORE-password
 
 
  a| 
-change-trust—store-password
  a| 
-更改用于信任存储库的密码、并将新密码存储在存储中。信任存储库的当前密码必须为"已知"。
+change-trust store-password更改用于信任存储的密码、并将新密码存储在存储中。信任存储库的当前密码必须为"已知"。
 
 
 
@@ -203,29 +204,6 @@ change-password
 更换键
  a| 
 生成新的空库(将与现有库具有不同的密钥)。然后将条目从当前库复制到新库。然后从实例中读取每个加密值、使用当前存储的加密服务对其解密、使用还原的存储的加密服务对其重新加密、并存储重新加密的值。
-
-|===
-
-
-=== 隐藏命令
-
-SA工具提供以下命令、这些命令不需要身份验证、但会对安装进行协调更改。
-
-[cols="25a,75a"]
-|===
-
-
- a| 
-列表密钥升级(服务器)
- a| 
-如果用户尚未进行身份验证、请使用当前存储中的_INTERNAL帐户和密码进行身份验证。然后将当前存储替换为备份文件中的存储并执行协调操作。
-
-
-
- a| 
-升级(购置)
- a| 
-将备份文件中的当前存储替换为存储、然后执行协调操作。
 
 |===
 
