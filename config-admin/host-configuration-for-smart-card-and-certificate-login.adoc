@@ -21,6 +21,9 @@ summary: '您必须修改OnCommand Insight 主机配置、以支持智能卡\(CA
 * LDAP `User principal account name` 属性必须与包含用户ID的LDAP字段匹配。
 
 
+
+NOTE: 如果已使用更改了_server.keystore_和/或_server.trustore_pands密码link:../config-admin/security-management.html["安全管理员"]，请在导入SANscreen证书之前重新启动_ldap_服务。
+
 [NOTE]
 ====
 有关最新的CAC和证书说明、请参见以下知识库文章(需要支持登录)：

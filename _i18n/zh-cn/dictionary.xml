@@ -8697,4 +8697,8 @@
   <block id="90264ebb70e49e99bceb1035bdcc8307" category="sidebar">OnCommand Insight文档</block>
   <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="sidebar">数据收集器支持列表</block>
   <block id="b0430548e2edafebde6bfdf10cf93cc6" category="sidebar">Insight安全性(安全管理工具)</block>
+  <block id="4924cdf1992856713a11ebac184ceb81" category="inline-link-macro">安全管理员</block>
+  <block id="280dd41aa1500bfa7ef3a8678e713080" category="admonition">如果使用更改了_server.keystore_和/或_server.trustore_pands，请<block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>在导入SANscreen证书之前重新启动_ldap_服务。</block>
+  <block id="ec4ef90f124e4475455cd66560c26fde" category="admonition">如果已使用更改了_server.keystore_和/或_server.trustore_pands密码<block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>，请在导入SANscreen证书之前重新启动_ldap_服务。</block>
+  <block id="a10389a2280f5287a5b5a38c80d3521f" category="admonition">如果要导入<block ref="5055fc7731112a1043a6604413e43539" category="inline-link-macro-rx"></block>SANscreen证书，并且已使用更改了_server.keystore_和/或_server.trustore_pands密码，请在导入LDAP证书之前重新启动_ldap_服务。</block>
 </blocks>

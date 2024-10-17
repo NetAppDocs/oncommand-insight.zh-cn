@@ -25,6 +25,9 @@ summary: '用户帐户、用户身份验证和用户授权可以通过以下两�
 * 分配正确的用户角色。
 
 
+
+NOTE: 如果要导入link:../config-admin/security-management.html["安全管理员"]SANscreen证书，并且已使用更改了_server.keystore_和/或_server.trustore_pands密码，请在导入LDAP证书之前重新启动_ldap_服务。
+
 [NOTE]
 ====
 安全最佳实践要求管理员配置主机操作系统、以防止非管理员/标准用户交互登录。

@@ -22,6 +22,9 @@ summary: 管理员可以从数据仓库门户为数据仓库和报告配置LDAP�
 对于所有安全Active Directory (例如LDAPS)用户、您必须使用证书中定义的AD服务器名称。不能使用IP地址进行安全AD登录。
 
 
+NOTE: 如果使用更改了_server.keystore_和/或_server.trustore_pands，请link:../config-admin/security-management.html["安全管理员"]在导入SANscreen证书之前重新启动_ldap_服务。
+
+
 
 == 步骤
 
